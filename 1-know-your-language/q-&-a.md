@@ -1,8 +1,3 @@
----
-typora-root-url: ./
-typora-copy-images-to: ./
----
-
 # A Q & A Session: Python
 
 ## Why should you learn Python?
@@ -38,7 +33,7 @@ Other popular applications:
 
 Guido van Rossum (Author of Python Programming Language) began implementing Python, who was also reading the published scripts from "Monty Python's Flying Circus", a BBC comedy series from 1970s.
 
-![Monty-Python-Flying-Circus](/Monty-Python-Flying-Circus.jpg)
+![Monty-Python-Flying-Circus](/1-know-your-language/Monty-Python-Flying-Circus.jpg)
 
 ## What are Python's strengths?
 
