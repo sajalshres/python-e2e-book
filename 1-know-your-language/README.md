@@ -2,7 +2,7 @@
 
 ## Index
 
-- [A Q & A Session](./q-&-a.md)
-- Before we begin
+- [A Q&A Session](./q-&-a.md)
+- [Before we begin](./before-we-begin.md)
 - 
 
