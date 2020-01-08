@@ -8,8 +8,8 @@ A full stack Python course to build, deploy and operate Python applications.
 
 - Q & A Session
 - Before we begin
-- Basics
-- Flow control
+- Applying Primer
+- Control the Flow
 - Functions
 - Data Structures
 - Strings
