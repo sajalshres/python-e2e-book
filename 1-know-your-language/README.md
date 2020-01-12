@@ -6,4 +6,12 @@
 - [Before we begin](./before-we-begin.md)
 - [Applying Primer](./python-primer.md)
 - [Control the flow](./flow-control.md)
+- Functions
+- [Data Structures](./data-structures.md)
+- [Looping Techniques](./looping-techniques.md)
+- [Modules](./modules.md)
+- [Errors and Exception](./errors-and-exceptions.md)
+- Objects and Classes
+- Package Mangement with PIP
+- Virtual Envrionments
 

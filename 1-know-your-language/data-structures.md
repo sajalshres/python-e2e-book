@@ -44,6 +44,8 @@ Return a shallow copy of the list. Equivalent to a[:].
 
 An example that uses most of the `list` methods:
 
+**Example:**
+
 
 ```python
 fruits = ['orange', 'apple', 'pear', 'banana', 'kiwi', 'apple', 'banana']
@@ -55,6 +57,8 @@ Output:
 
     2
 
+**Example:**
+
 
 ```python
 fruits.count('tangerine')
@@ -64,6 +68,8 @@ Output:
 
 
     0
+
+**Example:**
 
 
 ```python
@@ -75,6 +81,8 @@ Output:
 
     3
 
+**Example:**
+
 
 ```python
 fruits.index('banana', 4)
@@ -84,6 +92,8 @@ Output:
 
 
     6
+
+**Example:**
 
 
 ```python
@@ -107,6 +117,8 @@ Output:
 
     ['banana', 'apple', 'kiwi', 'banana', 'pear', 'apple', 'orange', 'grape']
 
+**Example:**
+
 
 ```python
 fruits.sort()
@@ -117,6 +129,8 @@ Output:
 
 
     ['apple', 'apple', 'banana', 'banana', 'grape', 'kiwi', 'orange', 'pear']
+
+**Example:**
 
 
 ```python
@@ -130,6 +144,8 @@ Output:
 
 ## List as a Stack
 The list methods make it very easy to use a list as a stack, where the last element added is the first element retrieved (“last-in, first-out”). To add an item to the top of the stack, use `append()`. To retrieve an item from the top of the stack, use `pop()`
+
+**Example:**
 
 
 ```python
@@ -147,6 +163,8 @@ Output:
 
     [3, 4, 5, 6]
 
+**Example:**
+
 
 ```python
 stack.append(7)
@@ -158,6 +176,8 @@ Output:
 
     [3, 4, 5, 6, 7]
 
+**Example:**
+
 
 ```python
 stack.pop()
@@ -167,6 +187,8 @@ Output:
 
 
     7
+
+**Example:**
 
 
 ```python
@@ -178,6 +200,8 @@ Output:
 
     [3, 4, 5, 6]
 
+**Example:**
+
 
 ```python
 stack.pop()
@@ -187,6 +211,8 @@ Output:
 
 
     6
+
+**Example:**
 
 
 ```python
@@ -217,6 +243,8 @@ Output:
 
     'Eric'
 
+**Example:**
+
 
 ```python
 queue.popleft()                 # The second to arrive now leaves
@@ -226,6 +254,8 @@ Output:
 
 
     'John'
+
+**Example:**
 
 
 ```python
@@ -258,6 +288,8 @@ Output:
 
     [0, 1, 4, 9, 16, 25, 36, 49, 64, 81]
 
+**Example:**
+
 
 ```python
 squares = [x**2 for x in range(10)] # More concise and readable right?
@@ -281,6 +313,8 @@ Output:
 
     ['p', 'y', 't', 'h', 'o', 'n']
 
+**Example:**
+
 
 ```python
 [number for number in range(10)]
@@ -290,6 +324,8 @@ Output:
 
 
     [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+**Example:**
 
 
 ```python
@@ -301,6 +337,8 @@ Output:
 
     [0, 2, 4, 6, 8]
 
+**Example:**
+
 
 ```python
 [number for number in range(100) if number % 2 == 0 if number % 5 == 0]
@@ -310,6 +348,8 @@ Output:
 
 
     [0, 10, 20, 30, 40, 50, 60, 70, 80, 90]
+
+**Example:**
 
 
 ```python
@@ -321,9 +361,10 @@ Output:
 
     ['Even', 'Odd', 'Even', 'Odd', 'Even', 'Odd', 'Even', 'Odd', 'Even', 'Odd']
 
+**Example:**
+
 
 ```python
-
 # create a new list with the values doubled
 [x*2 for x in vec]
 ```
@@ -332,6 +373,8 @@ Output:
 
 
     [-8, -4, 0, 4, 8]
+
+**Example:**
 
 
 ```python
@@ -344,6 +387,8 @@ Output:
 
 
     [0, 2, 4]
+
+**Example:**
 
 
 ```python
@@ -359,6 +404,8 @@ Output:
 
 ## `del`
 
+**Example:**
+
 
 ```python
 a = [-1, 1, 66.25, 333, 333, 1234.5]
@@ -371,6 +418,8 @@ Output:
 
     [1, 66.25, 333, 333, 1234.5]
 
+**Example:**
+
 
 ```python
 del a[2:4]
@@ -381,6 +430,8 @@ Output:
 
 
     [1, 66.25, 1234.5]
+
+**Example:**
 
 
 ```python
@@ -406,6 +457,8 @@ Output:
 ## Tuples
 Tuples are like lists except they are immutable like strings. They are useful when a statement or a function can safely assume that collection of values will not change.
 
+**Example:**
+
 
 ```python
 t = 12345, 54321, 'hello!'
@@ -416,6 +469,8 @@ Output:
 
 
     12345
+
+**Example:**
 
 
 ```python
@@ -428,6 +483,8 @@ Output:
 
 
     ((12345, 54321, 'hello!'), (1, 2, 3, 4, 5))
+
+**Example:**
 
 
 ```python
@@ -449,6 +506,8 @@ Output:
 
     TypeError: 'tuple' object does not support item assignment
 
+**Example:**
+
 ```python
 # but they can contain mutable objects:
 v = ([1, 2, 3], [3, 2, 1])
@@ -459,6 +518,8 @@ Output:
 
 
     ([1, 2, 3], [3, 2, 1])
+
+**Example:**
 
 
 ```python
@@ -473,6 +534,8 @@ Output:
 
 ### Sequence Unpacking
 Reverse operation of tuple packing
+
+**Example:**
 
 
 ```python
@@ -494,6 +557,8 @@ Output:
 
 You can create sets using `{}` or `set()` function
 
+**Example:**
+
 
 ```python
 shopping_basket = {'apple', 'orange', 'pineapple', 'apple', 'pear'}
@@ -504,6 +569,8 @@ Output:
 
 
     {'apple', 'orange', 'pear', 'pineapple'}
+
+**Example:**
 
 
 ```python
@@ -516,6 +583,8 @@ Output:
 
     set
 
+**Example:**
+
 
 ```python
 shopping_basket = {}
@@ -526,6 +595,8 @@ Output:
 
 
     dict
+
+**Example:**
 
 
 ```python
@@ -538,6 +609,8 @@ Output:
 
     True
 
+**Example:**
+
 
 ```python
 'strawberry' in shopping_basket
@@ -547,6 +620,8 @@ Output:
 
 
     False
+
+**Example:**
 
 
 ```python
@@ -560,6 +635,8 @@ Output:
 
     {'a', 'b', 'c', 'd', 'r'}
 
+**Example:**
+
 
 ```python
 b # unique letters in b
@@ -569,6 +646,8 @@ Output:
 
 
     {'a', 'c', 'l', 'm', 'z'}
+
+**Example:**
 
 
 ```python
@@ -580,6 +659,8 @@ Output:
 
     {'b', 'd', 'r'}
 
+**Example:**
+
 
 ```python
 a | b # letters in a or b or both
@@ -590,6 +671,8 @@ Output:
 
     {'a', 'b', 'c', 'd', 'l', 'm', 'r', 'z'}
 
+**Example:**
+
 
 ```python
 a & b # letters in both a and b
@@ -599,6 +682,8 @@ Output:
 
 
     {'a', 'c'}
+
+**Example:**
 
 
 ```python
@@ -644,6 +729,8 @@ Output:
 
     9840298755
 
+**Example:**
+
 
 ```python
 del contact['Kade Hade']
@@ -654,6 +741,8 @@ Output:
 
 
     {'Ram Kasula': 9840298755, 'Anu Pau': 98651201503}
+
+**Example:**
 
 
 ```python
@@ -666,6 +755,8 @@ Output:
 
     {'Ram Kasula': 9840298755, 'Anu Pau': 98651201503, 'Santa Behen': 9845022233}
 
+**Example:**
+
 
 ```python
 list(contact)
@@ -675,6 +766,8 @@ Output:
 
 
     ['Ram Kasula', 'Anu Pau', 'Santa Behen']
+
+**Example:**
 
 
 ```python
@@ -686,6 +779,8 @@ Output:
 
     ['Anu Pau', 'Ram Kasula', 'Santa Behen']
 
+**Example:**
+
 
 ```python
 'Santa Behen' in contact
@@ -696,6 +791,8 @@ Output:
 
     True
 
+**Example:**
+
 
 ```python
 'Kade Hade' in contact
@@ -705,6 +802,8 @@ Output:
 
 
     False
+
+**Example:**
 
 
 ```python
