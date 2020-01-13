@@ -12,7 +12,12 @@ A full stack Python course to build, deploy and operate Python applications.
 - Control the Flow
 - Functions
 - Data Structures
-- Strings
+- Looping Techniques
+- Modules
+- Errors and Exception
+- Objects and Classes
+- Package Management with PIP
+- Virtual Environments
 
 ### Automate: Applying Python in Real Life
 

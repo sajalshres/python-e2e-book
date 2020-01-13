@@ -1,5 +1,7 @@
 # A Q&A Session: Python
 
+![python-qna](./python-qna.jpg)
+
 ## Why should you learn Python?
 
 According to multiple sources (StackOverflow, Codeburst, TIOBE), Python is one of the ~~top 10~~ top 5 programming languages of 2019. Python, being a high level language, allows you to focus on the core functionality of the application by taking care of common programming tasks. It's dead simple syntax rules makes it easier to keep the code readable and maintainable. 

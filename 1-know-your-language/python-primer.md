@@ -1,4 +1,7 @@
 # Applying Primer
+
+![apply-primer](./apply-primer.jpg)
+
 ## Numbers
 The interpreter acts as a simple calculator: you can type an expression at it and it will write the value. 
 Expression syntax is straightforward: the operators +, -, * and / work just like in most other languages 

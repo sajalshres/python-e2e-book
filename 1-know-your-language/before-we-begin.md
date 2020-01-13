@@ -22,7 +22,7 @@ This particular shell is called bash which is short for “Bourne Again SHell”
 
 There’s a rich history of shells, and these “Unix style” shells began with Unix System 1’s shell in 1969. But even that was influenced by older programs such as RUNCOM. If you’ve ever noticed that some config files end in “rc” (e.g .vimrc), thats why.
 
-If these shells have changed since the 1960s, then why do developers keep on using them?
+If these shells haven't changed since the 1960s, then why do developers keep on using them?
 
 **Because** they haven’t really changed since the 60s. Graphical interfaces for your phone or computer fashionably change with every update (with usability improvements), but command line shells don’t. When you are scripting things or dealing with an entire farm of servers, you really don’t want your (user) interface to change, as it will break your scripts.
 
@@ -43,9 +43,16 @@ alienware-15r4\sajal shrestha
 Each operating systems has a slightly different set of commands while some may share the same, some will differ.
 
 #### Current directory
+*Linux:*
+```bash
+$ pwd
+```
+*PowerShell:*
 
+```powershell
+PS C:\Users> Get-Location
+```
 #### Learn about a command
-
 Many commands you can type at the command prompt have built-in help that you can display and read
 
 *Linux:*
@@ -53,32 +60,49 @@ Many commands you can type at the command prompt have built-in help that you can
 $ man ls
 ```
 *PowerShell:*
+
 ```powershell
 PS C:\Users> Get-Help Get-Location
 ```
 #### List files and directories
+
+*Linux:*
+
 ```bash
 $ ls
 ```
+*PowerShell:*
+
 ```powershell
 dir
 ```
 #### Change current directory
+
+*Linux:*
+
 ```bash
 $ cd /home/
 ```
+*PowerShell:*
+
 ```powershell
 cd c:\Users
 ```
 #### Create directory
+
+*Linux:*
+
 ```bash
 mkdir python
 ```
+*PowerShell:*
+
 ```powershell
 mkdir python
 ```
 #### Create a file
 *Linux:*
+
 ```bash
 $ touch python.txt
 ```
@@ -178,7 +202,7 @@ A conventional Git project will have three main sections:
 
    Sometimes also called as index, stage, or cache, this is a file that stores information about what will go into your upcoming commit. A commit tells Git to save the stage changes.
 
-   Git will take a snapshot of the files and permanently tore them in the Git directory.
+   Git will take a snapshot of the files and permanently store them in the Git directory.
 
 Each file in a Git project will maintain following states:
 
@@ -190,9 +214,13 @@ Each file in a Git project will maintain following states:
 
 git config command will allow us to customize your Git environment. Configuration is stored at three levels:
 
-1. System
-2. User
-3. Project
+1. System (`--system`)
+2. User (`--global`)
+3. Project (`--local`)
+
+`$ git --config --global user.name "SajalShres" `: Update the user's name
+
+`$ git --config --global user.email "sajal.shres@gmail.com"` : Update user's email 
 
 ### Initialize Repositories
 

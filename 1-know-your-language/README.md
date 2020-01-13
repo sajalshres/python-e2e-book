@@ -6,7 +6,7 @@
 - [Before we begin](./before-we-begin.md)
 - [Applying Primer](./python-primer.md)
 - [Control the flow](./flow-control.md)
-- Functions
+- [Functions](./functions.md)
 - [Data Structures](./data-structures.md)
 - [Looping Techniques](./looping-techniques.md)
 - [Modules](./modules.md)
