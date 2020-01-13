@@ -16,7 +16,7 @@ These shells have since evolved to be Windows desktop, Mac OS, and all the touch
 
 But before these shells started looking pretty and graphical, they were just a command line. You would type something in, and you would get a response. They looked like this:
 
-![Monty-Python-Flying-Circus](./Shell.jpg)
+![Shell](./Shell.jpg)
 
 This particular shell is called bash which is short for “Bourne Again SHell” because before that there was the “Bourne Shell” by Stephen Bourne. Never let a software engineer name something that will end up lasting.
 
