@@ -4,7 +4,7 @@ A full stack Python course to build, deploy and operate Python applications.
 
 ## Index
 
-### Know Your Language
+### [Know Your Language](./1-know-your-language/README.md)
 
 - Q & A Session
 - Before we begin
