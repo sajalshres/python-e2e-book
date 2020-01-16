@@ -6,15 +6,15 @@ A full stack Python course to build, deploy and operate Python applications.
 
 ### [Know Your Language](./1-know-your-language/README.md)
 
-- Q & A Session
-- Before we begin
-- Applying Primer
-- Control the Flow
-- Functions
-- Data Structures
-- Looping Techniques
-- Modules
-- Errors and Exception
+- [A Q&A Session](./1-know-your-language/q-&-a.md)
+- [Before we begin](./1-know-your-language/before-we-begin.md)
+- [Applying Primer](./1-know-your-language/python-primer.md)
+- [Control the flow](./1-know-your-language/flow-control.md)
+- [Functions](./1-know-your-language/functions.md)
+- [Data Structures](./1-know-your-language/data-structures.md)
+- [Looping Techniques](./1-know-your-language/looping-techniques.md)
+- [Modules](./1-know-your-language/modules.md)
+- [Errors and Exception](./1-know-your-language/errors-and-exceptions.md)
 - Objects and Classes
 - Package Management with PIP
 - Virtual Environments
