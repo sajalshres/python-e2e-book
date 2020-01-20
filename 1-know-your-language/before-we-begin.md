@@ -218,9 +218,9 @@ git config command will allow us to customize your Git environment. Configuratio
 2. User (`--global`)
 3. Project (`--local`)
 
-`$ git --config --global user.name "SajalShres" `: Update the user's name
+`$ git config --global user.name "SajalShres" `: Update the user's name
 
-`$ git --config --global user.email "sajal.shres@gmail.com"` : Update user's email 
+`$ git config --global user.email "sajal.shres@gmail.com"` : Update user's email 
 
 ### Initialize Repositories
 
