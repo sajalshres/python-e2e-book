@@ -10,8 +10,7 @@
 - [Data Structures](./data-structures.md)
 - [Looping Techniques](./looping-techniques.md)
 - [Modules](./modules.md)
-- [Errors and Exception](./errors-and-exceptions.md)
-- Objects and Classes
+- [Errors and Exception](./errors-and-exception.md)
+- [Objects and Classes](./classes-and-objects.md)
 - Package Management with PIP
 - Virtual Environments
-
