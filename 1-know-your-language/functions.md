@@ -17,8 +17,6 @@ greet(name)
 ```
 
     Hi, Prashant
-    
-
 
 ```python
 def fib(n):    # write Fibonacci series up to n
@@ -34,7 +32,7 @@ fib(2000)
 ```
 
     0 1 1 2 3 5 8 13 21 34 55 89 144 233 377 610 987 1597 
-    
+
 
 Keyword `def` introduces a function definition. It must be followed by the function name and the parenthesized list of parameters. The statements that form the body of the function start at the next line, and must be indented.
 
@@ -55,7 +53,7 @@ f(100)
 ```
 
     0 1 1 2 3 5 8 13 21 34 55 89 
-    
+
 
 Coming from other languages, you might object that fib is not a function but a procedure since it doesn’t return a value. In fact, even functions without a return statement do return a value, albeit a rather boring one. This value is called None (it’s a built-in name). 
 
@@ -65,10 +63,8 @@ fib(0)
 print(fib(0))
 ```
 
-    
-    
     None
-    
+
 
 ## Defining Functions
 It is also possible to define functions with a variable number of arguments. There are three forms, which can be combined
@@ -100,13 +96,7 @@ ask_ok('Do you really want to quit?')
 
     Do you really want to quit?y
     
-
-
-
-
     True
-
-
 
 
 ```python
@@ -115,13 +105,7 @@ ask_ok('OK to overwrite the file?', 2)
 
     OK to overwrite the file?nope
     
-
-
-
-
     False
-
-
 
 
 ```python
@@ -134,13 +118,7 @@ ask_ok('OK to overwrite the file?', 2, 'Come on, only yes or no!')
     Come on, only yes or no!
     OK to overwrite the file?no
     
-
-
-
-
     False
-
-
 
 ### Keyword Arguments
 Functions can also be called using keyword arguments of the form kwarg=value. For instance, the following function:
@@ -164,8 +142,6 @@ parrot(1000)                                          # 1 positional argument
     -- This parrot wouldn't voom if you put 1000 volts through it.
     -- Lovely plumage, the Norwegian Blue
     -- It's a stiff !
-    
-
 
 ```python
 parrot(voltage=1000)                                  # 1 keyword argument
@@ -174,8 +150,6 @@ parrot(voltage=1000)                                  # 1 keyword argument
     -- This parrot wouldn't voom if you put 1000 volts through it.
     -- Lovely plumage, the Norwegian Blue
     -- It's a stiff !
-    
-
 
 ```python
 parrot(voltage=1000000, action='VOOOOOM')             # 2 keyword arguments
@@ -184,8 +158,6 @@ parrot(voltage=1000000, action='VOOOOOM')             # 2 keyword arguments
     -- This parrot wouldn't VOOOOOM if you put 1000000 volts through it.
     -- Lovely plumage, the Norwegian Blue
     -- It's a stiff !
-    
-
 
 ```python
 parrot(action='VOOOOOM', voltage=1000000)             # 2 keyword arguments
@@ -194,8 +166,6 @@ parrot(action='VOOOOOM', voltage=1000000)             # 2 keyword arguments
     -- This parrot wouldn't VOOOOOM if you put 1000000 volts through it.
     -- Lovely plumage, the Norwegian Blue
     -- It's a stiff !
-    
-
 
 ```python
 parrot('a million', 'bereft of life', 'jump')         # 3 positional arguments
@@ -204,8 +174,6 @@ parrot('a million', 'bereft of life', 'jump')         # 3 positional arguments
     -- This parrot wouldn't jump if you put a million volts through it.
     -- Lovely plumage, the Norwegian Blue
     -- It's bereft of life !
-    
-
 
 ```python
 parrot('a thousand', state='pushing up the daisies')  # 1 positional, 1 keyword
@@ -214,13 +182,14 @@ parrot('a thousand', state='pushing up the daisies')  # 1 positional, 1 keyword
     -- This parrot wouldn't voom if you put a thousand volts through it.
     -- Lovely plumage, the Norwegian Blue
     -- It's pushing up the daisies !
-    
 
 but all the following calls would be invalid:
+```python
 parrot()                     # required argument missing
 parrot(voltage=5.0, 'dead')  # non-keyword argument after a keyword argument
 parrot(110, voltage=220)     # duplicate value for the same argument
 parrot(actor='John Cleese')  # unknown keyword argument
+```
 When a final formal parameter of the form `**name` is present, it receives a dictionary (see Mapping Types — dict) containing all keyword arguments except for those corresponding to a formal parameter. This may be combined with a formal parameter of the form `*name` (described in the next subsection) which receives a tuple containing the positional arguments beyond the formal parameter list. (`*name` must occur before `**name`.) For example, if we define a function like this:
 
 
@@ -254,7 +223,7 @@ cheeseshop("Limburger", "It's very runny, sir.",
     shopkeeper : Michael Palin
     client : John Cleese
     sketch : Cheese Shop Sketch
-    
+
 
 ### Special parameters
 By default, arguments may be passed to a Python function either by position or explicitly by keyword. For readability and performance, it makes sense to restrict the way arguments can be passed so that a developer need only look at the function definition to determine if items are passed by position, by position or keyword, or by keyword.
@@ -293,16 +262,12 @@ standard_arg(2)
 ```
 
     2
-    
-
 
 ```python
 standard_arg(arg=2)
 ```
 
     2
-    
-
 
 ```python
 def pos_only_arg(arg, /):
@@ -317,8 +282,6 @@ pos_only_arg(1)
 ```
 
     1
-    
-
 
 ```python
 pos_only_arg(arg=1)
@@ -326,16 +289,14 @@ pos_only_arg(arg=1)
 
 
     ---------------------------------------------------------------------------
-
+    
     TypeError                                 Traceback (most recent call last)
-
+    
     <ipython-input-29-434db44f4ff9> in <module>
     ----> 1 pos_only_arg(arg=1)
-    
+
 
     TypeError: pos_only_arg() got some positional-only arguments passed as keyword arguments: 'arg'
-
-
 
 ```python
 def kwd_only_arg(*, arg):
@@ -351,24 +312,20 @@ kwd_only_arg(3)
 
 
     ---------------------------------------------------------------------------
-
+    
     TypeError                                 Traceback (most recent call last)
-
+    
     <ipython-input-31-896c53ef896c> in <module>
     ----> 1 kwd_only_arg(3)
-    
+
 
     TypeError: kwd_only_arg() takes 0 positional arguments but 1 was given
-
-
 
 ```python
 kwd_only_arg(arg=3)
 ```
 
     3
-    
-
 
 ```python
 def combined_example(pos_only, /, standard, *, kwd_only):
@@ -384,32 +341,26 @@ combined_example(1, 2, 3)
 
 
     ---------------------------------------------------------------------------
-
+    
     TypeError                                 Traceback (most recent call last)
-
+    
     <ipython-input-35-037a05a37207> in <module>
     ----> 1 combined_example(1, 2, 3)
-    
+
 
     TypeError: combined_example() takes 2 positional arguments but 3 were given
-
-
 
 ```python
 combined_example(1, 2, kwd_only=3)
 ```
 
     1 2 3
-    
-
 
 ```python
 combined_example(1, standard=2, kwd_only=3)
 ```
 
     1 2 3
-    
-
 
 ```python
 combined_example(pos_only=1, standard=2, kwd_only=3)
@@ -417,12 +368,12 @@ combined_example(pos_only=1, standard=2, kwd_only=3)
 
 
     ---------------------------------------------------------------------------
-
+    
     TypeError                                 Traceback (most recent call last)
-
+    
     <ipython-input-39-cb7e0b67eae9> in <module>
     ----> 1 combined_example(4, pos_only=1, standard=2, kwd_only=3)
-    
+
 
     TypeError: combined_example() got some positional-only arguments passed as keyword arguments: 'pos_only'
 
@@ -440,11 +391,7 @@ f(0)
 ```
 
 
-
-
     42
-
-
 
 
 ```python
@@ -452,11 +399,7 @@ f(1)
 ```
 
 
-
-
     43
-
-
 
 ## Documentation Strings
 
@@ -475,8 +418,6 @@ print(my_function.__doc__)
     Do nothing, but document it.
     
         No, really, it doesn't do anything.
-        
-    
 
 ## Coding Style
 For Python, PEP 8 has emerged as the style guide that most projects adhere to; it promotes a very readable and eye-pleasing coding style. Every Python developer should read it at some point; here are the most important points extracted for you:
@@ -492,3 +433,5 @@ For Python, PEP 8 has emerged as the style guide that most projects adhere to; i
 * Name your classes and functions consistently; the convention is to use `UpperCamelCase` for classes and lowercase_with_underscores for functions and methods. Always use self as the name for the first method argument
 * Don’t use fancy encodings if your code is meant to be used in international environments. Python’s default, UTF-8, or even plain ASCII work best in any case.
 * Likewise, don’t use non-ASCII characters in identifiers if there is only the slightest chance people speaking a different language will read or maintain the code.
+
+For more details on PEP: [PEP Link](https://www.python.org/dev/peps/)

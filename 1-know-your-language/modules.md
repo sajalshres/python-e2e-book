@@ -227,7 +227,7 @@ do_something():
 
 ### Intra-package imports
 
-In subpackage structure, you can sue absolute imports or relative imports to refer to submodules of siblings packages
+In subpackage structure, you can use absolute imports or relative imports to refer to submodules of siblings packages
 
 #### Absolute Imports
 
