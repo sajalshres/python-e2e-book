@@ -189,6 +189,7 @@ sor_project/			# Top-level package
         __init__.py
         serializers.py
         views.py
+        models.py
         urls.py
     settings/			# Subpackage for settings
         __init__.py
