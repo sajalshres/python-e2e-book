@@ -61,3 +61,8 @@ A full stack Python course to build, deploy and operate Python applications.
 - Viewsets and Routers
 
 ### What Now?
+
+### Miscellaneous
+
+- [Docker](./6-Miscellaneous/docker.md)
+
