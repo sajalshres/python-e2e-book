@@ -63,7 +63,7 @@ An `image` is an executable package that includes everything needed to run an ap
 
 A `container` is a runtime instance of an image--what the image becomes in memory when executed (that is, an image with state, or a user process). You can see a list of your running containers with the command, `docker ps`, just as you would in Linux.
 
-Container Vs. Virtual Machines
+## Container Vs. Virtual Machines
 
 ![Container-VM](./container-vm.png)
 
@@ -71,32 +71,39 @@ A container runs natively on Linux and shares the kernel of the host machine wit
 
 By contrast, a virtual machine (VM) runs a full-blown “guest” operating system with virtual access to host resources through a hypervisor. In general, VMs provide an environment with more resources than most applications need.
 
-## DockerFile
+## `Dockerfile`
 
-DockerFile helps defining a container.
+`Dockerfile` helps defining a container.
 
-Python App Example
+### Python App Example
+
 In the past, if you were to start writing a Python app, your first order of business was to install a Python runtime onto your machine. But, that creates a situation where the environment on your machine needs to be perfect for your app to run as expected, and also needs to match your production environment.
 
 With Docker, you can just grab a portable Python runtime as an image, no installation necessary. Then, your build can include the base Python image right alongside your app code, ensuring that your app, its dependencies, and the runtime, all travel together.
 
-These portable images are defined by something called a Dockerfile.
+These portable images are defined by something called a `Dockerfile`.
 
-Dockerfile defines what goes on in the environment inside your container. Access to resources like networking interfaces and disk drives is virtualized inside this environment, which is isolated from the rest of your system, so you need to map ports to the outside world, and be specific about what files you want to “copy in” to that environment. 
+`Dockerfile` defines what goes on in the environment inside your container. Access to resources like networking interfaces and disk drives is virtualized inside this environment, which is isolated from the rest of your system, so you need to map ports to the outside world, and be specific about what files you want to “copy in” to that environment. 
 
 ```dockerfile
 # Use an official Python runtime as a parent image
 FROM python:3.7-slim
+
 # Set the working directory to /app
 WORKDIR /app
+
 # Copy the current directory contents into the container at /app
 COPY . /app
+
 # Install any needed packages specified in requirements.txt
 RUN pip install --trusted-host pypi.python.org -r requirements.txt
+
 # Make port 80 available to the world outside this container
 EXPOSE 80
+
 # Define environment variable
 ENV NAME World
+
 # Run app.py when the container launches
 CMD ["python", "app.py"]
 ```
@@ -168,3 +175,28 @@ This `docker-compose.yml` file tells Docker to do the following:
 - Map port 4000 on the host to web’s port 80.
 - Instruct web’s containers to share port 80 via a load-balanced network called webnet. (Internally, the containers themselves publish to web’s port 80 at an ephemeral port.)
 - Define the webnet network with the default settings (which is a load-balanced overlay network).
+
+### Exercise:
+
+```bash
+# Build a docker container
+docker build -f sor-api/deployment/Dockerfile -t sajalshres/sor-api:1.0 sor-api/
+
+# List images
+docker images
+docker image list
+
+# Push the container to repository
+docker push sajalshres/sor-api:1.0
+
+# Pull Images
+docker image pull python:3.7
+docker pull python:3.7
+
+# Run a image
+docker run -p 9990:9990/tcp sajalshres/sor-api:1.0 python manage.py runserver 0:9990
+docker run -p 9990:9990/tcp -d sajalshres/sor-api:1.0 python manage.py runserver 0:9990
+docker run -it --privileged sajalshres/sor-api:1.0 bash
+
+```
+
