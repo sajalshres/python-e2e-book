@@ -2,6 +2,5 @@
 .ipynb_checkpoints
 Untitled.ipynb
 Untitled[0-9].ipynb
-# settings.json
 .vscode
-untitled.txt
+*.code-workspace
