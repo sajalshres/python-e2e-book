@@ -16,12 +16,12 @@ A full stack Python course to build, deploy and operate Python applications.
 - [Modules](./1-know-your-language/modules.md)
 - [Errors and Exception](./1-know-your-language/errors-and-exception.md)
 - [Objects and Classes](./1-know-your-language/classes-and-objects.md)
-- Package Management with PIP
-- Virtual Environments
+- [Package Management with PIP](./1-know-your-language/package-management.md)
+- [Virtual Environments](./1-know-your-language/virtual-environment.md)
 
-### Automate: Applying Python in Real Life
+### [Automate: Applying Python in Real Life](./2-automate/README.md)
 
-- Regular Expressions
+- [Regular Expressions](./2-automate/regular-expressions.md)
 - Input and Output
 - Organize Files
 - Time to Debug
@@ -61,3 +61,8 @@ A full stack Python course to build, deploy and operate Python applications.
 - Viewsets and Routers
 
 ### What Now?
+
+### Miscellaneous
+
+- [Docker](./6-Miscellaneous/docker.md)
+

@@ -12,5 +12,5 @@
 - [Modules](./modules.md)
 - [Errors and Exception](./errors-and-exception.md)
 - [Objects and Classes](./classes-and-objects.md)
-- Package Management with PIP
-- Virtual Environments
+- [Package Management with PIP](./package-management.md)
+- [Virtual Environments](./virtual-environment.md)
