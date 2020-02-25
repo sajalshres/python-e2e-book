@@ -19,9 +19,9 @@ A full stack Python course to build, deploy and operate Python applications.
 - [Package Management with PIP](./1-know-your-language/package-management.md)
 - [Virtual Environments](./1-know-your-language/virtual-environment.md)
 
-### Automate: Applying Python in Real Life
+### [Automate: Applying Python in Real Life](./2-automate/README.md)
 
-- Regular Expressions
+- [Regular Expressions](./2-automate/regular-expressions.md)
 - Input and Output
 - Organize Files
 - Time to Debug
