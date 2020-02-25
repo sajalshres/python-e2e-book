@@ -29,13 +29,15 @@ Following example searches for the pattern 'word:' followed by a 3 letter word
 import re
 
 test_string = 'an example word:cat!!'
-match = re.search(r'word:\w\w\w', str)
+match = re.search(r'word:\w\w\w', string)
 
 # If-statement after search() tests if it succeeded
 if match:
   print('found')
 else:
   print('did not find')
+  
+# Output: did not find
 ```
 
 Another example:
@@ -52,6 +54,8 @@ if match:
   print('found')
 else:
   print('did not find')
+  
+# Output: found
 ```
 
 ## Specifying Patterns
