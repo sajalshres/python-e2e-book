@@ -24,9 +24,13 @@ def get_password_strength(password):
     # At least 1 special character
     special_regex = re.compile(r'[@_!#$%^&*()<>?/\|}{~:]+')
     # No whitespace
-    whitespace_regex = re.compile(r'^\s-')
+    whitespace_regex = re.compile(r'\s+')
 
-    if char_regex.findall(password) == []:
+    if whitespace_regex.findall(password):
+        print('{} whitespace found. Password must not include white space'.format(
+            len(whitespace_regex.findall(password))))
+        return False
+    elif char_regex.findall(password) == []:
         print('Password must include atleast 8 characters')
         return False
     elif lower_regex.findall(password) == []:
@@ -40,9 +44,6 @@ def get_password_strength(password):
         return False
     elif special_regex.findall(password) == []:
         print('Password must include atleast 1 special character')
-        return False
-    elif whitespace_regex.findall(password) == []:
-        print('Password must not include white space')
         return False
     else:
         print('Your passowrd is strong, awesome!')

@@ -26,11 +26,21 @@ class Contacts(object):
             contact['last_name'] = args[1]
             contact['sex'] = args[2]
             contact['phone'] = args[3]
-        if kwargs and len(kwargs.keys()) == 4:
+        elif kwargs and len(kwargs.keys()) == 4:
             contact = kwargs
+        else:
+            print('Argument is not in expected format, please try again')
+            return False
         
-        with open(self._database_file, 'a') as writer:
-            writer.write("\n{first_name},{last_name},{sex},{phone}".format(**contact))
+        if not self.get(**contact):
+            with open(self._database_file, 'a') as writer:
+                writer.write("\n{first_name},{last_name},{sex},{phone}".format(**contact))
+                print("Contact created successfully")
+                return True
+        else:
+            print("Contact already found.")
+            return False
+        
 
     def get(self,*args, **kwargs):
         contacts = self.get_database()
@@ -71,7 +81,4 @@ class Contacts(object):
 
     def get_file_content(self):
         with open(self._database_file, 'r') as contacts:
-            return [ contact.rstrip() for contact in contacts]
-
-        
-
+            return [contact.rstrip() for contact in contacts]    
