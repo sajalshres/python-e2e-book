@@ -1,7 +1,7 @@
 # Automate: Apply Python in Real Life
 
 - [Regular Expressions](./regular-expressions.md)
-- Input and Output
+- [Input and Output](./input-output.md)
 - Organize Files
 - Time to Debug
 - Scrape the Web [Queued]

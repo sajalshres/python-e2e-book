@@ -1,0 +1,8 @@
+Atul,Shrestha,Male,9843434323
+Prashant,Paudel,Male,98732423423
+Ram,Kasula,Male,32324324324
+Sajal,Shrestha,Male,9840274974
+Resa,Manandhar,Female,23432423
+Rashmi,Maharjan,Female,2423423423
+Prabin,Kayastha,Male,23423432423
+Bikram,Manandhar,Male,98221312
