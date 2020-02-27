@@ -23,7 +23,7 @@ A full stack Python course to build, deploy and operate Python applications.
 
 - [Regular Expressions](./2-automate/regular-expressions.md)
 - [Input and Output](./2-automate/input-output.md)
-- Organize Files
+- [Organize Files and Directories](./2-automate/organize-files.md)
 - Time to Debug
 - Scrape the Web
 - Spreadsheet Whisperer
