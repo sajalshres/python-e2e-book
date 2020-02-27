@@ -502,19 +502,19 @@ re.compile('(\\d{3}) (\\d{2})')
 
 ## Exercises
 
-- Check that a string contains only a certain set of characters (in this case a-z, a-z and 0-9)
-- Match a string that has an a followed by zero or more b
-- Match a string that has an a followed by 1 or more b
-- Match a string that has an a followed by zero or one b
+- Check that a string contains only a certain set of characters (in this case a-z, A-Z and 0-9)
+- Match a string that has an a followed by zero or more b -> NOW
+- Match a string that has an a followed by 1 or more b -> NOW
+- Match a string that has an a followed by zero or one b -> NOW
 - Match a string that has an a followed by three b
-- Match a string that has an a followed by two to three b
-- Match a string that has an 'a' followed by anything, ending in b
+- Match a string that has an a followed by two to three b -> NOW
+- Match a string that has an 'a' followed by anything, ending in b -> NOW
 - Match a word at the beginning of a string
 - Match a word containing 'z', not at the start or end of the word
-- Check for a number at the end of a string
+- Check for a number at the end of a string 
 - Find the occurrence and position of the substrings within a string.
 - Convert a date of yyyy-mm-dd format to dd-mm-yyyy format
-- Find all words starting with 'a' or 'e' in a given string
+- Find all words starting with 'a' or 'e' in a given string -> NOW
 - Convert camel case string to snake case string
 - Remove all whitespaces from a string
 - Find urls in a string

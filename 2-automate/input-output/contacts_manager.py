@@ -53,7 +53,7 @@ class Contacts(object):
             return False
         elif kwargs:
             return next((contact for contact in contacts if 
-                         all(contact[key] == kwargs[key] for key in kwargs.keys())), False)            
+                         all(contact[key] == kwargs[key] for key in kwargs.keys())), False)
         else:
             return self.get_database()
             
@@ -81,4 +81,4 @@ class Contacts(object):
 
     def get_file_content(self):
         with open(self._database_file, 'r') as contacts:
-            return [contact.rstrip() for contact in contacts]    
+            return [contact.rstrip() for contact in contacts]
