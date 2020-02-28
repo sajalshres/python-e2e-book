@@ -63,10 +63,33 @@ import os
 
 resume_path = r"2-automate\coding-challenges\Resume-{}.md".format(database['personal_info']['name'].title().replace(' ',  ''))
 with open(resume_path, 'w') as f:
-    f.write('# Resume\n')
+    f.write('# Resume\n\n')
     for first_header in database.keys():
         # print(first_header)
         f.writelines(f'## {first_header}\n')
+        if isinstance(database[first_header], dict):
+            for second_header in database[first_header].keys():
+                f.writelines(f'### {second_header}\n')
+        elif isinstance(database[first_header], list):
+            for second_header in database[first_header]:
+                f.writelines(f'### {second_header}\n')
+                for i in second_header:
+                    f.writelines(i)
+                
 
     # f.write('abc')
     
+
+class ResumeGenerator:
+    
+    def __init__(self, *args, **kwargs):
+        self._resume_contents = kwargs
+        print
+
+    def print_personal_info(self):
+        for i in self._resume_contents['personal_info']:
+            print('i')
+
+
+prabin=ResumeGenerator(database.items())
+prabin.print_personal_info()
