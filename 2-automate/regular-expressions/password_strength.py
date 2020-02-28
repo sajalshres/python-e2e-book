@@ -2,6 +2,7 @@
 
 import sys
 import re
+import pdb
 
 def get_password_strength(password):
     """Check strength of a given password

@@ -82,3 +82,5 @@ class Contacts(object):
     def get_file_content(self):
         with open(self._database_file, 'r') as contacts:
             return [contact.rstrip() for contact in contacts]
+
+
