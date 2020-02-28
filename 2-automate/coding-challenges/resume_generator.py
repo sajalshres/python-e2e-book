@@ -59,6 +59,7 @@ database = {
 }
 
 import os
+from pprint import pprint
 
 
 resume_path = r"2-automate\coding-challenges\Resume-{}.md".format(database['personal_info']['name'].title().replace(' ',  ''))
@@ -82,14 +83,29 @@ with open(resume_path, 'w') as f:
 
 class ResumeGenerator:
     
-    def __init__(self, *args, **kwargs):
-        self._resume_contents = kwargs
-        print
+    def __init__(self, database):
+        self._database = database
 
-    def print_personal_info(self):
-        for i in self._resume_contents['personal_info']:
-            print('i')
+    def extract_personal_info(self, **kwargs):
+        text = '# Personal Information\n'
+        pprint(self._database)
+        pprint(self._database['personal_info'])
+        for key, value in kwargs.items():
+            # print('{} : {}'.format(key.title(),value.title()))
+            text = text + '{} : {}'.format(key.title(),value.title()) + '\n'
+        return text
+
+    def extract_objective(self):
+        text = '# Objective\n'
+        # pprint(self._database)
+        pprint(self._database['objective'])
+        text = text + self._database['objective'] +'\n'
+        return text
 
 
-prabin=ResumeGenerator(database.items())
-prabin.print_personal_info()
+if __name__ == '__main__':
+    prabin=ResumeGenerator(database)
+    # print(**database['personal_info'])
+    print(prabin.extract_personal_info(**database['personal_info']))
+    # print(database['objective'])
+    print(prabin.extract_objective())
