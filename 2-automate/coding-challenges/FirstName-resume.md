@@ -1,15 +1,41 @@
 # Resume
-## personal_info
- {'name': 'FirstName LastName', 'location': 'Your Location', 'phone': 'Your phone number', 'email': 'email address'}
-## objective
- Your objective
-## education
- [{'institution': 'University Name', 'location': 'Location', 'year': 1990, 'degree': 'degree name', 'description': 'your grade description'}, {'institution': 'University Name', 'location': 'Location', 'year': 1990, 'degree': 'degree name', 'description': 'your grade description'}]
-## employment
- [{'role': 'role name', 'year': 1990, 'company': 'company name', 'location': 'location', 'description': ['description 1', 'description 2']}, {'role': 'role name', 'year': 1990, 'company': 'company name', 'location': 'location', 'description': ['description 1', 'description 2']}]
-## skills
- ['Sample skills and abilities 1', 'Sample skills and abilities 2']
-## activities
- ['Sample activity 1', 'Sample activity 2']
-## hobbies
- ['Sample hobby 1', 'Sample hobby 2']
+FirstName LastName
+Your Location
+Your phone number
+email address
+
+## Objective
+Your objective
+
+## Education
+#### University Name, Location, 1990
+- degree name
+- your grade description
+
+#### University Name, Location, 1990
+- degree name
+- your grade description
+
+## Employment
+#### Role Name, 1990
+Company Name, Location
+-  description 1
+-  description 2
+
+#### Role Name, 1990
+Company Name, Location
+-  description 1
+-  description 2
+
+## Skills
+-  Sample skills and abilities 1
+-  Sample skills and abilities 2
+
+## Activities
+-  Sample activity 1
+-  Sample activity 2
+
+## Hobbies
+-  Sample hobby 1
+-  Sample hobby 2
+
