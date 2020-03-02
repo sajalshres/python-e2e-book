@@ -91,7 +91,7 @@ class ResumeGenerator:
     def extract_education(self):
         text = '## Education\n'
         for edu in self._database['education']:
-            text = text + '####' + edu['institution'] + ', ' + edu['location'] + ', ' + str(edu['year']) + '\n'
+            text = text + '#### ' + edu['institution'] + ', ' + edu['location'] + ', ' + str(edu['year']) + '\n'
             text = text + '- Completed degree in ' + edu['degree'] + '\n'
             text = text + '- ' + edu['description'] + '\n'
         text = text +'\n'
@@ -100,7 +100,7 @@ class ResumeGenerator:
     def extract_employement(self):
         text = '## Employement Highlights\n'
         for emp in self._database['employment']:
-            text = text + '#### ' + emp['role'] + ', ' + ', ' + str(emp['year']) + '\n'
+            text = text + '#### ' + emp['role'] + ', ' + str(emp['year']) + '\n'
             text = text + emp['company'] + ', ' + emp['location'] + '\n'
             for desc in emp['description']:
                 text = text + '- ' + desc + '\n'
