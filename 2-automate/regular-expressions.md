@@ -470,8 +470,6 @@ Our pattern `(\d{3}) (\d{2})` has two subgroups `(\d{3})` and `(\d{2})`. You can
 ('801', '35')
 ```
 
-------
-
 ### match.start(), match.end() and match.span()
 
 The `start()` function returns the index of the start of the matched substring. Similarly, `end()` returns the end index of the matched substring.
@@ -490,8 +488,6 @@ The `span()` function returns a tuple containing start and end index of the matc
 (2, 8)
 ```
 
-------
-
 ### match.re and match.string
 
 The `re` attribute of a matched object returns a regular expression object. Similarly, `string` attribute returns the passed string.
@@ -503,3 +499,22 @@ re.compile('(\\d{3}) (\\d{2})')
 >>> match.string
 '39801 356, 2102 1111'
 ```
+
+## Exercises
+
+- Check that a string contains only a certain set of characters (in this case a-z, A-Z and 0-9)
+- Match a string that has an a followed by zero or more b -> NOW
+- Match a string that has an a followed by 1 or more b -> NOW
+- Match a string that has an a followed by zero or one b -> NOW
+- Match a string that has an a followed by three b
+- Match a string that has an a followed by two to three b -> NOW
+- Match a string that has an 'a' followed by anything, ending in b -> NOW
+- Match a word at the beginning of a string
+- Match a word containing 'z', not at the start or end of the word
+- Check for a number at the end of a string 
+- Find the occurrence and position of the substrings within a string.
+- Convert a date of yyyy-mm-dd format to dd-mm-yyyy format
+- Find all words starting with 'a' or 'e' in a given string -> NOW
+- Convert camel case string to snake case string
+- Remove all whitespaces from a string
+- Find urls in a string

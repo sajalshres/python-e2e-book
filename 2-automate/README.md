@@ -1,8 +1,8 @@
 # Automate: Apply Python in Real Life
 
 - [Regular Expressions](./regular-expressions.md)
-- Input and Output
-- Organize Files
+- [Input and Output](./input-output.md)
+- [Organize Files and Directories](./organize-files.md)
 - Time to Debug
 - Scrape the Web [Queued]
 - Spreadsheet Whisperer

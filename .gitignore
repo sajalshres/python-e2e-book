@@ -5,3 +5,6 @@ Untitled[0-9].ipynb
 
 .vscode
 *.code-workspace
+
+# Python
+__pycache__
