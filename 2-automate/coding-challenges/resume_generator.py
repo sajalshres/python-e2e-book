@@ -60,18 +60,18 @@ class resume_generator(object):
                 w = self.writeString(w,self._md.getHeader(k1.title(),2))
                 for i in v1:
                     w = self.writeString(w,self._md.getHeader('{institution}, {location}, {year}'.format(institution=i['institution'].title(), location=i['location'].title(), year=str(i['year'])),4))
-                    w = self.writeString(w,self._md.getList([i['degree'],i['description']],'u'))
+                    w = self.writeString(w,self._md.getList([i['degree'],i['description']],False))
                     w = self.writeString(w,'\n')
             elif(k1 == 'employment'):
                 w = self.writeString(w,self._md.getHeader(k1.title(),2))
                 for i in v1:
                     w = self.writeString(w,self._md.getHeader('{role}, {year}'.format(role=i['role'].title(),year=str(i['year'])),4))
                     w = self.writeString(w,'{company}, {location}\n'.format(company=i['company'].title(),location=i['location'].title()))
-                    w = self.writeString(w, self._md.getList(i['description'],'u'))
+                    w = self.writeString(w, self._md.getList(i['description'],False))
                     w = self.writeString(w,'\n')
             else:
                 w = self.writeString(w,self._md.getHeader(k1.title(),2))
-                w = self.writeString(w, self._md.getList(v1,'u'))
+                w = self.writeString(w, self._md.getList(v1,False))
                 w = self.writeString(w,'\n')
         return w
     
