@@ -5,7 +5,6 @@ def get_heading(message, level=1):
 def get_list(list_items, ordered=False):
     """A method to return a markdown list
     """
-    result = ""
     if isinstance(list_items,(list,tuple,set)):
         if not ordered:
             return "\n".join([f"-{item}" for item in list_items])
@@ -14,10 +13,14 @@ def get_list(list_items, ordered=False):
     else:
         print('unexpected list type')
 
-    return result     
-
 def get_paragraph(message):
     return f"{message}\n\n"
+
+def get_paragraphs(messages):
+    if isinstance(messages,(list,tuple,set)):
+        return "\n".join([f"-{message}" for message in messages]) + "\n"
+    else:
+        return f"{messages}\n"
 
 # def generate_resume:
 #     resume = []
@@ -36,7 +39,12 @@ if __name__ == '__main__':
     # print(get_list(["abinay","shakya"]))#getting list
     # print(get_list(["a","b","c"],"ordered"))#getting list
 
-    print(get_paragraph("this is testing"))
+    #print(get_paragraph("this is testing"))
+    print(get_paragraphs("testing"))
+    print(get_paragraphs(("test1","test1","test3")))
+    print(get_paragraphs(["test1","test1","test3"]))
+    print(get_paragraphs({"test1","test1","test3"}))
+
 
 
 
