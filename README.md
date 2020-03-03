@@ -33,6 +33,10 @@ A full stack Python course to build, deploy and operate Python applications.
 - Images
 - GUI Automation
 
+### Coding Challenges
+
+- [Resume Generator](./2-automate/coding-challenges.md)
+
 ### To Web and Beyond
 
 - Understanding Web
