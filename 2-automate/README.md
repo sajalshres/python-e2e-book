@@ -3,7 +3,7 @@
 - [Regular Expressions](./regular-expressions.md)
 - [Input and Output](./input-output.md)
 - [Organize Files and Directories](./organize-files.md)
-- Time to Debug
+- [Time to Debug](./debugging.md)
 - Scrape the Web [Queued]
 - Spreadsheet Whisperer
 - PDF and Word
