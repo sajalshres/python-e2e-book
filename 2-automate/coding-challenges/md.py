@@ -14,5 +14,12 @@ class md(object):
         if isinstance(l,(list, set, tuple)):            
             return "\n".join([f"{i[0]+1}. {i[1]}" if o else f"* {i[1]}" for i in enumerate(l)])
 
-md = md()
-print(md.getList(["a","ab",1],False))
+    def getParagraph(self, message):
+        p =""
+        if isinstance(message,dict):
+            p = "\n".join([f"{i}" for i in message.values()])
+        elif isinstance(message,(list, tuple, set)):
+            p = "\n".join([f"{i}" for i in message])
+        else:
+            p = f"{message}\n\n"
+        return p+"\n"
