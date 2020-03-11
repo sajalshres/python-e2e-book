@@ -7,7 +7,7 @@
 - Scrape the Web [Queued]
 - Spreadsheet Whisperer
 - PDF and Word
-- Manipulating CSV and JSON Data
+- [Manipulating CSV and JSON Data](./csv-json.md)
 - Emails and More [Queued]
 - Images [Queued]
 - GUI Automation [Queued]

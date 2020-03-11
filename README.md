@@ -28,7 +28,7 @@ A full stack Python course to build, deploy and operate Python applications.
 - Scrape the Web
 - Spreadsheet Whisperer
 - PDF and Word
-- Manipulating CSV and JSON Data
+- [Manipulating CSV and JSON Data](./2-automate/csv-json.md)
 - Emails and More
 - Images
 - GUI Automation
