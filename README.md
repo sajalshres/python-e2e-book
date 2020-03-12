@@ -33,10 +33,6 @@ A full stack Python course to build, deploy and operate Python applications.
 - Images
 - GUI Automation
 
-### Coding Challenges
-
-- [Resume Generator](./2-automate/coding-challenges.md)
-
 ### To Web and Beyond
 
 - Understanding Web
@@ -65,6 +61,11 @@ A full stack Python course to build, deploy and operate Python applications.
 - Viewsets and Routers
 
 ### What Now?
+
+### Coding Challenges
+
+- [Resume Generator](./2-automate/coding-challenges/resume-generator.md)
+- [Resume Generator 2](./2-automate/coding-challenges/resume-generator-2.md)
 
 ### Miscellaneous
 

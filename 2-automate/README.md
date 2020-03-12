@@ -12,6 +12,3 @@
 - Images [Queued]
 - GUI Automation [Queued]
 
-### Coding Challenges
-
-- [Resume Generator](./coding-challenges.md)
