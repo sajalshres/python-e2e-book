@@ -24,11 +24,11 @@ A full stack Python course to build, deploy and operate Python applications.
 - [Regular Expressions](./2-automate/regular-expressions.md)
 - [Input and Output](./2-automate/input-output.md)
 - [Organize Files and Directories](./2-automate/organize-files.md)
-- Time to Debug
+- [Time to Debug](./2-automate/debugging.md)
 - Scrape the Web
 - Spreadsheet Whisperer
 - PDF and Word
-- Manipulating CSV and JSON Data
+- [Manipulating CSV and JSON Data](./2-automate/csv-json.md)
 - Emails and More
 - Images
 - GUI Automation
@@ -61,6 +61,11 @@ A full stack Python course to build, deploy and operate Python applications.
 - Viewsets and Routers
 
 ### What Now?
+
+### Coding Challenges
+
+- [Resume Generator](./2-automate/coding-challenges/resume-generator.md)
+- [Resume Generator 2](./2-automate/coding-challenges/resume-generator-2.md)
 
 ### Miscellaneous
 

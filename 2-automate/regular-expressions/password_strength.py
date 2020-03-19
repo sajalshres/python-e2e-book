@@ -14,8 +14,8 @@ def get_password_strength(password):
     boolean
     """
     # Password strength regular expressions
-    # At least 8 characters
-    char_regex = re.compile(r'(\w{8,})')
+    # At least 8 characters (Any non-whitespace character)
+    char_regex = re.compile(r'(\S{8,})')
     # At least 1 lowercase letter
     lower_regex = re.compile(r'[a-z]+')
     # At least 1 uppercase letter

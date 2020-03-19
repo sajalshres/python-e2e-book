@@ -2,7 +2,9 @@
 
 ## Resume Generator
 
-Write a resume generator module that will generate a resume based on a data structure below:
+Write a resume generator module that will generate a resume based on a data structure mentioned below.
+
+The resume generator should read the data structure and generate a resume like [sample-resume.md](./coding-challenges/sample-resume.md). The resume should save in current directory or the desired output directory if mentioned. The output should be in the filename `name-resume.md` 
 
 ```python
 database = {
