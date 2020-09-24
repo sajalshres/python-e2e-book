@@ -3,8 +3,12 @@
 Untitled.ipynb
 Untitled[0-9].ipynb
 
+# VS Code
 .vscode
 *.code-workspace
+
+# Book
+_build
 
 # Python
 __pycache__
