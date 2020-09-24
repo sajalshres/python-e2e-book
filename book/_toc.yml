@@ -1,0 +1,32 @@
+- file: intro
+
+- part: Know Your Language
+  chapters:
+    - file: know-your-language/q-&-a/README.md
+    - file: know-your-language/before-we-begin/README.md
+    - file: know-your-language/apply-primer/README.md
+
+- part: "Automate: Apply Python in Real Life"
+  chapters:
+    - file: automate/regular-expressions/README.md
+
+- part: Web and Beyond
+  chapters:
+    - file: web-and-beyond/README.md
+
+- part: Rest time
+  chapters:
+    - file: rest-time/README.md
+
+- part: Master Your Language
+  chapters:
+    - file: master-your-language/README.md
+
+- part: Coding Challenges
+  chapters:
+    - file: coding-challenges/README.md
+
+- part: Miscellaneous
+  chapters:
+    - file: miscellaneous/docker/README.md
+    - file: miscellaneous/zen-of-python/README.md

@@ -1,4 +1,4 @@
-# Zen of Python'
+# Zen of Python
 
 *The Zen of Python* by Tim Peters are 20 guidelines for the design of the Python language. 
 

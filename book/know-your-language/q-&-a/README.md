@@ -1,4 +1,4 @@
-# A Q&A Session: Python
+# A Q&A Session
 
 ![python-qna](./python-qna.jpg)
 

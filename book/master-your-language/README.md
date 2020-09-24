@@ -1,6 +1,6 @@
 # Master your language
 
-## Index
+**Note:** Coming Soon
 
 - `super()` deep dive
 - Map-Filter-Reduce
