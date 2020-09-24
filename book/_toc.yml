@@ -2,9 +2,18 @@
 
 - part: Know Your Language
   chapters:
-    - file: know-your-language/q-&-a/README.md
+    - file: know-your-language/q-&-a/README.ipynb
     - file: know-your-language/before-we-begin/README.md
     - file: know-your-language/apply-primer/README.md
+    - file: know-your-language/control-the-flow/README.ipynb
+    - file: know-your-language/functions/README.ipynb
+    - file: know-your-language/data-structures/README.ipynb
+    - file: know-your-language/looping-techniques/README.ipynb
+    - file: know-your-language/modules/README.md
+    - file: know-your-language/errors-and-exception/README.ipynb
+    - file: know-your-language/objects-and-classes/README.ipynb
+    - file: know-your-language/package-management/README.ipynb
+    - file: know-your-language/virtual-environments/README.ipynb
 
 - part: Apply Python in Real Life
   chapters:
