@@ -6,7 +6,7 @@
     - file: know-your-language/before-we-begin/README.md
     - file: know-your-language/apply-primer/README.md
 
-- part: "Automate: Apply Python in Real Life"
+- part: Apply Python in Real Life
   chapters:
     - file: automate/regular-expressions/README.md
 
