@@ -1,4 +1,4 @@
-# zData Structures
+# Data Structures
 * Provides structure which can hold data together.
 * Used to store a collection of related data.
 
