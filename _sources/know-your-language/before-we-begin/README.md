@@ -43,138 +43,176 @@ alienware-15r4\sajal shrestha
 Each operating systems has a slightly different set of commands while some may share the same, some will differ.
 
 #### Current directory
-*Linux:*
+
+_Linux:_
+
 ```bash
 $ pwd
 ```
-*PowerShell:*
+
+_PowerShell:_
 
 ```powershell
 PS C:\Users> Get-Location
 ```
+
 #### Learn about a command
+
 Many commands you can type at the command prompt have built-in help that you can display and read
 
-*Linux:*
+_Linux:_
+
 ```bash
 $ man ls
 ```
-*PowerShell:*
+
+_PowerShell:_
 
 ```powershell
 PS C:\Users> Get-Help Get-Location
 ```
+
 #### List files and directories
 
-*Linux:*
+_Linux:_
 
 ```bash
 $ ls
 ```
-*PowerShell:*
+
+_PowerShell:_
 
 ```powershell
 dir
 ```
+
 #### Change current directory
 
-*Linux:*
+_Linux:_
 
 ```bash
 $ cd /home/
 ```
-*PowerShell:*
+
+_PowerShell:_
 
 ```powershell
 cd c:\Users
 ```
+
 #### Create directory
 
-*Linux:*
+_Linux:_
 
 ```bash
 mkdir python
 ```
-*PowerShell:*
+
+_PowerShell:_
 
 ```powershell
 mkdir python
 ```
+
 #### Create a file
-*Linux:*
+
+_Linux:_
 
 ```bash
 $ touch python.txt
 ```
-*PowerShell:*
+
+_PowerShell:_
+
 ```powershell
 PS C:\Users> New-Item -ItemType File -Name python.txt
 ```
+
 #### Copy
-*Linux:*
+
+_Linux:_
+
 ```bash
 $ cp python.txt python_copy.txt
 ```
-*PowerShell:*
+
+_PowerShell:_
 
 ```powershell
 PS C:\Users> Copy-Item python.txt python_copy.txt
 ```
+
 #### Move
-*Linux:*
+
+_Linux:_
 
 ```bash
 $ mv python.txt python_practice/
 ```
-*PowerShell:*
+
+_PowerShell:_
+
 ```powershell
 PS C:\Users> Move-Item python.txt python_practice\
 ```
+
 #### Remove
-*Linux:*
+
+_Linux:_
 
 ```bash
 $ rm python.txt
 $ rm -r python_practice
 ```
-*PowerShell:*
+
+_PowerShell:_
 
 ```powershell
 PS C:\Users> Remove-Item python.txt
 PS C:\Users> Remove-Item python_practice -Recurse
 ```
+
 #### Redirect Output
-*Linux:*
+
+_Linux:_
 
 ```bash
 $ ls > list_directory.txt
 $ ls >> list_directory.txt # Append
 ```
-*PowerShell:*
+
+_PowerShell:_
 
 ```powershell
 PS C:\Users> ls > list_directory.txt
 PS C:\Users> ls >> list_directory.txt # Append
 ```
+
 #### grep Search
-*Linux:*
+
+_Linux:_
+
 ```bash
 $ grep 'pau' names.txt
 ```
-*PowerShell:*
+
+_PowerShell:_
+
 ```powershell
 PS C:\Users> Select-String -Path names.txt -Pattern 'pau'
 ```
+
 #### Pipe command
 
-The `|` command is called a *pipe*. It is used to *pipe*, or transfer, the standard output from the command on its left into the the standard input of the command on its right.
+The `|` command is called a _pipe_. It is used to _pipe_, or transfer, the standard output from the command on its left into the the standard input of the command on its right.
 
-*Linux:*
+_Linux:_
 
 ```bash
 $ echo "Hello World" | wc -w
 ```
-*PowerShell:*
+
+_PowerShell:_
 
 ```powershell
 PS C:\Users> Write-Output "Hello World" | Measure-Object -word
@@ -220,7 +258,7 @@ git config command will allow us to customize your Git environment. Configuratio
 
 `$ git config --global user.name "SajalShres" `: Update the user's name
 
-`$ git config --global user.email "sajal.shres@gmail.com"` : Update user's email 
+`$ git config --global user.email "sajal.shres@gmail.com"` : Update user's email
 
 ### Initialize Repositories
 
@@ -264,7 +302,7 @@ Any commits you make will be made on the branch you’re currently “checked ou
 
 `$ git push` : Uploads all local branch commits to remote repository
 
-`$ git pull` :  Updates your current local working branch with all new commits from the corresponding remote branch. (Combination of `git fetch` and `git merge`)
+`$ git pull` : Updates your current local working branch with all new commits from the corresponding remote branch. (Combination of `git fetch` and `git merge`)
 
 ### Mistakes - That's Nice
 
@@ -272,7 +310,7 @@ Any commits you make will be made on the branch you’re currently “checked ou
 
 `$ git reset --hard [commit]` : Discards all history and changes back to the specified commit
 
-> *Warning:* Changing history can have have hazardous effect.
+> _Warning:_ Changing history can have have hazardous effect.
 
 ### Authenticate with SSH
 
@@ -303,7 +341,7 @@ Any commits you make will be made on the branch you’re currently “checked ou
 
 ## How the Web works
 
-*How the web works* provides a simplified view of what happens when you view a webpage in a web browser on your computer or phone.
+_How the web works_ provides a simplified view of what happens when you view a webpage in a web browser on your computer or phone.
 
 This theory is not essential to writing web code in the short term, but before long you'll really start to benefit from understanding what's happening in the background.
 
@@ -319,7 +357,7 @@ Computers connected to the web are called **clients** and **servers**. A simplif
 In addition,
 
 - **Your internet connection**: Allows you to send and receive data on the web.
-- **TCP/IP**: Transmission Control Protocol and Internet Protocol are communication protocols that define how data should travel across the web. 
+- **TCP/IP**: Transmission Control Protocol and Internet Protocol are communication protocols that define how data should travel across the web.
 - **DNS**: Domain Name Servers are like an address book for websites. When you type a web address in your browser, the browser looks at the DNS to find the website's real address before it can retrieve the website. The browser needs to find out which server the website lives on, so it can send HTTP messages to the right place.
 - **HTTP**: Hypertext Transfer Protocol is an application protocol that defines a language for clients and servers to speak to each other. This is like the language you use to order your goods.
 - **Component files:** A website is made up of many different files, which are like the different parts of the goods you buy from the shop. These files come in two main types:

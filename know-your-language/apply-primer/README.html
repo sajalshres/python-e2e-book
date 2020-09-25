@@ -71,7 +71,7 @@
   <ul class="nav sidenav_l1">
  <li class="toctree-l1">
   <a class="reference internal" href="../../intro.html">
-   Python End-2-End RoadMap
+   Introduction
   </a>
  </li>
 </ul>
@@ -94,16 +94,6 @@
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
    Applying Primer
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="#strings">
-   Strings
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="#lists">
-   Lists
   </a>
  </li>
 </ul>
@@ -241,6 +231,16 @@
    Numbers
   </a>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#strings">
+   Strings
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#lists">
+   Lists
+  </a>
+ </li>
 </ul>
 
         </nav>
@@ -322,9 +322,8 @@ Expression syntax is straightforward: the operators +, -, * and / work just like
 </div>
 <p>This variable should be treated as read-only by the user. Don’t explicitly assign a value to it <code class="docutils literal notranslate"><span class="pre">_</span></code> you would create an independent local variable with the same name masking the built-in variable with its magic behavior.</p>
 </div>
-</div>
 <div class="section" id="strings">
-<h1>Strings<a class="headerlink" href="#strings" title="Permalink to this headline">¶</a></h1>
+<h2>Strings<a class="headerlink" href="#strings" title="Permalink to this headline">¶</a></h2>
 <p>Besides numbers, Python can also manipulate strings, which can be expressed in several ways. They can be enclosed in single quotes (‘…’) or double quotes (“…”) with the same result
 <code class="docutils literal notranslate"><span class="pre">\</span></code> can be used to escape quotes:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="go">&gt;&gt;&gt;&#39;spam eggs&#39;  # single quotes</span>
@@ -464,8 +463,8 @@ Expression syntax is straightforward: the operators +, -, * and / work just like
 <p>+—+—+—+—+—+—+
 | P | y | t | h | o | n |
 +—+—+—+—+—+—+
-0   1   2   3   4   5   6
--6  -5  -4  -3  -2  -1</p>
+0 1 2 3 4 5 6
+-6 -5 -4 -3 -2 -1</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">word</span><span class="p">[</span><span class="mi">42</span><span class="p">]</span>  <span class="c1"># the word only has 6 characters</span>
 <span class="go">---------------------------------------------------------------------------</span>
 
@@ -487,7 +486,7 @@ Expression syntax is straightforward: the operators +, -, * and / work just like
 </div>
 </div>
 <div class="section" id="lists">
-<h1>Lists<a class="headerlink" href="#lists" title="Permalink to this headline">¶</a></h1>
+<h2>Lists<a class="headerlink" href="#lists" title="Permalink to this headline">¶</a></h2>
 <p>Python knows a number of compound data types, used to group together other values. The most versatile is the list, which can be written as a list of comma-separated values (items) between square brackets. Lists might contain items of different types, but usually the items all have the same type.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">squares</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">25</span><span class="p">]</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">squares</span>
@@ -573,6 +572,7 @@ Expression syntax is straightforward: the operators +, -, * and / work just like
 <span class="gp">... </span>	<span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="n">b</span><span class="p">,</span> <span class="n">a</span><span class="o">+</span><span class="n">b</span>
 <span class="go">0,1,1,2,3,5,8,13,</span>
 </pre></div>
+</div>
 </div>
 </div>
 
