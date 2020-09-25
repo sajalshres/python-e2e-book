@@ -36,6 +36,8 @@
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Regular Expressions" href="../../automate/regular-expressions/README.html" />
+    <link rel="prev" title="Package Management in Python (PIP)" href="../package-management/notebook.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="docsearch:language" content="en">
@@ -78,7 +80,7 @@
   Know Your Language
  </span>
 </p>
-<ul class="nav sidenav_l1">
+<ul class="current nav sidenav_l1">
  <li class="toctree-l1">
   <a class="reference internal" href="../before-we-begin/README.html">
    Before We Begin
@@ -164,8 +166,8 @@
    Package Management in Python (PIP)
   </a>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="notebook.html">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
    Virtual Environments
   </a>
  </li>
@@ -276,9 +278,9 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../../_sources/know-your-language/virtual-environments/README.md"><button type="button"
+        <a class="dropdown-buttons" href="../../_sources/know-your-language/virtual-environments/notebook.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
-                data-placement="left">.md</button></a>
+                data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
         <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
             onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
@@ -294,6 +296,28 @@
                     class="fas fa-expand"></i></button></a>
 
         <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/sajalshres/python-e2e-book/master?urlpath=tree/know-your-language/virtual-environments/notebook.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        <a class="colab-button" href="https://colab.research.google.com/github/sajalshres/python-e2e-book/blob/master/know-your-language/virtual-environments/notebook.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+                title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
+                    src="../../_static/images/logo_colab.png"
+                    alt="Interact on Colab">Colab</button></a>
+        
+        
+    </div>
+</div>
 
     </div>
 
@@ -315,8 +339,8 @@
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#but-which-virtual-environments-python-and-the-race-to-virtual-environment">
-   But which virtual environments? (Python and the race to virtual environment)
+  <a class="reference internal nav-link" href="#but-which-virtual-environments">
+   But which virtual environments?
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -333,11 +357,7 @@
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#virtualenv">
-   <code class="docutils literal notranslate">
-    <span class="pre">
-     virtualenv
-    </span>
-   </code>
+   Virtualenv
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
@@ -404,12 +424,12 @@
 <div class="section" id="solution">
 <h2>Solution:<a class="headerlink" href="#solution" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li><p>The solution is to create a virtual environment</p></li>
-<li><p>Virtual environments are self-contained directory that contains a Python installation for a particular version of Python, plus a number of additional packages.</p></li>
+<li><p>The solution for this problem is to create a virtual environment</p></li>
+<li><p>Virtual environments are self-contained directory tree that contains a Python installation for a particular version of Python, plus a number of additional packages.</p></li>
 </ul>
 </div>
-<div class="section" id="but-which-virtual-environments-python-and-the-race-to-virtual-environment">
-<h2>But which virtual environments? (Python and the race to virtual environment)<a class="headerlink" href="#but-which-virtual-environments-python-and-the-race-to-virtual-environment" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="but-which-virtual-environments">
+<h2>But which virtual environments?<a class="headerlink" href="#but-which-virtual-environments" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">virtualenv</span></code> is a very popular tool that creates isolated Python environments for Python libraries. If you’re not familiar with this tool, I highly recommend learning it, as it is a very useful tool, and I’ll be making comparisons to it for the rest of this answer.</p>
 <ul>
@@ -418,11 +438,11 @@
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">pyenv</span></code> is used to isolate Python versions. For example, you may want to test your code against Python 2.6, 2.7, 3.3, 3.4 and 3.5, so you’ll need a way to switch between them. Once activated, it prefixes the PATH environment variable with ~/.pyenv/shims, where there are special files matching the Python commands (python, pip). These are not copies of the Python-shipped commands; they are special scripts that decide on the fly which version of Python to run based on the PYENV_VERSION environment variable, or the .python-version file, or the ~/.pyenv/version file. pyenv also makes the process of downloading and installing multiple Python versions easier, using the command pyenv install.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">pyenv-virtualenv</span></code> is a plugin for pyenv by the same author as pyenv, to allow you to use pyenv and virtualenv at the same time conveniently. However, if you’re using Python 3.3 or later, pyenv-virtualenv will try to run python -m venv if it is available, instead of virtualenv. You can use virtualenv and pyenv together without pyenv-virtualenv, if you don’t want the convenience features.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">virtualenvwrapper</span></code> is a set of extensions to virtualenv. It gives you commands like mkvirtualenv, lssitepackages, and especially workon for switching between different virtualenv directories. This tool is especially useful if you want multiple virtualenv directories.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">virtualenvwrapper</span></code> is a set of extensions to virtualenv (see docs). It gives you commands like mkvirtualenv, lssitepackages, and especially workon for switching between different virtualenv directories. This tool is especially useful if you want multiple virtualenv directories.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">pyenv-virtualenvwrapper</span></code> is a plugin for pyenv by the same author as pyenv, to conveniently integrate virtualenvwrapper into pyenv.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">pipenv</span></code>, by Kenneth Reitz (the author of requests), is the newest project in this list. It aims to combine Pipfile, pip and virtualenv into one command on the command-line. The virtualenv directory typically gets placed in ~/.local/share/virtualenvs/XXX, with XXX being a hash of the path of the project directory. This is different from virtualenv, where the directory is typically in the current working directory.</p></li>
 </ul>
-<p>The Python Packaging Guide recommends pipenv when developing Python applications (as opposed to libraries). There does not seem to be any plans to support venv instead of virtualenv. Confusingly, its command-line option –venv refers to the virtualenv directory, not venv, and similarly, the environment variable PIPENV_VENV_IN_PROJECT affects the location of the virtualenv directory, not venv directory (#1919).</p>
+<p>The Python Packaging Guide recommends pipenv when developing Python applications (as opposed to libraries). There does not seem to be any plans to support venv instead of virtualenv (#15). Confusingly, its command-line option –venv refers to the virtualenv directory, not venv, and similarly, the environment variable PIPENV_VENV_IN_PROJECT affects the location of the virtualenv directory, not venv directory (#1919).</p>
 </div>
 <div class="section" id="standard-library">
 <h2>Standard library:<a class="headerlink" href="#standard-library" title="Permalink to this headline">¶</a></h2>
@@ -433,12 +453,12 @@
 <p><strong>Note</strong>: Most of these tools complement each other. For instance, <code class="docutils literal notranslate"><span class="pre">pipenv</span></code> integrates <code class="docutils literal notranslate"><span class="pre">pip</span></code>, <code class="docutils literal notranslate"><span class="pre">virtualenv</span></code> and even <code class="docutils literal notranslate"><span class="pre">pyenv</span></code> if desired. The only tools that are true alternatives to each other here are <code class="docutils literal notranslate"><span class="pre">venv</span></code> and <code class="docutils literal notranslate"><span class="pre">virtualenv</span></code>.</p>
 <div class="section" id="recommendation-for-beginners">
 <h3>Recommendation for beginners:<a class="headerlink" href="#recommendation-for-beginners" title="Permalink to this headline">¶</a></h3>
-<p>This is my recommendation for beginners (No bias, ahem): start by learning <code class="docutils literal notranslate"><span class="pre">virtualenv</span></code> and <code class="docutils literal notranslate"><span class="pre">pip</span></code>, tools which work with both Python 2 and 3 and in a variety of situations, and pick up the other tools once you start needing them.</p>
+<p>This is my personal recommendation for beginners: start by learning virtualenv and pip, tools which work with both Python 2 and 3 and in a variety of situations, and pick up the other tools once you start needing them.</p>
 </div>
 </div>
 <div class="section" id="virtualenv">
-<h2><code class="docutils literal notranslate"><span class="pre">virtualenv</span></code><a class="headerlink" href="#virtualenv" title="Permalink to this headline">¶</a></h2>
-<p><code class="docutils literal notranslate"><span class="pre">virtualenv</span></code> is a tool to create isolated Python environments. <code class="docutils literal notranslate"><span class="pre">virtualenv</span></code> creates a folder which contains all the necessary executables to use the packages that a Python project would need.</p>
+<h2>Virtualenv<a class="headerlink" href="#virtualenv" title="Permalink to this headline">¶</a></h2>
+<p>virtualenv is a tool to create isolated Python environments. virtualenv creates a folder which contains all the necessary executables to use the packages that a Python project would need.</p>
 <div class="section" id="install-virtualenv">
 <h3>Install <code class="docutils literal notranslate"><span class="pre">virtualenv</span></code><a class="headerlink" href="#install-virtualenv" title="Permalink to this headline">¶</a></h3>
 </div>
@@ -526,6 +546,8 @@ $ virtualenv venv
     
     <div class='prev-next-bottom'>
         
+    <a class='left-prev' id="prev-link" href="../package-management/notebook.html" title="previous page">Package Management in Python (PIP)</a>
+    <a class='right-next' id="next-link" href="../../automate/regular-expressions/README.html" title="next page">Regular Expressions</a>
 
     </div>
     <footer class="footer mt-5 mt-md-0">

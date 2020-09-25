@@ -6,7 +6,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Object Oriented Programmingn (OOP)</title>
+    <title>Object Oriented Programming (OOP)</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
     <link href="../../_static/css/index.css" rel="stylesheet">
     <link rel="stylesheet" href="../../_static/sphinx-book-theme.css" type="text/css" />
@@ -36,6 +36,8 @@
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Package Management in Python (PIP)" href="../package-management/notebook.html" />
+    <link rel="prev" title="Errors and Exceptions" href="../errors-and-exception/notebook.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="docsearch:language" content="en">
@@ -78,7 +80,7 @@
   Know Your Language
  </span>
 </p>
-<ul class="nav sidenav_l1">
+<ul class="current nav sidenav_l1">
  <li class="toctree-l1">
   <a class="reference internal" href="../before-we-begin/README.html">
    Before We Begin
@@ -154,8 +156,8 @@
    Errors and Exceptions
   </a>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="notebook.html">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
    Object Oriented Programming (OOP)
   </a>
  </li>
@@ -276,9 +278,9 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../../_sources/know-your-language/objects-and-classes/README.md"><button type="button"
+        <a class="dropdown-buttons" href="../../_sources/know-your-language/objects-and-classes/notebook.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
-                data-placement="left">.md</button></a>
+                data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
         <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
             onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
@@ -294,6 +296,28 @@
                     class="fas fa-expand"></i></button></a>
 
         <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/sajalshres/python-e2e-book/master?urlpath=tree/know-your-language/objects-and-classes/notebook.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        <a class="colab-button" href="https://colab.research.google.com/github/sajalshres/python-e2e-book/blob/master/know-your-language/objects-and-classes/notebook.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+                title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
+                    src="../../_static/images/logo_colab.png"
+                    alt="Interact on Colab">Colab</button></a>
+        
+        
+    </div>
+</div>
 
     </div>
 
@@ -322,6 +346,16 @@
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#examples">
      Examples:
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#dir-function">
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       dir()
+      </span>
+     </code>
+     function
     </a>
    </li>
   </ul>
@@ -374,8 +408,8 @@
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#instantiate-an-object-s-from-a-class">
-     Instantiate an Object(s) from a Class
+    <a class="reference internal nav-link" href="#intantiate-an-object-s-from-a-class">
+     Intantiate an Object(s) from a Class
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
@@ -404,15 +438,27 @@
     <a class="reference internal nav-link" href="#multiple-inheritance">
      Multiple Inheritance
     </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id1">
+       Syntax:
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#override">
+       Override
+      </a>
+     </li>
+    </ul>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#id1">
-     Syntax:
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#override">
-     Override
+    <a class="reference internal nav-link" href="#super-in-depth">
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       super()
+      </span>
+     </code>
+     in-depth
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
@@ -436,6 +482,16 @@
    Name Mangling
   </a>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#is-python-oops">
+   Is Python OOPs?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercise">
+   Exercise
+  </a>
+ </li>
 </ul>
 
         </nav>
@@ -446,8 +502,8 @@
         
               <div>
                 
-  <div class="section" id="object-oriented-programmingn-oop">
-<h1>Object Oriented Programmingn (OOP)<a class="headerlink" href="#object-oriented-programmingn-oop" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="object-oriented-programming-oop">
+<h1>Object Oriented Programming (OOP)<a class="headerlink" href="#object-oriented-programming-oop" title="Permalink to this headline">¶</a></h1>
 <p>Object-oriented Programming, or OOP, is a programming paradigm which provides a means of structuring programs so that properties(attributes) and behaviors(methods) are bundled into individual objects.</p>
 <p>For example, an object could represent a car with properties like name, color, wheels etc. and with behaviors like accelerate, brake, steer etc. An object could also represent a person with properties like name, age, sex, etc and with behaviours like talking, eating, walking, running etc.</p>
 <p>Another common programming paradigm is procedural programming which structures a program like a recipe in that it provides a set of steps, in the form of functions and code blocks, which flow sequentially in order to complete a task.</p>
@@ -474,7 +530,9 @@
 </div>
 <div class="section" id="examples">
 <h3>Examples:<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h3>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># var1 is in the global namespace </span>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># var1 is in the global namespace </span>
 <span class="n">var1</span> <span class="o">=</span> <span class="mi">5</span>
 <span class="k">def</span> <span class="nf">some_func</span><span class="p">():</span> 
     <span class="c1"># var2 is in the local namespace </span>
@@ -485,7 +543,11 @@
         <span class="n">var3</span> <span class="o">=</span> <span class="mi">7</span>
 </pre></div>
 </div>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">num_of_people</span> <span class="o">=</span> <span class="mi">5</span>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">num_of_people</span> <span class="o">=</span> <span class="mi">5</span>
 
 <span class="k">def</span> <span class="nf">add_people</span><span class="p">():</span> 
     <span class="k">global</span> <span class="n">num_of_people</span> 
@@ -495,8 +557,43 @@
 <span class="n">add_people</span><span class="p">()</span>
 </pre></div>
 </div>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>6
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>6
 </pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="dir-function">
+<h3><code class="docutils literal notranslate"><span class="pre">dir()</span></code> function<a class="headerlink" href="#dir-function" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Without arguments, return the list of names in the current local scope.</p></li>
+<li><p>With an argument, attempt to return a list of valid attributes for that object.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="nb">dir</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;In&#39;, &#39;Out&#39;, &#39;_&#39;, &#39;__&#39;, &#39;___&#39;, &#39;__builtin__&#39;, &#39;__builtins__&#39;, &#39;__doc__&#39;, &#39;__loader__&#39;, &#39;__name__&#39;, &#39;__package__&#39;, &#39;__spec__&#39;, &#39;_dh&#39;, &#39;_i&#39;, &#39;_i1&#39;, &#39;_i2&#39;, &#39;_i3&#39;, &#39;_ih&#39;, &#39;_ii&#39;, &#39;_iii&#39;, &#39;_oh&#39;, &#39;add_people&#39;, &#39;exit&#39;, &#39;get_ipython&#39;, &#39;num_of_people&#39;, &#39;quit&#39;, &#39;some_func&#39;, &#39;var1&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="nb">dir</span><span class="p">(</span><span class="n">add_people</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;__annotations__&#39;, &#39;__call__&#39;, &#39;__class__&#39;, &#39;__closure__&#39;, &#39;__code__&#39;, &#39;__defaults__&#39;, &#39;__delattr__&#39;, &#39;__dict__&#39;, &#39;__dir__&#39;, &#39;__doc__&#39;, &#39;__eq__&#39;, &#39;__format__&#39;, &#39;__ge__&#39;, &#39;__get__&#39;, &#39;__getattribute__&#39;, &#39;__globals__&#39;, &#39;__gt__&#39;, &#39;__hash__&#39;, &#39;__init__&#39;, &#39;__init_subclass__&#39;, &#39;__kwdefaults__&#39;, &#39;__le__&#39;, &#39;__lt__&#39;, &#39;__module__&#39;, &#39;__name__&#39;, &#39;__ne__&#39;, &#39;__new__&#39;, &#39;__qualname__&#39;, &#39;__reduce__&#39;, &#39;__reduce_ex__&#39;, &#39;__repr__&#39;, &#39;__setattr__&#39;, &#39;__sizeof__&#39;, &#39;__str__&#39;, &#39;__subclasshook__&#39;]
+</pre></div>
+</div>
+</div>
 </div>
 </div>
 </div>
@@ -518,7 +615,9 @@
 </div>
 <div class="section" id="example">
 <h3>Example<a class="headerlink" href="#example" title="Permalink to this headline">¶</a></h3>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">some_func</span><span class="p">():</span> 
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">some_func</span><span class="p">():</span> 
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Inside some_func&quot;</span><span class="p">)</span> 
     <span class="k">def</span> <span class="nf">some_inner_func</span><span class="p">():</span> 
         <span class="n">var</span> <span class="o">=</span> <span class="mi">10</span>
@@ -528,32 +627,33 @@
 <span class="n">some_func</span><span class="p">()</span>
 </pre></div>
 </div>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Inside some_func
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Inside some_func
 Inside inner function, value of var: 10
-
-
-
----------------------------------------------------------------------------
-
-NameError                                 Traceback (most recent call last)
-
-&lt;ipython-input-16-5fc192decd15&gt; in &lt;module&gt;
-      6     some_inner_func()
-      7     print(&quot;Try printing var from outer function: &quot;,var)
-----&gt; 8 some_func()
-
-
-&lt;ipython-input-16-5fc192decd15&gt; in some_func()
-      5         print(&quot;Inside inner function, value of var:&quot;,var)
-      6     some_inner_func()
-----&gt; 7     print(&quot;Try printing var from outer function: &quot;,var)
-      8 some_func()
-
-
-NameError: name &#39;var&#39; is not defined
 </pre></div>
 </div>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">a_num</span> <span class="o">=</span> <span class="mi">10</span>
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">5</span><span class="o">-</span><span class="mi">5</span><span class="n">fc192decd15</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">      </span><span class="mi">6</span>     <span class="n">some_inner_func</span><span class="p">()</span>
+<span class="g g-Whitespace">      </span><span class="mi">7</span>     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Try printing var from outer function: &quot;</span><span class="p">,</span><span class="n">var</span><span class="p">)</span>
+<span class="ne">----&gt; </span><span class="mi">8</span> <span class="n">some_func</span><span class="p">()</span>
+
+<span class="nn">&lt;ipython-input-5-5fc192decd15&gt;</span> in <span class="ni">some_func</span><span class="nt">()</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span>         <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Inside inner function, value of var:&quot;</span><span class="p">,</span><span class="n">var</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">6</span>     <span class="n">some_inner_func</span><span class="p">()</span>
+<span class="ne">----&gt; </span><span class="mi">7</span>     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Try printing var from outer function: &quot;</span><span class="p">,</span><span class="n">var</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">8</span> <span class="n">some_func</span><span class="p">()</span>
+
+<span class="ne">NameError</span>: name &#39;var&#39; is not defined
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a_num</span> <span class="o">=</span> <span class="mi">10</span>
 <span class="n">b_num</span> <span class="o">=</span> <span class="mi">11</span>
  
 <span class="k">def</span> <span class="nf">outer_func</span><span class="p">():</span>
@@ -575,7 +675,9 @@ NameError: name &#39;var&#39; is not defined
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;b_num outside all functions :&#39;</span><span class="p">,</span> <span class="n">b_num</span><span class="p">)</span>
 </pre></div>
 </div>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>a_num inside inner_func : 20
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>a_num inside inner_func : 20
 b_num inside inner_func : 21
 a_num inside outer_func : 20
 b_num inside outer_func : 16
@@ -585,12 +687,14 @@ b_num outside all functions : 11
 </div>
 </div>
 </div>
+</div>
+</div>
 <div class="section" id="class-in-python">
 <h2>Class in Python<a class="headerlink" href="#class-in-python" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li><p>User-defined data structure used to define arbitrary information about something.</p></li>
+<li><p>User-defined datastructure used to define arbitrary information about something.</p></li>
 <li><p>For example, a <code class="docutils literal notranslate"><span class="pre">Car()</span></code> class can have properties like name, type etc.</p></li>
-<li><p><strong>Note:</strong> Class is just like a blueprint, it doesn’t hold any state.</p></li>
+<li><p><strong>Note:</strong> Class is just like a blueprint, it doen’t hold any state.</p></li>
 </ul>
 </div>
 <div class="section" id="object-in-python">
@@ -612,9 +716,13 @@ b_num outside all functions : 11
     <span class="o">&lt;</span><span class="n">statement</span><span class="o">-</span><span class="n">N</span><span class="o">&gt;</span>
 </pre></div>
 </div>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">PythonClass</span><span class="p">:</span>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">PythonClass</span><span class="p">:</span>
     <span class="k">pass</span> <span class="c1"># pass is like a place holder where the code will enventually be written.</span>
 </pre></div>
+</div>
+</div>
 </div>
 </div>
 <div class="section" id="instance-attributes">
@@ -624,7 +732,9 @@ b_num outside all functions : 11
 <li><p>Use the <code class="docutils literal notranslate"><span class="pre">__init__()</span></code> method to initialize the object’s initial attributes. (State)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">__init__()</span></code> method must have at least one argument <code class="docutils literal notranslate"><span class="pre">self</span></code>, which refers to object itself.</p></li>
 </ul>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Car</span><span class="p">:</span>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Car</span><span class="p">:</span>
     
     <span class="c1"># Instance Attributes</span>
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">unid</span><span class="p">):</span>
@@ -632,7 +742,9 @@ b_num outside all functions : 11
         <span class="bp">self</span><span class="o">.</span><span class="n">unid</span> <span class="o">=</span> <span class="n">unid</span> 
 </pre></div>
 </div>
-<p><strong>Note</strong>: We never call the <strong>init</strong>() method; it gets automatically called when a new instance is created.</p>
+</div>
+</div>
+<p><strong>Note</strong>: We never call the <strong>init</strong>() method; it gets autmatically called when a new instance is created.</p>
 </div>
 <div class="section" id="class-attributes">
 <h3>Class Attributes<a class="headerlink" href="#class-attributes" title="Permalink to this headline">¶</a></h3>
@@ -640,7 +752,9 @@ b_num outside all functions : 11
 <li><p>Shared by all the instances of the class.</p></li>
 <li><p>Class attributes remain the same for all instances.</p></li>
 </ul>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Car</span><span class="p">:</span>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Car</span><span class="p">:</span>
     
     <span class="c1"># Class Attribute</span>
     <span class="nb">type</span> <span class="o">=</span> <span class="s1">&#39;vehicle&#39;</span>
@@ -652,34 +766,54 @@ b_num outside all functions : 11
 </pre></div>
 </div>
 </div>
-<div class="section" id="instantiate-an-object-s-from-a-class">
-<h3>Instantiate an Object(s) from a Class<a class="headerlink" href="#instantiate-an-object-s-from-a-class" title="Permalink to this headline">¶</a></h3>
+</div>
+</div>
+<div class="section" id="intantiate-an-object-s-from-a-class">
+<h3>Intantiate an Object(s) from a Class<a class="headerlink" href="#intantiate-an-object-s-from-a-class" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p>means creating a new, unique instance of a class</p></li>
 </ul>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Car</span><span class="p">:</span>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Car</span><span class="p">:</span>
     <span class="k">pass</span>
 
 <span class="n">Car</span><span class="p">()</span>
 </pre></div>
 </div>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;__main__.Car at 0x1db880825e0&gt;
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;__main__.Car at 0x1db880825e0&gt;
 </pre></div>
 </div>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">Car</span><span class="p">()</span>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Car</span><span class="p">()</span>
 </pre></div>
 </div>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;__main__.Car at 0x1db88082f40&gt;
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;__main__.Car at 0x1db88082f40&gt;
 </pre></div>
 </div>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">car_A</span> <span class="o">=</span> <span class="n">Car</span><span class="p">()</span>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">car_A</span> <span class="o">=</span> <span class="n">Car</span><span class="p">()</span>
 <span class="n">car_B</span> <span class="o">=</span> <span class="n">Car</span><span class="p">()</span>
 
 <span class="n">car_A</span> <span class="o">==</span> <span class="n">car_B</span>
 </pre></div>
 </div>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>False
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>False
 </pre></div>
+</div>
+</div>
 </div>
 </div>
 <div class="section" id="instance-methods">
@@ -688,7 +822,9 @@ b_num outside all functions : 11
 <li><p>Define inside a class, and can be used to get the content or perform operation on an instance/attributes.</p></li>
 <li><p>Similar to <code class="docutils literal notranslate"><span class="pre">__init__()</span></code> method, they also have <code class="docutils literal notranslate"><span class="pre">self</span></code> variable</p></li>
 </ul>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Car</span><span class="p">:</span>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Car</span><span class="p">:</span>
     
     <span class="c1"># Class Attribute</span>
     <span class="nb">type</span> <span class="o">=</span> <span class="s1">&#39;vehicle&#39;</span>
@@ -714,12 +850,30 @@ b_num outside all functions : 11
 <span class="nb">print</span><span class="p">(</span><span class="n">i20</span><span class="o">.</span><span class="n">honk</span><span class="p">(</span><span class="mi">2</span><span class="p">))</span>
 </pre></div>
 </div>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Car name is i20 and its ID is 1123
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Car name is i20 and its ID is 1123
 Car is honking at level 2
 </pre></div>
 </div>
-<p>Attribute lookup prioritize the instance, when same attribute name occurs. See below:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Person</span><span class="p">:</span>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;My name is </span><span class="si">{name}</span><span class="s2">, and My age is </span><span class="si">{age}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;Sajal&#39;</span><span class="p">,</span> <span class="n">age</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;My name is Sajal, and My age is 10&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p>Attribute lookup priotizes the instance, when same attribute name occurs. See below:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Person</span><span class="p">:</span>
     <span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;Kshitiz Maharjan&#39;</span>
     <span class="n">sex</span> <span class="o">=</span> <span class="s1">&#39;Male&#39;</span>
 
@@ -732,15 +886,21 @@ Car is honking at level 2
 <span class="nb">print</span><span class="p">(</span><span class="n">p1</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="n">p1</span><span class="o">.</span><span class="n">sex</span><span class="p">)</span>
 </pre></div>
 </div>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Kshitiz Maharjan Male
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Kshitiz Maharjan Male
 Kshitiz Maharjan Female
 Kshitiz Maharjan Male
 </pre></div>
 </div>
 </div>
+</div>
+</div>
 <div class="section" id="modify-attributes">
 <h3>Modify Attributes<a class="headerlink" href="#modify-attributes" title="Permalink to this headline">¶</a></h3>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Email</span><span class="p">:</span>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Email</span><span class="p">:</span>
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">is_sent</span> <span class="o">=</span> <span class="kc">False</span>
     
@@ -749,21 +909,36 @@ Kshitiz Maharjan Male
         <span class="bp">self</span><span class="o">.</span><span class="n">is_sent</span> <span class="o">=</span> <span class="kc">True</span>
 </pre></div>
 </div>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">email</span> <span class="o">=</span> <span class="n">Email</span><span class="p">()</span>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">email</span> <span class="o">=</span> <span class="n">Email</span><span class="p">()</span>
 <span class="n">email</span><span class="o">.</span><span class="n">is_sent</span>
 </pre></div>
 </div>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>False
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>False
 </pre></div>
 </div>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">email</span><span class="o">.</span><span class="n">send_email</span><span class="p">(</span><span class="s2">&quot;Ehh Bhaiii, K chhha?&quot;</span><span class="p">)</span>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">email</span><span class="o">.</span><span class="n">send_email</span><span class="p">(</span><span class="s2">&quot;Ehh Bhaiii, K chhha?&quot;</span><span class="p">)</span>
 <span class="n">email</span><span class="o">.</span><span class="n">is_sent</span>
 </pre></div>
 </div>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Sending: Ehh Bhaiii, K chhha?
-
-True
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Sending: Ehh Bhaiii, K chhha?
 </pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+</pre></div>
+</div>
+</div>
 </div>
 </div>
 </div>
@@ -772,7 +947,7 @@ True
 <ul class="simple">
 <li><p>One class takes attributes and methods of another.</p></li>
 <li><p>Child class derived from Parent class</p></li>
-<li><p>Child class override or extend attributes and methods of parent’s class.</p></li>
+<li><p>Child class override or extend attirbutes and methods of parent’s class.</p></li>
 </ul>
 <div class="section" id="syntax">
 <h3>Syntax:<a class="headerlink" href="#syntax" title="Permalink to this headline">¶</a></h3>
@@ -784,7 +959,9 @@ True
     <span class="o">&lt;</span><span class="n">statement</span><span class="o">-</span><span class="n">N</span><span class="o">&gt;</span>
 </pre></div>
 </div>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Car</span><span class="p">:</span>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Car</span><span class="p">:</span>
     
     <span class="c1"># Class attributes</span>
     <span class="nb">type</span> <span class="o">=</span> <span class="s1">&#39;vehicle&#39;</span>
@@ -805,20 +982,30 @@ True
         <span class="k">return</span> <span class="s2">&quot;Car </span><span class="si">%s</span><span class="s2"> zoomed&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
 </pre></div>
 </div>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">i20</span> <span class="o">=</span> <span class="n">Car</span><span class="p">(</span><span class="s1">&#39;i20&#39;</span><span class="p">,</span> <span class="s1">&#39;Hyundai&#39;</span><span class="p">,</span> <span class="mi">2020</span><span class="p">)</span>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">i20</span> <span class="o">=</span> <span class="n">Car</span><span class="p">(</span><span class="s1">&#39;i20&#39;</span><span class="p">,</span> <span class="s1">&#39;Hyundai&#39;</span><span class="p">,</span> <span class="mi">2020</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">i20</span><span class="o">.</span><span class="n">type</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">i20</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">i20</span><span class="o">.</span><span class="n">year</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">i20</span><span class="o">.</span><span class="n">accelerate</span><span class="p">(</span><span class="mi">2</span><span class="p">))</span>
 </pre></div>
 </div>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>vehicle
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>vehicle
 i20
 2020
 Car i20 is acclerating at 2
 </pre></div>
 </div>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">lamborghini</span> <span class="o">=</span> <span class="n">SuperCar</span><span class="p">(</span><span class="s1">&#39;Huracan&#39;</span><span class="p">,</span> <span class="s1">&#39;Lamborghini&#39;</span><span class="p">,</span> <span class="mi">2019</span><span class="p">)</span>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">lamborghini</span> <span class="o">=</span> <span class="n">SuperCar</span><span class="p">(</span><span class="s1">&#39;Huracan&#39;</span><span class="p">,</span> <span class="s1">&#39;Lamborghini&#39;</span><span class="p">,</span> <span class="mi">2019</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">lamborghini</span><span class="o">.</span><span class="n">type</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">lamborghini</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">lamborghini</span><span class="o">.</span><span class="n">year</span><span class="p">)</span>
@@ -826,7 +1013,9 @@ Car i20 is acclerating at 2
 <span class="nb">print</span><span class="p">(</span><span class="n">lamborghini</span><span class="o">.</span><span class="n">zoom</span><span class="p">())</span>
 </pre></div>
 </div>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>vehicle
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>vehicle
 Huracan
 2019
 Car Huracan is acclerating at 10
@@ -834,14 +1023,15 @@ Car Huracan zoomed
 </pre></div>
 </div>
 </div>
+</div>
+</div>
 <div class="section" id="multiple-inheritance">
 <h3>Multiple Inheritance<a class="headerlink" href="#multiple-inheritance" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p>Python also supports multiple inheritance.</p></li>
 </ul>
-</div>
 <div class="section" id="id1">
-<h3>Syntax:<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<h4>Syntax:<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h4>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">DerivedClassName</span><span class="p">(</span><span class="n">Base1</span><span class="p">,</span> <span class="n">Base2</span><span class="p">,</span> <span class="n">Base3</span><span class="p">):</span>
     <span class="o">&lt;</span><span class="n">statement</span><span class="o">-</span><span class="mi">1</span><span class="o">&gt;</span>
     <span class="o">.</span>
@@ -856,12 +1046,14 @@ Car Huracan zoomed
 </ul>
 </div>
 <div class="section" id="override">
-<h3>Override<a class="headerlink" href="#override" title="Permalink to this headline">¶</a></h3>
+<h4>Override<a class="headerlink" href="#override" title="Permalink to this headline">¶</a></h4>
 <ul class="simple">
 <li><p>Child classes can override attributes and methods of parent clasess.</p></li>
 <li><p>See example below:</p></li>
 </ul>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Car</span><span class="p">:</span>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Car</span><span class="p">:</span>
     
     <span class="c1"># Class attributes</span>
     <span class="nb">type</span> <span class="o">=</span> <span class="s1">&#39;vehicle&#39;</span>
@@ -883,19 +1075,28 @@ Car Huracan zoomed
         <span class="k">return</span> <span class="s2">&quot;Car </span><span class="si">%s</span><span class="s2"> zoomed&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
 </pre></div>
 </div>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">i20</span> <span class="o">=</span> <span class="n">Car</span><span class="p">(</span><span class="s1">&#39;i20&#39;</span><span class="p">,</span> <span class="s1">&#39;Hyundai&#39;</span><span class="p">,</span> <span class="mi">2020</span><span class="p">)</span>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">i20</span> <span class="o">=</span> <span class="n">Car</span><span class="p">(</span><span class="s1">&#39;i20&#39;</span><span class="p">,</span> <span class="s1">&#39;Hyundai&#39;</span><span class="p">,</span> <span class="mi">2020</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">i20</span><span class="o">.</span><span class="n">type</span><span class="p">)</span>
 
 <span class="n">lamborghini</span> <span class="o">=</span> <span class="n">SuperCar</span><span class="p">(</span><span class="s1">&#39;Huracan&#39;</span><span class="p">,</span> <span class="s1">&#39;Lamborghini&#39;</span><span class="p">,</span> <span class="mi">2019</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">lamborghini</span><span class="o">.</span><span class="n">type</span><span class="p">)</span>
-
 </pre></div>
 </div>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>vehicle
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>vehicle
 Luxury vehicle
 </pre></div>
 </div>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Car</span><span class="p">:</span>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Car</span><span class="p">:</span>
     
     <span class="c1"># Class attributes</span>
     <span class="nb">type</span> <span class="o">=</span> <span class="s1">&#39;vehicle&#39;</span>
@@ -914,8 +1115,12 @@ Luxury vehicle
 <span class="k">class</span> <span class="nc">SuperCar</span><span class="p">(</span><span class="n">Car</span><span class="p">):</span>
     <span class="nb">type</span> <span class="o">=</span> <span class="s1">&#39;Luxury vehicle&#39;</span>
     
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">manufacturer</span><span class="p">,</span> <span class="n">year</span><span class="p">,</span> <span class="n">hyper</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">manufacturer</span><span class="p">,</span> <span class="n">year</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">hyper</span> <span class="o">=</span> <span class="n">hyper</span>
+    
     <span class="k">def</span> <span class="nf">accelerate</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">speed</span><span class="p">):</span>
-        <span class="k">return</span> <span class="s2">&quot;Car </span><span class="si">%s</span><span class="s2"> is acclerating at </span><span class="si">%d</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="n">speed</span><span class="o">*</span><span class="mi">2</span><span class="p">)</span>
+        <span class="k">return</span> <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">accelerate</span><span class="p">(</span><span class="n">speed</span><span class="o">*</span><span class="mi">2</span><span class="p">)</span>
     
     <span class="k">def</span> <span class="nf">zoom</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">return</span> <span class="s2">&quot;Car </span><span class="si">%s</span><span class="s2"> zoomed&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
@@ -924,51 +1129,88 @@ Luxury vehicle
 <span class="n">i20</span> <span class="o">=</span> <span class="n">Car</span><span class="p">(</span><span class="s1">&#39;i20&#39;</span><span class="p">,</span> <span class="s1">&#39;Hyundai&#39;</span><span class="p">,</span> <span class="mi">2020</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">i20</span><span class="o">.</span><span class="n">accelerate</span><span class="p">(</span><span class="mi">10</span><span class="p">))</span>
 
-<span class="n">lamborghini</span> <span class="o">=</span> <span class="n">SuperCar</span><span class="p">(</span><span class="s1">&#39;Huracan&#39;</span><span class="p">,</span> <span class="s1">&#39;Lamborghini&#39;</span><span class="p">,</span> <span class="mi">2019</span><span class="p">)</span>
+<span class="n">lamborghini</span> <span class="o">=</span> <span class="n">SuperCar</span><span class="p">(</span><span class="s1">&#39;Huracan&#39;</span><span class="p">,</span> <span class="s1">&#39;Lamborghini&#39;</span><span class="p">,</span> <span class="mi">2019</span><span class="p">,</span> <span class="kc">True</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">lamborghini</span><span class="o">.</span><span class="n">accelerate</span><span class="p">(</span><span class="mi">10</span><span class="p">))</span>
 </pre></div>
 </div>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Car i20 is acclerating at 10
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Car i20 is acclerating at 10
 Car Huracan is acclerating at 20
 </pre></div>
 </div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="super-in-depth">
+<h3><code class="docutils literal notranslate"><span class="pre">super()</span></code> in-depth<a class="headerlink" href="#super-in-depth" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>revisit later</p></li>
+</ul>
 </div>
 <div class="section" id="isinstance">
 <h3><code class="docutils literal notranslate"><span class="pre">isinstance()</span></code><a class="headerlink" href="#isinstance" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p>determines if an instance is also an instance of a certain parent class.</p></li>
 </ul>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">isinstance</span><span class="p">(</span><span class="n">lamborghini</span><span class="p">,</span> <span class="n">Car</span><span class="p">)</span>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">isinstance</span><span class="p">(</span><span class="n">lamborghini</span><span class="p">,</span> <span class="n">Car</span><span class="p">)</span>
 </pre></div>
 </div>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>True
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
 </pre></div>
 </div>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">isinstance</span><span class="p">(</span><span class="n">lamborghini</span><span class="p">,</span> <span class="n">SuperCar</span><span class="p">)</span>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">isinstance</span><span class="p">(</span><span class="n">lamborghini</span><span class="p">,</span> <span class="n">SuperCar</span><span class="p">)</span>
 </pre></div>
 </div>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>True
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
 </pre></div>
 </div>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">isinstance</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="nb">int</span><span class="p">)</span>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">isinstance</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="nb">int</span><span class="p">)</span>
 </pre></div>
 </div>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>True
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
 </pre></div>
 </div>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mf">4.2</span>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mf">4.2</span>
 
 <span class="nb">isinstance</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="p">(</span><span class="nb">int</span><span class="p">,</span> <span class="nb">float</span><span class="p">))</span>
 </pre></div>
 </div>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>True
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
 </pre></div>
+</div>
+</div>
 </div>
 </div>
 </div>
 <div class="section" id="private-variables">
 <h2>Private Variables<a class="headerlink" href="#private-variables" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Car</span><span class="p">:</span>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Car</span><span class="p">:</span>
     
     <span class="c1"># Instance Attributes / Initialize</span>
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">manufacturer</span><span class="p">,</span> <span class="n">year</span><span class="p">):</span>
@@ -986,44 +1228,86 @@ Car Huracan is acclerating at 20
         <span class="k">return</span> <span class="s2">&quot;Car </span><span class="si">%s</span><span class="s2"> is acclerating at </span><span class="si">%d</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="n">speed</span><span class="p">)</span>
 </pre></div>
 </div>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">i20</span> <span class="o">=</span> <span class="n">Car</span><span class="p">(</span><span class="s1">&#39;i20&#39;</span><span class="p">,</span> <span class="s1">&#39;Hyundai&#39;</span><span class="p">,</span> <span class="mi">2020</span><span class="p">)</span>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">i20</span> <span class="o">=</span> <span class="n">Car</span><span class="p">(</span><span class="s1">&#39;i20&#39;</span><span class="p">,</span> <span class="s1">&#39;Hyundai&#39;</span><span class="p">,</span> <span class="mi">2020</span><span class="p">)</span>
 <span class="n">i20</span><span class="o">.</span><span class="n">get_type</span><span class="p">()</span>
 </pre></div>
 </div>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>&#39;vehicle&#39;
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;vehicle&#39;
 </pre></div>
 </div>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">i20</span><span class="o">.</span><span class="n">__type</span>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">i20</span><span class="o">.</span><span class="n">__type</span>
 </pre></div>
 </div>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>---------------------------------------------------------------------------
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">AttributeError</span><span class="g g-Whitespace">                            </span>Traceback (most recent call last)
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">37</span><span class="o">-</span><span class="n">e31da153b0a7</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">i20</span><span class="o">.</span><span class="n">__type</span>
 
-AttributeError                            Traceback (most recent call last)
-
-&lt;ipython-input-37-e31da153b0a7&gt; in &lt;module&gt;
-----&gt; 1 i20.__type
-
-
-AttributeError: &#39;Car&#39; object has no attribute &#39;__type&#39;
+<span class="ne">AttributeError</span>: &#39;Car&#39; object has no attribute &#39;__type&#39;
 </pre></div>
 </div>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">i20</span><span class="o">.</span><span class="n">_Car__type</span>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">i20</span><span class="o">.</span><span class="n">_Car__type</span>
 </pre></div>
 </div>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>&#39;vehicle&#39;
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;vehicle&#39;
 </pre></div>
 </div>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">i20</span><span class="o">.</span><span class="n">_num_of_wheels</span>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">i20</span><span class="o">.</span><span class="n">_num_of_wheels</span>
 </pre></div>
 </div>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>4
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4
 </pre></div>
+</div>
+</div>
 </div>
 </div>
 <div class="section" id="name-mangling">
 <h2>Name Mangling<a class="headerlink" href="#name-mangling" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p><strong>Note</strong> : Revisit after automation module.</p></li>
+</ul>
+</div>
+<div class="section" id="is-python-oops">
+<h2>Is Python OOPs?<a class="headerlink" href="#is-python-oops" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Revisit Later</p></li>
+</ul>
+</div>
+<div class="section" id="exercise">
+<h2>Exercise<a class="headerlink" href="#exercise" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Implement pow(x, n) using class</p></li>
+<li><p>Reverse a string word by word: Input: hello world Output: world hello</p></li>
+<li><p>Reverse a string in word by word. Example: Input: hello world Output: dlrow olleh</p></li>
+<li><p>A class named <code class="docutils literal notranslate"><span class="pre">Circle</span></code> constructed by a radius and two methods which will compute the area and the perimeter of a circle.</p></li>
+<li><p>A class which has two methods <code class="docutils literal notranslate"><span class="pre">get_String</span></code> and <code class="docutils literal notranslate"><span class="pre">print_String</span></code>. <code class="docutils literal notranslate"><span class="pre">get_String</span></code> accept a string from the user and <code class="docutils literal notranslate"><span class="pre">print_String</span></code> print the string in upper case</p></li>
+<li><p>Create a <code class="docutils literal notranslate"><span class="pre">Cricle</span></code> class and intialize it with <code class="docutils literal notranslate"><span class="pre">radius</span></code>. Make two methods <code class="docutils literal notranslate"><span class="pre">get_area</span></code> and <code class="docutils literal notranslate"><span class="pre">get_circumference</span></code> inside this class.</p></li>
+<li><p>Create <code class="docutils literal notranslate"><span class="pre">class</span></code> named Shape which has attributes length and breath and a method area, which returns the area of the shape [Assuming area to be length * breath]</p></li>
+<li><p>Create a <code class="docutils literal notranslate"><span class="pre">class</span></code> named <code class="docutils literal notranslate"><span class="pre">Dog</span></code> which has instance attributes <code class="docutils literal notranslate"><span class="pre">name</span></code>, <code class="docutils literal notranslate"><span class="pre">breed</span></code>, <code class="docutils literal notranslate"><span class="pre">life_expectancy</span></code>, <code class="docutils literal notranslate"><span class="pre">origin_place</span></code> and class attribute <code class="docutils literal notranslate"><span class="pre">species</span></code>. Add instance method <code class="docutils literal notranslate"><span class="pre">bark()</span></code>, <code class="docutils literal notranslate"><span class="pre">eat()</span></code>, <code class="docutils literal notranslate"><span class="pre">description()</span></code> methods.</p></li>
 </ul>
 </div>
 </div>
@@ -1056,6 +1340,8 @@ AttributeError: &#39;Car&#39; object has no attribute &#39;__type&#39;
     
     <div class='prev-next-bottom'>
         
+    <a class='left-prev' id="prev-link" href="../errors-and-exception/notebook.html" title="previous page">Errors and Exceptions</a>
+    <a class='right-next' id="next-link" href="../package-management/notebook.html" title="next page">Package Management in Python (PIP)</a>
 
     </div>
     <footer class="footer mt-5 mt-md-0">

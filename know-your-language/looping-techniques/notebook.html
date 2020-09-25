@@ -1,0 +1,946 @@
+
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>How to Loop: Looping Techniques</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
+    <link href="../../_static/css/index.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../_static/sphinx-book-theme.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/language_data.js"></script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/sphinx-book-theme.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Modules" href="../modules/README.html" />
+    <link rel="prev" title="Data Structures" href="../data-structures/notebook.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="docsearch:language" content="en">
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../../index.html">
+  
+  <img src="../../_static/logo.png" class="logo" alt="logo">
+  
+  
+</a>
+</div>
+
+<form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../intro.html">
+   Introduction
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Know Your Language
+ </span>
+</p>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../before-we-begin/README.html">
+   Before We Begin
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../apply-primer/README.html">
+   Applying Primer
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../control-the-flow/notebook.html">
+   Flow Controls
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../functions/notebook.html">
+   Default Argument Values
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../functions/notebook.html#keyword-arguments">
+   Keyword Arguments
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../functions/notebook.html#special-parameters">
+   Special parameters
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../functions/notebook.html#lambda-expressions">
+   Lambda Expressions
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../functions/notebook.html#lambda-calculas">
+   Lambda Calculas
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../functions/notebook.html#documentation-strings">
+   Documentation Strings
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../functions/notebook.html#coding-style">
+   Coding Style
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../data-structures/notebook.html">
+   Data Structures
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../data-structures/notebook.html#practice">
+   Practice:
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   How to Loop: Looping Techniques
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../modules/README.html">
+   Modules
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../errors-and-exception/notebook.html">
+   Errors and Exceptions
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../objects-and-classes/notebook.html">
+   Object Oriented Programming (OOP)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../package-management/notebook.html">
+   Package Management in Python (PIP)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../virtual-environments/notebook.html">
+   Virtual Environments
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Apply Python in Real Life
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../automate/regular-expressions/README.html">
+   Regular Expressions
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Web and Beyond
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../web-and-beyond/README.html">
+   To Web and Beyond
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Rest time
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../rest-time/README.html">
+   Rest Time
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Master Your Language
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../master-your-language/README.html">
+   Master your language
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Miscellaneous
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../miscellaneous/docker/README.html">
+   Docker
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../miscellaneous/zen-of-python/README.html">
+   Zen of Python
+  </a>
+ </li>
+</ul>
+
+</nav>
+
+ <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Compiled by <a href="mailto:sajalshres@gmail.com">Sajal Shrestha</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        <div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../_sources/know-your-language/looping-techniques/notebook.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+    
+</div>
+        <!-- Source interaction buttons -->
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/sajalshres/python-e2e-book/master?urlpath=tree/know-your-language/looping-techniques/notebook.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        <a class="colab-button" href="https://colab.research.google.com/github/sajalshres/python-e2e-book/blob/master/know-your-language/looping-techniques/notebook.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+                title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
+                    src="../../_static/images/logo_colab.png"
+                    alt="Interact on Colab">Colab</button></a>
+        
+        
+    </div>
+</div>
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#lists-and-sequences">
+   Lists and Sequences
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#looping-through-a-sequence">
+     Looping through a sequence
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#loop-through-a-sequence-using-enumerate">
+     Loop through a sequence using
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       enumerate()
+      </span>
+     </code>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#loop-through-a-sequence-in-reverse-using-reversed">
+     Loop through a sequence in reverse using
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       reversed()
+      </span>
+     </code>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#looping-through-multiple-sequences-using-zip">
+     Looping through multiple sequences using
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       zip()
+      </span>
+     </code>
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#dictionaries">
+   Dictionaries
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#looping-though-dictionary-using-items">
+     Looping though dictionary using
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       items()
+      </span>
+     </code>
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#looping-though-dictionary-using-iteritems">
+   Looping though dictionary using
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     iteritems()
+    </span>
+   </code>
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exercise">
+     Exercise
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+        </nav>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="how-to-loop-looping-techniques">
+<h1>How to Loop: Looping Techniques<a class="headerlink" href="#how-to-loop-looping-techniques" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="lists-and-sequences">
+<h2>Lists and Sequences<a class="headerlink" href="#lists-and-sequences" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="looping-through-a-sequence">
+<h3>Looping through a sequence<a class="headerlink" href="#looping-through-a-sequence" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;This&#39;</span><span class="p">,</span> <span class="s1">&#39;class&#39;</span><span class="p">,</span> <span class="s1">&#39;is&#39;</span><span class="p">,</span> <span class="s1">&#39;awesome&#39;</span><span class="p">]:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">item</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>This
+class
+is
+awesome
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="loop-through-a-sequence-using-enumerate">
+<h3>Loop through a sequence using <code class="docutils literal notranslate"><span class="pre">enumerate()</span></code><a class="headerlink" href="#loop-through-a-sequence-using-enumerate" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">enumerate</span><span class="p">([</span><span class="s1">&#39;This&#39;</span><span class="p">,</span> <span class="s1">&#39;class&#39;</span><span class="p">,</span> <span class="s1">&#39;is&#39;</span><span class="p">,</span> <span class="s1">&#39;awesome&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;enumerate at 0x7f39f11de380&gt;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">list</span><span class="p">(</span><span class="nb">enumerate</span><span class="p">([</span><span class="s1">&#39;This&#39;</span><span class="p">,</span> <span class="s1">&#39;class&#39;</span><span class="p">,</span> <span class="s1">&#39;is&#39;</span><span class="p">,</span> <span class="s1">&#39;awesome&#39;</span><span class="p">]))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[(0, &#39;This&#39;), (1, &#39;class&#39;), (2, &#39;is&#39;), (3, &#39;awesome&#39;)]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">list</span><span class="p">(</span><span class="nb">enumerate</span><span class="p">([</span><span class="s1">&#39;This&#39;</span><span class="p">,</span> <span class="s1">&#39;class&#39;</span><span class="p">,</span> <span class="s1">&#39;is&#39;</span><span class="p">,</span> <span class="s1">&#39;awesome&#39;</span><span class="p">],</span> <span class="n">start</span><span class="o">=</span><span class="mi">1</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[(1, &#39;This&#39;), (2, &#39;class&#39;), (3, &#39;is&#39;), (4, &#39;awesome&#39;)]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">iterator</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">([</span><span class="s1">&#39;This&#39;</span><span class="p">,</span> <span class="s1">&#39;class&#39;</span><span class="p">,</span> <span class="s1">&#39;is&#39;</span><span class="p">,</span> <span class="s1">&#39;awesome&#39;</span><span class="p">]):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">iterator</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0 This
+1 class
+2 is
+3 awesome
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="loop-through-a-sequence-in-reverse-using-reversed">
+<h3>Loop through a sequence in reverse using <code class="docutils literal notranslate"><span class="pre">reversed()</span></code><a class="headerlink" href="#loop-through-a-sequence-in-reverse-using-reversed" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="nb">reversed</span><span class="p">([</span><span class="s1">&#39;This&#39;</span><span class="p">,</span> <span class="s1">&#39;class&#39;</span><span class="p">,</span> <span class="s1">&#39;is&#39;</span><span class="p">,</span> <span class="s1">&#39;awesome&#39;</span><span class="p">]):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">item</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>awesome
+is
+class
+This
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="looping-through-multiple-sequences-using-zip">
+<h3>Looping through multiple sequences using <code class="docutils literal notranslate"><span class="pre">zip()</span></code><a class="headerlink" href="#looping-through-multiple-sequences-using-zip" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">questions</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;sex&#39;</span><span class="p">,</span> <span class="s1">&#39;name&#39;</span><span class="p">,</span> <span class="s1">&#39;shape&#39;</span><span class="p">,</span> <span class="s1">&#39;hello&#39;</span><span class="p">]</span>
+<span class="n">answers</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Male&#39;</span><span class="p">,</span> <span class="s1">&#39;Pau&#39;</span><span class="p">,</span> <span class="s1">&#39;Orange in shape&#39;</span><span class="p">]</span>
+
+<span class="k">for</span> <span class="n">question</span><span class="p">,</span> <span class="n">answer</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">questions</span><span class="p">,</span> <span class="n">answers</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;What is your &#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">question</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;?&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;I am &#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">answer</span><span class="p">))</span>
+    <span class="nb">print</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>What is your sex?
+I am Male
+
+What is your name?
+I am Pau
+
+What is your shape?
+I am Orange in shape
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">dict</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="n">questions</span><span class="p">,</span> <span class="n">answers</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;sex&#39;: &#39;Male&#39;, &#39;name&#39;: &#39;Pau&#39;, &#39;shape&#39;: &#39;Orange in shape&#39;}
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="dictionaries">
+<h2>Dictionaries<a class="headerlink" href="#dictionaries" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="looping-though-dictionary-using-items">
+<h3>Looping though dictionary using <code class="docutils literal notranslate"><span class="pre">items()</span></code><a class="headerlink" href="#looping-though-dictionary-using-items" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">contact</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;Ram Kasula&#39;</span><span class="p">:</span> <span class="mi">9840298755</span><span class="p">,</span>
+    <span class="s1">&#39;Anu Pau&#39;</span><span class="p">:</span> <span class="mi">98651201503</span><span class="p">,</span>
+    <span class="s1">&#39;Kade Hade&#39;</span><span class="p">:</span> <span class="mi">9863331239</span>
+<span class="p">}</span>
+
+<span class="k">for</span> <span class="n">name</span><span class="p">,</span> <span class="n">number</span> <span class="ow">in</span> <span class="n">contact</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">number</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Ram Kasula 9840298755
+Anu Pau 98651201503
+Kade Hade 9863331239
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="looping-though-dictionary-using-iteritems">
+<h2>Looping though dictionary using <code class="docutils literal notranslate"><span class="pre">iteritems()</span></code><a class="headerlink" href="#looping-though-dictionary-using-iteritems" title="Permalink to this headline">¶</a></h2>
+<p>This is depreciated in Python 3</p>
+<div class="section" id="exercise">
+<h3>Exercise<a class="headerlink" href="#exercise" title="Permalink to this headline">¶</a></h3>
+<ul>
+<li><p>Print below pattern using nested loop:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">*</span> 
+<span class="o">*</span> <span class="o">*</span> 
+<span class="o">*</span> <span class="o">*</span> <span class="o">*</span> 
+<span class="o">*</span> <span class="o">*</span> <span class="o">*</span> <span class="o">*</span> 
+<span class="o">*</span> <span class="o">*</span> <span class="o">*</span> <span class="o">*</span> <span class="o">*</span> 
+</pre></div>
+</div>
+</li>
+<li><p>Print below pattern:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">1</span>
+<span class="mi">22</span>
+<span class="mi">333</span>
+<span class="mi">4444</span>
+<span class="mi">55555</span>
+<span class="mi">666666</span>
+<span class="mi">7777777</span>
+<span class="mi">88888888</span>
+<span class="mi">999999999</span>
+</pre></div>
+</div>
+</li>
+<li><p>Print below pattern using nested loop:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">*</span> 
+<span class="o">*</span> <span class="o">*</span> 
+<span class="o">*</span> <span class="o">*</span> <span class="o">*</span> 
+<span class="o">*</span> <span class="o">*</span> <span class="o">*</span> <span class="o">*</span> 
+<span class="o">*</span> <span class="o">*</span> <span class="o">*</span> <span class="o">*</span> <span class="o">*</span> 
+<span class="o">*</span> <span class="o">*</span> <span class="o">*</span> <span class="o">*</span> 
+<span class="o">*</span> <span class="o">*</span> <span class="o">*</span> 
+<span class="o">*</span> <span class="o">*</span> 
+<span class="o">*</span>
+</pre></div>
+</div>
+</li>
+<li><p>Print below pattern using loop:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span> <span class="o">*</span>                                                                      
+ <span class="o">*</span>                                                                      
+ <span class="o">*</span>                                                                      
+ <span class="o">*</span>                                                                      
+ <span class="o">*</span>                                                                      
+ <span class="o">*</span>                                                                      
+ <span class="o">*****</span>
+</pre></div>
+</div>
+</li>
+<li><p>Calculate the individual expense by an individual, total expense and payable amount for each member from below data structures using loop:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">expenses</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;Eliza&#39;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s1">&#39;Dahi&#39;</span><span class="p">:</span> <span class="mi">280</span><span class="p">,</span>
+        <span class="s1">&#39;PaniPuri&#39;</span><span class="p">:</span> <span class="mi">120</span><span class="p">,</span>
+        <span class="s1">&#39;Bara&#39;</span><span class="p">:</span> <span class="mi">160</span><span class="p">,</span>
+        <span class="s1">&#39;Kulfi&#39;</span><span class="p">:</span> <span class="mi">200</span><span class="p">,</span>
+        <span class="s1">&#39;Pau&#39;</span><span class="p">:</span> <span class="mi">50</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="s1">&#39;Binay&#39;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s1">&#39;Water&#39;</span><span class="p">:</span> <span class="mi">30</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="s1">&#39;Kshitiz&#39;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s1">&#39;Chocolate&#39;</span><span class="p">:</span> <span class="mi">90</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="s1">&#39;Sajal&#39;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s1">&#39;Coffee&#39;</span><span class="p">:</span><span class="mi">500</span><span class="p">,</span>
+    <span class="p">},</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</li>
+<li><p>Create a dictionary of cubes upto number 10 using loop.</p></li>
+<li><p>Convert the above expenses dictionary keys to list using loop</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">Print below pattern using nested loop:</span>
+
+<span class="sd">  * </span>
+<span class="sd">  * * </span>
+<span class="sd">  * * * </span>
+<span class="sd">  * * * * </span>
+<span class="sd">  * * * * *</span>
+<span class="sd">&#39;&#39;&#39;</span>
+<span class="k">for</span> <span class="n">num</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">6</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;* &#39;</span> <span class="o">*</span> <span class="n">num</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>* 
+* * 
+* * * 
+* * * * 
+* * * * * 
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">Print below pattern:</span>
+
+<span class="sd">  1</span>
+<span class="sd">  22</span>
+<span class="sd">  333</span>
+<span class="sd">  4444</span>
+<span class="sd">  55555</span>
+<span class="sd">  666666</span>
+<span class="sd">  7777777</span>
+<span class="sd">  88888888</span>
+<span class="sd">  999999999</span>
+<span class="sd">&#39;&#39;&#39;</span>
+<span class="k">for</span> <span class="n">num</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">10</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">num</span><span class="p">)</span> <span class="o">*</span> <span class="n">num</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1
+22
+333
+4444
+55555
+666666
+7777777
+88888888
+999999999
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">Print below pattern using nested loop:</span>
+
+<span class="sd">  * </span>
+<span class="sd">  * * </span>
+<span class="sd">  * * * </span>
+<span class="sd">  * * * * </span>
+<span class="sd">  * * * * * </span>
+<span class="sd">  * * * * </span>
+<span class="sd">  * * * </span>
+<span class="sd">  * * </span>
+<span class="sd">  *</span>
+<span class="sd">&#39;&#39;&#39;</span>
+<span class="n">maxStar</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">maxStar</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;* &#39;</span> <span class="o">*</span> <span class="n">i</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">maxStar</span> <span class="o">-</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;* &#39;</span> <span class="o">*</span> <span class="n">i</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>* 
+* * 
+* * * 
+* * * * 
+* * * * * 
+* * * * 
+* * * 
+* * 
+* 
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">Print below pattern using loop:</span>
+
+<span class="sd">   *                                                                      </span>
+<span class="sd">   *                                                                      </span>
+<span class="sd">   *                                                                      </span>
+<span class="sd">   *                                                                      </span>
+<span class="sd">   *                                                                      </span>
+<span class="sd">   *                                                                      </span>
+<span class="sd">   *****</span>
+<span class="sd">&#39;&#39;&#39;</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">8</span><span class="p">):</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">i</span> <span class="o">==</span> <span class="nb">max</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">8</span><span class="p">))):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;*&#39;</span> <span class="o">*</span> <span class="mi">5</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;*&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>*
+*
+*
+*
+*
+*
+*****
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">Calculate the individual expense by an individual, total expense and payable amount for each member from below data structures using loop:</span>
+
+<span class="sd">  expenses = {</span>
+<span class="sd">      &#39;Eliza&#39;: {</span>
+<span class="sd">          &#39;Dahi&#39;: 280,</span>
+<span class="sd">          &#39;PaniPuri&#39;: 120,</span>
+<span class="sd">          &#39;Bara&#39;: 160,</span>
+<span class="sd">          &#39;Kulfi&#39;: 200,</span>
+<span class="sd">          &#39;Pau&#39;: 50,</span>
+<span class="sd">      },</span>
+<span class="sd">      &#39;Binay&#39;: {</span>
+<span class="sd">          &#39;Water&#39;: 30,</span>
+<span class="sd">      },</span>
+<span class="sd">      &#39;Kshitiz&#39;: {</span>
+<span class="sd">          &#39;Chocolate&#39;: 90,</span>
+<span class="sd">      },</span>
+<span class="sd">      &#39;Sajal&#39;: {</span>
+<span class="sd">          &#39;Coffee&#39;:500,</span>
+<span class="sd">      },</span>
+<span class="sd">  }</span>
+<span class="sd">&#39;&#39;&#39;</span>
+<span class="n">expenses</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="s1">&#39;Eliza&#39;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="s1">&#39;Dahi&#39;</span><span class="p">:</span> <span class="mi">280</span><span class="p">,</span>
+      <span class="s1">&#39;PaniPuri&#39;</span><span class="p">:</span> <span class="mi">120</span><span class="p">,</span>
+      <span class="s1">&#39;Bara&#39;</span><span class="p">:</span> <span class="mi">160</span><span class="p">,</span>
+      <span class="s1">&#39;Kulfi&#39;</span><span class="p">:</span> <span class="mi">200</span><span class="p">,</span>
+      <span class="s1">&#39;Pau&#39;</span><span class="p">:</span> <span class="mi">50</span><span class="p">,</span>
+  <span class="p">},</span>
+  <span class="s1">&#39;Binay&#39;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="s1">&#39;Water&#39;</span><span class="p">:</span> <span class="mi">30</span><span class="p">,</span>
+  <span class="p">},</span>
+  <span class="s1">&#39;Kshitiz&#39;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="s1">&#39;Chocolate&#39;</span><span class="p">:</span> <span class="mi">90</span><span class="p">,</span>
+  <span class="p">},</span>
+  <span class="s1">&#39;Sajal&#39;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="s1">&#39;Coffee&#39;</span><span class="p">:</span><span class="mi">500</span><span class="p">,</span>
+  <span class="p">},</span>
+<span class="p">}</span>
+
+<span class="n">total_expense</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">indvExpense</span> <span class="o">=</span> <span class="p">{}</span>
+
+<span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">expenses</span><span class="p">:</span>
+    <span class="n">indvExpense</span><span class="p">[</span><span class="n">item</span><span class="p">]</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">expenses</span><span class="p">[</span><span class="n">item</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Individual expense : &#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">indvExpense</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Total expense :&#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="nb">sum</span><span class="p">(</span><span class="n">indvExpense</span><span class="o">.</span><span class="n">values</span><span class="p">())))</span>
+<span class="n">payableAmount</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">indvExpense</span><span class="o">.</span><span class="n">values</span><span class="p">())</span><span class="o">/</span><span class="nb">len</span><span class="p">(</span><span class="n">indvExpense</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Payable Amount : &#39;</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">indvExpense</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">item</span> <span class="o">+</span> <span class="s1">&#39;-&gt;&#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">indvExpense</span><span class="p">[</span><span class="n">item</span><span class="p">]</span><span class="o">-</span><span class="n">payableAmount</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Individual expense : {&#39;Eliza&#39;: 810, &#39;Binay&#39;: 30, &#39;Kshitiz&#39;: 90, &#39;Sajal&#39;: 500}
+Total expense :1430
+Payable Amount : 
+Eliza-&gt;452.5
+Binay-&gt;-327.5
+Kshitiz-&gt;-267.5
+Sajal-&gt;142.5
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Create a dictionary of cubes upto number 10 using loop.</span>
+<span class="n">dictCubes</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">11</span><span class="p">):</span>
+    <span class="n">dictCubes</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">=</span><span class="n">i</span><span class="o">**</span><span class="mi">3</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">dictCubes</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{1: 1, 2: 8, 3: 27, 4: 64, 5: 125, 6: 216, 7: 343, 8: 512, 9: 729, 10: 1000}
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Convert the above expenses dictionary keys to list using loop</span>
+<span class="n">listKeys</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">expenses</span><span class="p">:</span>
+    <span class="n">listKeys</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">item</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">listKeys</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;Eliza&#39;, &#39;Binay&#39;, &#39;Kshitiz&#39;, &#39;Sajal&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./know-your-language/looping-techniques"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="../data-structures/notebook.html" title="previous page">Data Structures</a>
+    <a class='right-next' id="next-link" href="../modules/README.html" title="next page">Modules</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Sajal N. Shrestha<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    <script src="../../_static/js/index.js"></script>
+    
+  </body>
+</html>

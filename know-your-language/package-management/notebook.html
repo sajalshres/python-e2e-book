@@ -1,0 +1,1165 @@
+
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Package Management in Python (PIP)</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
+    <link href="../../_static/css/index.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../_static/sphinx-book-theme.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/language_data.js"></script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/sphinx-book-theme.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Virtual Environments" href="../virtual-environments/notebook.html" />
+    <link rel="prev" title="Object Oriented Programming (OOP)" href="../objects-and-classes/notebook.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="docsearch:language" content="en">
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../../index.html">
+  
+  <img src="../../_static/logo.png" class="logo" alt="logo">
+  
+  
+</a>
+</div>
+
+<form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../intro.html">
+   Introduction
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Know Your Language
+ </span>
+</p>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../before-we-begin/README.html">
+   Before We Begin
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../apply-primer/README.html">
+   Applying Primer
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../control-the-flow/notebook.html">
+   Flow Controls
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../functions/notebook.html">
+   Default Argument Values
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../functions/notebook.html#keyword-arguments">
+   Keyword Arguments
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../functions/notebook.html#special-parameters">
+   Special parameters
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../functions/notebook.html#lambda-expressions">
+   Lambda Expressions
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../functions/notebook.html#lambda-calculas">
+   Lambda Calculas
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../functions/notebook.html#documentation-strings">
+   Documentation Strings
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../functions/notebook.html#coding-style">
+   Coding Style
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../data-structures/notebook.html">
+   Data Structures
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../data-structures/notebook.html#practice">
+   Practice:
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../looping-techniques/notebook.html">
+   How to Loop: Looping Techniques
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../modules/README.html">
+   Modules
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../errors-and-exception/notebook.html">
+   Errors and Exceptions
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../objects-and-classes/notebook.html">
+   Object Oriented Programming (OOP)
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Package Management in Python (PIP)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../virtual-environments/notebook.html">
+   Virtual Environments
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Apply Python in Real Life
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../automate/regular-expressions/README.html">
+   Regular Expressions
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Web and Beyond
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../web-and-beyond/README.html">
+   To Web and Beyond
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Rest time
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../rest-time/README.html">
+   Rest Time
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Master Your Language
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../master-your-language/README.html">
+   Master your language
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Miscellaneous
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../miscellaneous/docker/README.html">
+   Docker
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../miscellaneous/zen-of-python/README.html">
+   Zen of Python
+  </a>
+ </li>
+</ul>
+
+</nav>
+
+ <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Compiled by <a href="mailto:sajalshres@gmail.com">Sajal Shrestha</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        <div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../_sources/know-your-language/package-management/notebook.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+    
+</div>
+        <!-- Source interaction buttons -->
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/sajalshres/python-e2e-book/master?urlpath=tree/know-your-language/package-management/notebook.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        <a class="colab-button" href="https://colab.research.google.com/github/sajalshres/python-e2e-book/blob/master/know-your-language/package-management/notebook.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+                title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
+                    src="../../_static/images/logo_colab.png"
+                    alt="Interact on Colab">Colab</button></a>
+        
+        
+    </div>
+</div>
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#the-basics">
+   The Basics
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#search-packages">
+     Search Packages
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#install-packages">
+     Install Packages
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#specify-version">
+       Specify version
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#upgrade-packages">
+     Upgrade Packages
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#remove-packages">
+     Remove Packages
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#display-package-information">
+     Display Package information
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#list-packages">
+     List Packages
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#freeze-packages">
+     Freeze Packages
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+        </nav>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="package-management-in-python-pip">
+<h1>Package Management in Python (PIP)<a class="headerlink" href="#package-management-in-python-pip" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li><p>You can install, upgrade, and remove packages using a program called pip.</p></li>
+<li><p>By default pip will install packages from the Python Package Index, <a class="reference external" href="https://pypi.org">https://pypi.org</a></p></li>
+<li><p>Similar to linux repository(YUM, APT), NPM for Node.js, etc</p></li>
+<li><p>Python actually has another, more primitive, package manager called <code class="docutils literal notranslate"><span class="pre">easy_install</span></code>, which is installed automatically when you install Python itself.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pip</span></code> is vastly superior to easy_install for lots of reasons, and so should generally be used instead.</p></li>
+</ul>
+<div class="section" id="the-basics">
+<h2>The Basics<a class="headerlink" href="#the-basics" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="search-packages">
+<h3>Search Packages<a class="headerlink" href="#search-packages" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>You can browse the Python Package Index by going to it in your web browser, or you can use pip’s limited search feature:</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">search</span> <span class="n">django</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>django-bagou (0.1.0)              - Django Websocket for Django
+django-maro (0.0.2)               - `django-maro` is utility for django.
+django-jackal (2.2.1)             - Boilerplate for Django and Django REST
+                                    Framework
+django-umanage (1.1.1)            - Django user management app for django
+django-mailwhimp (0.1)            - django-mailwhimp integrates mailchimp into
+                                    Django
+django-hooked (0.2.6)             - WebHooks for Django and Django Rest
+                                    Framework.
+django-ide (0.0.5)                - A Django app to develop Django apps
+django-six (1.0.4)                - Django-six &amp;#8212;&amp;#8212; Django
+                                    Compatibility Library
+django-polyfield (0.1.0)          - Django Polyfield
+django-poll (0.3.1)               - Django Poll
+django-sekizai (2.0.0)            - Django Sekizai
+django-localcrawler (0.1.1)       - django-localcrawler
+django-sendcloud2 (0.2.1)         - sendcloud2 for django
+django-sape (0.2.4)               - Django + sape.ru.
+django-micro (1.8.0)              - Django as a microframework
+django-callback (0.6.1)           - Django Callback
+django-tcms (0.1.11)              - Django tCMS.
+django-mariposa (0.1)             - django-mariposa
+django-alive (1.1.0)              - Healtchecks for Django
+django-alipay2 (0.13.3)           - alipay for django
+django-groot (0.1.1)              - Django Groot
+django-sae (0.2.1)                - for django in sae
+django-uri (1.0.5)                - Django URI
+django-glitter (0.2.10)           - Glitter for Django
+django-esutils (0.3)              - Django Esutils.
+django-docviewer (0.4)            - documentcloud for django
+django-profiling (0.1)            - Django Profiling
+django-keychain (0.0.1)           - Django Keychain
+django-purls (0.3)                - django-purls
+django-templates (0.0.13)         - Django Templates
+slow-django (1.1.0)               - Django, but slower
+django-edumetadata (0.7)          - django-edumetadata
+django-sendgrid (1.0.1)           - django-sendgrid
+django-mesh (0.1.0)               - A Django blog.
+django-restframework (0.0.1)      - django-restframework
+django-mailformer (0.0.1)         - Django Mailformer
+django-alerts (0.5.1)             - Django alerts
+django-moat (0.1.1)               - django-moat
+django-masquerade (1.3)           - django-masquerade
+django-projectname (1.0.0)        - django projectname
+django-narrative (0.5.9)          - Django narrative
+django-nextpage (1.0.2)           - django-nextpage
+django-coffee (0.0.4)             - Django Coffee
+django-icons (2.1.1)              - Icons for Django
+django-flow (1.0.3)               - Django flow
+django-paypal2 (1.0.2)            - paypal for django
+django-progress (1.0.4)           - Django Progress
+django-pagebase (0.4.1)           - Pages for Django
+django-extensions (3.0.9)         - Extensions for Django
+django-subcommands (2020.7.1)     - Django subcommands
+diy-django (1.3.1)                - diy-django
+django-datahooks (0.0.1)          - Django datahooks
+django-thumbnail (11.13)          - Thumbnailing in Django
+django-stopwatch (0.2)            - Django Stopwatch
+django-jsonschema2 (0.2.1)        - Django JSONSchema
+django-classified (0.9)           - Django Classified
+django-mako (0.1.3)               - Django Mako
+django-pipstatus (0.1.3)          - Django pipstatus
+django-more (0.2.6)               - Django with more
+django-wysiwyg (0.8.0)            - django-wysiwyg
+django-bitfield (2.0.1)           - BitField in Django
+django-userproperty (1.0.8)       - django userproperty
+django-plugins (0.3.0)            - django-plugins.
+django-formfield (0.4)            - django-formfield
+django-handlebars (0.1)           - Handlebars for Django
+django-funserver (1.0)            - FUNserver for Django
+django-concepts (0.7.2)           - django-concepts
+django-events (0.1)               - django-events
+django-vouchers (0.6)             - Vouchers in Django
+django-unixdatetimefield (1.2.0)  - UnixDateTimeField in Django
+django-microblogging (0.1.2)      - django-microblogging
+django-paginate (0.3.1)           - Django Paginate
+sense-django (0.2.26)             - sense django
+django-templatecomponents (0.03)  - django-templatecomponents
+django-ismobile (1.0.2)           - Middleware for Django.
+django-cepfield (0.3.1)           - Django CepField
+django-apscheduler (0.4.2)        - APScheduler for Django
+django-pinba (1.3.0)              - django pinba
+django-layui (0.0.1)              - django-layui
+django-crudviewset (0.1.2)        - Django CRUDViewSet
+django-listings (0.1)             - django-listings
+django-optionsfield (0.2)         - django-optionsfield
+django-utils (0.0.2)              - Utilities for Django
+Django-Util (0.0.4)               - Django Utililies
+django-acserv (0.6.1)             - acserv for django
+django-pagination (1.0.7)         - django-pagination
+django-chess (0.2.1)              - Django Chess
+django-freebase (0.1dev)          - Freebasing in Django.
+django-collage (1.0.1)            - django collages
+django-stachoutils (3.2.3)        - Commons for Django
+django-intenumfield (1.4.0)       - An IntEnumField for Django
+django-djikiki (1.1)              - A django wiki
+django-user (0.2.1)               - Django User
+django-uuidfield (0.5.0)          - UUIDField in Django
+django-jwt (1.0.0)                - JWT implementation for Django and Django
+                                    Rest Framework
+django-bananas (1.5.5)            - Django Bananas - Django extensions the
+                                    monkey way
+django-auxilium (0.1.4)           - Django utility app to help in Django
+                                    development
+django-simplemde (0.1.3)          - django-simplemde is a WYSIWYG markdown
+                                    editor for Django
+django-rosetta (0.9.4)            - A Django application that eases the
+                                    translation of Django projects
+django-ripple (0.3.2)             - Django-React-Bootstrap Framework Django
+                                    Component
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Note: you may need to restart the kernel to use updated packages.
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="install-packages">
+<h3>Install Packages<a class="headerlink" href="#install-packages" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Install the latest version of a package by specifying a package’s name:</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">requests</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: requests in /opt/hostedtoolcache/Python/3.8.5/x64/lib/python3.8/site-packages (2.24.0)
+Requirement already satisfied: chardet&lt;4,&gt;=3.0.2 in /opt/hostedtoolcache/Python/3.8.5/x64/lib/python3.8/site-packages (from requests) (3.0.4)
+Requirement already satisfied: certifi&gt;=2017.4.17 in /opt/hostedtoolcache/Python/3.8.5/x64/lib/python3.8/site-packages (from requests) (2020.6.20)
+Requirement already satisfied: idna&lt;3,&gt;=2.5 in /opt/hostedtoolcache/Python/3.8.5/x64/lib/python3.8/site-packages (from requests) (2.10)
+Requirement already satisfied: urllib3!=1.25.0,!=1.25.1,&lt;1.26,&gt;=1.21.1 in /opt/hostedtoolcache/Python/3.8.5/x64/lib/python3.8/site-packages (from requests) (1.25.10)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Note: you may need to restart the kernel to use updated packages.
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="specify-version">
+<h4>Specify version<a class="headerlink" href="#specify-version" title="Permalink to this headline">¶</a></h4>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">requests</span><span class="o">==</span><span class="mf">2.6</span><span class="o">.</span><span class="mi">0</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting requests==2.6.0
+  Downloading requests-2.6.0-py2.py3-none-any.whl (469 kB)
+?25l
+     |▊                               | 10 kB 33.4 MB/s eta 0:00:01
+     |█▍                              | 20 kB 38.4 MB/s eta 0:00:01
+     |██                              | 30 kB 44.4 MB/s eta 0:00:01
+     |██▉                             | 40 kB 28.9 MB/s eta 0:00:01
+     |███▌                            | 51 kB 31.8 MB/s eta 0:00:01
+     |████▏                           | 61 kB 19.8 MB/s eta 0:00:01
+     |████▉                           | 71 kB 21.9 MB/s eta 0:00:01
+     |█████▋                          | 81 kB 20.0 MB/s eta 0:00:01
+     |██████▎                         | 92 kB 17.9 MB/s eta 0:00:01
+     |███████                         | 102 kB 17.2 MB/s eta 0:00:01
+     |███████▊                        | 112 kB 17.2 MB/s eta 0:00:01
+     |████████▍                       | 122 kB 17.2 MB/s eta 0:00:01
+     |█████████                       | 133 kB 17.2 MB/s eta 0:00:01
+     |█████████▊                      | 143 kB 17.2 MB/s eta 0:00:01
+     |██████████▌                     | 153 kB 17.2 MB/s eta 0:00:01
+     |███████████▏                    | 163 kB 17.2 MB/s eta 0:00:01
+     |███████████▉                    | 174 kB 17.2 MB/s eta 0:00:01
+     |████████████▌                   | 184 kB 17.2 MB/s eta 0:00:01
+     |█████████████▎                  | 194 kB 17.2 MB/s eta 0:00:01
+     |██████████████                  | 204 kB 17.2 MB/s eta 0:00:01
+     |██████████████▋                 | 215 kB 17.2 MB/s eta 0:00:01
+     |███████████████▍                | 225 kB 17.2 MB/s eta 0:00:01
+     |████████████████                | 235 kB 17.2 MB/s eta 0:00:01
+     |████████████████▊               | 245 kB 17.2 MB/s eta 0:00:01
+     |█████████████████▍              | 256 kB 17.2 MB/s eta 0:00:01
+     |██████████████████▏             | 266 kB 17.2 MB/s eta 0:00:01
+     |██████████████████▉             | 276 kB 17.2 MB/s eta 0:00:01
+     |███████████████████▌            | 286 kB 17.2 MB/s eta 0:00:01
+     |████████████████████▎           | 296 kB 17.2 MB/s eta 0:00:01
+     |█████████████████████           | 307 kB 17.2 MB/s eta 0:00:01
+     |█████████████████████▋          | 317 kB 17.2 MB/s eta 0:00:01
+     |██████████████████████▎         | 327 kB 17.2 MB/s eta 0:00:01
+     |███████████████████████         | 337 kB 17.2 MB/s eta 0:00:01
+     |███████████████████████▊        | 348 kB 17.2 MB/s eta 0:00:01
+     |████████████████████████▍       | 358 kB 17.2 MB/s eta 0:00:01
+     |█████████████████████████       | 368 kB 17.2 MB/s eta 0:00:01
+     |█████████████████████████▉      | 378 kB 17.2 MB/s eta 0:00:01
+     |██████████████████████████▌     | 389 kB 17.2 MB/s eta 0:00:01
+     |███████████████████████████▏    | 399 kB 17.2 MB/s eta 0:00:01
+     |████████████████████████████    | 409 kB 17.2 MB/s eta 0:00:01
+     |████████████████████████████▋   | 419 kB 17.2 MB/s eta 0:00:01
+     |█████████████████████████████▎  | 430 kB 17.2 MB/s eta 0:00:01
+     |██████████████████████████████  | 440 kB 17.2 MB/s eta 0:00:01
+     |██████████████████████████████▊ | 450 kB 17.2 MB/s eta 0:00:01
+     |███████████████████████████████▍| 460 kB 17.2 MB/s eta 0:00:01
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     |████████████████████████████████| 469 kB 17.2 MB/s 
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>?25hInstalling collected packages: requests
+  Attempting uninstall: requests
+    Found existing installation: requests 2.24.0
+    Uninstalling requests-2.24.0:
+      Successfully uninstalled requests-2.24.0
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Successfully installed requests-2.6.0
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Note: you may need to restart the kernel to use updated packages.
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="upgrade-packages">
+<h3>Upgrade Packages<a class="headerlink" href="#upgrade-packages" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>You can run <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">--upgrade</span></code> to upgrade the package to the latest version:</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="o">--</span><span class="n">upgrade</span> <span class="n">requests</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting requests
+  Using cached requests-2.24.0-py2.py3-none-any.whl (61 kB)
+Requirement already satisfied, skipping upgrade: certifi&gt;=2017.4.17 in /opt/hostedtoolcache/Python/3.8.5/x64/lib/python3.8/site-packages (from requests) (2020.6.20)
+Requirement already satisfied, skipping upgrade: idna&lt;3,&gt;=2.5 in /opt/hostedtoolcache/Python/3.8.5/x64/lib/python3.8/site-packages (from requests) (2.10)
+Requirement already satisfied, skipping upgrade: urllib3!=1.25.0,!=1.25.1,&lt;1.26,&gt;=1.21.1 in /opt/hostedtoolcache/Python/3.8.5/x64/lib/python3.8/site-packages (from requests) (1.25.10)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied, skipping upgrade: chardet&lt;4,&gt;=3.0.2 in /opt/hostedtoolcache/Python/3.8.5/x64/lib/python3.8/site-packages (from requests) (3.0.4)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Installing collected packages: requests
+  Attempting uninstall: requests
+    Found existing installation: requests 2.6.0
+    Uninstalling requests-2.6.0:
+      Successfully uninstalled requests-2.6.0
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Successfully installed requests-2.24.0
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Note: you may need to restart the kernel to use updated packages.
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="remove-packages">
+<h3>Remove Packages<a class="headerlink" href="#remove-packages" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">uninstall</span></code> followed by one or more package names will remove the packages</p></li>
+</ul>
+</div>
+<div class="section" id="display-package-information">
+<h3>Display Package information<a class="headerlink" href="#display-package-information" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">show</span></code> will display information about a particular package:</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">show</span> <span class="n">requests</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Name: requests
+Version: 2.24.0
+Summary: Python HTTP for Humans.
+Home-page: https://requests.readthedocs.io
+Author: Kenneth Reitz
+Author-email: me@kennethreitz.org
+License: Apache 2.0
+Location: /opt/hostedtoolcache/Python/3.8.5/x64/lib/python3.8/site-packages
+Requires: idna, certifi, chardet, urllib3
+Required-by: Sphinx, nbdime
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Note: you may need to restart the kernel to use updated packages.
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="list-packages">
+<h3>List Packages<a class="headerlink" href="#list-packages" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">list</span></code> will display all of the packages installed in the virtual environment</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="nb">list</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Package                       Version
+----------------------------- ---------
+alabaster                     0.7.12
+argon2-cffi                   20.1.0
+async-generator               1.10
+attrs                         20.2.0
+Babel                         2.8.0
+backcall                      0.2.0
+beautifulsoup4                4.9.1
+bleach                        3.2.1
+certifi                       2020.6.20
+cffi                          1.14.3
+chardet                       3.0.4
+click                         7.1.2
+colorama                      0.4.3
+cycler                        0.10.0
+decorator                     4.4.2
+defusedxml                    0.6.0
+docutils                      0.16
+entrypoints                   0.3
+ghp-import                    1.0.0
+gitdb                         4.0.5
+GitPython                     3.1.8
+idna                          2.10
+imagesize                     1.2.0
+importlib-metadata            2.0.0
+ipykernel                     5.3.4
+ipython                       7.18.1
+ipython-genutils              0.2.0
+ipywidgets                    7.5.1
+jedi                          0.17.2
+Jinja2                        2.11.2
+jsonschema                    3.2.0
+jupyter-book                  0.8.2
+jupyter-cache                 0.4.1
+jupyter-client                6.1.7
+jupyter-core                  4.6.3
+jupyter-sphinx                0.3.2
+kiwisolver                    1.2.0
+latexcodec                    2.0.1
+libsass                       0.20.1
+markdown-it-py                0.5.4
+MarkupSafe                    1.1.1
+matplotlib                    3.3.2
+mistune                       0.8.4
+myst-nb                       0.10.1
+myst-parser                   0.12.10
+nbclient                      0.5.0
+nbconvert                     5.6.1
+nbdime                        2.0.0
+nbformat                      5.0.7
+nest-asyncio                  1.4.0
+notebook                      6.1.4
+numpy                         1.19.2
+oset                          0.1.3
+packaging                     20.4
+pandocfilters                 1.4.2
+parso                         0.7.1
+pexpect                       4.8.0
+pickleshare                   0.7.5
+Pillow                        7.2.0
+pip                           20.2.3
+prometheus-client             0.8.0
+prompt-toolkit                3.0.7
+ptyprocess                    0.6.0
+pybtex                        0.22.2
+pybtex-docutils               0.2.2
+pycparser                     2.20
+pydata-sphinx-theme           0.3.2
+Pygments                      2.7.1
+pyparsing                     2.4.7
+pyrsistent                    0.17.3
+python-dateutil               2.8.1
+pytz                          2020.1
+PyYAML                        5.3.1
+pyzmq                         19.0.2
+requests                      2.24.0
+Send2Trash                    1.5.0
+setuptools                    47.1.0
+six                           1.15.0
+smmap                         3.0.4
+snowballstemmer               2.0.0
+soupsieve                     2.0.1
+Sphinx                        3.2.1
+sphinx-book-theme             0.0.36
+sphinx-comments               0.0.3
+sphinx-copybutton             0.3.0
+sphinx-panels                 0.5.1
+sphinx-thebe                  0.0.7
+sphinx-togglebutton           0.2.2
+sphinxcontrib-applehelp       1.0.2
+sphinxcontrib-bibtex          1.0.0
+sphinxcontrib-devhelp         1.0.2
+sphinxcontrib-htmlhelp        1.0.3
+sphinxcontrib-jsmath          1.0.1
+sphinxcontrib-qthelp          1.0.3
+sphinxcontrib-serializinghtml 1.1.4
+SQLAlchemy                    1.3.19
+terminado                     0.9.1
+testpath                      0.4.4
+tornado                       6.0.4
+traitlets                     5.0.4
+urllib3                       1.25.10
+wcwidth                       0.2.5
+webencodings                  0.5.1
+wheel                         0.35.1
+widgetsnbextension            3.5.1
+zipp                          3.2.0
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Note: you may need to restart the kernel to use updated packages.
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="freeze-packages">
+<h3>Freeze Packages<a class="headerlink" href="#freeze-packages" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">freeze</span></code> will produce a similar list of the installed packages, but the output uses the format that pip install expects.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">freeze</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>alabaster==0.7.12
+argon2-cffi==20.1.0
+async-generator==1.10
+attrs==20.2.0
+Babel==2.8.0
+backcall==0.2.0
+beautifulsoup4==4.9.1
+bleach==3.2.1
+certifi==2020.6.20
+cffi==1.14.3
+chardet==3.0.4
+click==7.1.2
+colorama==0.4.3
+cycler==0.10.0
+decorator==4.4.2
+defusedxml==0.6.0
+docutils==0.16
+entrypoints==0.3
+ghp-import==1.0.0
+gitdb==4.0.5
+GitPython==3.1.8
+idna==2.10
+imagesize==1.2.0
+importlib-metadata==2.0.0
+ipykernel==5.3.4
+ipython==7.18.1
+ipython-genutils==0.2.0
+ipywidgets==7.5.1
+jedi==0.17.2
+Jinja2==2.11.2
+jsonschema==3.2.0
+jupyter-book==0.8.2
+jupyter-cache==0.4.1
+jupyter-client==6.1.7
+jupyter-core==4.6.3
+jupyter-sphinx==0.3.2
+kiwisolver==1.2.0
+latexcodec==2.0.1
+libsass==0.20.1
+markdown-it-py==0.5.4
+MarkupSafe==1.1.1
+matplotlib==3.3.2
+mistune==0.8.4
+myst-nb==0.10.1
+myst-parser==0.12.10
+nbclient==0.5.0
+nbconvert==5.6.1
+nbdime==2.0.0
+nbformat==5.0.7
+nest-asyncio==1.4.0
+notebook==6.1.4
+numpy==1.19.2
+oset==0.1.3
+packaging==20.4
+pandocfilters==1.4.2
+parso==0.7.1
+pexpect==4.8.0
+pickleshare==0.7.5
+Pillow==7.2.0
+prometheus-client==0.8.0
+prompt-toolkit==3.0.7
+ptyprocess==0.6.0
+pybtex==0.22.2
+pybtex-docutils==0.2.2
+pycparser==2.20
+pydata-sphinx-theme==0.3.2
+Pygments==2.7.1
+pyparsing==2.4.7
+pyrsistent==0.17.3
+python-dateutil==2.8.1
+pytz==2020.1
+PyYAML==5.3.1
+pyzmq==19.0.2
+requests==2.24.0
+Send2Trash==1.5.0
+six==1.15.0
+smmap==3.0.4
+snowballstemmer==2.0.0
+soupsieve==2.0.1
+Sphinx==3.2.1
+sphinx-book-theme==0.0.36
+sphinx-comments==0.0.3
+sphinx-copybutton==0.3.0
+sphinx-panels==0.5.1
+sphinx-thebe==0.0.7
+sphinx-togglebutton==0.2.2
+sphinxcontrib-applehelp==1.0.2
+sphinxcontrib-bibtex==1.0.0
+sphinxcontrib-devhelp==1.0.2
+sphinxcontrib-htmlhelp==1.0.3
+sphinxcontrib-jsmath==1.0.1
+sphinxcontrib-qthelp==1.0.3
+sphinxcontrib-serializinghtml==1.1.4
+SQLAlchemy==1.3.19
+terminado==0.9.1
+testpath==0.4.4
+tornado==6.0.4
+traitlets==5.0.4
+urllib3==1.25.10
+wcwidth==0.2.5
+webencodings==0.5.1
+widgetsnbextension==3.5.1
+zipp==3.2.0
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Note: you may need to restart the kernel to use updated packages.
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">freeze</span> <span class="o">&gt;</span> <span class="n">requirements</span><span class="o">.</span><span class="n">txt</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Note: you may need to restart the kernel to use updated packages.
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;requirements.txt&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">())</span>
+<span class="n">f</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>alabaster==0.7.12
+argon2-cffi==20.1.0
+async-generator==1.10
+attrs==20.2.0
+Babel==2.8.0
+backcall==0.2.0
+beautifulsoup4==4.9.1
+bleach==3.2.1
+certifi==2020.6.20
+cffi==1.14.3
+chardet==3.0.4
+click==7.1.2
+colorama==0.4.3
+cycler==0.10.0
+decorator==4.4.2
+defusedxml==0.6.0
+docutils==0.16
+entrypoints==0.3
+ghp-import==1.0.0
+gitdb==4.0.5
+GitPython==3.1.8
+idna==2.10
+imagesize==1.2.0
+importlib-metadata==2.0.0
+ipykernel==5.3.4
+ipython==7.18.1
+ipython-genutils==0.2.0
+ipywidgets==7.5.1
+jedi==0.17.2
+Jinja2==2.11.2
+jsonschema==3.2.0
+jupyter-book==0.8.2
+jupyter-cache==0.4.1
+jupyter-client==6.1.7
+jupyter-core==4.6.3
+jupyter-sphinx==0.3.2
+kiwisolver==1.2.0
+latexcodec==2.0.1
+libsass==0.20.1
+markdown-it-py==0.5.4
+MarkupSafe==1.1.1
+matplotlib==3.3.2
+mistune==0.8.4
+myst-nb==0.10.1
+myst-parser==0.12.10
+nbclient==0.5.0
+nbconvert==5.6.1
+nbdime==2.0.0
+nbformat==5.0.7
+nest-asyncio==1.4.0
+notebook==6.1.4
+numpy==1.19.2
+oset==0.1.3
+packaging==20.4
+pandocfilters==1.4.2
+parso==0.7.1
+pexpect==4.8.0
+pickleshare==0.7.5
+Pillow==7.2.0
+prometheus-client==0.8.0
+prompt-toolkit==3.0.7
+ptyprocess==0.6.0
+pybtex==0.22.2
+pybtex-docutils==0.2.2
+pycparser==2.20
+pydata-sphinx-theme==0.3.2
+Pygments==2.7.1
+pyparsing==2.4.7
+pyrsistent==0.17.3
+python-dateutil==2.8.1
+pytz==2020.1
+PyYAML==5.3.1
+pyzmq==19.0.2
+requests==2.24.0
+Send2Trash==1.5.0
+six==1.15.0
+smmap==3.0.4
+snowballstemmer==2.0.0
+soupsieve==2.0.1
+Sphinx==3.2.1
+sphinx-book-theme==0.0.36
+sphinx-comments==0.0.3
+sphinx-copybutton==0.3.0
+sphinx-panels==0.5.1
+sphinx-thebe==0.0.7
+sphinx-togglebutton==0.2.2
+sphinxcontrib-applehelp==1.0.2
+sphinxcontrib-bibtex==1.0.0
+sphinxcontrib-devhelp==1.0.2
+sphinxcontrib-htmlhelp==1.0.3
+sphinxcontrib-jsmath==1.0.1
+sphinxcontrib-qthelp==1.0.3
+sphinxcontrib-serializinghtml==1.1.4
+SQLAlchemy==1.3.19
+terminado==0.9.1
+testpath==0.4.4
+tornado==6.0.4
+traitlets==5.0.4
+urllib3==1.25.10
+wcwidth==0.2.5
+webencodings==0.5.1
+widgetsnbextension==3.5.1
+zipp==3.2.0
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ValueError</span><span class="g g-Whitespace">                                </span>Traceback (most recent call last)
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">10</span><span class="o">-</span><span class="mi">315</span><span class="n">c20b774c2</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">())</span>
+
+<span class="ne">ValueError</span>: I/O operation on closed file.
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">requests</span><span class="o">==</span><span class="mf">2.18</span><span class="o">.</span><span class="mi">4</span> <span class="o">--</span><span class="n">user</span> <span class="o">--</span><span class="n">trusted</span><span class="o">-</span><span class="n">host</span><span class="o">=</span><span class="n">pypi</span><span class="o">.</span><span class="n">python</span><span class="o">.</span><span class="n">org</span> <span class="o">--</span><span class="n">trusted</span><span class="o">-</span><span class="n">host</span><span class="o">=</span><span class="n">pypi</span><span class="o">.</span><span class="n">org</span> <span class="o">--</span><span class="n">trusted</span><span class="o">-</span><span class="n">host</span><span class="o">=</span><span class="n">files</span><span class="o">.</span><span class="n">pythonhosted</span><span class="o">.</span><span class="n">org</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./know-your-language/package-management"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="../objects-and-classes/notebook.html" title="previous page">Object Oriented Programming (OOP)</a>
+    <a class='right-next' id="next-link" href="../virtual-environments/notebook.html" title="next page">Virtual Environments</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Sajal N. Shrestha<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    <script src="../../_static/js/index.js"></script>
+    
+  </body>
+</html>
