@@ -1,0 +1,1309 @@
+
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Time to debug</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
+    <link href="../../_static/css/index.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../_static/sphinx-book-theme.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/language_data.js"></script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/sphinx-book-theme.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="docsearch:language" content="en">
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../../index.html">
+  
+  <img src="../../_static/logo.png" class="logo" alt="logo">
+  
+  
+</a>
+</div>
+
+<form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../intro.html">
+   Python End-2-End RoadMap
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Know Your Language
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../know-your-language/q-%26-a/README.html">
+   A Q&amp;A Session
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../know-your-language/before-we-begin/README.html">
+   Before We Begin
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../know-your-language/apply-primer/README.html">
+   Applying Primer
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../know-your-language/apply-primer/README.html#strings">
+   Strings
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../know-your-language/apply-primer/README.html#lists">
+   Lists
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Apply Python in Real Life
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../regular-expressions/README.html">
+   Regular Expressions
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Web and Beyond
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../web-and-beyond/README.html">
+   To Web and Beyond
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Rest time
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../rest-time/README.html">
+   Rest Time
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Master Your Language
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../master-your-language/README.html">
+   Master your language
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Miscellaneous
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../miscellaneous/docker/README.html">
+   Docker
+  </a>
+ </li>
+</ul>
+
+</nav>
+
+ <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Compiled by <a href="mailto:sajalshres@gmail.com">Sajal Shrestha</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        <div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../_sources/automate/_todo/debugging.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+    
+</div>
+        <!-- Source interaction buttons -->
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#print-expressions">
+   Print expressions
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#stepping-through-code">
+   Stepping Through Code
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#listing-source-code">
+     Listing Source Code
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#using-breakpoints">
+   Using Breakpoints
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#continuing-execution">
+   Continuing Execution
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#displaying-expressions">
+   Displaying Expressions
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#python-caller-id">
+   Python Caller ID
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#essential-pdb-commands">
+   Essential pdb Commands
+  </a>
+ </li>
+</ul>
+
+        </nav>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="time-to-debug">
+<h1>Time to debug<a class="headerlink" href="#time-to-debug" title="Permalink to this headline">¶</a></h1>
+<p>The module <code class="docutils literal notranslate"><span class="pre">pdb</span></code> defines an interactive source code debugger for Python programs. It supports setting (conditional) breakpoints and single stepping at the source line level, inspection of stack frames, source code listing, and evaluation of arbitrary Python code in the context of any stack frame. It also supports post-mortem debugging and can be called under program control.</p>
+<p>Insert the following code at the location where you want to break into the debugger:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pdb</span><span class="p">;</span> <span class="n">pdb</span><span class="o">.</span><span class="n">set_trace</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>When the line above is executed, Python stops and waits for you to tell it what to do next. You’ll see a <code class="docutils literal notranslate"><span class="pre">(Pdb)</span></code> prompt. This means that you’re now paused in the interactive debugger and can enter a command.</p>
+<p>Starting in Python 3.7, there’s another way to enter the debugger. PEP 553 describes the built-in function breakpoint(), which makes entering the debugger easy and consistent:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">breakpoint</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>By default, <code class="docutils literal notranslate"><span class="pre">breakpoint()</span></code> will import <code class="docutils literal notranslate"><span class="pre">pdb</span></code> and call <code class="docutils literal notranslate"><span class="pre">pdb.set_trace()</span></code>, as shown above. However, using <code class="docutils literal notranslate"><span class="pre">breakpoint()</span></code> is more flexible and allows you to control debugging behavior via its API and use of the environment variable <code class="docutils literal notranslate"><span class="pre">PYTHONBREAKPOINT</span></code>.</p>
+<p>For example, setting <code class="docutils literal notranslate"><span class="pre">PYTHONBREAKPOINT=0</span></code> in your environment will completely disable <code class="docutils literal notranslate"><span class="pre">breakpoint()</span></code>, thus disabling debugging. If you’re using Python 3.7 or later, use <code class="docutils literal notranslate"><span class="pre">breakpoint()</span></code> instead of <code class="docutils literal notranslate"><span class="pre">pdb.set_trace()</span></code>.</p>
+<p>You can also break into the debugger, without modifying the source and using <code class="docutils literal notranslate"><span class="pre">pdb.set_trace()</span></code> or <code class="docutils literal notranslate"><span class="pre">breakpoint()</span></code>, by running Python directly from the command-line and passing the option <code class="docutils literal notranslate"><span class="pre">-m</span> <span class="pre">pdb</span></code>.</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>$ python3 -m pdb password_strength.py HelloPrashant1
+</pre></div>
+</div>
+<p>Let’s look at the example. Here’s the <code class="docutils literal notranslate"><span class="pre">debug_1.py</span></code> source:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/usr/bin/env python3</span>
+
+<span class="n">filename</span> <span class="o">=</span> <span class="vm">__file__</span>
+<span class="kn">import</span> <span class="nn">pdb</span><span class="p">;</span> <span class="n">pdb</span><span class="o">.</span><span class="n">set_trace</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;path = </span><span class="si">{</span><span class="n">filename</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>If you run this from your shell, you should get the following output:</p>
+<div class="highlight-powershell notranslate"><div class="highlight"><pre><span></span>PS D:\repositories\python-e2e-book\2-automate\debugging&gt; python .\debug_1.py 
+&gt; d:\repositories\python-e2e-book\2-automate\debugging\debug_1.py(5)&lt;module&gt;()
+-&gt; print(f&#39;path = {filename}&#39;)
+(Pdb) 
+</pre></div>
+</div>
+<p>Now enter <code class="docutils literal notranslate"><span class="pre">p</span> <span class="pre">filename</span></code>. You should see:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="n">Pdb</span><span class="p">)</span> <span class="n">p</span> <span class="n">filename</span>
+<span class="s1">&#39;.</span><span class="se">\\</span><span class="s1">debug_1.py&#39;</span>
+<span class="p">(</span><span class="n">Pdb</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Since you’re in a shell and using a CLI (command-line interface), pay attention to the characters and formatting. They’ll give you the context you need:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">&gt;</span></code> starts the 1st line and tells you which source file you’re in. After the filename, there is the current line number in parentheses. Next is the name of the function. In this example, since we’re not paused inside a function and at module level, we see <code class="docutils literal notranslate"><span class="pre">()</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">-&gt;</span></code> starts the 2nd line and is the current source line where Python is paused. This line hasn’t been executed yet. In this example, this is line <code class="docutils literal notranslate"><span class="pre">5</span></code> in <code class="docutils literal notranslate"><span class="pre">debug_1.py</span></code>, from the <code class="docutils literal notranslate"><span class="pre">&gt;</span></code> line above.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">(Pdb)</span></code> is pdb’s prompt. It’s waiting for a command.</p></li>
+</ul>
+<p>Use the command <code class="docutils literal notranslate"><span class="pre">q</span></code> to quit debugging and exit.</p>
+<div class="section" id="print-expressions">
+<h2>Print expressions<a class="headerlink" href="#print-expressions" title="Permalink to this headline">¶</a></h2>
+<p>When using the print command <code class="docutils literal notranslate"><span class="pre">p</span></code>, you’re passing an expression to be evaluated by Python. If you pass a variable name, <code class="docutils literal notranslate"><span class="pre">pdb</span></code> prints its current value.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/usr/bin/env python3</span>
+
+<span class="kn">import</span> <span class="nn">os</span>
+
+
+<span class="k">def</span> <span class="nf">get_path</span><span class="p">(</span><span class="n">filename</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Return file&#39;s path or empty string if no path.&quot;&quot;&quot;</span>
+    <span class="n">head</span><span class="p">,</span> <span class="n">tail</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
+    <span class="kn">import</span> <span class="nn">pdb</span><span class="p">;</span> <span class="n">pdb</span><span class="o">.</span><span class="n">set_trace</span><span class="p">()</span>
+    <span class="k">return</span> <span class="n">head</span>
+
+
+<span class="n">filename</span> <span class="o">=</span> <span class="vm">__file__</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;path = </span><span class="si">{</span><span class="n">get_path</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>If you run this from your shell, you should get the output:</p>
+<div class="highlight-powershell notranslate"><div class="highlight"><pre><span></span>PS D:\repositories\python-e2e-book\2-automate\debugging&gt; python .\debug_2.py
+&gt; d:\repositories\python-e2e-book\2-automate\debugging\debug_2.py(10)get_path()
+-&gt; return head
+(Pdb) 
+</pre></div>
+</div>
+<p>Where are we?</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">&gt;</span></code>: We’re in the source file <code class="docutils literal notranslate"><span class="pre">debug_2.py</span></code> on line <code class="docutils literal notranslate"><span class="pre">10</span></code> in the function <code class="docutils literal notranslate"><span class="pre">get_path()</span></code>. This is the frame of reference the <code class="docutils literal notranslate"><span class="pre">p</span></code> command will use to resolve variable names, i.e. the current scope or context.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">-&gt;</span></code>: Execution has paused at <code class="docutils literal notranslate"><span class="pre">return</span> <span class="pre">head</span></code>. This line hasn’t been executed yet. This is line <code class="docutils literal notranslate"><span class="pre">10</span></code> in <code class="docutils literal notranslate"><span class="pre">example2.py</span></code> in the function <code class="docutils literal notranslate"><span class="pre">get_path()</span></code>, from the <code class="docutils literal notranslate"><span class="pre">&gt;</span></code> line above.</p></li>
+</ul>
+<p>Let’s print some expressions to look at the current state of the application.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">PS</span> <span class="n">D</span><span class="p">:</span>\<span class="n">repositories</span>\<span class="n">python</span><span class="o">-</span><span class="n">e2e</span><span class="o">-</span><span class="n">book</span>\<span class="mi">2</span><span class="o">-</span><span class="n">automate</span>\<span class="n">debugging</span><span class="o">&gt;</span> <span class="n">python</span> <span class="o">.</span>\<span class="n">debug_2</span><span class="o">.</span><span class="n">py</span>
+<span class="o">&gt;</span> <span class="n">d</span><span class="p">:</span>\<span class="n">repositories</span>\<span class="n">python</span><span class="o">-</span><span class="n">e2e</span><span class="o">-</span><span class="n">book</span>\<span class="mi">2</span><span class="o">-</span><span class="n">automate</span>\<span class="n">debugging</span>\<span class="n">debug_2</span><span class="o">.</span><span class="n">py</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span><span class="n">get_path</span><span class="p">()</span>
+<span class="o">-&gt;</span> <span class="k">return</span> <span class="n">head</span>
+<span class="p">(</span><span class="n">Pdb</span><span class="p">)</span> <span class="n">p</span> <span class="n">filename</span>
+<span class="s1">&#39;.</span><span class="se">\\</span><span class="s1">debug_2.py&#39;</span>
+<span class="p">(</span><span class="n">Pdb</span><span class="p">)</span> <span class="n">p</span> <span class="n">head</span><span class="p">,</span> <span class="n">tail</span>
+<span class="p">(</span><span class="s1">&#39;.&#39;</span><span class="p">,</span> <span class="s1">&#39;debug_2.py&#39;</span><span class="p">)</span>
+<span class="p">(</span><span class="n">Pdb</span><span class="p">)</span> <span class="n">p</span> <span class="s1">&#39;filename: &#39;</span> <span class="o">+</span> <span class="n">filename</span>
+<span class="s1">&#39;filename: .</span><span class="se">\\</span><span class="s1">debug_2.py&#39;</span>
+<span class="p">(</span><span class="n">Pdb</span><span class="p">)</span> <span class="n">p</span> <span class="n">get_path</span>
+<span class="o">&lt;</span><span class="n">function</span> <span class="n">get_path</span> <span class="n">at</span> <span class="mh">0x000001C5C16C5160</span><span class="o">&gt;</span>
+<span class="p">(</span><span class="n">Pdb</span><span class="p">)</span> <span class="n">p</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">get_path</span><span class="p">,</span> <span class="s1">&#39;__doc__&#39;</span><span class="p">)</span>
+<span class="s2">&quot;Return file&#39;s path or empty string if no path.&quot;</span>
+<span class="p">(</span><span class="n">Pdb</span><span class="p">)</span> <span class="n">p</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">sys</span><span class="o">.</span><span class="n">path</span>
+<span class="p">[</span><span class="s1">&#39;D:</span><span class="se">\\</span><span class="s1">repositories</span><span class="se">\\</span><span class="s1">python-e2e-book</span><span class="se">\\</span><span class="s1">2-automate</span><span class="se">\\</span><span class="s1">debugging&#39;</span><span class="p">,</span> <span class="s1">&#39;D:</span><span class="se">\\</span><span class="s1">applications</span><span class="se">\\</span><span class="s1">winpython-3.8</span><span class="se">\\</span><span class="s1">python-3.8.1.amd64</span><span class="se">\\</span><span class="s1">python38.zip&#39;</span><span class="p">,</span> <span class="s1">&#39;D:</span><span class="se">\\</span><span class="s1">applications</span><span class="se">\\</span><span class="s1">winpython-3.8</span><span class="se">\\</span><span class="s1">python-3.8.1.amd64</span><span class="se">\\</span><span class="s1">DLLs&#39;</span><span class="p">,</span> <span class="s1">&#39;D:</span><span class="se">\\</span><span class="s1">applications</span><span class="se">\\</span><span class="s1">winpython-3.8</span><span class="se">\\</span><span class="s1">python-3.8.1.amd64</span><span class="se">\\</span><span class="s1">lib&#39;</span><span class="p">,</span> <span class="s1">&#39;D:</span><span class="se">\\</span><span class="s1">applications</span><span class="se">\\</span><span class="s1">winpython-3.8</span><span class="se">\\</span><span class="s1">python-3.8.1.amd64&#39;</span><span class="p">,</span> <span class="s1">&#39;D:</span><span class="se">\\</span><span class="s1">applications</span><span class="se">\\</span><span class="s1">winpython-3.8</span><span class="se">\\</span><span class="s1">python-3.8.1.amd64</span><span class="se">\\</span><span class="s1">lib</span><span class="se">\\</span><span class="s1">site-packages&#39;</span><span class="p">,</span> <span class="s1">&#39;D:</span><span class="se">\\</span><span class="s1">applications</span><span class="se">\\</span><span class="s1">winpython-3.8</span><span class="se">\\</span><span class="s1">python-3.8.1.amd64</span><span class="se">\\</span><span class="s1">lib</span><span class="se">\\</span><span class="s1">site-packages</span><span class="se">\\</span><span class="s1">win32&#39;</span><span class="p">,</span> <span class="s1">&#39;D:</span><span class="se">\\</span><span class="s1">applications</span><span class="se">\\</span><span class="s1">winpython-3.8</span><span class="se">\\</span><span class="s1">python-3.8.1.amd64</span><span class="se">\\</span><span class="s1">lib</span><span class="se">\\</span><span class="s1">site-packages</span><span class="se">\\</span><span class="s1">win32</span><span class="se">\\</span><span class="s1">lib&#39;</span><span class="p">,</span> <span class="s1">&#39;D:</span><span class="se">\\</span><span class="s1">applications</span><span class="se">\\</span><span class="s1">winpython-3.8</span><span class="se">\\</span><span class="s1">python-3.8.1.amd64</span><span class="se">\\</span><span class="s1">lib</span><span class="se">\\</span><span class="s1">site-packages</span><span class="se">\\</span><span class="s1">Pythonwin&#39;</span><span class="p">]</span>
+<span class="p">(</span><span class="n">Pdb</span><span class="p">)</span> <span class="n">p</span> <span class="p">[</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="n">p</span><span class="p">)[</span><span class="mi">1</span><span class="p">]</span> <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="p">]</span>
+<span class="p">[</span><span class="s1">&#39;debugging&#39;</span><span class="p">,</span> <span class="s1">&#39;python38.zip&#39;</span><span class="p">,</span> <span class="s1">&#39;DLLs&#39;</span><span class="p">,</span> <span class="s1">&#39;lib&#39;</span><span class="p">,</span> <span class="s1">&#39;python-3.8.1.amd64&#39;</span><span class="p">,</span> <span class="s1">&#39;site-packages&#39;</span><span class="p">,</span> <span class="s1">&#39;win32&#39;</span><span class="p">,</span> <span class="s1">&#39;lib&#39;</span><span class="p">,</span> <span class="s1">&#39;Pythonwin&#39;</span><span class="p">]</span>
+<span class="p">(</span><span class="n">Pdb</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>You can pass any valid Python expression to <code class="docutils literal notranslate"><span class="pre">p</span></code> for evaluation.</p>
+<p>This is especially helpful when you are debugging and want to test an alternative implementation directly in the application at runtime.</p>
+</div>
+<div class="section" id="stepping-through-code">
+<h2>Stepping Through Code<a class="headerlink" href="#stepping-through-code" title="Permalink to this headline">¶</a></h2>
+<p>There are two commands you can use to step through code when debugging:</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Command</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">n</span></code> (next)</p></td>
+<td><p>Continue execution until the next line in the current function is reached or it returns.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">s</span></code> (step)</p></td>
+<td><p>Execute the current line and stop at the first possible occasion (either in a function that is called or in the current function).</p></td>
+</tr>
+</tbody>
+</table>
+<p>The difference between <code class="docutils literal notranslate"><span class="pre">n</span></code> (next) and <code class="docutils literal notranslate"><span class="pre">s</span></code> (step) is where pdb stops.</p>
+<p>Use <code class="docutils literal notranslate"><span class="pre">n</span></code> (next) to continue execution until the next line and stay within the current function, i.e. not stop in a foreign function if one is called. Think of next as “staying local” or “step over”.</p>
+<p>Use <code class="docutils literal notranslate"><span class="pre">s</span></code> (step) to execute the current line and stop in a foreign function if one is called. Think of step as “step into”. If execution is stopped in another function, <code class="docutils literal notranslate"><span class="pre">s</span></code> will print <code class="docutils literal notranslate"><span class="pre">--Call--</span></code>.</p>
+<p>Both <code class="docutils literal notranslate"><span class="pre">n</span></code> and <code class="docutils literal notranslate"><span class="pre">s</span></code> will stop execution when the end of the current function is reached and print <code class="docutils literal notranslate"><span class="pre">--Return--</span></code> along with the return value at the end of the next line after <code class="docutils literal notranslate"><span class="pre">-&gt;</span></code>.</p>
+<p>Lets look into debug_3.py</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/usr/bin/env python3</span>
+
+<span class="kn">import</span> <span class="nn">os</span>
+
+
+<span class="k">def</span> <span class="nf">get_path</span><span class="p">(</span><span class="n">filename</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Return file&#39;s path or empty string if no path.&quot;&quot;&quot;</span>
+    <span class="n">head</span><span class="p">,</span> <span class="n">tail</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">head</span>
+
+
+<span class="n">filename</span> <span class="o">=</span> <span class="vm">__file__</span>
+<span class="kn">import</span> <span class="nn">pdb</span><span class="p">;</span> <span class="n">pdb</span><span class="o">.</span><span class="n">set_trace</span><span class="p">()</span>
+<span class="n">filename_path</span> <span class="o">=</span> <span class="n">get_path</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;path = </span><span class="si">{</span><span class="n">filename_path</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>If you run this from your shell and enter <code class="docutils literal notranslate"><span class="pre">n</span></code>, you should get the output:</p>
+<div class="highlight-powershell notranslate"><div class="highlight"><pre><span></span>PS D:\repositories\python-e2e-book\2-automate\debugging&gt; python .\debug_3.py
+&gt; d:\repositories\python-e2e-book\2-automate\debugging\debug_3.py(14)&lt;module&gt;()
+-&gt; filename_path = get_path(filename)
+(Pdb) n
+&gt; d:\repositories\python-e2e-book\2-automate\debugging\debug_3.py(15)&lt;module&gt;()
+-&gt; print(f&#39;path = {filename_path}&#39;)
+(Pdb)
+</pre></div>
+</div>
+<p>With <code class="docutils literal notranslate"><span class="pre">n</span></code> (next), we stopped on line <code class="docutils literal notranslate"><span class="pre">15</span></code>, the next line. We “stayed local” in <code class="docutils literal notranslate"><span class="pre">()</span></code> and “stepped over” the call to <code class="docutils literal notranslate"><span class="pre">get_path()</span></code>. The function is <code class="docutils literal notranslate"><span class="pre">()</span></code> since we’re currently at module level and not paused inside another function.</p>
+<p>Let’s try <code class="docutils literal notranslate"><span class="pre">s</span></code>:</p>
+<div class="highlight-powershell notranslate"><div class="highlight"><pre><span></span>PS D:\repositories\python-e2e-book\2-automate\debugging&gt; python .\debug_3.py
+&gt; d:\repositories\python-e2e-book\2-automate\debugging\debug_3.py(14)&lt;module&gt;()
+-&gt; filename_path = get_path(filename)
+(Pdb) s
+--Call--
+&gt; d:\repositories\python-e2e-book\2-automate\debugging\debug_3.py(6)get_path()
+-&gt; def get_path(filename):
+(Pdb)
+</pre></div>
+</div>
+<p>With <code class="docutils literal notranslate"><span class="pre">s</span></code> (step), we stopped on line <code class="docutils literal notranslate"><span class="pre">6</span></code> in the function <code class="docutils literal notranslate"><span class="pre">get_path()</span></code> since it was called on line <code class="docutils literal notranslate"><span class="pre">14</span></code>. Notice the line <code class="docutils literal notranslate"><span class="pre">--Call--</span></code> after the <code class="docutils literal notranslate"><span class="pre">s</span></code> command.</p>
+<p>Below is an example of using both <code class="docutils literal notranslate"><span class="pre">s</span></code> and <code class="docutils literal notranslate"><span class="pre">n</span></code> to step through the code. I enter <code class="docutils literal notranslate"><span class="pre">s</span></code> initially because I want to “step into” the function <code class="docutils literal notranslate"><span class="pre">get_path()</span></code> and stop. Then I enter <code class="docutils literal notranslate"><span class="pre">n</span></code> once to “stay local” or “step over” any other function calls and just press Enter to repeat the <code class="docutils literal notranslate"><span class="pre">n</span></code> command until I get to the last source line.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">PS</span> <span class="n">D</span><span class="p">:</span>\<span class="n">repositories</span>\<span class="n">python</span><span class="o">-</span><span class="n">e2e</span><span class="o">-</span><span class="n">book</span>\<span class="mi">2</span><span class="o">-</span><span class="n">automate</span>\<span class="n">debugging</span><span class="o">&gt;</span> <span class="n">python</span> <span class="o">.</span>\<span class="n">debug_3</span><span class="o">.</span><span class="n">py</span>
+<span class="o">&gt;</span> <span class="n">d</span><span class="p">:</span>\<span class="n">repositories</span>\<span class="n">python</span><span class="o">-</span><span class="n">e2e</span><span class="o">-</span><span class="n">book</span>\<span class="mi">2</span><span class="o">-</span><span class="n">automate</span>\<span class="n">debugging</span>\<span class="n">debug_3</span><span class="o">.</span><span class="n">py</span><span class="p">(</span><span class="mi">14</span><span class="p">)</span><span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span><span class="p">()</span>
+<span class="o">-&gt;</span> <span class="n">filename_path</span> <span class="o">=</span> <span class="n">get_path</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
+<span class="p">(</span><span class="n">Pdb</span><span class="p">)</span> <span class="n">s</span>
+<span class="o">--</span><span class="n">Call</span><span class="o">--</span>
+<span class="o">&gt;</span> <span class="n">d</span><span class="p">:</span>\<span class="n">repositories</span>\<span class="n">python</span><span class="o">-</span><span class="n">e2e</span><span class="o">-</span><span class="n">book</span>\<span class="mi">2</span><span class="o">-</span><span class="n">automate</span>\<span class="n">debugging</span>\<span class="n">debug_3</span><span class="o">.</span><span class="n">py</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span><span class="n">get_path</span><span class="p">()</span>
+<span class="o">-&gt;</span> <span class="k">def</span> <span class="nf">get_path</span><span class="p">(</span><span class="n">filename</span><span class="p">):</span>
+<span class="p">(</span><span class="n">Pdb</span><span class="p">)</span> <span class="n">n</span>
+<span class="o">&gt;</span> <span class="n">d</span><span class="p">:</span>\<span class="n">repositories</span>\<span class="n">python</span><span class="o">-</span><span class="n">e2e</span><span class="o">-</span><span class="n">book</span>\<span class="mi">2</span><span class="o">-</span><span class="n">automate</span>\<span class="n">debugging</span>\<span class="n">debug_3</span><span class="o">.</span><span class="n">py</span><span class="p">(</span><span class="mi">8</span><span class="p">)</span><span class="n">get_path</span><span class="p">()</span>
+<span class="o">-&gt;</span> <span class="n">head</span><span class="p">,</span> <span class="n">tail</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
+<span class="p">(</span><span class="n">Pdb</span><span class="p">)</span>
+<span class="o">&gt;</span> <span class="n">d</span><span class="p">:</span>\<span class="n">repositories</span>\<span class="n">python</span><span class="o">-</span><span class="n">e2e</span><span class="o">-</span><span class="n">book</span>\<span class="mi">2</span><span class="o">-</span><span class="n">automate</span>\<span class="n">debugging</span>\<span class="n">debug_3</span><span class="o">.</span><span class="n">py</span><span class="p">(</span><span class="mi">9</span><span class="p">)</span><span class="n">get_path</span><span class="p">()</span>
+<span class="o">-&gt;</span> <span class="k">return</span> <span class="n">head</span>
+<span class="p">(</span><span class="n">Pdb</span><span class="p">)</span>
+<span class="o">--</span><span class="n">Return</span><span class="o">--</span>
+<span class="o">&gt;</span> <span class="n">d</span><span class="p">:</span>\<span class="n">repositories</span>\<span class="n">python</span><span class="o">-</span><span class="n">e2e</span><span class="o">-</span><span class="n">book</span>\<span class="mi">2</span><span class="o">-</span><span class="n">automate</span>\<span class="n">debugging</span>\<span class="n">debug_3</span><span class="o">.</span><span class="n">py</span><span class="p">(</span><span class="mi">9</span><span class="p">)</span><span class="n">get_path</span><span class="p">()</span><span class="o">-&gt;</span><span class="s1">&#39;.&#39;</span>
+<span class="o">-&gt;</span> <span class="k">return</span> <span class="n">head</span>
+<span class="p">(</span><span class="n">Pdb</span><span class="p">)</span>
+<span class="o">&gt;</span> <span class="n">d</span><span class="p">:</span>\<span class="n">repositories</span>\<span class="n">python</span><span class="o">-</span><span class="n">e2e</span><span class="o">-</span><span class="n">book</span>\<span class="mi">2</span><span class="o">-</span><span class="n">automate</span>\<span class="n">debugging</span>\<span class="n">debug_3</span><span class="o">.</span><span class="n">py</span><span class="p">(</span><span class="mi">15</span><span class="p">)</span><span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span><span class="p">()</span>
+<span class="o">-&gt;</span> <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;path = </span><span class="si">{</span><span class="n">filename_path</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="p">(</span><span class="n">Pdb</span><span class="p">)</span>
+<span class="n">path</span> <span class="o">=</span> <span class="o">.</span>
+<span class="o">--</span><span class="n">Return</span><span class="o">--</span>
+<span class="o">&gt;</span> <span class="n">d</span><span class="p">:</span>\<span class="n">repositories</span>\<span class="n">python</span><span class="o">-</span><span class="n">e2e</span><span class="o">-</span><span class="n">book</span>\<span class="mi">2</span><span class="o">-</span><span class="n">automate</span>\<span class="n">debugging</span>\<span class="n">debug_3</span><span class="o">.</span><span class="n">py</span><span class="p">(</span><span class="mi">15</span><span class="p">)</span><span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span><span class="p">()</span><span class="o">-&gt;</span><span class="kc">None</span>
+<span class="o">-&gt;</span> <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;path = </span><span class="si">{</span><span class="n">filename_path</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="p">(</span><span class="n">Pdb</span><span class="p">)</span>
+<span class="n">PS</span> <span class="n">D</span><span class="p">:</span>\<span class="n">repositories</span>\<span class="n">python</span><span class="o">-</span><span class="n">e2e</span><span class="o">-</span><span class="n">book</span>\<span class="mi">2</span><span class="o">-</span><span class="n">automate</span>\<span class="n">debugging</span><span class="o">&gt;</span> 
+</pre></div>
+</div>
+<p>Note the lines <code class="docutils literal notranslate"><span class="pre">--Call--</span></code> and <code class="docutils literal notranslate"><span class="pre">--Return--</span></code>. This is pdb letting you know why execution was stopped. <code class="docutils literal notranslate"><span class="pre">n</span></code> (next) and <code class="docutils literal notranslate"><span class="pre">s</span></code> (step) will stop before a function returns. That’s why you see the <code class="docutils literal notranslate"><span class="pre">--Return--</span></code> lines above.</p>
+<div class="section" id="listing-source-code">
+<h3>Listing Source Code<a class="headerlink" href="#listing-source-code" title="Permalink to this headline">¶</a></h3>
+<p>Don’t forget the command <code class="docutils literal notranslate"><span class="pre">ll</span></code> (longlist: list the whole source code for the current function or frame). It’s really helpful when you’re stepping through unfamiliar code or you just want to see the entire function for context.</p>
+<p>Here’s an example:</p>
+<div class="highlight-powershell notranslate"><div class="highlight"><pre><span></span>PS D:\repositories\python-e2e-book\2-automate\debugging&gt; python .\debug_3.py
+&gt; d:\repositories\python-e2e-book\2-automate\debugging\debug_3.py(14)&lt;module&gt;()
+-&gt; filename_path = get_path(filename)
+(Pdb) s
+--Call--
+&gt; d:\repositories\python-e2e-book\2-automate\debugging\debug_3.py(6)get_path()
+-&gt; def get_path(filename):
+(Pdb) ll
+  6  -&gt; def get_path(filename):
+  7         &quot;&quot;&quot;Return file&#39;s path or empty string if no path.&quot;&quot;&quot;
+  8         head, tail = os.path.split(filename)
+  9         return head
+(Pdb)
+</pre></div>
+</div>
+<p>To see a shorter snippet of code, use the command <code class="docutils literal notranslate"><span class="pre">l</span></code> (list). Without arguments, it will print 11 lines around the current line or continue the previous listing. Pass the argument <code class="docutils literal notranslate"><span class="pre">.</span></code> to always list 11 lines around the current line: <code class="docutils literal notranslate"><span class="pre">l</span> <span class="pre">.</span></code></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">PS</span> <span class="n">D</span><span class="p">:</span>\<span class="n">repositories</span>\<span class="n">python</span><span class="o">-</span><span class="n">e2e</span><span class="o">-</span><span class="n">book</span>\<span class="mi">2</span><span class="o">-</span><span class="n">automate</span>\<span class="n">debugging</span><span class="o">&gt;</span> <span class="n">python</span> <span class="o">.</span>\<span class="n">debug_3</span><span class="o">.</span><span class="n">py</span>
+<span class="o">&gt;</span> <span class="n">d</span><span class="p">:</span>\<span class="n">repositories</span>\<span class="n">python</span><span class="o">-</span><span class="n">e2e</span><span class="o">-</span><span class="n">book</span>\<span class="mi">2</span><span class="o">-</span><span class="n">automate</span>\<span class="n">debugging</span>\<span class="n">debug_3</span><span class="o">.</span><span class="n">py</span><span class="p">(</span><span class="mi">14</span><span class="p">)</span><span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span><span class="p">()</span>
+<span class="n">PS</span> <span class="n">D</span><span class="p">:</span>\<span class="n">repositories</span>\<span class="n">python</span><span class="o">-</span><span class="n">e2e</span><span class="o">-</span><span class="n">book</span>\<span class="mi">2</span><span class="o">-</span><span class="n">automate</span>\<span class="n">debugging</span><span class="o">&gt;</span> <span class="n">python</span> <span class="o">.</span>\<span class="n">debug_3</span><span class="o">.</span><span class="n">py</span>
+<span class="o">&gt;</span> <span class="n">d</span><span class="p">:</span>\<span class="n">repositories</span>\<span class="n">python</span><span class="o">-</span><span class="n">e2e</span><span class="o">-</span><span class="n">book</span>\<span class="mi">2</span><span class="o">-</span><span class="n">automate</span>\<span class="n">debugging</span>\<span class="n">debug_3</span><span class="o">.</span><span class="n">py</span><span class="p">(</span><span class="mi">14</span><span class="p">)</span><span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span><span class="p">()</span>
+<span class="o">-&gt;</span> <span class="n">filename_path</span> <span class="o">=</span> <span class="n">get_path</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
+<span class="p">(</span><span class="n">Pdb</span><span class="p">)</span> <span class="n">l</span>
+  <span class="mi">9</span>         <span class="k">return</span> <span class="n">head</span>
+ <span class="mi">10</span>
+ <span class="mi">11</span>
+ <span class="mi">12</span>     <span class="n">filename</span> <span class="o">=</span> <span class="vm">__file__</span>
+ <span class="mi">13</span>     <span class="kn">import</span> <span class="nn">pdb</span><span class="p">;</span> <span class="n">pdb</span><span class="o">.</span><span class="n">set_trace</span><span class="p">()</span>       
+ <span class="mi">14</span>  <span class="o">-&gt;</span> <span class="n">filename_path</span> <span class="o">=</span> <span class="n">get_path</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
+ <span class="mi">15</span>     <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;path = </span><span class="si">{</span><span class="n">filename_path</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>  
+<span class="p">[</span><span class="n">EOF</span><span class="p">]</span>
+<span class="p">(</span><span class="n">Pdb</span><span class="p">)</span> <span class="n">l</span>
+<span class="p">[</span><span class="n">EOF</span><span class="p">]</span> 
+<span class="p">(</span><span class="n">Pdb</span><span class="p">)</span> <span class="n">l</span> <span class="o">.</span>
+  <span class="mi">9</span>         <span class="k">return</span> <span class="n">head</span>
+ <span class="mi">10</span>
+ <span class="mi">11</span>
+ <span class="mi">12</span>     <span class="n">filename</span> <span class="o">=</span> <span class="vm">__file__</span>
+ <span class="mi">13</span>     <span class="kn">import</span> <span class="nn">pdb</span><span class="p">;</span> <span class="n">pdb</span><span class="o">.</span><span class="n">set_trace</span><span class="p">()</span>
+ <span class="mi">14</span>  <span class="o">-&gt;</span> <span class="n">filename_path</span> <span class="o">=</span> <span class="n">get_path</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
+ <span class="mi">15</span>     <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;path = </span><span class="si">{</span><span class="n">filename_path</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="p">[</span><span class="n">EOF</span><span class="p">]</span>
+<span class="p">(</span><span class="n">Pdb</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="using-breakpoints">
+<h2>Using Breakpoints<a class="headerlink" href="#using-breakpoints" title="Permalink to this headline">¶</a></h2>
+<p>Breakpoints are very convenient and can save you a lot of time. Instead of stepping through dozens of lines you’re not interested in, simply create a breakpoint where you want to investigate. Optionally, you can also tell pdb to break only when a certain condition is true.</p>
+<p>Use the command <code class="docutils literal notranslate"><span class="pre">b</span></code> (break) to set a breakpoint. You can specify a line number or a function name where execution is stopped.</p>
+<p>The syntax for break is:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">b</span><span class="p">(</span><span class="n">reak</span><span class="p">)</span> <span class="p">[</span> <span class="p">([</span><span class="n">filename</span><span class="p">:]</span><span class="n">lineno</span> <span class="o">|</span> <span class="n">function</span><span class="p">)</span> <span class="p">[,</span> <span class="n">condition</span><span class="p">]</span> <span class="p">]</span>
+</pre></div>
+</div>
+<p>If <code class="docutils literal notranslate"><span class="pre">filename:</span></code> is not specified before the line number <code class="docutils literal notranslate"><span class="pre">lineno</span></code>, then the current source file is used.</p>
+<p>Note the optional 2nd argument to <code class="docutils literal notranslate"><span class="pre">b</span></code>: <code class="docutils literal notranslate"><span class="pre">condition</span></code>. This is very powerful. Imagine a situation where you wanted to break only if a certain condition existed. If you pass a Python expression as the 2nd argument, pdb will break when the expression evaluates to true. We’ll do this in an example below.</p>
+<p>In this example, there’s a utility module <code class="docutils literal notranslate"><span class="pre">util.py</span></code>. Let’s set a breakpoint to stop execution in the function <code class="docutils literal notranslate"><span class="pre">get_path()</span></code>.</p>
+<p>Here’s the source for the main script <code class="docutils literal notranslate"><span class="pre">debug_4.py</span></code>:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/usr/bin/env python3</span>
+
+<span class="kn">import</span> <span class="nn">util</span>
+
+<span class="n">filename</span> <span class="o">=</span> <span class="vm">__file__</span>
+<span class="kn">import</span> <span class="nn">pdb</span><span class="p">;</span> <span class="n">pdb</span><span class="o">.</span><span class="n">set_trace</span><span class="p">()</span>
+<span class="n">filename_path</span> <span class="o">=</span> <span class="n">util</span><span class="o">.</span><span class="n">get_path</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;path = </span><span class="si">{</span><span class="n">filename_path</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Here’s the source for the utility module <code class="docutils literal notranslate"><span class="pre">util.py</span></code>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">get_path</span><span class="p">(</span><span class="n">filename</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Return file&#39;s path or empty string if no path.&quot;&quot;&quot;</span>
+    <span class="kn">import</span> <span class="nn">os</span>
+    <span class="n">head</span><span class="p">,</span> <span class="n">tail</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">head</span>
+</pre></div>
+</div>
+<p>First, let’s set a breakpoint using the source filename and line number:</p>
+<div class="highlight-powershell notranslate"><div class="highlight"><pre><span></span>PS D:\repositories\python-e2e-book\2-automate\debugging&gt; python .\debug_4.py
+&gt; d:\repositories\python-e2e-book\2-automate\debugging\debug_4.py(7)&lt;module&gt;()
+-&gt; filename_path = util.get_path(filename)
+(Pdb) b util:5
+Breakpoint 1 at d:\repositories\python-e2e-book\2-automate\debugging\util.py:5
+(Pdb) c
+&gt; d:\repositories\python-e2e-book\2-automate\debugging\util.py(5)get_path()
+-&gt; return head
+(Pdb) p filename, head, tail 
+(&#39;.\\debug_4.py&#39;, &#39;.&#39;, &#39;debug_4.py&#39;)
+(Pdb)
+</pre></div>
+</div>
+<p>The command <code class="docutils literal notranslate"><span class="pre">c</span></code> (continue) continues execution until a breakpoint is found.</p>
+<p>Next, let’s set a breakpoint using the function name:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">PS</span> <span class="n">D</span><span class="p">:</span>\<span class="n">repositories</span>\<span class="n">python</span><span class="o">-</span><span class="n">e2e</span><span class="o">-</span><span class="n">book</span>\<span class="mi">2</span><span class="o">-</span><span class="n">automate</span>\<span class="n">debugging</span><span class="o">&gt;</span> <span class="n">python</span> <span class="o">.</span>\<span class="n">debug_4</span><span class="o">.</span><span class="n">py</span>
+<span class="o">&gt;</span> <span class="n">d</span><span class="p">:</span>\<span class="n">repositories</span>\<span class="n">python</span><span class="o">-</span><span class="n">e2e</span><span class="o">-</span><span class="n">book</span>\<span class="mi">2</span><span class="o">-</span><span class="n">automate</span>\<span class="n">debugging</span>\<span class="n">debug_4</span><span class="o">.</span><span class="n">py</span><span class="p">(</span><span class="mi">7</span><span class="p">)</span><span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span><span class="p">()</span>
+<span class="o">-&gt;</span> <span class="n">filename_path</span> <span class="o">=</span> <span class="n">util</span><span class="o">.</span><span class="n">get_path</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
+<span class="p">(</span><span class="n">Pdb</span><span class="p">)</span> <span class="n">b</span> <span class="n">util</span><span class="o">.</span><span class="n">get_path</span>
+<span class="n">Breakpoint</span> <span class="mi">1</span> <span class="n">at</span> <span class="n">d</span><span class="p">:</span>\<span class="n">repositories</span>\<span class="n">python</span><span class="o">-</span><span class="n">e2e</span><span class="o">-</span><span class="n">book</span>\<span class="mi">2</span><span class="o">-</span><span class="n">automate</span>\<span class="n">debugging</span>\<span class="n">util</span><span class="o">.</span><span class="n">py</span><span class="p">:</span><span class="mi">1</span>
+<span class="p">(</span><span class="n">Pdb</span><span class="p">)</span> <span class="n">c</span>
+<span class="o">&gt;</span> <span class="n">d</span><span class="p">:</span>\<span class="n">repositories</span>\<span class="n">python</span><span class="o">-</span><span class="n">e2e</span><span class="o">-</span><span class="n">book</span>\<span class="mi">2</span><span class="o">-</span><span class="n">automate</span>\<span class="n">debugging</span>\<span class="n">util</span><span class="o">.</span><span class="n">py</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span><span class="n">get_path</span><span class="p">()</span>
+<span class="o">-&gt;</span> <span class="kn">import</span> <span class="nn">os</span>
+<span class="p">(</span><span class="n">Pdb</span><span class="p">)</span> <span class="n">p</span> <span class="n">filename</span>
+<span class="s1">&#39;.</span><span class="se">\\</span><span class="s1">debug_4.py&#39;</span>
+</pre></div>
+</div>
+<p>Enter <code class="docutils literal notranslate"><span class="pre">b</span></code> with no arguments to see a list of all breakpoints:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="n">Pdb</span><span class="p">)</span> <span class="n">b</span>
+<span class="n">Num</span> <span class="n">Type</span>         <span class="n">Disp</span> <span class="n">Enb</span>   <span class="n">Where</span>
+<span class="mi">1</span>   <span class="n">breakpoint</span>   <span class="n">keep</span> <span class="n">yes</span>   <span class="n">at</span> <span class="n">d</span><span class="p">:</span>\<span class="n">repositories</span>\<span class="n">python</span><span class="o">-</span><span class="n">e2e</span><span class="o">-</span><span class="n">book</span>\<span class="mi">2</span><span class="o">-</span><span class="n">automate</span>\<span class="n">debugging</span>\<span class="n">util</span><span class="o">.</span><span class="n">py</span><span class="p">:</span><span class="mi">1</span>
+        <span class="n">breakpoint</span> <span class="n">already</span> <span class="n">hit</span> <span class="mi">1</span> <span class="n">time</span>
+<span class="p">(</span><span class="n">Pdb</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>You can disable and re-enable breakpoints using the command <code class="docutils literal notranslate"><span class="pre">disable</span> <span class="pre">bpnumber</span></code> and <code class="docutils literal notranslate"><span class="pre">enable</span> <span class="pre">bpnumber</span></code>. <code class="docutils literal notranslate"><span class="pre">bpnumber</span></code> is the breakpoint number from the breakpoints list’s 1st column <code class="docutils literal notranslate"><span class="pre">Num</span></code>. Notice the <code class="docutils literal notranslate"><span class="pre">Enb</span></code> column’s value change:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="n">Pdb</span><span class="p">)</span> <span class="n">disable</span> <span class="mi">1</span>
+<span class="n">Disabled</span> <span class="n">breakpoint</span> <span class="mi">1</span> <span class="n">at</span> <span class="n">d</span><span class="p">:</span>\<span class="n">repositories</span>\<span class="n">python</span><span class="o">-</span><span class="n">e2e</span><span class="o">-</span><span class="n">book</span>\<span class="mi">2</span><span class="o">-</span><span class="n">automate</span>\<span class="n">debugging</span>\<span class="n">util</span><span class="o">.</span><span class="n">py</span><span class="p">:</span><span class="mi">1</span>
+<span class="p">(</span><span class="n">Pdb</span><span class="p">)</span> <span class="n">b</span>
+<span class="n">Num</span> <span class="n">Type</span>         <span class="n">Disp</span> <span class="n">Enb</span>   <span class="n">Where</span>
+<span class="mi">1</span>   <span class="n">breakpoint</span>   <span class="n">keep</span> <span class="n">no</span>    <span class="n">at</span> <span class="n">d</span><span class="p">:</span>\<span class="n">repositories</span>\<span class="n">python</span><span class="o">-</span><span class="n">e2e</span><span class="o">-</span><span class="n">book</span>\<span class="mi">2</span><span class="o">-</span><span class="n">automate</span>\<span class="n">debugging</span>\<span class="n">util</span><span class="o">.</span><span class="n">py</span><span class="p">:</span><span class="mi">1</span>
+        <span class="n">breakpoint</span> <span class="n">already</span> <span class="n">hit</span> <span class="mi">1</span> <span class="n">time</span>
+<span class="p">(</span><span class="n">Pdb</span><span class="p">)</span> <span class="n">enable</span> <span class="mi">1</span>
+<span class="n">Enabled</span> <span class="n">breakpoint</span> <span class="mi">1</span> <span class="n">at</span> <span class="n">d</span><span class="p">:</span>\<span class="n">repositories</span>\<span class="n">python</span><span class="o">-</span><span class="n">e2e</span><span class="o">-</span><span class="n">book</span>\<span class="mi">2</span><span class="o">-</span><span class="n">automate</span>\<span class="n">debugging</span>\<span class="n">util</span><span class="o">.</span><span class="n">py</span><span class="p">:</span><span class="mi">1</span>
+<span class="p">(</span><span class="n">Pdb</span><span class="p">)</span> <span class="n">b</span>
+<span class="n">Num</span> <span class="n">Type</span>         <span class="n">Disp</span> <span class="n">Enb</span>   <span class="n">Where</span>
+<span class="mi">1</span>   <span class="n">breakpoint</span>   <span class="n">keep</span> <span class="n">yes</span>   <span class="n">at</span> <span class="n">d</span><span class="p">:</span>\<span class="n">repositories</span>\<span class="n">python</span><span class="o">-</span><span class="n">e2e</span><span class="o">-</span><span class="n">book</span>\<span class="mi">2</span><span class="o">-</span><span class="n">automate</span>\<span class="n">debugging</span>\<span class="n">util</span><span class="o">.</span><span class="n">py</span><span class="p">:</span><span class="mi">1</span>
+        <span class="n">breakpoint</span> <span class="n">already</span> <span class="n">hit</span> <span class="mi">1</span> <span class="n">time</span>
+<span class="p">(</span><span class="n">Pdb</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>To delete a breakpoint, use the command <code class="docutils literal notranslate"><span class="pre">cl</span></code> (clear):</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cl</span><span class="p">(</span><span class="n">ear</span><span class="p">)</span> <span class="n">filename</span><span class="p">:</span><span class="n">lineno</span>
+<span class="n">cl</span><span class="p">(</span><span class="n">ear</span><span class="p">)</span> <span class="p">[</span><span class="n">bpnumber</span> <span class="p">[</span><span class="n">bpnumber</span><span class="o">...</span><span class="p">]]</span>
+</pre></div>
+</div>
+<p>Now let’s use a Python expression to set a breakpoint. Imagine a situation where you wanted to break only if your troubled function received a certain input.</p>
+<p>In this example scenario, the <code class="docutils literal notranslate"><span class="pre">get_path()</span></code> function is failing when it receives a relative path, i.e. the file’s path doesn’t start with <code class="docutils literal notranslate"><span class="pre">/</span></code>. I’ll create an expression that evaluates to true in this case and pass it to <code class="docutils literal notranslate"><span class="pre">b</span></code> as the 2nd argument:</p>
+<div class="highlight-powershell notranslate"><div class="highlight"><pre><span></span>PS D:\repositories\python-e2e-book\2-automate\debugging&gt; python .\debug_4.py
+&gt; d:\repositories\python-e2e-book\2-automate\debugging\debug_4.py(7)&lt;module&gt;()
+-&gt; filename_path = util.get_path(filename)
+(Pdb) b util.get_path, not filename.startswith(&#39;/&#39;)
+Breakpoint 1 at d:\repositories\python-e2e-book\2-automate\debugging\util.py:1
+(Pdb) c
+&gt; d:\repositories\python-e2e-book\2-automate\debugging\util.py(3)get_path()
+-&gt; import os
+(Pdb) a
+filename = &#39;.\\debug_4.py&#39;
+(Pdb)
+</pre></div>
+</div>
+<p>After you create the breakpoint above and enter <code class="docutils literal notranslate"><span class="pre">c</span></code> to continue execution, pdb stops when the expression evaluates to true. The command <code class="docutils literal notranslate"><span class="pre">a</span></code> (args) prints the argument list of the current function.</p>
+<p>In the example above, when you’re setting the breakpoint with a function name rather than a line number, note that the expression should use only function arguments or global variables that are available at the time the function is entered. Otherwise, the breakpoint will stop execution in the function regardless of the expression’s value.</p>
+<p>If you need to break using an expression with a variable name located inside a function, i.e. a variable name not in the function’s argument list, specify the line number:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">PS</span> <span class="n">D</span><span class="p">:</span>\<span class="n">repositories</span>\<span class="n">python</span><span class="o">-</span><span class="n">e2e</span><span class="o">-</span><span class="n">book</span>\<span class="mi">2</span><span class="o">-</span><span class="n">automate</span>\<span class="n">debugging</span><span class="o">&gt;</span> <span class="n">python</span> <span class="o">.</span>\<span class="n">debug_4</span><span class="o">.</span><span class="n">py</span>
+<span class="o">&gt;</span> <span class="n">d</span><span class="p">:</span>\<span class="n">repositories</span>\<span class="n">python</span><span class="o">-</span><span class="n">e2e</span><span class="o">-</span><span class="n">book</span>\<span class="mi">2</span><span class="o">-</span><span class="n">automate</span>\<span class="n">debugging</span>\<span class="n">debug_4</span><span class="o">.</span><span class="n">py</span><span class="p">(</span><span class="mi">7</span><span class="p">)</span><span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span><span class="p">()</span>
+<span class="o">-&gt;</span> <span class="n">filename_path</span> <span class="o">=</span> <span class="n">util</span><span class="o">.</span><span class="n">get_path</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
+<span class="p">(</span><span class="n">Pdb</span><span class="p">)</span> <span class="n">b</span> <span class="n">util</span><span class="p">:</span><span class="mi">5</span><span class="p">,</span> <span class="ow">not</span> <span class="n">head</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">)</span>
+<span class="n">Breakpoint</span> <span class="mi">1</span> <span class="n">at</span> <span class="n">d</span><span class="p">:</span>\<span class="n">repositories</span>\<span class="n">python</span><span class="o">-</span><span class="n">e2e</span><span class="o">-</span><span class="n">book</span>\<span class="mi">2</span><span class="o">-</span><span class="n">automate</span>\<span class="n">debugging</span>\<span class="n">util</span><span class="o">.</span><span class="n">py</span><span class="p">:</span><span class="mi">5</span>
+<span class="p">(</span><span class="n">Pdb</span><span class="p">)</span> <span class="n">c</span>
+<span class="o">&gt;</span> <span class="n">d</span><span class="p">:</span>\<span class="n">repositories</span>\<span class="n">python</span><span class="o">-</span><span class="n">e2e</span><span class="o">-</span><span class="n">book</span>\<span class="mi">2</span><span class="o">-</span><span class="n">automate</span>\<span class="n">debugging</span>\<span class="n">util</span><span class="o">.</span><span class="n">py</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span><span class="n">get_path</span><span class="p">()</span>
+<span class="o">-&gt;</span> <span class="k">return</span> <span class="n">head</span>
+<span class="p">(</span><span class="n">Pdb</span><span class="p">)</span> <span class="n">p</span> <span class="n">head</span>
+<span class="s1">&#39;.&#39;</span>   
+<span class="p">(</span><span class="n">Pdb</span><span class="p">)</span> <span class="n">a</span>
+<span class="n">filename</span> <span class="o">=</span> <span class="s1">&#39;.</span><span class="se">\\</span><span class="s1">debug_4.py&#39;</span>
+<span class="p">(</span><span class="n">Pdb</span><span class="p">)</span> 
+</pre></div>
+</div>
+<p>You can also set a temporary breakpoint using the command <code class="docutils literal notranslate"><span class="pre">tbreak</span></code>. It’s removed automatically when it’s first hit. It uses the same arguments as <code class="docutils literal notranslate"><span class="pre">b</span></code>.</p>
+</div>
+<div class="section" id="continuing-execution">
+<h2>Continuing Execution<a class="headerlink" href="#continuing-execution" title="Permalink to this headline">¶</a></h2>
+<p>So far, we’ve looked at stepping through code with <code class="docutils literal notranslate"><span class="pre">n</span></code> (next) and <code class="docutils literal notranslate"><span class="pre">s</span></code> (step) and using breakpoints with <code class="docutils literal notranslate"><span class="pre">b</span></code> (break) and <code class="docutils literal notranslate"><span class="pre">c</span></code> (continue).</p>
+<p>There’s also a related command: <code class="docutils literal notranslate"><span class="pre">unt</span></code> (until).</p>
+<p>Use <code class="docutils literal notranslate"><span class="pre">unt</span></code> to continue execution like <code class="docutils literal notranslate"><span class="pre">c</span></code>, but stop at the next line greater than the current line. Sometimes <code class="docutils literal notranslate"><span class="pre">unt</span></code> is more convenient and quicker to use and is exactly what you want. I’ll demonstrate this with an example below.</p>
+<p>Let’s first look at the syntax and description for <code class="docutils literal notranslate"><span class="pre">unt</span></code>:</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Command</p></th>
+<th class="head"><p>Syntax</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">unt</span></code></p></td>
+<td><p>unt(il) [lineno]</p></td>
+<td><p>Without <code class="docutils literal notranslate"><span class="pre">lineno</span></code>, continue execution until the line with a number greater than the current one is reached. With <code class="docutils literal notranslate"><span class="pre">lineno</span></code>, continue execution until a line with a number greater or equal to that is reached. In both cases, also stop when the current frame returns.</p></td>
+</tr>
+</tbody>
+</table>
+<p>Depending on whether or not you pass the line number argument <code class="docutils literal notranslate"><span class="pre">lineno</span></code>, <code class="docutils literal notranslate"><span class="pre">unt</span></code> can behave in two ways:</p>
+<ul class="simple">
+<li><p>Without <code class="docutils literal notranslate"><span class="pre">lineno</span></code>, continue execution until the line with a number greater than the current one is reached. This is similar to <code class="docutils literal notranslate"><span class="pre">n</span></code> (next). It’s an alternate way to execute and “step over” code. The difference between <code class="docutils literal notranslate"><span class="pre">n</span></code> and <code class="docutils literal notranslate"><span class="pre">unt</span></code> is that <code class="docutils literal notranslate"><span class="pre">unt</span></code> stops only when a line with a number greater than the current one is reached. <code class="docutils literal notranslate"><span class="pre">n</span></code> will stop at the next logically executed line.</p></li>
+<li><p>With <code class="docutils literal notranslate"><span class="pre">lineno</span></code>, continue execution until a line with a number greater or equal to that is reached. This is like <code class="docutils literal notranslate"><span class="pre">c</span></code> (continue) with a line number argument.</p></li>
+</ul>
+<p>In both cases, <code class="docutils literal notranslate"><span class="pre">unt</span></code> stops when the current frame (function) returns, just like <code class="docutils literal notranslate"><span class="pre">n</span></code> (next) and <code class="docutils literal notranslate"><span class="pre">s</span></code> (step).</p>
+<p>The primary behavior to note with <code class="docutils literal notranslate"><span class="pre">unt</span></code> is that it will stop when a line number <strong>greater or equal</strong> to the current or specified line is reached.</p>
+<p>Use <code class="docutils literal notranslate"><span class="pre">unt</span></code> when you want to continue execution and stop farther down in the current source file. You can treat it like a hybrid of <code class="docutils literal notranslate"><span class="pre">n</span></code> (next) and <code class="docutils literal notranslate"><span class="pre">b</span></code> (break), depending on whether you pass a line number argument or not.</p>
+<p>In the example below, there is a function with a loop. Here, you want to continue execution of the code and stop after the loop, without stepping through each iteration of the loop or setting a breakpoint:</p>
+<p>Here’s the example source for <code class="docutils literal notranslate"><span class="pre">debug_5.py</span></code>:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/usr/bin/env python3</span>
+
+<span class="kn">import</span> <span class="nn">os</span>
+
+
+<span class="k">def</span> <span class="nf">get_path</span><span class="p">(</span><span class="n">fname</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Return file&#39;s path or empty string if no path.&quot;&quot;&quot;</span>
+    <span class="kn">import</span> <span class="nn">pdb</span><span class="p">;</span> <span class="n">pdb</span><span class="o">.</span><span class="n">set_trace</span><span class="p">()</span>
+    <span class="n">head</span><span class="p">,</span> <span class="n">tail</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="n">fname</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">char</span> <span class="ow">in</span> <span class="n">tail</span><span class="p">:</span>
+        <span class="k">pass</span>  <span class="c1"># Check filename char</span>
+    <span class="k">return</span> <span class="n">head</span>
+
+
+<span class="n">filename</span> <span class="o">=</span> <span class="vm">__file__</span>
+<span class="n">filename_path</span> <span class="o">=</span> <span class="n">get_path</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;path = </span><span class="si">{</span><span class="n">filename_path</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>And the console output using <code class="docutils literal notranslate"><span class="pre">unt</span></code>:</p>
+<div class="highlight-powershell notranslate"><div class="highlight"><pre><span></span>PS D:\repositories\python-e2e-book\2-automate\debugging&gt; python .\debug_5.py
+&gt; d:\repositories\python-e2e-book\2-automate\debugging\debug_5.py(9)get_path()
+-&gt; head, tail = os.path.split(fname)
+(Pdb) ll
+  6     def get_path(fname):
+  7         &quot;&quot;&quot;Return file&#39;s path or empty string if no path.&quot;&quot;&quot;
+  8         import pdb; pdb.set_trace()
+  9  -&gt;     head, tail = os.path.split(fname)
+ 10         for char in tail:
+ 11             pass  # Check filename char
+ 12         return head
+(Pdb) unt
+&gt; d:\repositories\python-e2e-book\2-automate\debugging\debug_5.py(10)get_path()
+-&gt; for char in tail:
+(Pdb)
+&gt; d:\repositories\python-e2e-book\2-automate\debugging\debug_5.py(11)get_path()
+-&gt; pass  # Check filename char
+(Pdb)
+&gt; d:\repositories\python-e2e-book\2-automate\debugging\debug_5.py(12)get_path()
+-&gt; return head
+(Pdb)
+--Return--
+&gt; d:\repositories\python-e2e-book\2-automate\debugging\debug_5.py(12)get_path()-&gt;&#39;.&#39;      
+-&gt; return head
+(Pdb) p char, tail
+(&#39;y&#39;, &#39;debug_5.py&#39;)
+(Pdb)
+</pre></div>
+</div>
+<p>The <code class="docutils literal notranslate"><span class="pre">ll</span></code> command was used first to print the function’s source, followed by <code class="docutils literal notranslate"><span class="pre">unt</span></code>. pdb remembers the last command entered, so I just pressed Enter to repeat the <code class="docutils literal notranslate"><span class="pre">unt</span></code> command. This continued execution through the code until a source line greater than the current line was reached.</p>
+<p>Note in the console output above that pdb stopped only once on lines <code class="docutils literal notranslate"><span class="pre">10</span></code> and <code class="docutils literal notranslate"><span class="pre">11</span></code>. Since <code class="docutils literal notranslate"><span class="pre">unt</span></code> was used, execution was stopped only in the 1st iteration of the loop. However, each iteration of the loop was executed. This can be verified in the last line of output. The <code class="docutils literal notranslate"><span class="pre">char</span></code> variable’s value <code class="docutils literal notranslate"><span class="pre">'y'</span></code> is equal to the last character in <code class="docutils literal notranslate"><span class="pre">tail</span></code>’s value <code class="docutils literal notranslate"><span class="pre">'debug_5.py'</span></code>.</p>
+</div>
+<div class="section" id="displaying-expressions">
+<h2>Displaying Expressions<a class="headerlink" href="#displaying-expressions" title="Permalink to this headline">¶</a></h2>
+<p>Similar to printing expressions with <code class="docutils literal notranslate"><span class="pre">p</span></code> and <code class="docutils literal notranslate"><span class="pre">pp</span></code>, you can use the command <code class="docutils literal notranslate"><span class="pre">display</span> <span class="pre">[expression]</span></code> to tell pdb to automatically display the value of an expression, if it changed, when execution stops. Use the command <code class="docutils literal notranslate"><span class="pre">undisplay</span> <span class="pre">[expression]</span></code> to clear a display expression.</p>
+<p>Here’s the syntax and description for both commands:</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Command</p></th>
+<th class="head"><p>Syntax</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">display</span></code></p></td>
+<td><p>display [expression]</p></td>
+<td><p>Display the value of <code class="docutils literal notranslate"><span class="pre">expression</span></code> if it changed, each time execution stops in the current frame. Without <code class="docutils literal notranslate"><span class="pre">expression</span></code>, list all display expressions for the current frame.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">undisplay</span></code></p></td>
+<td><p>undisplay [expression]</p></td>
+<td><p>Do not display <code class="docutils literal notranslate"><span class="pre">expression</span></code> any more in the current frame. Without <code class="docutils literal notranslate"><span class="pre">expression</span></code>, clear all display expressions for the current frame.</p></td>
+</tr>
+</tbody>
+</table>
+<p>Below is an example, <code class="docutils literal notranslate"><span class="pre">debug_5.py</span></code>, demonstrating its use with a loop:</p>
+<div class="highlight-powershell notranslate"><div class="highlight"><pre><span></span>PS D:\repositories\python-e2e-book\2-automate\debugging&gt; python .\debug_5.py
+&gt; d:\repositories\python-e2e-book\2-automate\debugging\debug_5.py(9)get_path()
+-&gt; head, tail = os.path.split(fname)
+(Pdb) ll
+  6     def get_path(fname):
+  7         &quot;&quot;&quot;Return file&#39;s path or empty string if no path.&quot;&quot;&quot;
+  8         import pdb; pdb.set_trace()
+  9  -&gt;     head, tail = os.path.split(fname)
+ 10         for char in tail:
+ 11             pass  # Check filename char
+ 12         return head
+(Pdb) b 11
+Breakpoint 1 at d:\repositories\python-e2e-book\2-automate\debugging\debug_5.py:11
+(Pdb) c
+&gt; d:\repositories\python-e2e-book\2-automate\debugging\debug_5.py(11)get_path()
+-&gt; pass  # Check filename char
+(Pdb) display char
+display char: &#39;d&#39;
+(Pdb) c
+&gt; d:\repositories\python-e2e-book\2-automate\debugging\debug_5.py(11)get_path()
+-&gt; pass  # Check filename char
+display char: &#39;e&#39;  [old: &#39;d&#39;]
+(Pdb)
+&gt; d:\repositories\python-e2e-book\2-automate\debugging\debug_5.py(11)get_path()
+-&gt; pass  # Check filename char
+display char: &#39;b&#39;  [old: &#39;e&#39;]
+(Pdb)
+&gt; d:\repositories\python-e2e-book\2-automate\debugging\debug_5.py(11)get_path()
+-&gt; pass  # Check filename char
+display char: &#39;u&#39;  [old: &#39;b&#39;]
+(Pdb)
+&gt; d:\repositories\python-e2e-book\2-automate\debugging\debug_5.py(11)get_path()
+-&gt; pass  # Check filename char
+display char: &#39;g&#39;  [old: &#39;u&#39;]
+(Pdb)
+</pre></div>
+</div>
+<p>In the output above, pdb automatically displayed the value of the <code class="docutils literal notranslate"><span class="pre">char</span></code> variable because each time the breakpoint was hit its value had changed. Sometimes this is helpful and exactly what you want, but there’s another way to use <code class="docutils literal notranslate"><span class="pre">display</span></code>.</p>
+<p>You can enter <code class="docutils literal notranslate"><span class="pre">display</span></code> multiple times to build a watch list of expressions. This can be easier to use than <code class="docutils literal notranslate"><span class="pre">p</span></code>. After adding all of the expressions you’re interested in, simply enter <code class="docutils literal notranslate"><span class="pre">display</span></code> to see the current values:</p>
+<div class="highlight-powershell notranslate"><div class="highlight"><pre><span></span>(Pdb) display
+Currently displaying:
+char: &#39;g&#39;
+(Pdb) display fname
+display fname: &#39;.\\debug_5.py&#39;
+(Pdb) display fname
+display fname: &#39;.\\debug_5.py&#39;
+(Pdb) display head
+display head: &#39;.&#39;
+(Pdb) display tail
+display tail: &#39;debug_5.py&#39;
+(Pdb)
+</pre></div>
+</div>
+</div>
+<div class="section" id="python-caller-id">
+<h2>Python Caller ID<a class="headerlink" href="#python-caller-id" title="Permalink to this headline">¶</a></h2>
+<p>In this last section, we’ll build upon what we’ve learned so far and finish with a nice payoff. I use the name “caller ID” in reference to the phone system’s caller identification feature. That is exactly what this example demonstrates, except it’s applied to Python.</p>
+<p>Here’s the source for the main script <code class="docutils literal notranslate"><span class="pre">debug_6.py</span></code>:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/usr/bin/env python3</span>
+
+<span class="kn">import</span> <span class="nn">fileutil</span>
+
+
+<span class="k">def</span> <span class="nf">get_file_info</span><span class="p">(</span><span class="n">full_fname</span><span class="p">):</span>
+    <span class="n">file_path</span> <span class="o">=</span> <span class="n">fileutil</span><span class="o">.</span><span class="n">get_path</span><span class="p">(</span><span class="n">full_fname</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">file_path</span>
+
+
+<span class="n">filename</span> <span class="o">=</span> <span class="vm">__file__</span>
+<span class="n">filename_path</span> <span class="o">=</span> <span class="n">get_file_info</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;path = </span><span class="si">{</span><span class="n">filename_path</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Here’s the utility module <code class="docutils literal notranslate"><span class="pre">fileutil.py</span></code>:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">get_path</span><span class="p">(</span><span class="n">fname</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Return file&#39;s path or empty string if no path.&quot;&quot;&quot;</span>
+    <span class="kn">import</span> <span class="nn">os</span>
+    <span class="kn">import</span> <span class="nn">pdb</span><span class="p">;</span> <span class="n">pdb</span><span class="o">.</span><span class="n">set_trace</span><span class="p">()</span>
+    <span class="n">head</span><span class="p">,</span> <span class="n">tail</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="n">fname</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">head</span>
+</pre></div>
+</div>
+<p>In this scenario, imagine there’s a large code base with a function in a utility module, <code class="docutils literal notranslate"><span class="pre">get_path()</span></code>, that’s being called with invalid input. However, it’s being called from many places in different packages.</p>
+<p><strong>How do you find who the caller is?</strong></p>
+<p>Use the command <code class="docutils literal notranslate"><span class="pre">w</span></code> (where) to print a stack trace, with the most recent frame at the bottom:</p>
+<div class="highlight-powershell notranslate"><div class="highlight"><pre><span></span>PS D:\repositories\python-e2e-book\2-automate\debugging&gt; python .\debug_6.py
+&gt; d:\repositories\python-e2e-book\2-automate\debugging\fileutil.py(5)get_path()
+-&gt; head, tail = os.path.split(fname)
+(Pdb) w
+  d:\repositories\python-e2e-book\2-automate\debugging\debug_6.py(12)&lt;module&gt;()
+-&gt; filename_path = get_file_info(filename)
+  d:\repositories\python-e2e-book\2-automate\debugging\debug_6.py(7)get_file_info()       
+-&gt; file_path = fileutil.get_path(full_fname)
+&gt; d:\repositories\python-e2e-book\2-automate\debugging\fileutil.py(5)get_path()
+-&gt; head, tail = os.path.split(fname)
+(Pdb)
+</pre></div>
+</div>
+<p>Don’t worry if this looks confusing or if you’re not sure what a stack trace or frame is. I’ll explain those terms below. It’s not as difficult as it might sound.</p>
+<p>Since the most recent frame is at the bottom, start there and read from the bottom up. Look at the lines that start with <code class="docutils literal notranslate"><span class="pre">-&gt;</span></code>, but skip the 1st instance since that’s where <code class="docutils literal notranslate"><span class="pre">pdb.set_trace()</span></code> was used to enter pdb in the function <code class="docutils literal notranslate"><span class="pre">get_path()</span></code>. In this example, the source line that called the function <code class="docutils literal notranslate"><span class="pre">get_path()</span></code> is:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">-&gt;</span> <span class="n">file_path</span> <span class="o">=</span> <span class="n">fileutil</span><span class="o">.</span><span class="n">get_path</span><span class="p">(</span><span class="n">full_fname</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>The line above each <code class="docutils literal notranslate"><span class="pre">-&gt;</span></code> contains the filename, line number (in parentheses), and function name the source line is in. So the caller is:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>  <span class="n">d</span><span class="p">:</span>\<span class="n">repositories</span>\<span class="n">python</span><span class="o">-</span><span class="n">e2e</span><span class="o">-</span><span class="n">book</span>\<span class="mi">2</span><span class="o">-</span><span class="n">automate</span>\<span class="n">debugging</span>\<span class="n">debug_6</span><span class="o">.</span><span class="n">py</span><span class="p">(</span><span class="mi">7</span><span class="p">)</span><span class="n">get_file_info</span><span class="p">()</span>       
+<span class="o">-&gt;</span> <span class="n">file_path</span> <span class="o">=</span> <span class="n">fileutil</span><span class="o">.</span><span class="n">get_path</span><span class="p">(</span><span class="n">full_fname</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>That’s no surprise in this small example for demonstration purposes, but imagine a large application where you’ve set a breakpoint with a condition to identify where a bad input value is originating.</p>
+<p>Now we know how to find the caller.</p>
+<p><strong>But what about this stack trace and frame stuff?</strong></p>
+<p>A stack trace is just a list of all the frames that Python has created to keep track of function calls. A frame is a data structure Python creates when a function is called and deletes when it returns. The stack is simply an ordered list of frames or function calls at any point in time. The (function call) stack grows and shrinks throughout the life of an application as functions are called and then return.</p>
+<p>When printed, this ordered list of frames, the stack, is called a stack trace. You can see it at any time by entering the command <code class="docutils literal notranslate"><span class="pre">w</span></code>, as we did above to find the caller.</p>
+<blockquote>
+<div><p>See this <a class="reference external" href="https://en.wikipedia.org/wiki/Call_stack">call stack article on Wikipedia</a> for details.</p>
+</div></blockquote>
+<p>To understand better and get more out of pdb, let’s look more closely at the help for <code class="docutils literal notranslate"><span class="pre">w</span></code>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="n">Pdb</span><span class="p">)</span> <span class="n">h</span> <span class="n">w</span>
+<span class="n">w</span><span class="p">(</span><span class="n">here</span><span class="p">)</span>
+        <span class="n">Print</span> <span class="n">a</span> <span class="n">stack</span> <span class="n">trace</span><span class="p">,</span> <span class="k">with</span> <span class="n">the</span> <span class="n">most</span> <span class="n">recent</span> <span class="n">frame</span> <span class="n">at</span> <span class="n">the</span> <span class="n">bottom</span><span class="o">.</span>
+        <span class="n">An</span> <span class="n">arrow</span> <span class="n">indicates</span> <span class="n">the</span> <span class="s2">&quot;current frame&quot;</span><span class="p">,</span> <span class="n">which</span> <span class="n">determines</span> <span class="n">the</span>
+        <span class="n">context</span> <span class="n">of</span> <span class="n">most</span> <span class="n">commands</span><span class="o">.</span> <span class="s1">&#39;bt&#39;</span> <span class="ow">is</span> <span class="n">an</span> <span class="n">alias</span> <span class="k">for</span> <span class="n">this</span> <span class="n">command</span><span class="o">.</span>
+</pre></div>
+</div>
+<p><strong>What does pdb mean by “current frame”?</strong></p>
+<p>Think of the current frame as the current function where pdb has stopped execution. In other words, the current frame is where your application is currently paused and is used as the “frame” of reference for pdb commands like <code class="docutils literal notranslate"><span class="pre">p</span></code> (print).</p>
+<p><code class="docutils literal notranslate"><span class="pre">p</span></code> and other commands will use the current frame for context when needed. In the case of <code class="docutils literal notranslate"><span class="pre">p</span></code>, the current frame will be used for looking up and printing variable references.</p>
+<p>When pdb prints a stack trace, an arrow <code class="docutils literal notranslate"><span class="pre">&gt;</span></code> indicates the current frame.</p>
+<p><strong>How is this useful?</strong></p>
+<p>You can use the two commands <code class="docutils literal notranslate"><span class="pre">u</span></code> (up) and <code class="docutils literal notranslate"><span class="pre">d</span></code> (down) to change the current frame. Combined with <code class="docutils literal notranslate"><span class="pre">p</span></code>, this allows you to inspect variables and state in your application at any point along the call stack in any frame.</p>
+<p>Here’s the syntax and description for both commands:</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Command</p></th>
+<th class="head"><p>Syntax</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">u</span></code></p></td>
+<td><p>u(p) [count]</p></td>
+<td><p>Move the current frame <code class="docutils literal notranslate"><span class="pre">count</span></code> (default one) levels up in the stack trace (to an older frame).</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">d</span></code></p></td>
+<td><p>d(own) [count]</p></td>
+<td><p>Move the current frame <code class="docutils literal notranslate"><span class="pre">count</span></code> (default one) levels down in the stack trace (to a newer frame).</p></td>
+</tr>
+</tbody>
+</table>
+<p>Let’s look at an example using the <code class="docutils literal notranslate"><span class="pre">u</span></code> and <code class="docutils literal notranslate"><span class="pre">d</span></code> commands. In this scenario, we want to inspect the variable <code class="docutils literal notranslate"><span class="pre">full_fname</span></code> that’s local to the function <code class="docutils literal notranslate"><span class="pre">get_file_info()</span></code> in <code class="docutils literal notranslate"><span class="pre">debug_6.py</span></code>. In order to do this, we have to change the current frame up one level using the command <code class="docutils literal notranslate"><span class="pre">u</span></code>:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">PS</span> <span class="n">D</span><span class="p">:</span>\<span class="n">repositories</span>\<span class="n">python</span><span class="o">-</span><span class="n">e2e</span><span class="o">-</span><span class="n">book</span>\<span class="mi">2</span><span class="o">-</span><span class="n">automate</span>\<span class="n">debugging</span><span class="o">&gt;</span> <span class="n">python</span> <span class="o">.</span>\<span class="n">debug_6</span><span class="o">.</span><span class="n">py</span>
+<span class="o">&gt;</span> <span class="n">d</span><span class="p">:</span>\<span class="n">repositories</span>\<span class="n">python</span><span class="o">-</span><span class="n">e2e</span><span class="o">-</span><span class="n">book</span>\<span class="mi">2</span><span class="o">-</span><span class="n">automate</span>\<span class="n">debugging</span>\<span class="n">fileutil</span><span class="o">.</span><span class="n">py</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span><span class="n">get_path</span><span class="p">()</span>
+<span class="o">-&gt;</span> <span class="n">head</span><span class="p">,</span> <span class="n">tail</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="n">fname</span><span class="p">)</span>
+<span class="p">(</span><span class="n">Pdb</span><span class="p">)</span> <span class="n">w</span>
+  <span class="n">d</span><span class="p">:</span>\<span class="n">repositories</span>\<span class="n">python</span><span class="o">-</span><span class="n">e2e</span><span class="o">-</span><span class="n">book</span>\<span class="mi">2</span><span class="o">-</span><span class="n">automate</span>\<span class="n">debugging</span>\<span class="n">debug_6</span><span class="o">.</span><span class="n">py</span><span class="p">(</span><span class="mi">12</span><span class="p">)</span><span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span><span class="p">()</span>
+<span class="o">-&gt;</span> <span class="n">filename_path</span> <span class="o">=</span> <span class="n">get_file_info</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
+  <span class="n">d</span><span class="p">:</span>\<span class="n">repositories</span>\<span class="n">python</span><span class="o">-</span><span class="n">e2e</span><span class="o">-</span><span class="n">book</span>\<span class="mi">2</span><span class="o">-</span><span class="n">automate</span>\<span class="n">debugging</span>\<span class="n">debug_6</span><span class="o">.</span><span class="n">py</span><span class="p">(</span><span class="mi">7</span><span class="p">)</span><span class="n">get_file_info</span><span class="p">()</span>       
+<span class="o">-&gt;</span> <span class="n">file_path</span> <span class="o">=</span> <span class="n">fileutil</span><span class="o">.</span><span class="n">get_path</span><span class="p">(</span><span class="n">full_fname</span><span class="p">)</span>
+<span class="o">&gt;</span> <span class="n">d</span><span class="p">:</span>\<span class="n">repositories</span>\<span class="n">python</span><span class="o">-</span><span class="n">e2e</span><span class="o">-</span><span class="n">book</span>\<span class="mi">2</span><span class="o">-</span><span class="n">automate</span>\<span class="n">debugging</span>\<span class="n">fileutil</span><span class="o">.</span><span class="n">py</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span><span class="n">get_path</span><span class="p">()</span>
+<span class="o">-&gt;</span> <span class="n">head</span><span class="p">,</span> <span class="n">tail</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="n">fname</span><span class="p">)</span>
+<span class="p">(</span><span class="n">Pdb</span><span class="p">)</span> <span class="n">h</span> <span class="n">w</span>
+<span class="n">w</span><span class="p">(</span><span class="n">here</span><span class="p">)</span>
+        <span class="n">Print</span> <span class="n">a</span> <span class="n">stack</span> <span class="n">trace</span><span class="p">,</span> <span class="k">with</span> <span class="n">the</span> <span class="n">most</span> <span class="n">recent</span> <span class="n">frame</span> <span class="n">at</span> <span class="n">the</span> <span class="n">bottom</span><span class="o">.</span>
+        <span class="n">An</span> <span class="n">arrow</span> <span class="n">indicates</span> <span class="n">the</span> <span class="s2">&quot;current frame&quot;</span><span class="p">,</span> <span class="n">which</span> <span class="n">determines</span> <span class="n">the</span>  
+        <span class="n">context</span> <span class="n">of</span> <span class="n">most</span> <span class="n">commands</span><span class="o">.</span>  <span class="s1">&#39;bt&#39;</span> <span class="ow">is</span> <span class="n">an</span> <span class="n">alias</span> <span class="k">for</span> <span class="n">this</span> <span class="n">command</span><span class="o">.</span> 
+<span class="p">(</span><span class="n">Pdb</span><span class="p">)</span> <span class="n">u</span>
+<span class="o">&gt;</span> <span class="n">d</span><span class="p">:</span>\<span class="n">repositories</span>\<span class="n">python</span><span class="o">-</span><span class="n">e2e</span><span class="o">-</span><span class="n">book</span>\<span class="mi">2</span><span class="o">-</span><span class="n">automate</span>\<span class="n">debugging</span>\<span class="n">debug_6</span><span class="o">.</span><span class="n">py</span><span class="p">(</span><span class="mi">7</span><span class="p">)</span><span class="n">get_file_info</span><span class="p">()</span>
+<span class="o">-&gt;</span> <span class="n">file_path</span> <span class="o">=</span> <span class="n">fileutil</span><span class="o">.</span><span class="n">get_path</span><span class="p">(</span><span class="n">full_fname</span><span class="p">)</span>
+<span class="p">(</span><span class="n">Pdb</span><span class="p">)</span> <span class="n">p</span> <span class="n">full_fname</span>
+<span class="s1">&#39;.</span><span class="se">\\</span><span class="s1">debug_6.py&#39;</span>
+<span class="p">(</span><span class="n">Pdb</span><span class="p">)</span> <span class="n">d</span>
+<span class="o">&gt;</span> <span class="n">d</span><span class="p">:</span>\<span class="n">repositories</span>\<span class="n">python</span><span class="o">-</span><span class="n">e2e</span><span class="o">-</span><span class="n">book</span>\<span class="mi">2</span><span class="o">-</span><span class="n">automate</span>\<span class="n">debugging</span>\<span class="n">fileutil</span><span class="o">.</span><span class="n">py</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span><span class="n">get_path</span><span class="p">()</span>
+<span class="o">-&gt;</span> <span class="n">head</span><span class="p">,</span> <span class="n">tail</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="n">fname</span><span class="p">)</span>
+<span class="p">(</span><span class="n">Pdb</span><span class="p">)</span> <span class="n">p</span> <span class="n">fname</span>
+<span class="s1">&#39;.</span><span class="se">\\</span><span class="s1">debug_6.py&#39;</span>
+<span class="p">(</span><span class="n">Pdb</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>The call to <code class="docutils literal notranslate"><span class="pre">pdb.set_trace()</span></code> is in <code class="docutils literal notranslate"><span class="pre">fileutil.py</span></code> in the function <code class="docutils literal notranslate"><span class="pre">get_path()</span></code>, so the current frame is initially set there. You can see it in the 1st line of output above:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;</span> <span class="n">d</span><span class="p">:</span>\<span class="n">repositories</span>\<span class="n">python</span><span class="o">-</span><span class="n">e2e</span><span class="o">-</span><span class="n">book</span>\<span class="mi">2</span><span class="o">-</span><span class="n">automate</span>\<span class="n">debugging</span>\<span class="n">fileutil</span><span class="o">.</span><span class="n">py</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span><span class="n">get_path</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>To access and print the local variable <code class="docutils literal notranslate"><span class="pre">full_fname</span></code> in the function <code class="docutils literal notranslate"><span class="pre">get_file_info()</span></code> in <code class="docutils literal notranslate"><span class="pre">example5.py</span></code>, the command <code class="docutils literal notranslate"><span class="pre">u</span></code> was used to move up one level:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="n">Pdb</span><span class="p">)</span> <span class="n">u</span>
+<span class="o">&gt;</span> <span class="n">d</span><span class="p">:</span>\<span class="n">repositories</span>\<span class="n">python</span><span class="o">-</span><span class="n">e2e</span><span class="o">-</span><span class="n">book</span>\<span class="mi">2</span><span class="o">-</span><span class="n">automate</span>\<span class="n">debugging</span>\<span class="n">debug_6</span><span class="o">.</span><span class="n">py</span><span class="p">(</span><span class="mi">7</span><span class="p">)</span><span class="n">get_file_info</span><span class="p">()</span>
+<span class="o">-&gt;</span> <span class="n">file_path</span> <span class="o">=</span> <span class="n">fileutil</span><span class="o">.</span><span class="n">get_path</span><span class="p">(</span><span class="n">full_fname</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Note in the output of <code class="docutils literal notranslate"><span class="pre">u</span></code> above that pdb printed the arrow <code class="docutils literal notranslate"><span class="pre">&gt;</span></code> at the beginning of the 1st line. This is pdb letting you know the frame was changed and this source location is now the current frame. The variable <code class="docutils literal notranslate"><span class="pre">full_fname</span></code> is accessible now. Also, it’s important to realize the source line starting with <code class="docutils literal notranslate"><span class="pre">-&gt;</span></code> on the 2nd line has been executed. Since the frame was moved up the stack, <code class="docutils literal notranslate"><span class="pre">fileutil.get_path()</span></code> has been called. Using <code class="docutils literal notranslate"><span class="pre">u</span></code>, we moved up the stack (in a sense, back in time) to the function <code class="docutils literal notranslate"><span class="pre">debug_6.get_file_info()</span></code> where <code class="docutils literal notranslate"><span class="pre">fileutil.get_path()</span></code> was called.</p>
+<p>Continuing with the example, after <code class="docutils literal notranslate"><span class="pre">full_fname</span></code> was printed, the current frame was moved to its original location using <code class="docutils literal notranslate"><span class="pre">d</span></code>, and the local variable <code class="docutils literal notranslate"><span class="pre">fname</span></code> in <code class="docutils literal notranslate"><span class="pre">get_path()</span></code> was printed.</p>
+<p>If we wanted to, we could have moved multiple frames at once by passing the <code class="docutils literal notranslate"><span class="pre">count</span></code> argument to <code class="docutils literal notranslate"><span class="pre">u</span></code> or <code class="docutils literal notranslate"><span class="pre">d</span></code>. For example, we could have moved to module level in <code class="docutils literal notranslate"><span class="pre">debug_6.py</span></code> by entering <code class="docutils literal notranslate"><span class="pre">u</span> <span class="pre">2</span></code>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ ./example5.py 
+&gt; /code/fileutil.py(5)get_path()
+-&gt; head, tail = os.path.split(fname)
+(Pdb) u 2
+&gt; /code/example5.py(12)&lt;module&gt;()
+-&gt; filename_path = get_file_info(filename)
+(Pdb) p filename
+&#39;./example5.py&#39;
+(Pdb) 
+</pre></div>
+</div>
+<p>It’s easy to forget where you are when you’re debugging and thinking of many different things. Just remember you can always use the aptly named command <code class="docutils literal notranslate"><span class="pre">w</span></code> (where) to see where execution is paused and what the current frame is.</p>
+</div>
+<div class="section" id="essential-pdb-commands">
+<h2>Essential pdb Commands<a class="headerlink" href="#essential-pdb-commands" title="Permalink to this headline">¶</a></h2>
+<p>Once you’ve spent a little time with pdb, you’ll realize a little knowledge goes a long way. Help is always available with the <code class="docutils literal notranslate"><span class="pre">h</span></code> command.</p>
+<p>Just enter <code class="docutils literal notranslate"><span class="pre">h</span></code> or <code class="docutils literal notranslate"><span class="pre">help</span> </code> to get a list of all commands or help for a specific command or topic.</p>
+<p>For quick reference, here’s a list of essential commands:</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Command</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">p</span></code></p></td>
+<td><p>Print the value of an expression.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">pp</span></code></p></td>
+<td><p>Pretty-print the value of an expression.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">n</span></code></p></td>
+<td><p>Continue execution until the next line in the current function is reached or it returns.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">s</span></code></p></td>
+<td><p>Execute the current line and stop at the first possible occasion (either in a function that is called or in the current function).</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">c</span></code></p></td>
+<td><p>Continue execution and only stop when a breakpoint is encountered.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">unt</span></code></p></td>
+<td><p>Continue execution until the line with a number greater than the current one is reached. With a line number argument, continue execution until a line with a number greater or equal to that is reached.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">l</span></code></p></td>
+<td><p>List source code for the current file. Without arguments, list 11 lines around the current line or continue the previous listing.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">ll</span></code></p></td>
+<td><p>List the whole source code for the current function or frame.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">b</span></code></p></td>
+<td><p>With no arguments, list all breaks. With a line number argument, set a breakpoint at this line in the current file.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">w</span></code></p></td>
+<td><p>Print a stack trace, with the most recent frame at the bottom. An arrow indicates the current frame, which determines the context of most commands.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">u</span></code></p></td>
+<td><p>Move the current frame count (default one) levels up in the stack trace (to an older frame).</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">d</span></code></p></td>
+<td><p>Move the current frame count (default one) levels down in the stack trace (to a newer frame).</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">h</span></code></p></td>
+<td><p>See a list of available commands.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">h</span> </code></p></td>
+<td><p>Show help for a command or topic.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">h</span> <span class="pre">pdb</span></code></p></td>
+<td><p>Show the full pdb documentation.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">q</span></code></p></td>
+<td><p>Quit the debugger and exit.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section" id="vs-code-debugging">
+<h1>VS Code Debugging<a class="headerlink" href="#vs-code-debugging" title="Permalink to this headline">¶</a></h1>
+<p>The Python extension supports debugging of a number of types of Python applications.</p>
+<div class="section" id="initialize-configurations">
+<h2>Initialize configurations<a class="headerlink" href="#initialize-configurations" title="Permalink to this headline">¶</a></h2>
+<p>A configuration drives VS Code’s behavior during a debugging session. Configurations are defined in a <code class="docutils literal notranslate"><span class="pre">launch.json</span></code> file that’s stored in a <code class="docutils literal notranslate"><span class="pre">.vscode</span></code> folder in your workspace.</p>
+<blockquote>
+<div><p><strong>Note</strong> In order to change debugging configuration, your code must be stored in a folder.</p>
+</div></blockquote>
+<div class="section" id="example-configuration">
+<h3>Example Configuration<a class="headerlink" href="#example-configuration" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span>{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    &quot;version&quot;: &quot;0.2.0&quot;,
+    &quot;configurations&quot;: [
+        {
+            &quot;name&quot;: &quot;Python: Current File&quot;,
+            &quot;type&quot;: &quot;python&quot;,
+            &quot;request&quot;: &quot;launch&quot;,
+            &quot;program&quot;: &quot;${file}&quot;,
+            &quot;args&quot;: [&quot;HelloWorld&quot;],
+            &quot;console&quot;: &quot;integratedTerminal&quot;
+        }
+    ]
+}
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="set-configuration-options">
+<h2>Set configuration options<a class="headerlink" href="#set-configuration-options" title="Permalink to this headline">¶</a></h2>
+<p>When you first create <code class="docutils literal notranslate"><span class="pre">launch.json</span></code>, there are two standard configurations that run the active file in the editor in either the integrated terminal (inside VS Code) or the external terminal (outside of VS Code):</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span>{
+    &quot;name&quot;: &quot;Python: Current File (Integrated Terminal)&quot;,
+    &quot;type&quot;: &quot;python&quot;,
+    &quot;request&quot;: &quot;launch&quot;,
+    &quot;program&quot;: &quot;${file}&quot;,
+    &quot;console&quot;: &quot;integratedTerminal&quot;
+},
+{
+    &quot;name&quot;: &quot;Python: Current File (External Terminal)&quot;,
+    &quot;type&quot;: &quot;python&quot;,
+    &quot;request&quot;: &quot;launch&quot;,
+    &quot;program&quot;: &quot;${file}&quot;,
+    &quot;console&quot;: &quot;externalTerminal&quot;
+}
+</pre></div>
+</div>
+<p>The specific settings are described in the following sections. You can also add other settings, such as <code class="docutils literal notranslate"><span class="pre">args</span></code>, that aren’t included in the standard configurations.</p>
+<blockquote>
+<div><p><strong>Tip</strong>: It’s often helpful in a project to create a configuration that runs a specific startup file. For example, if you want to always launch <code class="docutils literal notranslate"><span class="pre">startup.py</span></code> with the arguments <code class="docutils literal notranslate"><span class="pre">--port</span> <span class="pre">1593</span></code> when you start the debugger, create a configuration entry as follows:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span>{
+    &quot;name&quot;: &quot;Python: startup.py&quot;,
+    &quot;type&quot;: &quot;python&quot;,
+    &quot;request&quot;: &quot;launch&quot;,
+    &quot;program&quot;: &quot;${workspaceFolder}/startup.py&quot;,
+    &quot;args&quot; : [&quot;--port&quot;, &quot;1593&quot;]
+},
+</pre></div>
+</div>
+</div></blockquote>
+<div class="section" id="name">
+<h3><code class="docutils literal notranslate"><span class="pre">name</span></code><a class="headerlink" href="#name" title="Permalink to this headline">¶</a></h3>
+<p>Provides the name for the debug configuration that appears in the VS Code drop-down list.</p>
+</div>
+<div class="section" id="type">
+<h3><code class="docutils literal notranslate"><span class="pre">type</span></code><a class="headerlink" href="#type" title="Permalink to this headline">¶</a></h3>
+<p>Identifies the type of debugger to use; leave this set to <code class="docutils literal notranslate"><span class="pre">python</span></code> for Python code.</p>
+</div>
+<div class="section" id="request">
+<h3><code class="docutils literal notranslate"><span class="pre">request</span></code><a class="headerlink" href="#request" title="Permalink to this headline">¶</a></h3>
+<p>Specifies the mode in which to start debugging:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">launch</span></code>: start the debugger on the file specified in <code class="docutils literal notranslate"><span class="pre">program</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">attach</span></code>: attach the debugger to an already running process.</p></li>
+</ul>
+</div>
+<div class="section" id="program">
+<h3><code class="docutils literal notranslate"><span class="pre">program</span></code><a class="headerlink" href="#program" title="Permalink to this headline">¶</a></h3>
+<p>Provides the fully qualified path to the python program’s entry module (startup file). The value <code class="docutils literal notranslate"><span class="pre">${file}</span></code>, often used in default configurations, uses the currently active file in the editor. By specifying a specific startup file, you can always be sure of launching your program with the same entry point regardless of which files are open. For example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;program&quot;</span><span class="p">:</span> <span class="s2">&quot;/Users/Me/Projects/PokemonGo-Bot/pokemongo_bot/event_handlers/__init__.py&quot;</span><span class="p">,</span>
+</pre></div>
+</div>
+<p>You can also rely on a relative path from the workspace root. For example, if the root is <code class="docutils literal notranslate"><span class="pre">/Users/Me/Projects/PokemonGo-Bot</span></code> then you can use the following:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;program&quot;</span><span class="p">:</span> <span class="s2">&quot;$</span><span class="si">{workspaceFolder}</span><span class="s2">/pokemongo_bot/event_handlers/__init__.py&quot;</span><span class="p">,</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="pythonpath">
+<h3><code class="docutils literal notranslate"><span class="pre">pythonPath</span></code><a class="headerlink" href="#pythonpath" title="Permalink to this headline">¶</a></h3>
+<p>Points to the Python interpreter to be used for debugging, which can be a folder containing a Python interpreter. The value can use variables like <code class="docutils literal notranslate"><span class="pre">${workspaceFolder}</span></code> and <code class="docutils literal notranslate"><span class="pre">${workspaceFolder}/.venv</span></code>.</p>
+<p>If not specified, this setting defaults to the interpreter identified in the <code class="docutils literal notranslate"><span class="pre">python.pythonPath</span></code> setting, which is equivalent to using the value <code class="docutils literal notranslate"><span class="pre">${config:python.pythonPath}</span></code>. To use a different interpreter, specify its path instead in the <code class="docutils literal notranslate"><span class="pre">pythonPath</span></code> property of a debug configuration.</p>
+<p>You can specify platform-specific paths by placing <code class="docutils literal notranslate"><span class="pre">pythonPath</span></code> within a parent object named <code class="docutils literal notranslate"><span class="pre">osx</span></code>, <code class="docutils literal notranslate"><span class="pre">windows</span></code>, or <code class="docutils literal notranslate"><span class="pre">linux</span></code>. For example, the configuration for PySpark uses the following values:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;osx&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="s2">&quot;pythonPath&quot;</span><span class="p">:</span> <span class="s2">&quot;^</span><span class="se">\&quot;\\</span><span class="s2">${env:SPARK_HOME}/bin/spark-submit</span><span class="se">\&quot;</span><span class="s2">&quot;</span>
+<span class="p">},</span>
+<span class="s2">&quot;windows&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="s2">&quot;pythonPath&quot;</span><span class="p">:</span> <span class="s2">&quot;^</span><span class="se">\&quot;\\</span><span class="s2">${env:SPARK_HOME}/bin/spark-submit.cmd</span><span class="se">\&quot;</span><span class="s2">&quot;</span>
+<span class="p">},</span>
+<span class="s2">&quot;linux&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="s2">&quot;pythonPath&quot;</span><span class="p">:</span> <span class="s2">&quot;^</span><span class="se">\&quot;\\</span><span class="s2">${env:SPARK_HOME}/bin/spark-submit</span><span class="se">\&quot;</span><span class="s2">&quot;</span>
+<span class="p">},</span>
+</pre></div>
+</div>
+<p>Alternately, you can use a custom environment variable that’s defined on each platform to contain the full path to the Python interpreter to use, so that no additional folder paths are needed.</p>
+</div>
+<div class="section" id="args">
+<h3><code class="docutils literal notranslate"><span class="pre">args</span></code><a class="headerlink" href="#args" title="Permalink to this headline">¶</a></h3>
+<p>Specifies arguments to pass to the Python program. Each element of the argument string that’s separated by a space should be contained within quotes, for example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;args&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;--quiet&quot;</span><span class="p">,</span> <span class="s2">&quot;--norepeat&quot;</span><span class="p">,</span> <span class="s2">&quot;--port&quot;</span><span class="p">,</span> <span class="s2">&quot;1593&quot;</span><span class="p">],</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="stoponentry">
+<h3><code class="docutils literal notranslate"><span class="pre">stopOnEntry</span></code><a class="headerlink" href="#stoponentry" title="Permalink to this headline">¶</a></h3>
+<p>When set to <code class="docutils literal notranslate"><span class="pre">true</span></code>, breaks the debugger at the first line of the program being debugged. If omitted (the default) or set to <code class="docutils literal notranslate"><span class="pre">false</span></code>, the debugger runs the program to the first breakpoint.</p>
+</div>
+<div class="section" id="console">
+<h3><code class="docutils literal notranslate"><span class="pre">console</span></code><a class="headerlink" href="#console" title="Permalink to this headline">¶</a></h3>
+<p>Specifies how program output is displayed.</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="text-align:left head"><p>Value</p></th>
+<th class="text-align:left head"><p>Where output is displayed</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-align:left"><p><code class="docutils literal notranslate"><span class="pre">&quot;internalConsole&quot;</span></code></p></td>
+<td class="text-align:left"><p>VS Code debug console</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:left"><p><code class="docutils literal notranslate"><span class="pre">&quot;integratedTerminal&quot;</span></code> (default)</p></td>
+<td class="text-align:left"><p>VS Code Integrated Terminal</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:left"><p><code class="docutils literal notranslate"><span class="pre">&quot;externalTerminal&quot;</span></code></p></td>
+<td class="text-align:left"><p>Separate console window</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="cwd">
+<h3><code class="docutils literal notranslate"><span class="pre">cwd</span></code><a class="headerlink" href="#cwd" title="Permalink to this headline">¶</a></h3>
+<p>Specifies the current working directory for the debugger, which is the base folder for any relative paths used in code. If omitted, defaults to <code class="docutils literal notranslate"><span class="pre">${workspaceFolder}</span></code> (the folder open in VS Code).</p>
+<p>As an example, say <code class="docutils literal notranslate"><span class="pre">${workspaceFolder}</span></code> contains a <code class="docutils literal notranslate"><span class="pre">py_code</span></code> folder containing <code class="docutils literal notranslate"><span class="pre">app.py</span></code>, and a <code class="docutils literal notranslate"><span class="pre">data</span></code> folder containing <code class="docutils literal notranslate"><span class="pre">salaries.csv</span></code>. If you start the debugger on <code class="docutils literal notranslate"><span class="pre">py_code/app.py</span></code>, then the relative paths to the data file vary depending on the value of <code class="docutils literal notranslate"><span class="pre">cwd</span></code>:</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="text-align:left head"><p>cwd</p></th>
+<th class="text-align:left head"><p>Relative path to data file</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-align:left"><p>Omitted or <code class="docutils literal notranslate"><span class="pre">${workspaceFolder}</span></code></p></td>
+<td class="text-align:left"><p><code class="docutils literal notranslate"><span class="pre">data/salaries.csv</span></code></p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:left"><p><code class="docutils literal notranslate"><span class="pre">${workspaceFolder}/py_code</span></code></p></td>
+<td class="text-align:left"><p><code class="docutils literal notranslate"><span class="pre">../data/salaries.csv</span></code></p></td>
+</tr>
+<tr class="row-even"><td class="text-align:left"><p><code class="docutils literal notranslate"><span class="pre">${workspaceFolder}/data</span></code></p></td>
+<td class="text-align:left"><p><code class="docutils literal notranslate"><span class="pre">salaries.csv</span></code></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="redirectoutput">
+<h3><code class="docutils literal notranslate"><span class="pre">redirectOutput</span></code><a class="headerlink" href="#redirectoutput" title="Permalink to this headline">¶</a></h3>
+<p>When omitted or set to <code class="docutils literal notranslate"><span class="pre">true</span></code> (the default), causes the debugger to print all output from the program into the VS Code debug output window. If set to <code class="docutils literal notranslate"><span class="pre">false</span></code>, program output is not displayed in the debugger output window.</p>
+<p>This option is typically disabled when using <code class="docutils literal notranslate"><span class="pre">&quot;console&quot;:</span> <span class="pre">&quot;integratedTerminal&quot;</span></code> or <code class="docutils literal notranslate"><span class="pre">&quot;console&quot;:</span> <span class="pre">&quot;externalTerminal&quot;</span></code> because there’s no need to duplicate the output in the debug console.</p>
+</div>
+<div class="section" id="justmycode">
+<h3><code class="docutils literal notranslate"><span class="pre">justMyCode</span></code><a class="headerlink" href="#justmycode" title="Permalink to this headline">¶</a></h3>
+<p>When omitted or set to <code class="docutils literal notranslate"><span class="pre">true</span></code> (the default), restricts debugging to user-written code only. Set to <code class="docutils literal notranslate"><span class="pre">false</span></code> to also enable debugging of standard library functions.</p>
+</div>
+<div class="section" id="django">
+<h3><code class="docutils literal notranslate"><span class="pre">django</span></code><a class="headerlink" href="#django" title="Permalink to this headline">¶</a></h3>
+<p>When set to <code class="docutils literal notranslate"><span class="pre">true</span></code>, activates debugging features specific to the Django web framework.</p>
+</div>
+<div class="section" id="sudo">
+<h3><code class="docutils literal notranslate"><span class="pre">sudo</span></code><a class="headerlink" href="#sudo" title="Permalink to this headline">¶</a></h3>
+<p>When set to <code class="docutils literal notranslate"><span class="pre">true</span></code> and used with <code class="docutils literal notranslate"><span class="pre">&quot;console&quot;:</span> <span class="pre">&quot;externalTerminal&quot;</span></code>, allows for debugging apps that require elevation. Using an external console is necessary to capture the password.</p>
+</div>
+<div class="section" id="pyramid">
+<h3><code class="docutils literal notranslate"><span class="pre">pyramid</span></code><a class="headerlink" href="#pyramid" title="Permalink to this headline">¶</a></h3>
+<p>When set to <code class="docutils literal notranslate"><span class="pre">true</span></code>, ensures that a Pyramid app is launched with <a class="reference external" href="https://docs.pylonsproject.org/projects/pyramid/en/latest/narr/startup.html?highlight=pserve">the necessary <code class="docutils literal notranslate"><span class="pre">pserve</span></code> command</a>.</p>
+</div>
+<div class="section" id="env">
+<h3><code class="docutils literal notranslate"><span class="pre">env</span></code><a class="headerlink" href="#env" title="Permalink to this headline">¶</a></h3>
+<p>Sets optional environment variables for the debugger process beyond system environment variables, which the debugger always inherits. The values for these variables must be entered as strings.</p>
+</div>
+<div class="section" id="envfile">
+<h3><code class="docutils literal notranslate"><span class="pre">envFile</span></code><a class="headerlink" href="#envfile" title="Permalink to this headline">¶</a></h3>
+<p>Optional path to a file that contains environment variable definitions. See <a class="reference external" href="https://code.visualstudio.com/docs/python/environments#_environment-variable-definitions-file">Configuring Python environments - environment variable definitions file</a>.</p>
+</div>
+<div class="section" id="gevent">
+<h3><code class="docutils literal notranslate"><span class="pre">gevent</span></code><a class="headerlink" href="#gevent" title="Permalink to this headline">¶</a></h3>
+<p>If set to <code class="docutils literal notranslate"><span class="pre">true</span></code>, enables debugging of <a class="reference external" href="http://www.gevent.org/intro.html">gevent monkey-patched code</a>.</p>
+</div>
+</div>
+<div class="section" id="invoking-a-breakpoint-in-code">
+<h2>Invoking a breakpoint in code<a class="headerlink" href="#invoking-a-breakpoint-in-code" title="Permalink to this headline">¶</a></h2>
+<p>In your Python code, you can call <code class="docutils literal notranslate"><span class="pre">breakpoint()</span></code> at any point where you want to pause the debugger during a debugging session.</p>
+</div>
+<div class="section" id="breakpoint-validation">
+<h2>Breakpoint validation<a class="headerlink" href="#breakpoint-validation" title="Permalink to this headline">¶</a></h2>
+<p>The Python extension automatically detects breakpoints that are set on non-executable lines, such as <code class="docutils literal notranslate"><span class="pre">pass</span></code> statements or the middle of a multiline statement. In such cases, running the debugger moves the breakpoint to nearest valid line to ensure that code execution stops at that point.</p>
+</div>
+<div class="section" id="attach-to-a-local-script">
+<h2>Attach to a local script<a class="headerlink" href="#attach-to-a-local-script" title="Permalink to this headline">¶</a></h2>
+<p>In some scenarios, you need to debug a Python script that’s invoked locally by another process. For example, you may be debugging a web server that runs different Python scripts for specific processing jobs. In such cases, you need to attach the VS Code debugger to the script once it’s been launched:</p>
+<ol>
+<li><p>Run VS Code, open the folder or workspace containing the script, and create a <code class="docutils literal notranslate"><span class="pre">launch.json</span></code> for that workspace if one doesn’t exist already.</p></li>
+<li><p>In the script code, add the following and save the file:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">ptvsd</span>
+
+<span class="c1"># 5678 is the default attach port in the VS Code debug configurations</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Waiting for debugger attach&quot;</span><span class="p">)</span>
+<span class="n">ptvsd</span><span class="o">.</span><span class="n">enable_attach</span><span class="p">(</span><span class="n">address</span><span class="o">=</span><span class="p">(</span><span class="s1">&#39;localhost&#39;</span><span class="p">,</span> <span class="mi">5678</span><span class="p">),</span> <span class="n">redirect_output</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">ptvsd</span><span class="o">.</span><span class="n">wait_for_attach</span><span class="p">()</span>
+<span class="n">breakpoint</span><span class="p">()</span>
+</pre></div>
+</div>
+</li>
+<li><p>Open a terminal using <strong>Terminal: Create New Integrated Terminal</strong>, which activates the script’s selected environment.</p></li>
+<li><p>In the terminal, install the ptvsd package with <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">-m</span> <span class="pre">pip</span> <span class="pre">install</span> <span class="pre">--upgrade</span> <span class="pre">ptvsd</span></code>.</p></li>
+<li><p>In the terminal, start Python with the script, for example, <code class="docutils literal notranslate"><span class="pre">python3</span> <span class="pre">myscript.py</span></code>. You should see the “Waiting for debugger attach” message that’s included in the code, and the script halts at the <code class="docutils literal notranslate"><span class="pre">ptvsd.wait_for_attach()</span></code> call.</p></li>
+<li><p>Switch to the Debug view, select <strong>Python: Attach</strong> from the debugger drop-down list, and start the debugger.</p></li>
+<li><p>The debugger should stop on the <code class="docutils literal notranslate"><span class="pre">breakpoint()</span></code> call, from which point you can use the debugger normally. You can, of course, set other breakpoints in the script code instead of using <code class="docutils literal notranslate"><span class="pre">breakpoint()</span></code>.</p></li>
+</ol>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./automate/_todo"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Sajal N. Shrestha<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    <script src="../../_static/js/index.js"></script>
+    
+  </body>
+</html>

@@ -1,0 +1,573 @@
+
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Docker</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
+    <link href="../../_static/css/index.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../_static/sphinx-book-theme.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/language_data.js"></script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/sphinx-book-theme.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="prev" title="Master your language" href="../../master-your-language/README.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="docsearch:language" content="en">
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../../index.html">
+  
+  <img src="../../_static/logo.png" class="logo" alt="logo">
+  
+  
+</a>
+</div>
+
+<form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../intro.html">
+   Python End-2-End RoadMap
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Know Your Language
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../know-your-language/q-%26-a/README.html">
+   A Q&amp;A Session
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../know-your-language/before-we-begin/README.html">
+   Before We Begin
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../know-your-language/apply-primer/README.html">
+   Applying Primer
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../know-your-language/apply-primer/README.html#strings">
+   Strings
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../know-your-language/apply-primer/README.html#lists">
+   Lists
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Apply Python in Real Life
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../automate/regular-expressions/README.html">
+   Regular Expressions
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Web and Beyond
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../web-and-beyond/README.html">
+   To Web and Beyond
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Rest time
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../rest-time/README.html">
+   Rest Time
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Master Your Language
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../master-your-language/README.html">
+   Master your language
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Miscellaneous
+ </span>
+</p>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Docker
+  </a>
+ </li>
+</ul>
+
+</nav>
+
+ <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Compiled by <a href="mailto:sajalshres@gmail.com">Sajal Shrestha</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        <div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../_sources/miscellaneous/docker/README.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+    
+</div>
+        <!-- Source interaction buttons -->
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#docker-uses">
+   Docker Uses
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#docker-engine">
+   Docker Engine
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#docker-architecture">
+   Docker Architecture
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#the-docker-daemon">
+     The Docker daemon
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#the-docker-client">
+     The Docker client
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#docker-registries">
+     Docker registries
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#docker-objects">
+     Docker objects
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#images-and-container">
+     Images and Container
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#container-vs-virtual-machines">
+   Container Vs. Virtual Machines
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#dockerfile">
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     Dockerfile
+    </span>
+   </code>
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#python-app-example">
+     Python App Example
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#docker-command">
+     Docker Command
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#services">
+   Services
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#docker-compose">
+   Docker Compose
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exercise">
+     Exercise:
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+        </nav>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="docker">
+<h1>Docker<a class="headerlink" href="#docker" title="Permalink to this headline">¶</a></h1>
+<p>Docker is a platform for developers and sysadmins to develop, deploy, and run applications with containers.</p>
+<p>The use of Linux containers to deploy applications is called containerization.</p>
+<p>Containers are not new, but their use for easily deploying applications is.</p>
+<p>Containerization is increasingly popular because containers are:</p>
+<ul class="simple">
+<li><p>Flexible: Even the most complex applications can be containerized.</p></li>
+<li><p>Lightweight: Containers leverage and share the host kernel.</p></li>
+<li><p>Interchangeable: You can deploy updates and upgrades on-the-fly.</p></li>
+<li><p>Portable: You can build locally, deploy to the cloud, and run anywhere.</p></li>
+<li><p>Scalable: You can increase and automatically distribute container replicas.</p></li>
+<li><p>Stackable: You can stack services vertically and on-the-fly.</p></li>
+</ul>
+<div class="section" id="docker-uses">
+<h2>Docker Uses<a class="headerlink" href="#docker-uses" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Your developers write code locally and share their work with their colleagues using Docker containers.</p></li>
+<li><p>They use Docker to push their applications into a test environment and execute automated and manual tests.</p></li>
+<li><p>When developers find bugs, they can fix them in the development environment and redeploy them to the test environment for testing and validation.</p></li>
+<li><p>When testing is complete, getting the fix to the customer is as simple as pushing the updated image to the production environment.</p></li>
+</ul>
+</div>
+<div class="section" id="docker-engine">
+<h2>Docker Engine<a class="headerlink" href="#docker-engine" title="Permalink to this headline">¶</a></h2>
+<p><img alt="Docker-Engine" src="../../_images/docker-engine.png" /></p>
+<p>Docker Engine is a client-server application with these major components:</p>
+<ul class="simple">
+<li><p>A server which is a type of long-running program called a daemon process (the <code class="docutils literal notranslate"><span class="pre">dockerd</span></code> command).</p></li>
+<li><p>A REST API which specifies interfaces that programs can use to talk to the daemon and instruct it what to do.</p></li>
+<li><p>A command line interface (CLI) client (the docker command).</p></li>
+</ul>
+</div>
+<div class="section" id="docker-architecture">
+<h2>Docker Architecture<a class="headerlink" href="#docker-architecture" title="Permalink to this headline">¶</a></h2>
+<p><img alt="Docker-Architecture" src="../../_images/docker-architecture.png" /></p>
+<p>Docker uses a client-server architecture. The Docker client talks to the Docker daemon, which does the heavy lifting of building, running, and distributing your Docker containers. The Docker client and daemon can run on the same system, or you can connect a Docker client to a remote Docker daemon. The Docker client and daemon communicate using a REST API, over UNIX sockets or a network interface.</p>
+<div class="section" id="the-docker-daemon">
+<h3>The Docker daemon<a class="headerlink" href="#the-docker-daemon" title="Permalink to this headline">¶</a></h3>
+<p>The Docker daemon (<code class="docutils literal notranslate"><span class="pre">dockerd</span></code>) listens for Docker API requests and manages Docker objects such as images, containers, networks, and volumes. A daemon can also communicate with other daemons to manage Docker services.</p>
+</div>
+<div class="section" id="the-docker-client">
+<h3>The Docker client<a class="headerlink" href="#the-docker-client" title="Permalink to this headline">¶</a></h3>
+<p>The Docker client (<code class="docutils literal notranslate"><span class="pre">docker</span></code>) is the primary way that many Docker users interact with Docker. When you use commands such as docker run, the client sends these commands to <code class="docutils literal notranslate"><span class="pre">dockerd</span></code>, which carries them out. The docker command uses the Docker API. The Docker client can communicate with more than one daemon.</p>
+</div>
+<div class="section" id="docker-registries">
+<h3>Docker registries<a class="headerlink" href="#docker-registries" title="Permalink to this headline">¶</a></h3>
+<p>A Docker registry stores Docker images. Docker Hub is a public registry that anyone can use, and Docker is configured to look for images on Docker Hub by default. You can even run your own private registry. If you use Docker Datacenter (DDC), it includes Docker Trusted Registry (DTR).
+When you use the docker pull or docker run commands, the required images are pulled from your configured registry. When you use the docker push command, your image is pushed to your configured registry.</p>
+</div>
+<div class="section" id="docker-objects">
+<h3>Docker objects<a class="headerlink" href="#docker-objects" title="Permalink to this headline">¶</a></h3>
+<p>When you use Docker, you are creating and using images, containers, networks, volumes, plugins, and other objects. This section is a brief overview of some of those objects.</p>
+</div>
+<div class="section" id="images-and-container">
+<h3>Images and Container<a class="headerlink" href="#images-and-container" title="Permalink to this headline">¶</a></h3>
+<p>A container is launched by running an <code class="docutils literal notranslate"><span class="pre">image</span></code>.</p>
+<p>An <code class="docutils literal notranslate"><span class="pre">image</span></code> is an executable package that includes everything needed to run an application–the code, a runtime, libraries, environment variables, and configuration files.</p>
+<p>A <code class="docutils literal notranslate"><span class="pre">container</span></code> is a runtime instance of an image–what the image becomes in memory when executed (that is, an image with state, or a user process). You can see a list of your running containers with the command, <code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">ps</span></code>, just as you would in Linux.</p>
+</div>
+</div>
+<div class="section" id="container-vs-virtual-machines">
+<h2>Container Vs. Virtual Machines<a class="headerlink" href="#container-vs-virtual-machines" title="Permalink to this headline">¶</a></h2>
+<p><img alt="Container-VM" src="../../_images/container-vm.png" /></p>
+<p>A container runs natively on Linux and shares the kernel of the host machine with other containers. It runs a discrete process, taking no more memory than any other executable, making it lightweight.</p>
+<p>By contrast, a virtual machine (VM) runs a full-blown “guest” operating system with virtual access to host resources through a hypervisor. In general, VMs provide an environment with more resources than most applications need.</p>
+</div>
+<div class="section" id="dockerfile">
+<h2><code class="docutils literal notranslate"><span class="pre">Dockerfile</span></code><a class="headerlink" href="#dockerfile" title="Permalink to this headline">¶</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">Dockerfile</span></code> helps defining a container.</p>
+<div class="section" id="python-app-example">
+<h3>Python App Example<a class="headerlink" href="#python-app-example" title="Permalink to this headline">¶</a></h3>
+<p>In the past, if you were to start writing a Python app, your first order of business was to install a Python runtime onto your machine. But, that creates a situation where the environment on your machine needs to be perfect for your app to run as expected, and also needs to match your production environment.</p>
+<p>With Docker, you can just grab a portable Python runtime as an image, no installation necessary. Then, your build can include the base Python image right alongside your app code, ensuring that your app, its dependencies, and the runtime, all travel together.</p>
+<p>These portable images are defined by something called a <code class="docutils literal notranslate"><span class="pre">Dockerfile</span></code>.</p>
+<p><code class="docutils literal notranslate"><span class="pre">Dockerfile</span></code> defines what goes on in the environment inside your container. Access to resources like networking interfaces and disk drives is virtualized inside this environment, which is isolated from the rest of your system, so you need to map ports to the outside world, and be specific about what files you want to “copy in” to that environment.</p>
+<div class="highlight-dockerfile notranslate"><div class="highlight"><pre><span></span><span class="c"># Use an official Python runtime as a parent image</span>
+<span class="k">FROM</span> <span class="s">python:3.7-slim</span>
+
+<span class="c"># Set the working directory to /app</span>
+<span class="k">WORKDIR</span><span class="s"> /app</span>
+
+<span class="c"># Copy the current directory contents into the container at /app</span>
+<span class="k">COPY</span> . /app
+
+<span class="c"># Install any needed packages specified in requirements.txt</span>
+<span class="k">RUN</span> pip install --trusted-host pypi.python.org -r requirements.txt
+
+<span class="c"># Make port 80 available to the world outside this container</span>
+<span class="k">EXPOSE</span><span class="s"> 80</span>
+
+<span class="c"># Define environment variable</span>
+<span class="k">ENV</span> NAME World
+
+<span class="c"># Run app.py when the container launches</span>
+<span class="k">CMD</span> <span class="p">[</span><span class="s2">&quot;python&quot;</span><span class="p">,</span> <span class="s2">&quot;app.py&quot;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="docker-command">
+<h3>Docker Command<a class="headerlink" href="#docker-command" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>docker build -t friendlyhello .  <span class="c1"># Create image using this directory&#39;s Dockerfile</span>
+docker run -p <span class="m">4000</span>:80 friendlyhello  <span class="c1"># Run &quot;friendlyhello&quot; mapping port 4000 to 80</span>
+docker run -d -p <span class="m">4000</span>:80 friendlyhello         <span class="c1"># Same thing, but in detached mode</span>
+docker container ls                                <span class="c1"># List all running containers</span>
+docker container ls -a             <span class="c1"># List all containers, even those not running</span>
+docker container stop &lt;hash&gt;           <span class="c1"># Gracefully stop the specified container</span>
+docker container <span class="nb">kill</span> &lt;hash&gt;         <span class="c1"># Force shutdown of the specified container</span>
+docker container rm &lt;hash&gt;        <span class="c1"># Remove specified container from this machine</span>
+docker container rm <span class="k">$(</span>docker container ls -a -q<span class="k">)</span>         <span class="c1"># Remove all containers</span>
+docker image ls -a                             <span class="c1"># List all images on this machine</span>
+docker image rm &lt;image id&gt;            <span class="c1"># Remove specified image from this machine</span>
+docker image rm <span class="k">$(</span>docker image ls -a -q<span class="k">)</span>   <span class="c1"># Remove all images from this machine</span>
+docker login             <span class="c1"># Log in this CLI session using your Docker credentials</span>
+docker tag &lt;image&gt; username/repository:tag  <span class="c1"># Tag &lt;image&gt; for upload to registry</span>
+docker push username/repository:tag            <span class="c1"># Upload tagged image to registry</span>
+docker run username/repository:tag                   <span class="c1"># Run image from a registry</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="services">
+<h2>Services<a class="headerlink" href="#services" title="Permalink to this headline">¶</a></h2>
+<p>Services are really just “containers in production.” A service only runs one image, but it codifies the way that image runs—what ports it should use, how many replicas of the container should run so the service has the capacity it needs, and so on.</p>
+<p>Luckily it’s very easy to define, run, and scale services with the Docker platform – just write a <code class="docutils literal notranslate"><span class="pre">docker-compose.yml</span></code> file.</p>
+</div>
+<div class="section" id="docker-compose">
+<h2>Docker Compose<a class="headerlink" href="#docker-compose" title="Permalink to this headline">¶</a></h2>
+<p>Compose is a tool for defining and running multi-container Docker applications. With Compose, you use a YAML file to configure your application’s services. Then, with a single command, you create and start all the services from your configuration.</p>
+<p>Using Compose is basically a three-step process:</p>
+<ul class="simple">
+<li><p>Define your app’s environment with a <code class="docutils literal notranslate"><span class="pre">Dockerfile</span></code> so it can be reproduced anywhere.</p></li>
+<li><p>Define the services that make up your app in <code class="docutils literal notranslate"><span class="pre">docker-compose.yml</span></code> so they can be run together in an isolated environment.</p></li>
+<li><p>Run <code class="docutils literal notranslate"><span class="pre">docker-compose</span> <span class="pre">up</span></code> and Compose starts and runs your entire app.</p></li>
+</ul>
+<p>A sample <code class="docutils literal notranslate"><span class="pre">docker-compose.yml</span></code> file:</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">version</span><span class="p">:</span> <span class="s">&quot;3&quot;</span>
+<span class="nt">services</span><span class="p">:</span>
+  <span class="nt">web</span><span class="p">:</span>
+    <span class="c1"># replace username/repo:tag with your name and image details</span>
+    <span class="nt">image</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">username/repo:tag</span>
+    <span class="nt">deploy</span><span class="p">:</span>
+      <span class="nt">replicas</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">5</span>
+      <span class="nt">resources</span><span class="p">:</span>
+        <span class="nt">limits</span><span class="p">:</span>
+          <span class="nt">cpus</span><span class="p">:</span> <span class="s">&quot;0.1&quot;</span>
+          <span class="nt">memory</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">50M</span>
+      <span class="nt">restart_policy</span><span class="p">:</span>
+        <span class="nt">condition</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">on-failure</span>
+    <span class="nt">ports</span><span class="p">:</span>
+      <span class="p p-Indicator">-</span> <span class="s">&quot;4000:80&quot;</span>
+    <span class="nt">networks</span><span class="p">:</span>
+      <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">webnet</span>
+</pre></div>
+</div>
+<p>This <code class="docutils literal notranslate"><span class="pre">docker-compose.yml</span></code> file tells Docker to do the following:</p>
+<ul class="simple">
+<li><p>Pull the image  from the registry.</p></li>
+<li><p>Run 5 instances of that image as a service called web, limiting each one to use, at most, 10% of a single core of CPU time (this could also be e.g. “1.5” to mean 1 and half core for each), and 50MB of RAM.</p></li>
+<li><p>Immediately restart containers if one fails.</p></li>
+<li><p>Map port 4000 on the host to web’s port 80.</p></li>
+<li><p>Instruct web’s containers to share port 80 via a load-balanced network called webnet. (Internally, the containers themselves publish to web’s port 80 at an ephemeral port.)</p></li>
+<li><p>Define the webnet network with the default settings (which is a load-balanced overlay network).</p></li>
+</ul>
+<div class="section" id="exercise">
+<h3>Exercise:<a class="headerlink" href="#exercise" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Build a docker container</span>
+docker build -f sor-api/deployment/Dockerfile -t sajalshres/sor-api:1.0 sor-api/
+
+<span class="c1"># List images</span>
+docker images
+docker image list
+
+<span class="c1"># Push the container to repository</span>
+docker push sajalshres/sor-api:1.0
+
+<span class="c1"># Pull Images</span>
+docker image pull python:3.7
+docker pull python:3.7
+
+<span class="c1"># Run a image</span>
+docker run -p <span class="m">9990</span>:9990/tcp sajalshres/sor-api:1.0 python manage.py runserver <span class="m">0</span>:9990
+docker run -p <span class="m">9990</span>:9990/tcp -d sajalshres/sor-api:1.0 python manage.py runserver <span class="m">0</span>:9990
+docker run -it --privileged sajalshres/sor-api:1.0 bash
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./miscellaneous/docker"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="../../master-your-language/README.html" title="previous page">Master your language</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Sajal N. Shrestha<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    <script src="../../_static/js/index.js"></script>
+    
+  </body>
+</html>

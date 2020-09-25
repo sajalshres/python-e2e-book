@@ -1,0 +1,914 @@
+
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Input and Output</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
+    <link href="../../_static/css/index.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../_static/sphinx-book-theme.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/language_data.js"></script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/sphinx-book-theme.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="docsearch:language" content="en">
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../../index.html">
+  
+  <img src="../../_static/logo.png" class="logo" alt="logo">
+  
+  
+</a>
+</div>
+
+<form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../intro.html">
+   Python End-2-End RoadMap
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Know Your Language
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../know-your-language/q-%26-a/README.html">
+   A Q&amp;A Session
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../know-your-language/before-we-begin/README.html">
+   Before We Begin
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../know-your-language/apply-primer/README.html">
+   Applying Primer
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../know-your-language/apply-primer/README.html#strings">
+   Strings
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../know-your-language/apply-primer/README.html#lists">
+   Lists
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Apply Python in Real Life
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../regular-expressions/README.html">
+   Regular Expressions
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Web and Beyond
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../web-and-beyond/README.html">
+   To Web and Beyond
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Rest time
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../rest-time/README.html">
+   Rest Time
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Master Your Language
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../master-your-language/README.html">
+   Master your language
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Miscellaneous
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../miscellaneous/docker/README.html">
+   Docker
+  </a>
+ </li>
+</ul>
+
+</nav>
+
+ <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Compiled by <a href="mailto:sajalshres@gmail.com">Sajal Shrestha</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        <div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../_sources/automate/_todo/input-output.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+    
+</div>
+        <!-- Source interaction buttons -->
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#output-formatting">
+   Output Formatting
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#formatted-string-literals-f-strings">
+     Formatted String Literals (f-strings)
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#string-format-method">
+     String
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       format()
+      </span>
+     </code>
+     method
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#old-school-string-formatting">
+     Old School string formatting
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#reading-and-writing-files">
+   Reading and Writing Files
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#file-an-overview">
+     File: An Overview
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#paths">
+     Paths
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#line-endings">
+     Line Endings
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#character-encoding">
+     Character Encoding
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#opening-and-closing-a-file">
+     Opening and Closing a File
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#alternative-method">
+       Alternative Method
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#the-file-mode">
+       The file mode
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#file-object">
+       File Object
+      </a>
+      <ul class="nav section-nav flex-column">
+       <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#text-files">
+         Text files
+        </a>
+       </li>
+       <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#buffered-binary-files">
+         Buffered binary files
+        </a>
+       </li>
+       <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#raw-binary-files">
+         Raw binary files
+        </a>
+       </li>
+      </ul>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id1">
+     Reading and Writing files
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#read-method">
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         .read()
+        </span>
+       </code>
+       Method
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#readline-method">
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         .readline()
+        </span>
+       </code>
+       Method
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#readlines-method">
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         .readlines()
+        </span>
+       </code>
+       Method
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#iterating-over-each-line">
+       Iterating over each line
+      </a>
+      <ul class="nav section-nav flex-column">
+       <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#using-readline">
+         Using
+         <code class="docutils literal notranslate">
+          <span class="pre">
+           readline()
+          </span>
+         </code>
+        </a>
+       </li>
+       <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#using-readlines">
+         Using
+         <code class="docutils literal notranslate">
+          <span class="pre">
+           readlines()
+          </span>
+         </code>
+        </a>
+       </li>
+       <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#using-file-object">
+         Using file object
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#write-method">
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         .write()
+        </span>
+       </code>
+       Method
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#writelines-seq-method">
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         .writelines(seq)
+        </span>
+       </code>
+       Method
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+        </nav>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="input-and-output">
+<h1>Input and Output<a class="headerlink" href="#input-and-output" title="Permalink to this headline">¶</a></h1>
+<img src="./file-joke.png" alt="File-Joke" style="zoom:80%;" />
+<p>There are several ways to present the output of a program; data can be printed in a human-readable form, or written to a file for future use.</p>
+<div class="section" id="output-formatting">
+<h2>Output Formatting<a class="headerlink" href="#output-formatting" title="Permalink to this headline">¶</a></h2>
+<p>So far we’ve encountered two ways of writing values: <em>expression statements</em> and the <code class="docutils literal notranslate"><span class="pre">print()</span></code> function. Often you’ll want more control over the formatting of your output than simply printing space-separated values.</p>
+<p>There are several ways to format output.</p>
+<div class="section" id="formatted-string-literals-f-strings">
+<h3>Formatted String Literals (f-strings)<a class="headerlink" href="#formatted-string-literals-f-strings" title="Permalink to this headline">¶</a></h3>
+<p>Fromatted String Literals (also called f-strings for short) let you include the value of Python expressions inside a string by prefixing the string with <code class="docutils literal notranslate"><span class="pre">f</span></code> or <code class="docutils literal notranslate"><span class="pre">F</span></code> and writing expressions as <code class="docutils literal notranslate"><span class="pre">{expression}</span></code>.</p>
+<p>To use formatted string literals, begin a string with <code class="docutils literal notranslate"><span class="pre">f</span></code> or <code class="docutils literal notranslate"><span class="pre">F</span></code> before the opening quotation mark or triple quotation mark. Inside this string, you can write a Python expression between <code class="docutils literal notranslate"><span class="pre">{</span></code> and <code class="docutils literal notranslate"><span class="pre">}</span></code> characters that can refer to variables or literal values.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">first_name</span> <span class="o">=</span> <span class="s1">&#39;Rashmi&#39;</span>
+<span class="n">last_name</span> <span class="o">=</span> <span class="s1">&#39;Maharjan&#39;</span>
+<span class="sa">f</span><span class="s1">&#39;My name is </span><span class="si">{</span><span class="n">first_name</span><span class="si">}</span><span class="s1"> </span><span class="si">{</span><span class="n">last_name</span><span class="si">}</span><span class="s1">&#39;</span>
+
+<span class="c1"># Output: My name is Rashmi Maharjan</span>
+</pre></div>
+</div>
+<p>The following example rounds pi to three places after the decimal:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">math</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;The value of pi is approximately </span><span class="si">{</span><span class="n">math</span><span class="o">.</span><span class="n">pi</span><span class="si">:</span><span class="s1">.3f</span><span class="si">}</span><span class="s1">.&#39;</span><span class="p">)</span>
+
+<span class="c1"># Output: The value of pi is approximately 3.142.</span>
+</pre></div>
+</div>
+<p>Passing an integer after the <code class="docutils literal notranslate"><span class="pre">':'</span></code> will cause that field to be a minimum number of characters wide. This is useful for making columns line up.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">table</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;Bikash&#39;</span><span class="p">:</span> <span class="mi">1212</span><span class="p">,</span> <span class="s1">&#39;Ram&#39;</span><span class="p">:</span> <span class="mi">4112</span><span class="p">,</span> <span class="s1">&#39;Rabin&#39;</span><span class="p">:</span> <span class="mi">7890</span><span class="p">}</span>
+<span class="k">for</span> <span class="n">name</span><span class="p">,</span> <span class="n">phone</span> <span class="ow">in</span> <span class="n">table</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">name</span><span class="si">:</span><span class="s1">10</span><span class="si">}</span><span class="s1"> ==&gt; </span><span class="si">{</span><span class="n">phone</span><span class="si">:</span><span class="s1">10d</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+    
+<span class="c1"># Output:</span>
+<span class="c1"># Bikash     ==&gt;       1212</span>
+<span class="c1"># Ram        ==&gt;       4112</span>
+<span class="c1"># Rabin      ==&gt;       7890</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="string-format-method">
+<h3>String <code class="docutils literal notranslate"><span class="pre">format()</span></code> method<a class="headerlink" href="#string-format-method" title="Permalink to this headline">¶</a></h3>
+<p>Basic usage of the <code class="docutils literal notranslate"><span class="pre">str.format()</span></code> method looks like this:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;We are the </span><span class="si">{}</span><span class="s1"> who say &quot;</span><span class="si">{}</span><span class="s1">!&quot;&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="s1">&#39;knights&#39;</span><span class="p">,</span> <span class="s1">&#39;Ni&#39;</span><span class="p">))</span>
+
+<span class="c1"># Output: We are the knights who say &quot;Ni!&quot;</span>
+</pre></div>
+</div>
+<p>A number in the brackets can be used to refer to the position of the object passed into the <code class="docutils literal notranslate"><span class="pre">str.format()</span></code> method.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">{0}</span><span class="s1"> </span><span class="si">{1}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="s1">&#39;Hello&#39;</span><span class="p">,</span> <span class="s1">&#39;Pau&#39;</span><span class="p">))</span>
+<span class="c1"># Output: Hello Pau</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">{1}</span><span class="s1"> </span><span class="si">{0}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="s1">&#39;Pau&#39;</span><span class="p">,</span> <span class="s1">&#39;Tori&#39;</span><span class="p">))</span>
+<span class="c1"># Output: Tori Pau</span>
+</pre></div>
+</div>
+<p>A keyword argument can also be used</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;This </span><span class="si">{food}</span><span class="s1"> is </span><span class="si">{adjective}</span><span class="s1">.&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+      <span class="n">food</span><span class="o">=</span><span class="s1">&#39;spam&#39;</span><span class="p">,</span> <span class="n">adjective</span><span class="o">=</span><span class="s1">&#39;absolutely horrible&#39;</span><span class="p">))</span>
+
+<span class="c1"># Output: This spam is absolutely horrible.</span>
+</pre></div>
+</div>
+<p>You can also use dict:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">table</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;Ram&#39;</span><span class="p">:</span> <span class="mi">4127</span><span class="p">,</span> <span class="s1">&#39;Rashmi&#39;</span><span class="p">:</span> <span class="mi">4098</span><span class="p">,</span> <span class="s1">&#39;Akshyata&#39;</span><span class="p">:</span> <span class="mi">8637678</span><span class="p">}</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Rashmi: </span><span class="si">{0[Rashmi]:d}</span><span class="s1">; Ram: </span><span class="si">{0[Ram]:d}</span><span class="s1">; &#39;</span>
+      <span class="s1">&#39;Akshyata: </span><span class="si">{0[Akshyata]:d}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">table</span><span class="p">))</span>
+
+<span class="c1"># Output: Rashmi: 4098; Ram: 4127; Akshyata: 8637678</span>
+</pre></div>
+</div>
+<p>An example of aligned columns:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">11</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">{0:2d}</span><span class="s1"> </span><span class="si">{1:3d}</span><span class="s1"> </span><span class="si">{2:4d}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">x</span><span class="o">*</span><span class="n">x</span><span class="p">,</span> <span class="n">x</span><span class="o">*</span><span class="n">x</span><span class="o">*</span><span class="n">x</span><span class="p">))</span>
+
+<span class="c1"># Output:</span>
+<span class="c1">#  1   1    1</span>
+<span class="c1">#  2   4    8</span>
+<span class="c1">#  3   9   27</span>
+<span class="c1">#  4  16   64</span>
+<span class="c1">#  5  25  125</span>
+<span class="c1">#  6  36  216</span>
+<span class="c1">#  7  49  343</span>
+<span class="c1">#  8  64  512</span>
+<span class="c1">#  9  81  729</span>
+<span class="c1"># 10 100 1000</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="old-school-string-formatting">
+<h3>Old School string formatting<a class="headerlink" href="#old-school-string-formatting" title="Permalink to this headline">¶</a></h3>
+<p>The <code class="docutils literal notranslate"><span class="pre">%</span></code> operator can also be used for string formatting.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">math</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The value of pi is approximately </span><span class="si">%5.3f</span><span class="s1">.&#39;</span> <span class="o">%</span> <span class="n">math</span><span class="o">.</span><span class="n">pi</span><span class="p">)</span>
+
+<span class="c1"># Output: The value of pi is approximately 3.142.</span>
+</pre></div>
+</div>
+<p>Another example:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">%(language)s</span><span class="s1"> has </span><span class="si">%(number)03d</span><span class="s1"> quote types.&#39;</span> <span class="o">%</span>
+      <span class="p">{</span><span class="s1">&#39;language&#39;</span><span class="p">:</span> <span class="s2">&quot;Python&quot;</span><span class="p">,</span> <span class="s2">&quot;number&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">})</span>
+
+<span class="c1"># Output: Python has 002 quote types.</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="reading-and-writing-files">
+<h2>Reading and Writing Files<a class="headerlink" href="#reading-and-writing-files" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="file-an-overview">
+<h3>File: An Overview<a class="headerlink" href="#file-an-overview" title="Permalink to this headline">¶</a></h3>
+<p>At its core, a file is a contiguous set of bytes used to store data. This data is organized in a specific format and can be anything as simple as a text file or as complicated as a program executable. In the end, these byte files are then translated into binary 1 and 0 for easier processing by the computer.</p>
+<p>Files on most modern file systems are composed of three main parts:</p>
+<ul class="simple">
+<li><p><strong>Header</strong>: metadata about the contents of the file (file name, size, type, and so on)</p></li>
+<li><p><strong>Data</strong>: contents of the file as written by the creator or editor</p></li>
+<li><p><strong>End of file (EOF)</strong>: special character that indicates the end of the file</p></li>
+</ul>
+<img src="./file-parts.png" alt="File Parts" style="zoom:80%;" />
+</div>
+<div class="section" id="paths">
+<h3>Paths<a class="headerlink" href="#paths" title="Permalink to this headline">¶</a></h3>
+<p>When you access a file on an operating system, a file path is required. The file path is a string that represents the location of a file. It’s broken up into three major parts:</p>
+<ul class="simple">
+<li><p><strong>Folder Path</strong>: the file folder location on the file system where subsequent folders are separated by a forward slash / (Unix) or backslash \ (Windows)</p></li>
+<li><p><strong>File Name</strong>: the actual name of the file</p></li>
+<li><p><strong>Extension</strong>: the end of the file path pre-pended with a period (.) used to indicate the file type</p></li>
+</ul>
+<p>Consider the file structure of this project:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>│   .gitignore
+│   debug.log
+│   LICENSE
+│   python-e2e-book.code-workspace
+│   README.md
+│
+├───.ipynb_checkpoints
+├───.vscode
+│       settings.json
+│
+├───1-know-your-language
+│   │   apply-primer.jpg
+│   │   before-we-begin.md
+│   │   classes-and-objects.ipynb
+│   │   classes-and-objects.md
+│   │   Client-server.jpg
+│   │   data-structures.ipynb
+│   │   data-structures.md
+│   │   errors-and-exception.ipynb
+│   │   errors-and-exception.md
+│   │   flow-control.md
+│   │   functions.ipynb
+│   │   functions.md
+│   │   looping-techniques.ipynb
+│   │   looping-techniques.md
+│   │   modules.md
+│   │   package-management.ipynb
+│   │   package-management.md
+│   │   python-primer.ipynb
+│   │   python-primer.md
+│   │   python-qna.jpg
+│   │   q-&amp;-a.md
+│   │   virtual-environment.ipynb
+│   │   virtual-environment.md
+│
+├───2-automate
+│   │   file-joke.png
+│   │   file-parts.png
+│   │   input-output.md
+│   │   README.md
+│   │   regular-expressions.md
+│   │   Untitled.ipynb
+│   │
+│   ├───.ipynb_checkpoints
+│   │       spreadsheet-whisperer-checkpoint.ipynb
+│   │       Untitled-checkpoint.ipynb
+│   │
+│   └───regular-expressions
+│           password_strength.py
+│
+├───3-web-and-beyond
+│       README.md
+│
+├───4-rest-time
+│       README.md
+│
+├───5-what-now
+│       README.md
+│
+└───6-Miscellaneous
+        container-vm.png
+        docker-architecture.png
+        docker-engine.png
+        docker.md
+        README.md
+</pre></div>
+</div>
+<p>Suppose, we want to access <code class="docutils literal notranslate"><span class="pre">password_strength.py</span></code> from root folder. The path can be broken into:</p>
+<ul class="simple">
+<li><p><strong>Folder Path</strong>: <code class="docutils literal notranslate"><span class="pre">2-automate/regular-expressions</span></code></p></li>
+<li><p><strong>File Name</strong>: <code class="docutils literal notranslate"><span class="pre">password_strength.py</span></code></p></li>
+<li><p><strong>Extension</strong>: <code class="docutils literal notranslate"><span class="pre">.py</span></code></p></li>
+</ul>
+<p>So, full path is <code class="docutils literal notranslate"><span class="pre">2-automate/regular-expressions/password_strength.py</span> </code></p>
+<p>Let’s say, we want to access <code class="docutils literal notranslate"><span class="pre">README.md</span></code> in root folder from <code class="docutils literal notranslate"><span class="pre">2-automate/regular-expressions</span></code>. In that case, we can use special double-dot <code class="docutils literal notranslate"><span class="pre">..</span></code> to move one director up. So we’ll have to use path <code class="docutils literal notranslate"><span class="pre">../../README.md</span></code></p>
+</div>
+<div class="section" id="line-endings">
+<h3>Line Endings<a class="headerlink" href="#line-endings" title="Permalink to this headline">¶</a></h3>
+<p>One problem often encountered when working with file data is the representation of a new line or line ending.</p>
+<p>American Standards Association (ASA) states that line endings should use the sequence of the Carriage Return (<code class="docutils literal notranslate"><span class="pre">CR</span></code> or <code class="docutils literal notranslate"><span class="pre">\r</span></code>) <em>and</em> the Line Feed (<code class="docutils literal notranslate"><span class="pre">LF</span></code> or <code class="docutils literal notranslate"><span class="pre">\n</span></code>) characters (<code class="docutils literal notranslate"><span class="pre">CR+LF</span></code> or <code class="docutils literal notranslate"><span class="pre">\r\n</span></code>).</p>
+<p>The International Organization  (ISO) standard however allowed for either the <code class="docutils literal notranslate"><span class="pre">CR+LF</span></code> characters or just the <code class="docutils literal notranslate"><span class="pre">LF</span></code> character.</p>
+<p>Note: <strong>Windows</strong> uses the <code class="docutils literal notranslate"><span class="pre">CR+LF</span></code> characters to indicate a new line, while <strong>Unix</strong> and the newer <strong>Mac</strong> versions use just the <code class="docutils literal notranslate"><span class="pre">LF</span></code> character. This can cause some complications when you’re processing files on an operating system that is different than the file’s source.</p>
+</div>
+<div class="section" id="character-encoding">
+<h3>Character Encoding<a class="headerlink" href="#character-encoding" title="Permalink to this headline">¶</a></h3>
+<p>Another common problem that you may face is the encoding of the byte data. An encoding is a translation from byte data to human readable characters. This is typically done by assigning a numerical value to represent a character.</p>
+<p>The two most common encodings are the ASCII and UNICODE Formats. ASCII can only store 128 characters, while Unicode can contain up to 1,114,112 characters.</p>
+<p>Note: ASCII is actually a subset of Unicode (UTF-8), meaning that ASCII and Unicode share the same numerical to character values.</p>
+<p>It’s important to note that parsing a file with the incorrect character encoding can lead to failures or misrepresentation of the character.</p>
+<p>For example, if a file was created using the UTF-8 encoding, and you try to parse it using the ASCII encoding, if there is a character that is outside of those 128 values, then an error will be thrown.</p>
+</div>
+<div class="section" id="opening-and-closing-a-file">
+<h3>Opening and Closing a File<a class="headerlink" href="#opening-and-closing-a-file" title="Permalink to this headline">¶</a></h3>
+<p>To open a file, we invoke <code class="docutils literal notranslate"><span class="pre">open()</span></code> built-in function. <code class="docutils literal notranslate"><span class="pre">open()</span></code> has a single required argument that is path to the file and returns the file object.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">file</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;contacts.txt&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>you should call <code class="docutils literal notranslate"><span class="pre">f.close()</span></code> to close the file and immediately free up any system resources used by it. If you don’t explicitly close a file, Python’s garbage collector will eventually destroy the object and close the open file for you, but the file may stay open for a while. Another risk is that different Python implementations will do this clean-up at different times.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">file</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>When manipulating a file, we’ve to ensure the file have been closes, even when an error is encountered.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">file</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;contacts.txt&#39;</span><span class="p">)</span>
+
+<span class="k">try</span><span class="p">:</span>
+    <span class="c1"># Do something with file</span>
+<span class="k">finally</span><span class="p">:</span>
+    <span class="n">file</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+</div>
+<div class="section" id="alternative-method">
+<h4>Alternative Method<a class="headerlink" href="#alternative-method" title="Permalink to this headline">¶</a></h4>
+<p>An alternative way of closing a file would be to use <code class="docutils literal notranslate"><span class="pre">with</span></code> statement.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;contacts.txt&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
+    <span class="c1"># Do something with wile</span>
+</pre></div>
+</div>
+<p>The <code class="docutils literal notranslate"><span class="pre">with</span></code> statement automatically takes care of closing the file once it leaves the <code class="docutils literal notranslate"><span class="pre">with</span></code> block, even in cases of error.</p>
+</div>
+<div class="section" id="the-file-mode">
+<h4>The file mode<a class="headerlink" href="#the-file-mode" title="Permalink to this headline">¶</a></h4>
+<p>You’ll also want to use the second positional argument, <code class="docutils literal notranslate"><span class="pre">mode</span></code>. This argument is a string that contains multiple characters to represent how you want to open the file. The default and most common is <code class="docutils literal notranslate"><span class="pre">'r'</span></code>, which represents opening the file in read-only mode as a text file:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;contacts.txt&#39;</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
+    <span class="c1"># Further file processing goes here</span>
+</pre></div>
+</div>
+<p>Most common file modes are:</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Character</p></th>
+<th class="head"><p>Meaning</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">'r'</span></code></p></td>
+<td><p>Open for reading (default)</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">'w'</span></code></p></td>
+<td><p>Open for writing, truncating (overwriting) the file first</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">'rb'</span></code> or <code class="docutils literal notranslate"><span class="pre">'wb'</span></code></p></td>
+<td><p>Open in binary mode (read/write using byte data)</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="file-object">
+<h4>File Object<a class="headerlink" href="#file-object" title="Permalink to this headline">¶</a></h4>
+<p>A file object is:</p>
+<blockquote>
+<div><p>An object exposing a file-oriented API (with methods such as <code class="docutils literal notranslate"><span class="pre">read()</span></code> or <code class="docutils literal notranslate"><span class="pre">write()</span></code>) to an underlying resource.</p>
+</div></blockquote>
+<p>There are three different categories of file objects:</p>
+<ul class="simple">
+<li><p>Text files</p></li>
+<li><p>Buffered binary files</p></li>
+<li><p>Raw binary files</p></li>
+</ul>
+<div class="section" id="text-files">
+<h5>Text files<a class="headerlink" href="#text-files" title="Permalink to this headline">¶</a></h5>
+<p>A text file is the most common file that you’ll encounter. Here are some examples of how these files are opened:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">open</span><span class="p">(</span><span class="s1">&#39;contacts.txt&#39;</span><span class="p">)</span>
+
+<span class="nb">open</span><span class="p">(</span><span class="s1">&#39;contacts.txt&#39;</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span>
+
+<span class="nb">open</span><span class="p">(</span><span class="s1">&#39;contacts.txt&#39;</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="buffered-binary-files">
+<h5>Buffered binary files<a class="headerlink" href="#buffered-binary-files" title="Permalink to this headline">¶</a></h5>
+<p>A buffered binary file type is used for reading and writing binary files. Here are some examples of how these files are opened:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">open</span><span class="p">(</span><span class="s1">&#39;contacts.txt&#39;</span><span class="p">,</span> <span class="s1">&#39;rb&#39;</span><span class="p">)</span>
+
+<span class="nb">open</span><span class="p">(</span><span class="s1">&#39;contacts.txt&#39;</span><span class="p">,</span> <span class="s1">&#39;wb&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="raw-binary-files">
+<h5>Raw binary files<a class="headerlink" href="#raw-binary-files" title="Permalink to this headline">¶</a></h5>
+<p>A raw file generally used as a low-level building-block for binary and text streams.</p>
+<p>It is generally not used.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">open</span><span class="p">(</span><span class="s2">&quot;contacts.jpg&quot;</span><span class="p">,</span> <span class="s2">&quot;rb&quot;</span><span class="p">,</span> <span class="n">buffering</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="id1">
+<h3>Reading and Writing files<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<p>Once you’ve opened up a file, you’ll want to read or write to the file. First off, let’s cover reading a file.</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Method</p></th>
+<th class="head"><p>What It Does</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">.read(size=-1)</span></code></p></td>
+<td><p>This reads from the file based on the number of <code class="docutils literal notranslate"><span class="pre">size</span></code> bytes. If no argument is passed or <code class="docutils literal notranslate"><span class="pre">None</span></code> or <code class="docutils literal notranslate"><span class="pre">-1</span></code> is passed, then the entire file is read.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">.readline(size=-1)</span></code></p></td>
+<td><p>This reads at most <code class="docutils literal notranslate"><span class="pre">size</span></code> number of characters from the line. This continues to the end of the line and then wraps back around. If no argument is passed or <code class="docutils literal notranslate"><span class="pre">None</span></code> or <code class="docutils literal notranslate"><span class="pre">-1</span></code> is passed, then the entire line (or rest of the line) is read.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">.readlines()</span></code></p></td>
+<td><p>This reads the remaining lines from the file object and returns them as a list.</p></td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="read-method">
+<h4><code class="docutils literal notranslate"><span class="pre">.read()</span></code> Method<a class="headerlink" href="#read-method" title="Permalink to this headline">¶</a></h4>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;contacts.txt&#39;</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">reader</span><span class="p">:</span>
+    <span class="c1"># Read &amp; print the entire file</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">reader</span><span class="o">.</span><span class="n">read</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="readline-method">
+<h4><code class="docutils literal notranslate"><span class="pre">.readline()</span></code> Method<a class="headerlink" href="#readline-method" title="Permalink to this headline">¶</a></h4>
+<p>Here’s an example of how to read 5 bytes of a line each time using the Python <code class="docutils literal notranslate"><span class="pre">.readline()</span></code> method:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;contacts.txt&#39;</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">reader</span><span class="p">:</span>
+    <span class="c1"># Read &amp; print the first 5 characters of the line 5 times</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">reader</span><span class="o">.</span><span class="n">readline</span><span class="p">(</span><span class="mi">5</span><span class="p">))</span>
+    <span class="c1"># Notice that line is greater than the 5 chars and continues</span>
+    <span class="c1"># down the line, reading 5 chars each time until the end of the</span>
+    <span class="c1"># line and then &quot;wraps&quot; around</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">reader</span><span class="o">.</span><span class="n">readline</span><span class="p">(</span><span class="mi">5</span><span class="p">))</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">reader</span><span class="o">.</span><span class="n">readline</span><span class="p">(</span><span class="mi">5</span><span class="p">))</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">reader</span><span class="o">.</span><span class="n">readline</span><span class="p">(</span><span class="mi">5</span><span class="p">))</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">reader</span><span class="o">.</span><span class="n">readline</span><span class="p">(</span><span class="mi">5</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="readlines-method">
+<h4><code class="docutils literal notranslate"><span class="pre">.readlines()</span></code> Method<a class="headerlink" href="#readlines-method" title="Permalink to this headline">¶</a></h4>
+<p>Here’s an example of how to read the entire file as a list using the Python <code class="docutils literal notranslate"><span class="pre">.readlines()</span></code> method:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;contacts.txt&#39;</span><span class="p">)</span>
+<span class="n">f</span><span class="o">.</span><span class="n">readlines</span><span class="p">()</span>  <span class="c1"># Returns a list object or use list(f)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="iterating-over-each-line">
+<h4>Iterating over each line<a class="headerlink" href="#iterating-over-each-line" title="Permalink to this headline">¶</a></h4>
+<div class="section" id="using-readline">
+<h5>Using <code class="docutils literal notranslate"><span class="pre">readline()</span></code><a class="headerlink" href="#using-readline" title="Permalink to this headline">¶</a></h5>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;contacts.txt&#39;</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">reader</span><span class="p">:</span>
+    <span class="c1"># Read and print the entire file line by line</span>
+    <span class="n">line</span> <span class="o">=</span> <span class="n">reader</span><span class="o">.</span><span class="n">readline</span><span class="p">()</span>
+    <span class="k">while</span> <span class="n">line</span> <span class="o">!=</span> <span class="s1">&#39;&#39;</span><span class="p">:</span>  <span class="c1"># The EOF char is an empty string</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">line</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
+        <span class="n">line</span> <span class="o">=</span> <span class="n">reader</span><span class="o">.</span><span class="n">readline</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="using-readlines">
+<h5>Using <code class="docutils literal notranslate"><span class="pre">readlines()</span></code><a class="headerlink" href="#using-readlines" title="Permalink to this headline">¶</a></h5>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;contacts.txt&#39;</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">reader</span><span class="p">:</span>
+    <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">reader</span><span class="o">.</span><span class="n">readlines</span><span class="p">():</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">line</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="using-file-object">
+<h5>Using file object<a class="headerlink" href="#using-file-object" title="Permalink to this headline">¶</a></h5>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;contacts.txt&#39;</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">reader</span><span class="p">:</span>
+    <span class="c1"># Read and print the entire file line by line</span>
+    <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">reader</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">line</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Now let’s dive into writing files. As with reading files, file objects have multiple methods that are useful for writing to a file:</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Method</p></th>
+<th class="head"><p>What It Does</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">.write(string)</span></code></p></td>
+<td><p>This writes the string to the file.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">.writelines(seq)</span></code></p></td>
+<td><p>This writes the sequence to the file. No line endings are appended to each sequence item. It’s up to you to add the appropriate line ending(s).</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section" id="write-method">
+<h4><code class="docutils literal notranslate"><span class="pre">.write()</span></code> Method<a class="headerlink" href="#write-method" title="Permalink to this headline">¶</a></h4>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;contacts.txt&#39;</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">writer</span><span class="p">:</span>
+    <span class="n">contacts</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Ram Kasula&#39;</span><span class="p">,</span> <span class="s1">&#39;Bikram Manandhar&#39;</span><span class="p">,</span> <span class="s1">&#39;Mooool Shreya&#39;</span><span class="p">]</span>
+    <span class="k">for</span> <span class="n">contact</span> <span class="ow">in</span> <span class="n">contacts</span><span class="p">:</span>
+        <span class="n">writer</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">contacts</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="writelines-seq-method">
+<h4><code class="docutils literal notranslate"><span class="pre">.writelines(seq)</span></code> Method<a class="headerlink" href="#writelines-seq-method" title="Permalink to this headline">¶</a></h4>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;dog_breeds_reversed.txt&#39;</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">writer</span><span class="p">:</span>
+    <span class="n">contacts</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Ram Kasula&#39;</span><span class="p">,</span> <span class="s1">&#39;Bikram Manandhar&#39;</span><span class="p">,</span> <span class="s1">&#39;Mooool Shreya&#39;</span><span class="p">]</span>
+    <span class="n">writer</span><span class="o">.</span><span class="n">writelines</span><span class="p">(</span><span class="n">contacts</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./automate/_todo"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Sajal N. Shrestha<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    <script src="../../_static/js/index.js"></script>
+    
+  </body>
+</html>

@@ -1,0 +1,631 @@
+
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Package Management in Python (PIP)</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
+    <link href="../../_static/css/index.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../_static/sphinx-book-theme.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/language_data.js"></script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/sphinx-book-theme.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="docsearch:language" content="en">
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../../index.html">
+  
+  <img src="../../_static/logo.png" class="logo" alt="logo">
+  
+  
+</a>
+</div>
+
+<form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../intro.html">
+   Python End-2-End RoadMap
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Know Your Language
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../q-%26-a/README.html">
+   A Q&amp;A Session
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../before-we-begin/README.html">
+   Before We Begin
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../apply-primer/README.html">
+   Applying Primer
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../apply-primer/README.html#strings">
+   Strings
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../apply-primer/README.html#lists">
+   Lists
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Apply Python in Real Life
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../automate/regular-expressions/README.html">
+   Regular Expressions
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Web and Beyond
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../web-and-beyond/README.html">
+   To Web and Beyond
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Rest time
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../rest-time/README.html">
+   Rest Time
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Master Your Language
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../master-your-language/README.html">
+   Master your language
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Miscellaneous
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../miscellaneous/docker/README.html">
+   Docker
+  </a>
+ </li>
+</ul>
+
+</nav>
+
+ <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Compiled by <a href="mailto:sajalshres@gmail.com">Sajal Shrestha</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        <div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../_sources/know-your-language/_todo/package-management.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+    
+</div>
+        <!-- Source interaction buttons -->
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#the-basics">
+   The Basics
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#search-packages">
+     Search Packages
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#install-packages">
+     Install Packages
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#specify-version">
+       Specify version
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#upgrade-packages">
+     Upgrade Packages
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#remove-packages">
+     Remove Packages
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#display-package-information">
+     Display Package information
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#list-packages">
+     List Packages
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#freeze-packages">
+     Freeze Packages
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+        </nav>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="package-management-in-python-pip">
+<h1>Package Management in Python (PIP)<a class="headerlink" href="#package-management-in-python-pip" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li><p>You can install, upgrade, and remove packages using a program called pip.</p></li>
+<li><p>By default pip will install packages from the Python Package Index, <a class="reference external" href="https://pypi.org">https://pypi.org</a></p></li>
+<li><p>Similar to linux repository(YUM, APT), NPM for Node.js, etc</p></li>
+<li><p>Python actually has another, more primitive, package manager called <code class="docutils literal notranslate"><span class="pre">easy_install</span></code>, which is installed automatically when you install Python itself.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pip</span></code> is vastly superior to easy_install for lots of reasons, and so should generally be used instead.</p></li>
+</ul>
+<div class="section" id="the-basics">
+<h2>The Basics<a class="headerlink" href="#the-basics" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="search-packages">
+<h3>Search Packages<a class="headerlink" href="#search-packages" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>You can browse the Python Package Index by going to it in your web browser, or you can use pip’s limited search feature:</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">search</span> <span class="n">django</span>
+</pre></div>
+</div>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>django-bagou (0.1.0)              - Django Websocket for Django
+django-maro (0.0.2)               - `django-maro` is utility for django.
+django-ide (0.0.5)                - A Django app to develop Django apps
+django-hooked (0.2.6)             - WebHooks for Django and Django Rest Framework.
+django-six (1.0.4)                - Django-six &amp;#8212;&amp;#8212; Django Compatibility Library
+django-jackal (2.1.1)             - Boilerplate for Django and Django REST Framework
+django-umanage (1.1.1)            - Django user management app for django
+django-mailwhimp (0.1)            - django-mailwhimp integrates mailchimp into Django
+django-nadmin (0.1.0)             - django nadmin support django version 1.8 based on django-xadmin
+django-templatecomponents (0.03)  - django-templatecomponents
+django-cepfield (0.3.0)           - Django CepField
+django-apscheduler (0.3.0)        - APScheduler for Django
+django-pinba (1.3.0)              - django pinba
+django-crudviewset (0.1.2)        - Django CRUDViewSet
+django-listings (0.1)             - django-listings
+django-optionsfield (0.2)         - django-optionsfield
+django-user (0.2.1)               - Django User
+django-uuidfield (0.5.0)          - UUIDField in Django
+django-utils (0.0.2)              - Utilities for Django
+Django-Util (0.0.3)               - Django Utililies
+django-acserv (0.6.1)             - acserv for django
+django-pagination (1.0.7)         - django-pagination
+django-chess (0.2.1)              - Django Chess
+django-handlebars (0.1)           - Handlebars for Django
+django-funserver (1.0)            - FUNserver for Django
+django-concepts (0.7.2)           - django-concepts
+django-events (0.1)               - django-events
+django-vouchers (0.6)             - Vouchers in Django
+django-freebase (0.1dev)          - Freebasing in Django.
+django-collage (1.0.1)            - django collages
+django-stachoutils (3.1.2)        - Commons for Django
+django-intenumfield (1.4.0)       - An IntEnumField for Django
+django-djikiki (1.1)              - A django wiki
+django-wysiwyg (0.8.0)            - django-wysiwyg
+django-bitfield (1.9.6)           - BitField in Django
+django-userproperty (1.0.8)       - django userproperty
+django-plugins (0.3.0)            - django-plugins.
+django-formfield (0.4)            - django-formfield
+django-unixdatetimefield (1.2.0)  - UnixDateTimeField in Django
+django-microblogging (0.1.2)      - django-microblogging
+django-paginate (0.3.1)           - Django Paginate
+sense-django (0.2.20)             - sense django
+django-nextpage (1.0.2)           - django-nextpage
+django-mako (0.1.3)               - Django Mako
+django-coffee (0.0.4)             - Django Coffee
+django-pipstatus (0.1.3)          - Django pipstatus
+django-more (0.2.6)               - Django with more
+django-icons (1.1.1)              - Icons for Django
+django-extensions (2.2.6)         - Extensions for Django
+django-subcommands (2019.4.13)    - Django subcommands
+django-restframework (0.0.1)      - django-restframework
+django-mailformer (0.0.1)         - Django Mailformer
+django-alerts (0.5.1)             - Django alerts
+diy-django (1.3.1)                - diy-django
+django-datahooks (0.0.1)          - Django datahooks
+django-shares (0.0.1)             - Sharing for django
+django-thumbnail (11.13)          - Thumbnailing in Django
+django-stopwatch (0.2)            - Django Stopwatch
+django-moat (0.1.1)               - django-moat
+django-masquerade (1.3)           - django-masquerade
+django-projectname (1.0.0)        - django projectname
+django-narrative (0.5.9)          - Django narrative
+django-jsonschema2 (0.2.1)        - Django JSONSchema
+django-docviewer (0.4)            - documentcloud for django
+django-profiling (0.1)            - Django Profiling
+django-humans (0.1)               - Django Humans
+django-keychain (0.0.1)           - Django Keychain
+django-purls (0.3)                - django-purls
+django-edumetadata (0.7)          - django-edumetadata
+django-sendgrid (1.0.1)           - django-sendgrid
+django-pagebase (0.4.1)           - Pages for Django
+django-mesh (0.1.0)               - A Django blog.
+django-glitter (0.2.10)           - Glitter for Django
+django-tcms (0.1.11)              - Django tCMS.
+django-mariposa (0.1)             - django-mariposa
+django-esutils (0.3)              - Django Esutils.
+django-alive (1.1.0)              - Healtchecks for Django
+django-alipay2 (0.13.3)           - alipay for django
+django-flow (1.0.3)               - Django flow
+django-paypal2 (1.0.2)            - paypal for django
+django-progress (1.0.4)           - Django Progress
+django-polyfield (0.1.0)          - Django Polyfield
+django-poll (0.3.1)               - Django Poll
+django-sekizai (1.0.0)            - Django Sekizai
+django-localcrawler (0.1.1)       - django-localcrawler
+django-sections (0.1)             - django-sections
+django-groot (0.1.1)              - Django Groot
+django-sendcloud2 (0.2.1)         - sendcloud2 for django
+django-sape (0.2.4)               - Django + sape.ru.
+django-micro (1.8.0)              - Django as a microframework
+django-callback (0.6.1)           - Django Callback
+django-sae (0.2.1)                - for django in sae
+django-uri (1.0.5)                - Django URI
+django-requestlogs (0.2.0)        - Audit logging for Django and Django Rest Framework
+django-brevisurl (2.0.3)          - django-brevisurl is django app for shortening urls
+django-pybrowscap (1.0.0)         - django-pybrowscap is django middleware with support for pybrowscap
+django-eth (0.2.6)                - Ethereum utilities for Django and Django Rest projects
+django-scrapyd (0.2)              - Django scrapyd is a Django app to manage scrapyd
+django-perm (2.5.0)               - Class based Django permissions for Django models.
+django-postit (0.3)               - django-postit is a scrumboard application for django projects
+Note: you may need to restart the kernel to use updated packages.
+</pre></div>
+</div>
+</div>
+<div class="section" id="install-packages">
+<h3>Install Packages<a class="headerlink" href="#install-packages" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Install the latest version of a package by specifying a package’s name:</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">requests</span>
+</pre></div>
+</div>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: requests in d:\applications\winpython-3.8\python-3.8.1.amd64\lib\site-packages (2.22.0)
+Requirement already satisfied: urllib3 in d:\applications\winpython-3.8\python-3.8.1.amd64\lib\site-packages (from requests) (1.25.7)
+Requirement already satisfied: idna in d:\applications\winpython-3.8\python-3.8.1.amd64\lib\site-packages (from requests) (2.8)
+Requirement already satisfied: chardet in d:\applications\winpython-3.8\python-3.8.1.amd64\lib\site-packages (from requests) (3.0.4)
+Requirement already satisfied: certifi in d:\applications\winpython-3.8\python-3.8.1.amd64\lib\site-packages (from requests) (2019.11.28)
+Note: you may need to restart the kernel to use updated packages.
+</pre></div>
+</div>
+<div class="section" id="specify-version">
+<h4>Specify version<a class="headerlink" href="#specify-version" title="Permalink to this headline">¶</a></h4>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">requests</span><span class="o">==</span><span class="mf">2.6</span><span class="o">.</span><span class="mi">0</span>
+</pre></div>
+</div>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Collecting requests==2.6.0
+  Using cached https://files.pythonhosted.org/packages/73/63/b0729be549494a3e31316437053bc4e0a8bb71a07a6ee6059434b8f1cd5f/requests-2.6.0-py2.py3-none-any.whl
+Installing collected packages: requests
+  Found existing installation: requests 2.22.0
+    Uninstalling requests-2.22.0:
+      Successfully uninstalled requests-2.22.0
+Successfully installed requests-2.6.0
+Note: you may need to restart the kernel to use updated packages.
+
+
+ERROR: twine 3.1.1 has requirement requests&gt;=2.20, but you&#39;ll have requests 2.6.0 which is incompatible.
+ERROR: moviepy 1.0.1 has requirement requests&lt;3.0,&gt;=2.8.1, but you&#39;ll have requests 2.6.0 which is incompatible.
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="upgrade-packages">
+<h3>Upgrade Packages<a class="headerlink" href="#upgrade-packages" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>You can run <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">--upgrade</span></code> to upgrade the package to the latest version:</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="o">--</span><span class="n">upgrade</span> <span class="n">requests</span>
+</pre></div>
+</div>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Collecting requests
+  Using cached https://files.pythonhosted.org/packages/51/bd/23c926cd341ea6b7dd0b2a00aba99ae0f828be89d72b2190f27c11d4b7fb/requests-2.22.0-py2.py3-none-any.whl
+Requirement already satisfied, skipping upgrade: certifi&gt;=2017.4.17 in d:\applications\winpython-3.8\python-3.8.1.amd64\lib\site-packages (from requests) (2019.11.28)
+Requirement already satisfied, skipping upgrade: urllib3!=1.25.0,!=1.25.1,&lt;1.26,&gt;=1.21.1 in d:\applications\winpython-3.8\python-3.8.1.amd64\lib\site-packages (from requests) (1.25.7)
+Requirement already satisfied, skipping upgrade: chardet&lt;3.1.0,&gt;=3.0.2 in d:\applications\winpython-3.8\python-3.8.1.amd64\lib\site-packages (from requests) (3.0.4)
+Requirement already satisfied, skipping upgrade: idna&lt;2.9,&gt;=2.5 in d:\applications\winpython-3.8\python-3.8.1.amd64\lib\site-packages (from requests) (2.8)
+Installing collected packages: requests
+  Found existing installation: requests 2.6.0
+    Uninstalling requests-2.6.0:
+      Successfully uninstalled requests-2.6.0
+Successfully installed requests-2.22.0
+Note: you may need to restart the kernel to use updated packages.
+</pre></div>
+</div>
+</div>
+<div class="section" id="remove-packages">
+<h3>Remove Packages<a class="headerlink" href="#remove-packages" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">uninstall</span></code> followed by one or more package names will remove the packages</p></li>
+</ul>
+</div>
+<div class="section" id="display-package-information">
+<h3>Display Package information<a class="headerlink" href="#display-package-information" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">show</span></code> will display information about a particular package:</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">show</span> <span class="n">requests</span>
+</pre></div>
+</div>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Name: requests
+Version: 2.22.0
+Summary: Python HTTP for Humans.
+Home-page: http://python-requests.org
+Author: Kenneth Reitz
+Author-email: me@kennethreitz.org
+License: Apache 2.0
+Location: d:\applications\winpython-3.8\python-3.8.1.amd64\lib\site-packages
+Requires: certifi, idna, chardet, urllib3
+Required-by: twine, Sphinx, requests-toolbelt, quantecon, pyepsg, papermill, pandas-datareader, moviepy, intake
+Note: you may need to restart the kernel to use updated packages.
+</pre></div>
+</div>
+</div>
+<div class="section" id="list-packages">
+<h3>List Packages<a class="headerlink" href="#list-packages" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">list</span></code> will display all of the packages installed in the virtual environment</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="nb">list</span>
+</pre></div>
+</div>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Package                       Version     
+----------------------------- ------------
+adodbapi                      2.6.1.3     
+affine                        2.3.0       
+aiofiles                      0.4.0       
+aiosqlite                     0.11.0      
+alabaster                     0.7.12      
+altair                        4.0.0    
+...
+</pre></div>
+</div>
+</div>
+<div class="section" id="freeze-packages">
+<h3>Freeze Packages<a class="headerlink" href="#freeze-packages" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">freeze</span></code> will produce a similar list of the installed packages, but the output uses the format that pip install expects.</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">freeze</span>
+</pre></div>
+</div>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>adodbapi==2.6.1.3
+affine==2.3.0
+aiofiles==0.4.0
+aiosqlite==0.11.0
+alabaster==0.7.12
+altair==4.0.0
+...
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">freeze</span> <span class="o">&gt;</span> <span class="n">requirements</span><span class="o">.</span><span class="n">txt</span>
+</pre></div>
+</div>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Note: you may need to restart the kernel to use updated packages.
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;requirements.txt&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">())</span>
+<span class="n">f</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+</div>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>adodbapi==2.6.1.3
+affine==2.3.0
+aiofiles==0.4.0
+aiosqlite==0.11.0
+alabaster==0.7.12
+altair==4.0.0
+...
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">())</span>
+</pre></div>
+</div>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>---------------------------------------------------------------------------
+
+ValueError                                Traceback (most recent call last)
+
+&lt;ipython-input-19-315c20b774c2&gt; in &lt;module&gt;
+----&gt; 1 print(f.read())
+
+
+ValueError: I/O operation on closed file.
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./know-your-language/_todo"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Sajal N. Shrestha<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    <script src="../../_static/js/index.js"></script>
+    
+  </body>
+</html>

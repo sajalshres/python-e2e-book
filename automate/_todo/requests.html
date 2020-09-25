@@ -1,0 +1,771 @@
+
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Requests</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
+    <link href="../../_static/css/index.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../_static/sphinx-book-theme.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/language_data.js"></script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/sphinx-book-theme.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="docsearch:language" content="en">
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../../index.html">
+  
+  <img src="../../_static/logo.png" class="logo" alt="logo">
+  
+  
+</a>
+</div>
+
+<form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../intro.html">
+   Python End-2-End RoadMap
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Know Your Language
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../know-your-language/q-%26-a/README.html">
+   A Q&amp;A Session
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../know-your-language/before-we-begin/README.html">
+   Before We Begin
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../know-your-language/apply-primer/README.html">
+   Applying Primer
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../know-your-language/apply-primer/README.html#strings">
+   Strings
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../know-your-language/apply-primer/README.html#lists">
+   Lists
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Apply Python in Real Life
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../regular-expressions/README.html">
+   Regular Expressions
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Web and Beyond
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../web-and-beyond/README.html">
+   To Web and Beyond
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Rest time
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../rest-time/README.html">
+   Rest Time
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Master Your Language
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../master-your-language/README.html">
+   Master your language
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Miscellaneous
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../miscellaneous/docker/README.html">
+   Docker
+  </a>
+ </li>
+</ul>
+
+</nav>
+
+ <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Compiled by <a href="mailto:sajalshres@gmail.com">Sajal Shrestha</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        <div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../_sources/automate/_todo/requests.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+    
+</div>
+        <!-- Source interaction buttons -->
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#getting-started-with-requests">
+   Getting Started With
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     requests
+    </span>
+   </code>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#the-get-request">
+   The GET Request
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#the-response">
+   The Response
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#status-codes">
+     Status Codes
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#content">
+     Content
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#headers">
+     Headers
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#query-string-parameters">
+   Query String Parameters
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#request-headers">
+   Request Headers
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#other-http-methods">
+   Other HTTP Methods
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#the-message-body">
+   The Message Body
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#inspecting-your-request">
+   Inspecting Your Request
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#authentication">
+   Authentication
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#ssl-certificate-verification">
+   SSL Certificate Verification
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#performance">
+   Performance
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#timeouts">
+     Timeouts
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#the-session-object">
+     The Session Object
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#max-retries">
+     Max Retries
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+        </nav>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="requests">
+<h1>Requests<a class="headerlink" href="#requests" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="getting-started-with-requests">
+<h2>Getting Started With <code class="docutils literal notranslate"><span class="pre">requests</span></code><a class="headerlink" href="#getting-started-with-requests" title="Permalink to this headline">¶</a></h2>
+<p>Let’s begin by installing the <code class="docutils literal notranslate"><span class="pre">requests</span></code> library. To do so, run the following command:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ pip install requests
+</pre></div>
+</div>
+<p>Once <code class="docutils literal notranslate"><span class="pre">requests</span></code> is installed, you can use it in your application. Importing <code class="docutils literal notranslate"><span class="pre">requests</span></code> looks like this:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">requests</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="the-get-request">
+<h2>The GET Request<a class="headerlink" href="#the-get-request" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol#Request_methods">HTTP methods</a> such as <code class="docutils literal notranslate"><span class="pre">GET</span></code> and <code class="docutils literal notranslate"><span class="pre">POST</span></code>, determine which action you’re trying to perform when making an HTTP request. Besides <code class="docutils literal notranslate"><span class="pre">GET</span></code> and <code class="docutils literal notranslate"><span class="pre">POST</span></code>, there are several other common methods that you’ll use later in this tutorial.</p>
+<p>One of the most common HTTP methods is <code class="docutils literal notranslate"><span class="pre">GET</span></code>. The <code class="docutils literal notranslate"><span class="pre">GET</span></code> method indicates that you’re trying to get or retrieve data from a specified resource. To make a <code class="docutils literal notranslate"><span class="pre">GET</span></code> request, invoke <code class="docutils literal notranslate"><span class="pre">requests.get()</span></code>.</p>
+<p>To test this out, you can make a <code class="docutils literal notranslate"><span class="pre">GET</span></code> request to GitHub’s <a class="reference external" href="https://developer.github.com/v3/#root-endpoint">Root REST API</a> by calling <code class="docutils literal notranslate"><span class="pre">get()</span></code> with the following URL:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;https://api.github.com&#39;</span><span class="p">)</span>
+<span class="go">&lt;Response [200]&gt;</span>
+</pre></div>
+</div>
+<p>Congratulations! You’ve made your first request.</p>
+</div>
+<div class="section" id="the-response">
+<h2>The Response<a class="headerlink" href="#the-response" title="Permalink to this headline">¶</a></h2>
+<p>A <code class="docutils literal notranslate"><span class="pre">Response</span></code> is a powerful object for inspecting the results of the request. Let’s make that same request again, but this time store the return value in a variable so that you can get a closer look at its attributes and behaviors:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;https://api.github.com&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>In this example, you’ve captured the return value of <code class="docutils literal notranslate"><span class="pre">get()</span></code>, which is an instance of <code class="docutils literal notranslate"><span class="pre">Response</span></code>, and stored it in a variable called <code class="docutils literal notranslate"><span class="pre">response</span></code>.</p>
+<div class="section" id="status-codes">
+<h3>Status Codes<a class="headerlink" href="#status-codes" title="Permalink to this headline">¶</a></h3>
+<p>The first bit of information that you can gather from <code class="docutils literal notranslate"><span class="pre">Response</span></code> is the status code. A status code informs you of the status of the request.</p>
+<p>For example, a <code class="docutils literal notranslate"><span class="pre">200</span> <span class="pre">OK</span></code> status means that your request was successful, whereas a <code class="docutils literal notranslate"><span class="pre">404</span> <span class="pre">NOT</span> <span class="pre">FOUND</span></code> status means that the resource you were looking for was not found. There are <a class="reference external" href="https://en.wikipedia.org/wiki/List_of_HTTP_status_codes">many other possible status codes</a> as well to give you specific insights into what happened with your request.</p>
+<p>By accessing <code class="docutils literal notranslate"><span class="pre">.status_code</span></code>, you can see the status code that the server returned:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">response</span><span class="o">.</span><span class="n">status_code</span>
+<span class="go">200</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">.status_code</span></code> returned a <code class="docutils literal notranslate"><span class="pre">200</span></code>, which means your request was successful and the server responded with the data you were requesting.</p>
+<p>Sometimes, you might want to use this information to make decisions in your code:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">response</span><span class="o">.</span><span class="n">status_code</span> <span class="o">==</span> <span class="mi">200</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Success!&#39;</span><span class="p">)</span>
+<span class="k">elif</span> <span class="n">response</span><span class="o">.</span><span class="n">status_code</span> <span class="o">==</span> <span class="mi">404</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Not Found.&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Let’s say you don’t want to check the response’s status code in an <code class="docutils literal notranslate"><span class="pre">if</span></code> statement. Instead, you want to raise an exception if the request was unsuccessful. You can do this using <code class="docutils literal notranslate"><span class="pre">.raise_for_status()</span></code>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">requests</span>
+<span class="kn">from</span> <span class="nn">requests.exceptions</span> <span class="kn">import</span> <span class="n">HTTPError</span>
+
+<span class="k">for</span> <span class="n">url</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;https://api.github.com&#39;</span><span class="p">,</span> <span class="s1">&#39;https://api.github.com/invalid&#39;</span><span class="p">]:</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+
+        <span class="c1"># If the response was successful, no Exception will be raised</span>
+        <span class="n">response</span><span class="o">.</span><span class="n">raise_for_status</span><span class="p">()</span>
+    <span class="k">except</span> <span class="n">HTTPError</span> <span class="k">as</span> <span class="n">http_err</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;HTTP error occurred: </span><span class="si">{</span><span class="n">http_err</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>  <span class="c1"># Python 3.6</span>
+    <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">err</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Other error occurred: </span><span class="si">{</span><span class="n">err</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>  <span class="c1"># Python 3.6</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Success!&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>If you invoke <code class="docutils literal notranslate"><span class="pre">.raise_for_status()</span></code>, an <code class="docutils literal notranslate"><span class="pre">HTTPError</span></code> will be raised for certain status codes. If the status code indicates a successful request, the program will proceed without that exception being raised.</p>
+</div>
+<div class="section" id="content">
+<h3>Content<a class="headerlink" href="#content" title="Permalink to this headline">¶</a></h3>
+<p>The response of a <code class="docutils literal notranslate"><span class="pre">GET</span></code> request often has some valuable information, known as a payload, in the message body. Using the attributes and methods of <code class="docutils literal notranslate"><span class="pre">Response</span></code>, you can view the payload in a variety of different formats.</p>
+<p>To see the response’s content in <code class="docutils literal notranslate"><span class="pre">bytes</span></code>, you use <code class="docutils literal notranslate"><span class="pre">.content</span></code>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;https://api.github.com&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">response</span><span class="o">.</span><span class="n">content</span>
+<span class="go">b&#39;{&quot;current_user_url&quot;:&quot;https://api.github.com/user&quot;,&quot;current_user_authorizations_html_url&quot;:&quot;https://github.com/settings/connections/applications{/client_id}&quot;,&quot;authorizations_url&quot;:&quot;https://api.github.com/authorizations&quot;,&quot;code_search_url&quot;:&quot;https://api.github.com/search/code?q={query}{&amp;page,per_page,sort,order}&quot;,&quot;commit_search_url&quot;:&quot;https://api.github.com/search/commits?q={query}{&amp;page,per_page,sort,order}&quot;,&quot;emails_url&quot;:&quot;https://api.github.com/user/emails&quot;,&quot;emojis_url&quot;:&quot;https://api.github.com/emojis&quot;,&quot;events_url&quot;:&quot;https://api.github.com/events&quot;,&quot;feeds_url&quot;:&quot;https://api.github.com/feeds&quot;,&quot;followers_url&quot;:&quot;https://api.github.com/user/followers&quot;,&quot;following_url&quot;:&quot;https://api.github.com/user/following{/target}&quot;,&quot;gists_url&quot;:&quot;https://api.github.com/gists{/gist_id}&quot;,&quot;hub_url&quot;:&quot;https://api.github.com/hub&quot;,&quot;issue_search_url&quot;:&quot;https://api.github.com/search/issues?q={query}{&amp;page,per_page,sort,order}&quot;,&quot;issues_url&quot;:&quot;https://api.github.com/issues&quot;,&quot;keys_url&quot;:&quot;https://api.github.com/user/keys&quot;,&quot;notifications_url&quot;:&quot;https://api.github.com/notifications&quot;,&quot;organization_repositories_url&quot;:&quot;https://api.github.com/orgs/{org}/repos{?type,page,per_page,sort}&quot;,&quot;organization_url&quot;:&quot;https://api.github.com/orgs/{org}&quot;,&quot;public_gists_url&quot;:&quot;https://api.github.com/gists/public&quot;,&quot;rate_limit_url&quot;:&quot;https://api.github.com/rate_limit&quot;,&quot;repository_url&quot;:&quot;https://api.github.com/repos/{owner}/{repo}&quot;,&quot;repository_search_url&quot;:&quot;https://api.github.com/search/repositories?q={query}{&amp;page,per_page,sort,order}&quot;,&quot;current_user_repositories_url&quot;:&quot;https://api.github.com/user/repos{?type,page,per_page,sort}&quot;,&quot;starred_url&quot;:&quot;https://api.github.com/user/starred{/owner}{/repo}&quot;,&quot;starred_gists_url&quot;:&quot;https://api.github.com/gists/starred&quot;,&quot;team_url&quot;:&quot;https://api.github.com/teams&quot;,&quot;user_url&quot;:&quot;https://api.github.com/users/{user}&quot;,&quot;user_organizations_url&quot;:&quot;https://api.github.com/user/orgs&quot;,&quot;user_repositories_url&quot;:&quot;https://api.github.com/users/{user}/repos{?type,page,per_page,sort}&quot;,&quot;user_search_url&quot;:&quot;https://api.github.com/search/users?q={query}{&amp;page,per_page,sort,order}&quot;}&#39;</span>
+</pre></div>
+</div>
+<p>While <code class="docutils literal notranslate"><span class="pre">.content</span></code> gives you access to the raw bytes of the response payload, you will often want to convert them into a <code class="docutils literal notranslate"><span class="pre">string</span></code> using a character encoding such as <a class="reference external" href="https://en.wikipedia.org/wiki/UTF-8">UTF-8</a>. <code class="docutils literal notranslate"><span class="pre">response</span></code> will do that for you when you access <code class="docutils literal notranslate"><span class="pre">.text</span></code>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">response</span><span class="o">.</span><span class="n">text</span>
+<span class="go">&#39;{&quot;current_user_url&quot;:&quot;https://api.github.com/user&quot;,&quot;current_user_authorizations_html_url&quot;:&quot;https://github.com/settings/connections/applications{/client_id}&quot;,&quot;authorizations_url&quot;:&quot;https://api.github.com/authorizations&quot;,&quot;code_search_url&quot;:&quot;https://api.github.com/search/code?q={query}{&amp;page,per_page,sort,order}&quot;,&quot;commit_search_url&quot;:&quot;https://api.github.com/search/commits?q={query}{&amp;page,per_page,sort,order}&quot;,&quot;emails_url&quot;:&quot;https://api.github.com/user/emails&quot;,&quot;emojis_url&quot;:&quot;https://api.github.com/emojis&quot;,&quot;events_url&quot;:&quot;https://api.github.com/events&quot;,&quot;feeds_url&quot;:&quot;https://api.github.com/feeds&quot;,&quot;followers_url&quot;:&quot;https://api.github.com/user/followers&quot;,&quot;following_url&quot;:&quot;https://api.github.com/user/following{/target}&quot;,&quot;gists_url&quot;:&quot;https://api.github.com/gists{/gist_id}&quot;,&quot;hub_url&quot;:&quot;https://api.github.com/hub&quot;,&quot;issue_search_url&quot;:&quot;https://api.github.com/search/issues?q={query}{&amp;page,per_page,sort,order}&quot;,&quot;issues_url&quot;:&quot;https://api.github.com/issues&quot;,&quot;keys_url&quot;:&quot;https://api.github.com/user/keys&quot;,&quot;notifications_url&quot;:&quot;https://api.github.com/notifications&quot;,&quot;organization_repositories_url&quot;:&quot;https://api.github.com/orgs/{org}/repos{?type,page,per_page,sort}&quot;,&quot;organization_url&quot;:&quot;https://api.github.com/orgs/{org}&quot;,&quot;public_gists_url&quot;:&quot;https://api.github.com/gists/public&quot;,&quot;rate_limit_url&quot;:&quot;https://api.github.com/rate_limit&quot;,&quot;repository_url&quot;:&quot;https://api.github.com/repos/{owner}/{repo}&quot;,&quot;repository_search_url&quot;:&quot;https://api.github.com/search/repositories?q={query}{&amp;page,per_page,sort,order}&quot;,&quot;current_user_repositories_url&quot;:&quot;https://api.github.com/user/repos{?type,page,per_page,sort}&quot;,&quot;starred_url&quot;:&quot;https://api.github.com/user/starred{/owner}{/repo}&quot;,&quot;starred_gists_url&quot;:&quot;https://api.github.com/gists/starred&quot;,&quot;team_url&quot;:&quot;https://api.github.com/teams&quot;,&quot;user_url&quot;:&quot;https://api.github.com/users/{user}&quot;,&quot;user_organizations_url&quot;:&quot;https://api.github.com/user/orgs&quot;,&quot;user_repositories_url&quot;:&quot;https://api.github.com/users/{user}/repos{?type,page,per_page,sort}&quot;,&quot;user_search_url&quot;:&quot;https://api.github.com/search/users?q={query}{&amp;page,per_page,sort,order}&quot;}&#39;</span>
+</pre></div>
+</div>
+<p>Because the decoding of <code class="docutils literal notranslate"><span class="pre">bytes</span></code> to a <code class="docutils literal notranslate"><span class="pre">str</span></code> requires an encoding scheme, <code class="docutils literal notranslate"><span class="pre">requests</span></code> will try to guess the encoding  based on the response’s <a class="reference external" href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers">headers</a> if you do not specify one. You can provide an explicit encoding by setting <code class="docutils literal notranslate"><span class="pre">.encoding</span></code> before accessing <code class="docutils literal notranslate"><span class="pre">.text</span></code>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">response</span><span class="o">.</span><span class="n">encoding</span> <span class="o">=</span> <span class="s1">&#39;utf-8&#39;</span> <span class="c1"># Optional: requests infers this internally</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">response</span><span class="o">.</span><span class="n">text</span>
+<span class="go">&#39;{&quot;current_user_url&quot;:&quot;https://api.github.com/user&quot;,&quot;current_user_authorizations_html_url&quot;:&quot;https://github.com/settings/connections/applications{/client_id}&quot;,&quot;authorizations_url&quot;:&quot;https://api.github.com/authorizations&quot;,&quot;code_search_url&quot;:&quot;https://api.github.com/search/code?q={query}{&amp;page,per_page,sort,order}&quot;,&quot;commit_search_url&quot;:&quot;https://api.github.com/search/commits?q={query}{&amp;page,per_page,sort,order}&quot;,&quot;emails_url&quot;:&quot;https://api.github.com/user/emails&quot;,&quot;emojis_url&quot;:&quot;https://api.github.com/emojis&quot;,&quot;events_url&quot;:&quot;https://api.github.com/events&quot;,&quot;feeds_url&quot;:&quot;https://api.github.com/feeds&quot;,&quot;followers_url&quot;:&quot;https://api.github.com/user/followers&quot;,&quot;following_url&quot;:&quot;https://api.github.com/user/following{/target}&quot;,&quot;gists_url&quot;:&quot;https://api.github.com/gists{/gist_id}&quot;,&quot;hub_url&quot;:&quot;https://api.github.com/hub&quot;,&quot;issue_search_url&quot;:&quot;https://api.github.com/search/issues?q={query}{&amp;page,per_page,sort,order}&quot;,&quot;issues_url&quot;:&quot;https://api.github.com/issues&quot;,&quot;keys_url&quot;:&quot;https://api.github.com/user/keys&quot;,&quot;notifications_url&quot;:&quot;https://api.github.com/notifications&quot;,&quot;organization_repositories_url&quot;:&quot;https://api.github.com/orgs/{org}/repos{?type,page,per_page,sort}&quot;,&quot;organization_url&quot;:&quot;https://api.github.com/orgs/{org}&quot;,&quot;public_gists_url&quot;:&quot;https://api.github.com/gists/public&quot;,&quot;rate_limit_url&quot;:&quot;https://api.github.com/rate_limit&quot;,&quot;repository_url&quot;:&quot;https://api.github.com/repos/{owner}/{repo}&quot;,&quot;repository_search_url&quot;:&quot;https://api.github.com/search/repositories?q={query}{&amp;page,per_page,sort,order}&quot;,&quot;current_user_repositories_url&quot;:&quot;https://api.github.com/user/repos{?type,page,per_page,sort}&quot;,&quot;starred_url&quot;:&quot;https://api.github.com/user/starred{/owner}{/repo}&quot;,&quot;starred_gists_url&quot;:&quot;https://api.github.com/gists/starred&quot;,&quot;team_url&quot;:&quot;https://api.github.com/teams&quot;,&quot;user_url&quot;:&quot;https://api.github.com/users/{user}&quot;,&quot;user_organizations_url&quot;:&quot;https://api.github.com/user/orgs&quot;,&quot;user_repositories_url&quot;:&quot;https://api.github.com/users/{user}/repos{?type,page,per_page,sort}&quot;,&quot;user_search_url&quot;:&quot;https://api.github.com/search/users?q={query}{&amp;page,per_page,sort,order}&quot;}&#39;</span>
+</pre></div>
+</div>
+<p>If you take a look at the response, you’ll see that it is actually serialized JSON content. To get a dictionary, you could take the <code class="docutils literal notranslate"><span class="pre">str</span></code> you retrieved from <code class="docutils literal notranslate"><span class="pre">.text</span></code> and deserialize it using <code class="docutils literal notranslate"><span class="pre">json.loads()</span></code>. However, a simpler way to accomplish this task is to use <code class="docutils literal notranslate"><span class="pre">.json()</span></code>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
+<span class="go">{&#39;current_user_url&#39;: &#39;https://api.github.com/user&#39;, &#39;current_user_authorizations_html_url&#39;: &#39;https://github.com/settings/connections/applications{/client_id}&#39;, &#39;authorizations_url&#39;: &#39;https://api.github.com/authorizations&#39;, &#39;code_search_url&#39;: &#39;https://api.github.com/search/code?q={query}{&amp;page,per_page,sort,order}&#39;, &#39;commit_search_url&#39;: &#39;https://api.github.com/search/commits?q={query}{&amp;page,per_page,sort,order}&#39;, &#39;emails_url&#39;: &#39;https://api.github.com/user/emails&#39;, &#39;emojis_url&#39;: &#39;https://api.github.com/emojis&#39;, &#39;events_url&#39;: &#39;https://api.github.com/events&#39;, &#39;feeds_url&#39;: &#39;https://api.github.com/feeds&#39;, &#39;followers_url&#39;: &#39;https://api.github.com/user/followers&#39;, &#39;following_url&#39;: &#39;https://api.github.com/user/following{/target}&#39;, &#39;gists_url&#39;: &#39;https://api.github.com/gists{/gist_id}&#39;, &#39;hub_url&#39;: &#39;https://api.github.com/hub&#39;, &#39;issue_search_url&#39;: &#39;https://api.github.com/search/issues?q={query}{&amp;page,per_page,sort,order}&#39;, &#39;issues_url&#39;: &#39;https://api.github.com/issues&#39;, &#39;keys_url&#39;: &#39;https://api.github.com/user/keys&#39;, &#39;notifications_url&#39;: &#39;https://api.github.com/notifications&#39;, &#39;organization_repositories_url&#39;: &#39;https://api.github.com/orgs/{org}/repos{?type,page,per_page,sort}&#39;, &#39;organization_url&#39;: &#39;https://api.github.com/orgs/{org}&#39;, &#39;public_gists_url&#39;: &#39;https://api.github.com/gists/public&#39;, &#39;rate_limit_url&#39;: &#39;https://api.github.com/rate_limit&#39;, &#39;repository_url&#39;: &#39;https://api.github.com/repos/{owner}/{repo}&#39;, &#39;repository_search_url&#39;: &#39;https://api.github.com/search/repositories?q={query}{&amp;page,per_page,sort,order}&#39;, &#39;current_user_repositories_url&#39;: &#39;https://api.github.com/user/repos{?type,page,per_page,sort}&#39;, &#39;starred_url&#39;: &#39;https://api.github.com/user/starred{/owner}{/repo}&#39;, &#39;starred_gists_url&#39;: &#39;https://api.github.com/gists/starred&#39;, &#39;team_url&#39;: &#39;https://api.github.com/teams&#39;, &#39;user_url&#39;: &#39;https://api.github.com/users/{user}&#39;, &#39;user_organizations_url&#39;: &#39;https://api.github.com/user/orgs&#39;, &#39;user_repositories_url&#39;: &#39;https://api.github.com/users/{user}/repos{?type,page,per_page,sort}&#39;, &#39;user_search_url&#39;: &#39;https://api.github.com/search/users?q={query}{&amp;page,per_page,sort,order}&#39;}</span>
+</pre></div>
+</div>
+<p>The <code class="docutils literal notranslate"><span class="pre">type</span></code> of the return value of <code class="docutils literal notranslate"><span class="pre">.json()</span></code> is a dictionary, so you can access values in the object by key.</p>
+<p>You can do a lot with status codes and message bodies. But, if you need more information, like metadata about the response itself, you’ll need to look at the response’s headers.</p>
+</div>
+<div class="section" id="headers">
+<h3>Headers<a class="headerlink" href="#headers" title="Permalink to this headline">¶</a></h3>
+<p>The response headers can give you useful information, such as the content type of the response payload and a time limit on how long to cache the response. To view these headers, access <code class="docutils literal notranslate"><span class="pre">.headers</span></code>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">response</span><span class="o">.</span><span class="n">headers</span>
+<span class="go">{&#39;Server&#39;: &#39;GitHub.com&#39;, &#39;Date&#39;: &#39;Mon, 10 Dec 2018 17:49:54 GMT&#39;, &#39;Content-Type&#39;: &#39;application/json; charset=utf-8&#39;, &#39;Transfer-Encoding&#39;: &#39;chunked&#39;, &#39;Status&#39;: &#39;200 OK&#39;, &#39;X-RateLimit-Limit&#39;: &#39;60&#39;, &#39;X-RateLimit-Remaining&#39;: &#39;59&#39;, &#39;X-RateLimit-Reset&#39;: &#39;1544467794&#39;, &#39;Cache-Control&#39;: &#39;public, max-age=60, s-maxage=60&#39;, &#39;Vary&#39;: &#39;Accept&#39;, &#39;ETag&#39;: &#39;W/&quot;7dc470913f1fe9bb6c7355b50a0737bc&quot;&#39;, &#39;X-GitHub-Media-Type&#39;: &#39;github.v3; format=json&#39;, &#39;Access-Control-Expose-Headers&#39;: &#39;ETag, Link, Location, Retry-After, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval, X-GitHub-Media-Type&#39;, &#39;Access-Control-Allow-Origin&#39;: &#39;*&#39;, &#39;Strict-Transport-Security&#39;: &#39;max-age=31536000; includeSubdomains; preload&#39;, &#39;X-Frame-Options&#39;: &#39;deny&#39;, &#39;X-Content-Type-Options&#39;: &#39;nosniff&#39;, &#39;X-XSS-Protection&#39;: &#39;1; mode=block&#39;, &#39;Referrer-Policy&#39;: &#39;origin-when-cross-origin, strict-origin-when-cross-origin&#39;, &#39;Content-Security-Policy&#39;: &quot;default-src &#39;none&#39;&quot;, &#39;Content-Encoding&#39;: &#39;gzip&#39;, &#39;X-GitHub-Request-Id&#39;: &#39;E439:4581:CF2351:1CA3E06:5C0EA741&#39;}</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">.headers</span></code> returns a dictionary-like object, allowing you to access header values by key. For example, to see the content type of the response payload, you can access <code class="docutils literal notranslate"><span class="pre">Content-Type</span></code>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">response</span><span class="o">.</span><span class="n">headers</span><span class="p">[</span><span class="s1">&#39;Content-Type&#39;</span><span class="p">]</span>
+<span class="go">&#39;application/json; charset=utf-8&#39;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="query-string-parameters">
+<h2>Query String Parameters<a class="headerlink" href="#query-string-parameters" title="Permalink to this headline">¶</a></h2>
+<p>One common way to customize a <code class="docutils literal notranslate"><span class="pre">GET</span></code> request is to pass values through <a class="reference external" href="https://en.wikipedia.org/wiki/Query_string">query string</a> parameters in the URL. To do this using <code class="docutils literal notranslate"><span class="pre">get()</span></code>, you pass data to <code class="docutils literal notranslate"><span class="pre">params</span></code>. For example, you can use GitHub’s <a class="reference external" href="https://developer.github.com/v3/search/">Search</a> API to look for the <code class="docutils literal notranslate"><span class="pre">requests</span></code> library:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">requests</span>
+
+<span class="c1"># Search GitHub&#39;s repositories for requests</span>
+<span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span>
+    <span class="s1">&#39;https://api.github.com/search/repositories&#39;</span><span class="p">,</span>
+    <span class="n">params</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;q&#39;</span><span class="p">:</span> <span class="s1">&#39;requests+language:python&#39;</span><span class="p">},</span>
+<span class="p">)</span>
+
+<span class="c1"># Inspect some attributes of the `requests` repository</span>
+<span class="n">json_response</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
+<span class="n">repository</span> <span class="o">=</span> <span class="n">json_response</span><span class="p">[</span><span class="s1">&#39;items&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Repository name: </span><span class="si">{</span><span class="n">repository</span><span class="p">[</span><span class="s2">&quot;name&quot;</span><span class="p">]</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>  <span class="c1"># Python 3.6+</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Repository description: </span><span class="si">{</span><span class="n">repository</span><span class="p">[</span><span class="s2">&quot;description&quot;</span><span class="p">]</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>  <span class="c1"># Python 3.6+</span>
+</pre></div>
+</div>
+<p>By passing the dictionary <code class="docutils literal notranslate"><span class="pre">{'q':</span> <span class="pre">'requests+language:python'}</span></code> to the <code class="docutils literal notranslate"><span class="pre">params</span></code> parameter of <code class="docutils literal notranslate"><span class="pre">.get()</span></code>, you are able to modify the results that come back from the Search API.</p>
+<p>You can pass <code class="docutils literal notranslate"><span class="pre">params</span></code> to <code class="docutils literal notranslate"><span class="pre">get()</span></code> in the form of a dictionary, as you have just done, or as a list of tuples:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span>
+<span class="gp">... </span>    <span class="s1">&#39;https://api.github.com/search/repositories&#39;</span><span class="p">,</span>
+<span class="gp">... </span>    <span class="n">params</span><span class="o">=</span><span class="p">[(</span><span class="s1">&#39;q&#39;</span><span class="p">,</span> <span class="s1">&#39;requests+language:python&#39;</span><span class="p">)],</span>
+<span class="gp">... </span><span class="p">)</span>
+<span class="go">&lt;Response [200]&gt;</span>
+</pre></div>
+</div>
+<p>You can even pass the values as <code class="docutils literal notranslate"><span class="pre">bytes</span></code>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span>
+<span class="gp">... </span>    <span class="s1">&#39;https://api.github.com/search/repositories&#39;</span><span class="p">,</span>
+<span class="gp">... </span>    <span class="n">params</span><span class="o">=</span><span class="sa">b</span><span class="s1">&#39;q=requests+language:python&#39;</span><span class="p">,</span>
+<span class="gp">... </span><span class="p">)</span>
+<span class="go">&lt;Response [200]&gt;</span>
+</pre></div>
+</div>
+<p>Query strings are useful for parameterizing <code class="docutils literal notranslate"><span class="pre">GET</span></code> requests. You can also customize your requests by adding or modifying the headers you send.</p>
+</div>
+<div class="section" id="request-headers">
+<h2>Request Headers<a class="headerlink" href="#request-headers" title="Permalink to this headline">¶</a></h2>
+<p>To customize headers, you pass a dictionary of HTTP headers to <code class="docutils literal notranslate"><span class="pre">get()</span></code> using the <code class="docutils literal notranslate"><span class="pre">headers</span></code> parameter. For example, you can change your previous search request to highlight matching search terms in the results by specifying the <code class="docutils literal notranslate"><span class="pre">text-match</span></code> media type in the <code class="docutils literal notranslate"><span class="pre">Accept</span></code> header:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">requests</span>
+
+<span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span>
+    <span class="s1">&#39;https://api.github.com/search/repositories&#39;</span><span class="p">,</span>
+    <span class="n">params</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;q&#39;</span><span class="p">:</span> <span class="s1">&#39;requests+language:python&#39;</span><span class="p">},</span>
+    <span class="n">headers</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;Accept&#39;</span><span class="p">:</span> <span class="s1">&#39;application/vnd.github.v3.text-match+json&#39;</span><span class="p">},</span>
+<span class="p">)</span>
+
+<span class="c1"># View the new `text-matches` array which provides information</span>
+<span class="c1"># about your search term within the results</span>
+<span class="n">json_response</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
+<span class="n">repository</span> <span class="o">=</span> <span class="n">json_response</span><span class="p">[</span><span class="s1">&#39;items&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Text matches: </span><span class="si">{</span><span class="n">repository</span><span class="p">[</span><span class="s2">&quot;text_matches&quot;</span><span class="p">]</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>The <code class="docutils literal notranslate"><span class="pre">Accept</span></code> header tells the server what content types your application can handle. In this case, since you’re expecting the matching search terms to be highlighted, you’re using the header value <code class="docutils literal notranslate"><span class="pre">application/vnd.github.v3.text-match+json</span></code>, which is a proprietary GitHub <code class="docutils literal notranslate"><span class="pre">Accept</span></code> header where the content is a special JSON format.</p>
+<p>Before you learn more ways to customize requests, let’s broaden the horizon by exploring other HTTP methods.</p>
+</div>
+<div class="section" id="other-http-methods">
+<h2>Other HTTP Methods<a class="headerlink" href="#other-http-methods" title="Permalink to this headline">¶</a></h2>
+<p>Aside from <code class="docutils literal notranslate"><span class="pre">GET</span></code>, other popular HTTP methods include <code class="docutils literal notranslate"><span class="pre">POST</span></code>, <code class="docutils literal notranslate"><span class="pre">PUT</span></code>, <code class="docutils literal notranslate"><span class="pre">DELETE</span></code>, <code class="docutils literal notranslate"><span class="pre">HEAD</span></code>, <code class="docutils literal notranslate"><span class="pre">PATCH</span></code>, and <code class="docutils literal notranslate"><span class="pre">OPTIONS</span></code>. <code class="docutils literal notranslate"><span class="pre">requests</span></code> provides a method, with a similar signature to <code class="docutils literal notranslate"><span class="pre">get()</span></code>, for each of these HTTP methods:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">requests</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="s1">&#39;https://httpbin.org/post&#39;</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span><span class="s1">&#39;value&#39;</span><span class="p">})</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">requests</span><span class="o">.</span><span class="n">put</span><span class="p">(</span><span class="s1">&#39;https://httpbin.org/put&#39;</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span><span class="s1">&#39;value&#39;</span><span class="p">})</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">requests</span><span class="o">.</span><span class="n">delete</span><span class="p">(</span><span class="s1">&#39;https://httpbin.org/delete&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">requests</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="s1">&#39;https://httpbin.org/get&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">requests</span><span class="o">.</span><span class="n">patch</span><span class="p">(</span><span class="s1">&#39;https://httpbin.org/patch&#39;</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span><span class="s1">&#39;value&#39;</span><span class="p">})</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">requests</span><span class="o">.</span><span class="n">options</span><span class="p">(</span><span class="s1">&#39;https://httpbin.org/get&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Each function call makes a request to the <code class="docutils literal notranslate"><span class="pre">httpbin</span></code> service using the corresponding HTTP method. For each method, you can inspect their responses in the same way you did before:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="s1">&#39;https://httpbin.org/get&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">response</span><span class="o">.</span><span class="n">headers</span><span class="p">[</span><span class="s1">&#39;Content-Type&#39;</span><span class="p">]</span>
+<span class="go">&#39;application/json&#39;</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">delete</span><span class="p">(</span><span class="s1">&#39;https://httpbin.org/delete&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">json_response</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">json_response</span><span class="p">[</span><span class="s1">&#39;args&#39;</span><span class="p">]</span>
+<span class="go">{}</span>
+</pre></div>
+</div>
+<p>Headers, response bodies, status codes, and more are returned in the <code class="docutils literal notranslate"><span class="pre">Response</span></code> for each method. Next you’ll take a closer look at the <code class="docutils literal notranslate"><span class="pre">POST</span></code>, <code class="docutils literal notranslate"><span class="pre">PUT</span></code>, and <code class="docutils literal notranslate"><span class="pre">PATCH</span></code> methods and learn how they differ from the other request types.</p>
+</div>
+<div class="section" id="the-message-body">
+<h2>The Message Body<a class="headerlink" href="#the-message-body" title="Permalink to this headline">¶</a></h2>
+<p>According to the HTTP specification, <code class="docutils literal notranslate"><span class="pre">POST</span></code>, <code class="docutils literal notranslate"><span class="pre">PUT</span></code>, and the less common <code class="docutils literal notranslate"><span class="pre">PATCH</span></code> requests pass their data through the message body rather than through parameters in the query string. Using <code class="docutils literal notranslate"><span class="pre">requests</span></code>, you’ll pass the payload to the corresponding function’s <code class="docutils literal notranslate"><span class="pre">data</span></code> parameter.</p>
+<p><code class="docutils literal notranslate"><span class="pre">data</span></code> takes a dictionary, a list of tuples, bytes, or a file-like object. You’ll want to adapt the data you send in the body of your request to the specific needs of the service you’re interacting with.</p>
+<p>For example, if your request’s content type is <code class="docutils literal notranslate"><span class="pre">application/x-www-form-urlencoded</span></code>, you can send the form data as a dictionary:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">requests</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="s1">&#39;https://httpbin.org/post&#39;</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span><span class="s1">&#39;value&#39;</span><span class="p">})</span>
+<span class="go">&lt;Response [200]&gt;</span>
+</pre></div>
+</div>
+<p>You can also send that same data as a list of tuples:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">requests</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="s1">&#39;https://httpbin.org/post&#39;</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="p">[(</span><span class="s1">&#39;key&#39;</span><span class="p">,</span> <span class="s1">&#39;value&#39;</span><span class="p">)])</span>
+<span class="go">&lt;Response [200]&gt;</span>
+</pre></div>
+</div>
+<p>If, however, you need to send JSON data, you can use the <code class="docutils literal notranslate"><span class="pre">json</span></code> parameter. When you pass JSON data via <code class="docutils literal notranslate"><span class="pre">json</span></code>, <code class="docutils literal notranslate"><span class="pre">requests</span></code> will serialize your data and add the correct <code class="docutils literal notranslate"><span class="pre">Content-Type</span></code> header for you.</p>
+<p><a class="reference external" href="https://httpbin.org/">httpbin.org</a> is a great resource created by the author of <code class="docutils literal notranslate"><span class="pre">requests</span></code>, <strong>Kenneth Reitz</strong>. It’s a service that accepts test requests and responds with data about the requests. For instance, you can use it to inspect a basic <code class="docutils literal notranslate"><span class="pre">POST</span></code> request:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="s1">&#39;https://httpbin.org/post&#39;</span><span class="p">,</span> <span class="n">json</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span><span class="s1">&#39;value&#39;</span><span class="p">})</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">json_response</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">json_response</span><span class="p">[</span><span class="s1">&#39;data&#39;</span><span class="p">]</span>
+<span class="go">&#39;{&quot;key&quot;: &quot;value&quot;}&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">json_response</span><span class="p">[</span><span class="s1">&#39;headers&#39;</span><span class="p">][</span><span class="s1">&#39;Content-Type&#39;</span><span class="p">]</span>
+<span class="go">&#39;application/json&#39;</span>
+</pre></div>
+</div>
+<p>You can see from the response that the server received your request data and headers as you sent them. <code class="docutils literal notranslate"><span class="pre">requests</span></code> also provides this information to you in the form of a <code class="docutils literal notranslate"><span class="pre">PreparedRequest</span></code>.</p>
+</div>
+<div class="section" id="inspecting-your-request">
+<h2>Inspecting Your Request<a class="headerlink" href="#inspecting-your-request" title="Permalink to this headline">¶</a></h2>
+<p>When you make a request, the <code class="docutils literal notranslate"><span class="pre">requests</span></code> library prepares the request before actually sending it to the destination server. Request preparation includes things like validating headers and serializing JSON content.</p>
+<p>You can view the <code class="docutils literal notranslate"><span class="pre">PreparedRequest</span></code> by accessing <code class="docutils literal notranslate"><span class="pre">.request</span></code>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="s1">&#39;https://httpbin.org/post&#39;</span><span class="p">,</span> <span class="n">json</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span><span class="s1">&#39;value&#39;</span><span class="p">})</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">response</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">headers</span><span class="p">[</span><span class="s1">&#39;Content-Type&#39;</span><span class="p">]</span>
+<span class="go">&#39;application/json&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">response</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">url</span>
+<span class="go">&#39;https://httpbin.org/post&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">response</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">body</span>
+<span class="go">b&#39;{&quot;key&quot;: &quot;value&quot;}&#39;</span>
+</pre></div>
+</div>
+<p>Inspecting the <code class="docutils literal notranslate"><span class="pre">PreparedRequest</span></code> gives you access to all kinds of information about the request being made such as payload, URL, headers, authentication, and more.</p>
+<p>So far, you’ve made a lot of different kinds of requests, but they’ve all had one thing in common: they’re unauthenticated requests to public APIs. Many services you may come across will want you to authenticate in some way.</p>
+</div>
+<div class="section" id="authentication">
+<h2>Authentication<a class="headerlink" href="#authentication" title="Permalink to this headline">¶</a></h2>
+<p>Authentication helps a service understand who you are. Typically, you provide your credentials to a server by passing data through the <code class="docutils literal notranslate"><span class="pre">Authorization</span></code> header or a custom header defined by the service. All the request functions you’ve seen to this point provide a parameter called <code class="docutils literal notranslate"><span class="pre">auth</span></code>, which allows you to pass your credentials.</p>
+<p>One example of an API that requires authentication is GitHub’s <a class="reference external" href="https://developer.github.com/v3/users/#get-the-authenticated-user">Authenticated User</a> API. This endpoint provides information about the authenticated user’s profile. To make a request to the Authenticated User API, you can pass your GitHub username and password in a tuple to <code class="docutils literal notranslate"><span class="pre">get()</span></code>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">getpass</span> <span class="kn">import</span> <span class="n">getpass</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;https://api.github.com/user&#39;</span><span class="p">,</span> <span class="n">auth</span><span class="o">=</span><span class="p">(</span><span class="s1">&#39;username&#39;</span><span class="p">,</span> <span class="n">getpass</span><span class="p">()))</span>
+<span class="go">&lt;Response [200]&gt;</span>
+</pre></div>
+</div>
+<p>The request succeeded if the credentials you passed in the tuple to <code class="docutils literal notranslate"><span class="pre">auth</span></code> are valid. If you try to make this request with no credentials, you’ll see that the status code is <code class="docutils literal notranslate"><span class="pre">401</span> <span class="pre">Unauthorized</span></code>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;https://api.github.com/user&#39;</span><span class="p">)</span>
+<span class="go">&lt;Response [401]&gt;</span>
+</pre></div>
+</div>
+<p>When you pass your username and password in a tuple to the <code class="docutils literal notranslate"><span class="pre">auth</span></code> parameter, <code class="docutils literal notranslate"><span class="pre">requests</span></code> is applying the credentials using HTTP’s <a class="reference external" href="https://en.wikipedia.org/wiki/Basic_access_authentication">Basic access authentication scheme</a> under the hood.</p>
+<p>Therefore, you could make the same request by passing explicit Basic authentication credentials using <code class="docutils literal notranslate"><span class="pre">HTTPBasicAuth</span></code>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">requests.auth</span> <span class="kn">import</span> <span class="n">HTTPBasicAuth</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">getpass</span> <span class="kn">import</span> <span class="n">getpass</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span>
+<span class="gp">... </span>    <span class="s1">&#39;https://api.github.com/user&#39;</span><span class="p">,</span>
+<span class="gp">... </span>    <span class="n">auth</span><span class="o">=</span><span class="n">HTTPBasicAuth</span><span class="p">(</span><span class="s1">&#39;username&#39;</span><span class="p">,</span> <span class="n">getpass</span><span class="p">())</span>
+<span class="gp">... </span><span class="p">)</span>
+<span class="go">&lt;Response [200]&gt;</span>
+</pre></div>
+</div>
+<p>Though you don’t need to be explicit for Basic authentication, you may want to authenticate using another method. <code class="docutils literal notranslate"><span class="pre">requests</span></code> provides other methods of authentication out of the box such as <code class="docutils literal notranslate"><span class="pre">HTTPDigestAuth</span></code> and <code class="docutils literal notranslate"><span class="pre">HTTPProxyAuth</span></code>.</p>
+<p>You can even supply your own authentication mechanism. To do so, you must first create a subclass of <code class="docutils literal notranslate"><span class="pre">AuthBase</span></code>. Then, you implement <code class="docutils literal notranslate"><span class="pre">__call__()</span></code>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">requests</span>
+<span class="kn">from</span> <span class="nn">requests.auth</span> <span class="kn">import</span> <span class="n">AuthBase</span>
+
+<span class="k">class</span> <span class="nc">TokenAuth</span><span class="p">(</span><span class="n">AuthBase</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Implements a custom authentication scheme.&quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">token</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">token</span> <span class="o">=</span> <span class="n">token</span>
+
+    <span class="k">def</span> <span class="fm">__call__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">r</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Attach an API token to a custom auth header.&quot;&quot;&quot;</span>
+        <span class="n">r</span><span class="o">.</span><span class="n">headers</span><span class="p">[</span><span class="s1">&#39;X-TokenAuth&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">token</span><span class="si">}</span><span class="s1">&#39;</span>  <span class="c1"># Python 3.6+</span>
+        <span class="k">return</span> <span class="n">r</span>
+
+
+<span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;https://httpbin.org/get&#39;</span><span class="p">,</span> <span class="n">auth</span><span class="o">=</span><span class="n">TokenAuth</span><span class="p">(</span><span class="s1">&#39;12345abcde-token&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>Here, your custom <code class="docutils literal notranslate"><span class="pre">TokenAuth</span></code> mechanism receives a token, then includes that token in the <code class="docutils literal notranslate"><span class="pre">X-TokenAuth</span></code> header of your request.</p>
+<p>Bad authentication mechanisms can lead to security vulnerabilities, so unless a service requires a custom authentication mechanism for some reason, you’ll always want to use a tried-and-true auth scheme like Basic or OAuth.</p>
+<p>While you’re thinking about security, let’s consider dealing with SSL Certificates using <code class="docutils literal notranslate"><span class="pre">requests</span></code>.</p>
+</div>
+<div class="section" id="ssl-certificate-verification">
+<h2>SSL Certificate Verification<a class="headerlink" href="#ssl-certificate-verification" title="Permalink to this headline">¶</a></h2>
+<p>Any time the data you are trying to send or receive is sensitive, security is important. The way that you communicate with secure sites over HTTP is by establishing an encrypted connection using SSL, which means that verifying the target server’s SSL Certificate is critical.</p>
+<p>The good news is that <code class="docutils literal notranslate"><span class="pre">requests</span></code> does this for you by default. However, there are some cases where you might want to change this behavior.</p>
+<p>If you want to disable SSL Certificate verification, you pass <code class="docutils literal notranslate"><span class="pre">False</span></code> to the <code class="docutils literal notranslate"><span class="pre">verify</span></code> parameter of the request function:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;https://api.github.com&#39;</span><span class="p">,</span> <span class="n">verify</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="go">InsecureRequestWarning: Unverified HTTPS request is being made. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings</span>
+<span class="go">  InsecureRequestWarning)</span>
+<span class="go">&lt;Response [200]&gt;</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">requests</span></code> even warns you when you’re making an insecure request to help you keep your data safe!</p>
+<p><strong>Note:</strong> <a class="reference external" href="http://docs.python-requests.org/en/master/user/advanced/#ca-certificates"><code class="docutils literal notranslate"><span class="pre">requests</span></code> uses a package called <code class="docutils literal notranslate"><span class="pre">certifi</span></code></a> to provide Certificate Authorities. This lets <code class="docutils literal notranslate"><span class="pre">requests</span></code> know which authorities it can trust. Therefore, you should update <code class="docutils literal notranslate"><span class="pre">certifi</span></code> frequently to keep your connections as secure as possible.</p>
+</div>
+<div class="section" id="performance">
+<h2>Performance<a class="headerlink" href="#performance" title="Permalink to this headline">¶</a></h2>
+<p>When using <code class="docutils literal notranslate"><span class="pre">requests</span></code>, especially in a production application environment, it’s important to consider performance implications. Features like timeout control, sessions, and retry limits can help you keep your application running smoothly.</p>
+<div class="section" id="timeouts">
+<h3>Timeouts<a class="headerlink" href="#timeouts" title="Permalink to this headline">¶</a></h3>
+<p>When you make an inline request to an external service, your system will need to wait upon the response before moving on. If your application waits too long for that response, requests to your service could back up, your user experience could suffer, or your background jobs could hang.</p>
+<p>By default, <code class="docutils literal notranslate"><span class="pre">requests</span></code> will wait indefinitely on the response, so you should almost always specify a timeout duration to prevent these things from happening. To set the request’s timeout, use the <code class="docutils literal notranslate"><span class="pre">timeout</span></code> parameter. <code class="docutils literal notranslate"><span class="pre">timeout</span></code> can be an integer or float representing the number of seconds to wait on a response before timing out:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;https://api.github.com&#39;</span><span class="p">,</span> <span class="n">timeout</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="go">&lt;Response [200]&gt;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;https://api.github.com&#39;</span><span class="p">,</span> <span class="n">timeout</span><span class="o">=</span><span class="mf">3.05</span><span class="p">)</span>
+<span class="go">&lt;Response [200]&gt;</span>
+</pre></div>
+</div>
+<p>In the first request, the request will timeout after 1 second. In the second request, the request will timeout after 3.05 seconds.</p>
+<p><a class="reference external" href="http://docs.python-requests.org/en/master/user/advanced/#timeouts">You can also pass a tuple</a> to <code class="docutils literal notranslate"><span class="pre">timeout</span></code> with the first element being a connect timeout (the time it allows for the client to establish a connection to the server), and the second being a read timeout (the time it will wait on a response once your client has established a connection):</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;https://api.github.com&#39;</span><span class="p">,</span> <span class="n">timeout</span><span class="o">=</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
+<span class="go">&lt;Response [200]&gt;</span>
+</pre></div>
+</div>
+<p>If the request establishes a connection within 2 seconds and receives data within 5 seconds of the connection being established, then the response will be returned as it was before. If the request times out, then the function will raise a <code class="docutils literal notranslate"><span class="pre">Timeout</span></code> exception:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">requests</span>
+<span class="kn">from</span> <span class="nn">requests.exceptions</span> <span class="kn">import</span> <span class="n">Timeout</span>
+
+<span class="k">try</span><span class="p">:</span>
+    <span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;https://api.github.com&#39;</span><span class="p">,</span> <span class="n">timeout</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="k">except</span> <span class="n">Timeout</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The request timed out&#39;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The request did not time out&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Your program can catch the <code class="docutils literal notranslate"><span class="pre">Timeout</span></code> exception and respond accordingly.</p>
+</div>
+<div class="section" id="the-session-object">
+<h3>The Session Object<a class="headerlink" href="#the-session-object" title="Permalink to this headline">¶</a></h3>
+<p>Until now, you’ve been dealing with high level <code class="docutils literal notranslate"><span class="pre">requests</span></code> APIs such as <code class="docutils literal notranslate"><span class="pre">get()</span></code> and <code class="docutils literal notranslate"><span class="pre">post()</span></code>. These functions are abstractions of what’s going on when you make your requests. They hide implementation details such as how connections are managed so that you don’t have to worry about them.</p>
+<p>Underneath those abstractions is a class called <code class="docutils literal notranslate"><span class="pre">Session</span></code>. If you need to fine-tune your control over how requests are being made or improve the performance of your requests, you may need to use a <code class="docutils literal notranslate"><span class="pre">Session</span></code> instance directly.</p>
+<p>Sessions are used to persist parameters across requests. For example, if you want to use the same authentication across multiple requests, you could use a session:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">requests</span>
+<span class="kn">from</span> <span class="nn">getpass</span> <span class="kn">import</span> <span class="n">getpass</span>
+
+<span class="c1"># By using a context manager, you can ensure the resources used by</span>
+<span class="c1"># the session will be released after use</span>
+<span class="k">with</span> <span class="n">requests</span><span class="o">.</span><span class="n">Session</span><span class="p">()</span> <span class="k">as</span> <span class="n">session</span><span class="p">:</span>
+    <span class="n">session</span><span class="o">.</span><span class="n">auth</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;username&#39;</span><span class="p">,</span> <span class="n">getpass</span><span class="p">())</span>
+
+    <span class="c1"># Instead of requests.get(), you&#39;ll use session.get()</span>
+    <span class="n">response</span> <span class="o">=</span> <span class="n">session</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;https://api.github.com/user&#39;</span><span class="p">)</span>
+
+<span class="c1"># You can inspect the response just like you did before</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">headers</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">())</span>
+</pre></div>
+</div>
+<p>Each time you make a request with <code class="docutils literal notranslate"><span class="pre">session</span></code>, once it has been initialized with authentication credentials, the credentials will be persisted.</p>
+<p>The primary performance optimization of sessions comes in the form of persistent connections. When your app makes a connection to a server using a <code class="docutils literal notranslate"><span class="pre">Session</span></code>, it keeps that connection around in a connection pool. When your app wants to connect to the same server again, it will reuse a connection from the pool rather than establishing a new one.</p>
+</div>
+<div class="section" id="max-retries">
+<h3>Max Retries<a class="headerlink" href="#max-retries" title="Permalink to this headline">¶</a></h3>
+<p>When a request fails, you may want your application to retry the same request. However, <code class="docutils literal notranslate"><span class="pre">requests</span></code> will not do this for you by default. To apply this functionality, you need to implement a custom <a class="reference external" href="http://docs.python-requests.org/en/master/user/advanced/#transport-adapters">Transport Adapter</a>.</p>
+<p>Transport Adapters let you define a set of configurations per service you’re interacting with. For example, let’s say you want all requests to <code class="docutils literal notranslate"><span class="pre">https://api.github.com</span></code> to retry three times before finally raising a <code class="docutils literal notranslate"><span class="pre">ConnectionError</span></code>. You would build a Transport Adapter, set its <code class="docutils literal notranslate"><span class="pre">max_retries</span></code> parameter, and mount it to an existing <code class="docutils literal notranslate"><span class="pre">Session</span></code>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">requests</span>
+<span class="kn">from</span> <span class="nn">requests.adapters</span> <span class="kn">import</span> <span class="n">HTTPAdapter</span>
+<span class="kn">from</span> <span class="nn">requests.exceptions</span> <span class="kn">import</span> <span class="ne">ConnectionError</span>
+
+<span class="n">github_adapter</span> <span class="o">=</span> <span class="n">HTTPAdapter</span><span class="p">(</span><span class="n">max_retries</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+
+<span class="n">session</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">Session</span><span class="p">()</span>
+
+<span class="c1"># Use `github_adapter` for all requests to endpoints that start with this URL</span>
+<span class="n">session</span><span class="o">.</span><span class="n">mount</span><span class="p">(</span><span class="s1">&#39;https://api.github.com&#39;</span><span class="p">,</span> <span class="n">github_adapter</span><span class="p">)</span>
+
+<span class="k">try</span><span class="p">:</span>
+    <span class="n">session</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;https://api.github.com&#39;</span><span class="p">)</span>
+<span class="k">except</span> <span class="ne">ConnectionError</span> <span class="k">as</span> <span class="n">ce</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">ce</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>When you mount the <code class="docutils literal notranslate"><span class="pre">HTTPAdapter</span></code>, <code class="docutils literal notranslate"><span class="pre">github_adapter</span></code>, to <code class="docutils literal notranslate"><span class="pre">session</span></code>, <code class="docutils literal notranslate"><span class="pre">session</span></code> will adhere to its configuration for each request to https://api.github.com.</p>
+<p>Timeouts, Transport Adapters, and sessions are for keeping your code efficient and your application resilient.</p>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./automate/_todo"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Sajal N. Shrestha<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    <script src="../../_static/js/index.js"></script>
+    
+  </body>
+</html>

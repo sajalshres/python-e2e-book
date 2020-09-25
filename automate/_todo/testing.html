@@ -1,0 +1,858 @@
+
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Testing Your Code</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
+    <link href="../../_static/css/index.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../_static/sphinx-book-theme.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/language_data.js"></script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/sphinx-book-theme.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="docsearch:language" content="en">
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../../index.html">
+  
+  <img src="../../_static/logo.png" class="logo" alt="logo">
+  
+  
+</a>
+</div>
+
+<form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../intro.html">
+   Python End-2-End RoadMap
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Know Your Language
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../know-your-language/q-%26-a/README.html">
+   A Q&amp;A Session
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../know-your-language/before-we-begin/README.html">
+   Before We Begin
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../know-your-language/apply-primer/README.html">
+   Applying Primer
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../know-your-language/apply-primer/README.html#strings">
+   Strings
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../know-your-language/apply-primer/README.html#lists">
+   Lists
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Apply Python in Real Life
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../regular-expressions/README.html">
+   Regular Expressions
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Web and Beyond
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../web-and-beyond/README.html">
+   To Web and Beyond
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Rest time
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../rest-time/README.html">
+   Rest Time
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Master Your Language
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../master-your-language/README.html">
+   Master your language
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Miscellaneous
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../miscellaneous/docker/README.html">
+   Docker
+  </a>
+ </li>
+</ul>
+
+</nav>
+
+ <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Compiled by <a href="mailto:sajalshres@gmail.com">Sajal Shrestha</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        <div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../_sources/automate/_todo/testing.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+    
+</div>
+        <!-- Source interaction buttons -->
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#automated-vs-manual-testing">
+   Automated vs. Manual Testing
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#unit-tests-vs-integration-tests">
+   Unit Tests vs. Integration Tests
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#choosing-a-test-runner">
+   Choosing a Test Runner
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#unittest">
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       unittest
+      </span>
+     </code>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#nose">
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       nose
+      </span>
+     </code>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#pytest">
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       pytest
+      </span>
+     </code>
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#writing-your-first-test">
+   Writing Your First Test
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#where-to-write-the-test">
+     Where to Write the Test
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#how-to-structure-a-simple-test">
+     How to Structure a Simple Test
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#how-to-write-assertions">
+     How to Write Assertions
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#side-effects">
+     Side Effects
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#executing-your-first-test">
+   Executing Your First Test
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#executing-test-runners">
+     Executing Test Runners
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#understanding-test-output">
+     Understanding Test Output
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#running-your-tests-from-pycharm">
+     Running Your Tests From PyCharm
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#running-your-tests-from-visual-studio-code">
+     Running Your Tests From Visual Studio Code
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+        </nav>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="testing-your-code">
+<h1>Testing Your Code<a class="headerlink" href="#testing-your-code" title="Permalink to this headline">¶</a></h1>
+<p>There are many ways to test your code. In this tutorial, you’ll learn the techniques from the most basic steps and work towards advanced methods.</p>
+<div class="section" id="automated-vs-manual-testing">
+<h2>Automated vs. Manual Testing<a class="headerlink" href="#automated-vs-manual-testing" title="Permalink to this headline">¶</a></h2>
+<p>The good news is, you’ve probably already created a test without realizing it. Remember when you ran your application and used it for the first time? Did you check the features and experiment using them? That’s known as <strong>exploratory testing</strong> and is a form of manual testing.</p>
+<p>Exploratory testing is a form of testing that is done without a plan. In an exploratory test, you’re just exploring the application.</p>
+<p>To have a complete set of manual tests, all you need to do is make a list of all the features your application has, the different types of input it can accept, and the expected results. Now, every time you make a change to your code, you need to go through every single item on that list and check it.</p>
+<p>That doesn’t sound like much fun, does it?</p>
+<p>This is where automated testing comes in. Automated testing is the execution of your test plan (the parts of your application you want to test, the order in which you want to test them, and the expected responses) by a script instead of a human. Python already comes with a set of tools and libraries to help you create automated tests for your application. We’ll explore those tools and libraries in this tutorial.</p>
+</div>
+<div class="section" id="unit-tests-vs-integration-tests">
+<h2>Unit Tests vs. Integration Tests<a class="headerlink" href="#unit-tests-vs-integration-tests" title="Permalink to this headline">¶</a></h2>
+<p>The world of testing has no shortage of terminology, and now that you know the difference between automated and manual testing, it’s time to go a level deeper.</p>
+<p>Think of how you might test the lights on a car. You would turn on the lights (known as the <strong>test step</strong>) and go outside the car or ask a friend to check that the lights are on (known as the <strong>test assertion</strong>). Testing multiple components is known as <strong>integration testing</strong>.</p>
+<p>Think of all the things that need to work correctly in order for a simple task to give the right result. These components are like the parts to your application, all of those classes, functions, and modules you’ve written.</p>
+<p>A major challenge with integration testing is when an integration test doesn’t give the right result. It’s very hard to diagnose the issue without being able to isolate which part of the system is failing. If the lights didn’t turn on, then maybe the bulbs are broken. Is the battery dead? What about the alternator? Is the car’s computer failing?</p>
+<p>If you have a fancy modern car, it will tell you when your light bulbs have gone. It does this using a form of <strong>unit test</strong>.</p>
+<p>A unit test is a smaller test, one that checks that a single component operates in the right way. A unit test helps you to isolate what is broken in your application and fix it faster.</p>
+<p>You have just seen two types of tests:</p>
+<ol class="simple">
+<li><p>An integration test checks that components in your application operate with each other.</p></li>
+<li><p>A unit test checks a small component in your application.</p></li>
+</ol>
+<p>You can write both integration tests and unit tests in Python. To write a unit test for the built-in function <code class="docutils literal notranslate"><span class="pre">sum()</span></code>, you would check the output of <code class="docutils literal notranslate"><span class="pre">sum()</span></code> against a known output.</p>
+<p>For example, here’s how you check that the <code class="docutils literal notranslate"><span class="pre">sum()</span></code> of the numbers <code class="docutils literal notranslate"><span class="pre">(1,</span> <span class="pre">2,</span> <span class="pre">3)</span></code> equals <code class="docutils literal notranslate"><span class="pre">6</span></code>:</p>
+<p>&gt;&gt;&gt;</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">assert</span> <span class="nb">sum</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">])</span> <span class="o">==</span> <span class="mi">6</span><span class="p">,</span> <span class="s2">&quot;Should be 6&quot;</span>
+</pre></div>
+</div>
+<p>This will not output anything on the REPL because the values are correct.</p>
+<p>If the result from <code class="docutils literal notranslate"><span class="pre">sum()</span></code> is incorrect, this will fail with an <code class="docutils literal notranslate"><span class="pre">AssertionError</span></code> and the message <code class="docutils literal notranslate"><span class="pre">&quot;Should</span> <span class="pre">be</span> <span class="pre">6&quot;</span></code>. Try an assertion statement again with the wrong values to see an <code class="docutils literal notranslate"><span class="pre">AssertionError</span></code>:</p>
+<p>&gt;&gt;&gt;</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">assert</span> <span class="nb">sum</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">])</span> <span class="o">==</span> <span class="mi">6</span><span class="p">,</span> <span class="s2">&quot;Should be 6&quot;</span>
+<span class="gt">Traceback (most recent call last):</span>
+  File <span class="nb">&quot;&lt;stdin&gt;&quot;</span>, line <span class="m">1</span>, in <span class="n">&lt;module&gt;</span>
+<span class="gr">AssertionError</span>: <span class="n">Should be 6</span>
+</pre></div>
+</div>
+<p>In the REPL, you are seeing the raised <code class="docutils literal notranslate"><span class="pre">AssertionError</span></code> because the result of <code class="docutils literal notranslate"><span class="pre">sum()</span></code> does not match <code class="docutils literal notranslate"><span class="pre">6</span></code>.</p>
+<p>Instead of testing on the REPL, you’ll want to put this into a new Python file called <code class="docutils literal notranslate"><span class="pre">test_sum.py</span></code> and execute it again:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">test_sum</span><span class="p">():</span>
+    <span class="k">assert</span> <span class="nb">sum</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">])</span> <span class="o">==</span> <span class="mi">6</span><span class="p">,</span> <span class="s2">&quot;Should be 6&quot;</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">test_sum</span><span class="p">()</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Everything passed&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Now you have written a <strong>test case</strong>, an assertion, and an entry point (the command line). You can now execute this at the command line:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ python test_sum.py
+Everything passed
+</pre></div>
+</div>
+<p>You can see the successful result, <code class="docutils literal notranslate"><span class="pre">Everything</span> <span class="pre">passed</span></code>.</p>
+<p>In Python, <code class="docutils literal notranslate"><span class="pre">sum()</span></code> accepts any iterable as its first argument. You tested with a list. Now test with a tuple as well. Create a new file called <code class="docutils literal notranslate"><span class="pre">test_sum_2.py</span></code> with the following code:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">test_sum</span><span class="p">():</span>
+    <span class="k">assert</span> <span class="nb">sum</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">])</span> <span class="o">==</span> <span class="mi">6</span><span class="p">,</span> <span class="s2">&quot;Should be 6&quot;</span>
+
+<span class="k">def</span> <span class="nf">test_sum_tuple</span><span class="p">():</span>
+    <span class="k">assert</span> <span class="nb">sum</span><span class="p">((</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span> <span class="o">==</span> <span class="mi">6</span><span class="p">,</span> <span class="s2">&quot;Should be 6&quot;</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">test_sum</span><span class="p">()</span>
+    <span class="n">test_sum_tuple</span><span class="p">()</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Everything passed&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>When you execute <code class="docutils literal notranslate"><span class="pre">test_sum_2.py</span></code>, the script will give an error because the <code class="docutils literal notranslate"><span class="pre">sum()</span></code> of <code class="docutils literal notranslate"><span class="pre">(1,</span> <span class="pre">2,</span> <span class="pre">2)</span></code> is <code class="docutils literal notranslate"><span class="pre">5</span></code>, not <code class="docutils literal notranslate"><span class="pre">6</span></code>. The result of the script gives you the error message, the line of code, and the traceback:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ python test_sum_2.py
+Traceback (most recent call last):
+  File &quot;test_sum_2.py&quot;, line 9, in &lt;module&gt;
+    test_sum_tuple()
+  File &quot;test_sum_2.py&quot;, line 5, in test_sum_tuple
+    assert sum((1, 2, 2)) == 6, &quot;Should be 6&quot;
+AssertionError: Should be 6
+</pre></div>
+</div>
+<p>Here you can see how a mistake in your code gives an error on the console with some information on where the error was and what the expected result was.</p>
+<p>Writing tests in this way is okay for a simple check, but what if more than one fails? This is where test runners come in. The test runner is a special application designed for running tests, checking the output, and giving you tools for debugging and diagnosing tests and applications.</p>
+</div>
+<div class="section" id="choosing-a-test-runner">
+<h2>Choosing a Test Runner<a class="headerlink" href="#choosing-a-test-runner" title="Permalink to this headline">¶</a></h2>
+<p>There are many test runners available for Python. The one built into the Python standard library is called <code class="docutils literal notranslate"><span class="pre">unittest</span></code>. In this tutorial, you will be using <code class="docutils literal notranslate"><span class="pre">unittest</span></code> test cases and the <code class="docutils literal notranslate"><span class="pre">unittest</span></code> test runner. The principles of <code class="docutils literal notranslate"><span class="pre">unittest</span></code> are easily portable to other frameworks. The three most popular test runners are:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">unittest</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">nose</span></code> or <code class="docutils literal notranslate"><span class="pre">nose2</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pytest</span></code></p></li>
+</ul>
+<p>Choosing the best test runner for your requirements and level of experience is important.</p>
+<div class="section" id="unittest">
+<h3><code class="docutils literal notranslate"><span class="pre">unittest</span></code><a class="headerlink" href="#unittest" title="Permalink to this headline">¶</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">unittest</span></code> has been built into the Python standard library since version 2.1. You’ll probably see it in commercial Python applications and open-source projects.</p>
+<p><code class="docutils literal notranslate"><span class="pre">unittest</span></code> contains both a testing framework and a test runner. <code class="docutils literal notranslate"><span class="pre">unittest</span></code> has some important requirements for writing and executing tests.</p>
+<p><code class="docutils literal notranslate"><span class="pre">unittest</span></code> requires that:</p>
+<ul class="simple">
+<li><p>You put your tests into classes as methods</p></li>
+<li><p>You use a series of special assertion methods in the <code class="docutils literal notranslate"><span class="pre">unittest.TestCase</span></code> class instead of the built-in <code class="docutils literal notranslate"><span class="pre">assert</span></code> statement</p></li>
+</ul>
+<p>To convert the earlier example to a <code class="docutils literal notranslate"><span class="pre">unittest</span></code> test case, you would have to:</p>
+<ol class="simple">
+<li><p>Import <code class="docutils literal notranslate"><span class="pre">unittest</span></code> from the standard library</p></li>
+<li><p>Create a class called <code class="docutils literal notranslate"><span class="pre">TestSum</span></code> that inherits from the <code class="docutils literal notranslate"><span class="pre">TestCase</span></code> class</p></li>
+<li><p>Convert the test functions into methods by adding <code class="docutils literal notranslate"><span class="pre">self</span></code> as the first argument</p></li>
+<li><p>Change the assertions to use the <code class="docutils literal notranslate"><span class="pre">self.assertEqual()</span></code> method on the <code class="docutils literal notranslate"><span class="pre">TestCase</span></code> class</p></li>
+<li><p>Change the command-line entry point to call <code class="docutils literal notranslate"><span class="pre">unittest.main()</span></code></p></li>
+</ol>
+<p>Follow those steps by creating a new file <code class="docutils literal notranslate"><span class="pre">test_sum_unittest.py</span></code> with the following code:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">unittest</span>
+
+
+<span class="k">class</span> <span class="nc">TestSum</span><span class="p">(</span><span class="n">unittest</span><span class="o">.</span><span class="n">TestCase</span><span class="p">):</span>
+
+    <span class="k">def</span> <span class="nf">test_sum</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="nb">sum</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]),</span> <span class="mi">6</span><span class="p">,</span> <span class="s2">&quot;Should be 6&quot;</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">test_sum_tuple</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="nb">sum</span><span class="p">((</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">)),</span> <span class="mi">6</span><span class="p">,</span> <span class="s2">&quot;Should be 6&quot;</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+    <span class="n">unittest</span><span class="o">.</span><span class="n">main</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>If you execute this at the command line, you’ll see one success (indicated with <code class="docutils literal notranslate"><span class="pre">.</span></code>) and one failure (indicated with <code class="docutils literal notranslate"><span class="pre">F</span></code>):</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ python test_sum_unittest.py
+.F
+======================================================================
+FAIL: test_sum_tuple (__main__.TestSum)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File &quot;test_sum_unittest.py&quot;, line 9, in test_sum_tuple
+    self.assertEqual(sum((1, 2, 2)), 6, &quot;Should be 6&quot;)
+AssertionError: Should be 6
+
+----------------------------------------------------------------------
+Ran 2 tests in 0.001s
+
+FAILED (failures=1)
+</pre></div>
+</div>
+<p>You have just executed two tests using the <code class="docutils literal notranslate"><span class="pre">unittest</span></code> test runner.</p>
+<p><strong>Note:</strong> Be careful if you’re writing test cases that need to execute in both Python 2 and 3. In Python 2.7 and below, <code class="docutils literal notranslate"><span class="pre">unittest</span></code> is called <code class="docutils literal notranslate"><span class="pre">unittest2</span></code>. If you simply import from <code class="docutils literal notranslate"><span class="pre">unittest</span></code>, you will get different versions with different features between Python 2 and 3.</p>
+<p>For more information on <code class="docutils literal notranslate"><span class="pre">unittest</span></code>, you can explore the <a class="reference external" href="https://docs.python.org/3/library/unittest.html">unittest Documentation</a>.</p>
+</div>
+<div class="section" id="nose">
+<h3><code class="docutils literal notranslate"><span class="pre">nose</span></code><a class="headerlink" href="#nose" title="Permalink to this headline">¶</a></h3>
+<p>You may find that over time, as you write hundreds or even thousands of tests for your application, it becomes increasingly hard to understand and use the output from <code class="docutils literal notranslate"><span class="pre">unittest</span></code>.</p>
+<p><code class="docutils literal notranslate"><span class="pre">nose</span></code> is compatible with any tests written using the <code class="docutils literal notranslate"><span class="pre">unittest</span></code> framework and can be used as a drop-in replacement for the <code class="docutils literal notranslate"><span class="pre">unittest</span></code> test runner. The development of <code class="docutils literal notranslate"><span class="pre">nose</span></code> as an open-source application fell behind, and a fork called <code class="docutils literal notranslate"><span class="pre">nose2</span></code> was created. If you’re starting from scratch, it is recommended that you use <code class="docutils literal notranslate"><span class="pre">nose2</span></code> instead of <code class="docutils literal notranslate"><span class="pre">nose</span></code>.</p>
+<p>To get started with <code class="docutils literal notranslate"><span class="pre">nose2</span></code>, install <code class="docutils literal notranslate"><span class="pre">nose2</span></code> from PyPI and execute it on the command line. <code class="docutils literal notranslate"><span class="pre">nose2</span></code> will try to discover all test scripts named <code class="docutils literal notranslate"><span class="pre">test*.py</span></code> and test cases inheriting from <code class="docutils literal notranslate"><span class="pre">unittest.TestCase</span></code> in your current directory:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ pip install nose2
+$ python -m nose2
+.F
+======================================================================
+FAIL: test_sum_tuple (__main__.TestSum)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File &quot;test_sum_unittest.py&quot;, line 9, in test_sum_tuple
+    self.assertEqual(sum((1, 2, 2)), 6, &quot;Should be 6&quot;)
+AssertionError: Should be 6
+
+----------------------------------------------------------------------
+Ran 2 tests in 0.001s
+
+FAILED (failures=1)
+</pre></div>
+</div>
+<p>You have just executed the test you created in <code class="docutils literal notranslate"><span class="pre">test_sum_unittest.py</span></code> from the <code class="docutils literal notranslate"><span class="pre">nose2</span></code> test runner. <code class="docutils literal notranslate"><span class="pre">nose2</span></code> offers many command-line flags for filtering the tests that you execute. For more information, you can explore the <a class="reference external" href="https://nose2.readthedocs.io/">Nose 2 documentation</a>.</p>
+</div>
+<div class="section" id="pytest">
+<h3><code class="docutils literal notranslate"><span class="pre">pytest</span></code><a class="headerlink" href="#pytest" title="Permalink to this headline">¶</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">pytest</span></code> supports execution of <code class="docutils literal notranslate"><span class="pre">unittest</span></code> test cases. The real advantage of <code class="docutils literal notranslate"><span class="pre">pytest</span></code> comes by writing <code class="docutils literal notranslate"><span class="pre">pytest</span></code> test cases. <code class="docutils literal notranslate"><span class="pre">pytest</span></code> test cases are a series of functions in a Python file starting with the name <code class="docutils literal notranslate"><span class="pre">test_</span></code>.</p>
+<p><code class="docutils literal notranslate"><span class="pre">pytest</span></code> has some other great features:</p>
+<ul class="simple">
+<li><p>Support for the built-in <code class="docutils literal notranslate"><span class="pre">assert</span></code> statement instead of using special <code class="docutils literal notranslate"><span class="pre">self.assert*()</span></code> methods</p></li>
+<li><p>Support for filtering for test cases</p></li>
+<li><p>Ability to rerun from the last failing test</p></li>
+<li><p>An ecosystem of hundreds of plugins to extend the functionality</p></li>
+</ul>
+<p>Writing the <code class="docutils literal notranslate"><span class="pre">TestSum</span></code> test case example for <code class="docutils literal notranslate"><span class="pre">pytest</span></code> would look like this:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">test_sum</span><span class="p">():</span>
+    <span class="k">assert</span> <span class="nb">sum</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">])</span> <span class="o">==</span> <span class="mi">6</span><span class="p">,</span> <span class="s2">&quot;Should be 6&quot;</span>
+
+<span class="k">def</span> <span class="nf">test_sum_tuple</span><span class="p">():</span>
+    <span class="k">assert</span> <span class="nb">sum</span><span class="p">((</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span> <span class="o">==</span> <span class="mi">6</span><span class="p">,</span> <span class="s2">&quot;Should be 6&quot;</span>
+</pre></div>
+</div>
+<p>You have dropped the <code class="docutils literal notranslate"><span class="pre">TestCase</span></code>, any use of classes, and the command-line entry point.</p>
+<p>More information can be found at the <a class="reference external" href="https://docs.pytest.org/en/latest/">Pytest Documentation Website</a>.</p>
+</div>
+</div>
+<div class="section" id="writing-your-first-test">
+<h2>Writing Your First Test<a class="headerlink" href="#writing-your-first-test" title="Permalink to this headline">¶</a></h2>
+<p>Let’s bring together what you’ve learned so far and, instead of testing the built-in <code class="docutils literal notranslate"><span class="pre">sum()</span></code> function, test a simple implementation of the same requirement.</p>
+<p>Create a new project folder and, inside that, create a new folder called <code class="docutils literal notranslate"><span class="pre">my_sum</span></code>. Inside <code class="docutils literal notranslate"><span class="pre">my_sum</span></code>, create an empty file called <code class="docutils literal notranslate"><span class="pre">__init__.py</span></code>. Creating the <code class="docutils literal notranslate"><span class="pre">__init__.py</span></code> file means that the <code class="docutils literal notranslate"><span class="pre">my_sum</span></code> folder can be imported as a module from the parent directory.</p>
+<p>Your project folder should look like this:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>project/
+│
+└── my_sum/
+    └── __init__.py
+</pre></div>
+</div>
+<p>Open up <code class="docutils literal notranslate"><span class="pre">my_sum/__init__.py</span></code> and create a new function called <code class="docutils literal notranslate"><span class="pre">sum()</span></code>, which takes an iterable (a list, tuple, or set) and adds the values together:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">sum</span><span class="p">(</span><span class="n">arg</span><span class="p">):</span>
+    <span class="n">total</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">val</span> <span class="ow">in</span> <span class="n">arg</span><span class="p">:</span>
+        <span class="n">total</span> <span class="o">+=</span> <span class="n">val</span>
+    <span class="k">return</span> <span class="n">total</span>
+</pre></div>
+</div>
+<p>This code example creates a variable called <code class="docutils literal notranslate"><span class="pre">total</span></code>, iterates over all the values in <code class="docutils literal notranslate"><span class="pre">arg</span></code>, and adds them to <code class="docutils literal notranslate"><span class="pre">total</span></code>. It then returns the result once the iterable has been exhausted.</p>
+<div class="section" id="where-to-write-the-test">
+<h3>Where to Write the Test<a class="headerlink" href="#where-to-write-the-test" title="Permalink to this headline">¶</a></h3>
+<p>To get started writing tests, you can simply create a file called <code class="docutils literal notranslate"><span class="pre">test.py</span></code>, which will contain your first test case. Because the file will need to be able to import your application to be able to test it, you want to place <code class="docutils literal notranslate"><span class="pre">test.py</span></code> above the package folder, so your directory tree will look something like this:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>project/
+│
+├── my_sum/
+│   └── __init__.py
+|
+└── test.py
+</pre></div>
+</div>
+<p>You’ll find that, as you add more and more tests, your single file will become cluttered and hard to maintain, so you can create a folder called <code class="docutils literal notranslate"><span class="pre">tests/</span></code> and split the tests into multiple files. It is convention to ensure each file starts with <code class="docutils literal notranslate"><span class="pre">test_</span></code> so all test runners will assume that Python file contains tests to be executed. Some very large projects split tests into more subdirectories based on their purpose or usage.</p>
+<p><strong>Note:</strong> What if your application is a single script?</p>
+<p>You can import any attributes of the script, such as classes, functions, and variables by using the built-in <code class="docutils literal notranslate"><span class="pre">__import__()</span></code> function. Instead of <code class="docutils literal notranslate"><span class="pre">from</span> <span class="pre">my_sum</span> <span class="pre">import</span> <span class="pre">sum</span></code>, you can write the following:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">target</span> <span class="o">=</span> <span class="nb">__import__</span><span class="p">(</span><span class="s2">&quot;my_sum.py&quot;</span><span class="p">)</span>
+<span class="nb">sum</span> <span class="o">=</span> <span class="n">target</span><span class="o">.</span><span class="n">sum</span>
+</pre></div>
+</div>
+<p>The benefit of using <code class="docutils literal notranslate"><span class="pre">__import__()</span></code> is that you don’t have to turn your project folder into a package, and you can specify the file name. This is also useful if your filename collides with any standard library packages. For example, <code class="docutils literal notranslate"><span class="pre">math.py</span></code> would collide with the <code class="docutils literal notranslate"><span class="pre">math</span></code> module.</p>
+</div>
+<div class="section" id="how-to-structure-a-simple-test">
+<h3>How to Structure a Simple Test<a class="headerlink" href="#how-to-structure-a-simple-test" title="Permalink to this headline">¶</a></h3>
+<p>Before you dive into writing tests, you’ll want to first make a couple of decisions:</p>
+<ol class="simple">
+<li><p>What do you want to test?</p></li>
+<li><p>Are you writing a unit test or an integration test?</p></li>
+</ol>
+<p>Then the structure of a test should loosely follow this workflow:</p>
+<ol class="simple">
+<li><p>Create your inputs</p></li>
+<li><p>Execute the code being tested, capturing the output</p></li>
+<li><p>Compare the output with an expected result</p></li>
+</ol>
+<p>For this application, you’re testing <code class="docutils literal notranslate"><span class="pre">sum()</span></code>. There are many behaviors in <code class="docutils literal notranslate"><span class="pre">sum()</span></code> you could check, such as:</p>
+<ul class="simple">
+<li><p>Can it sum a list of whole numbers (integers)?</p></li>
+<li><p>Can it sum a tuple or set?</p></li>
+<li><p>Can it sum a list of floats?</p></li>
+<li><p>What happens when you provide it with a bad value, such as a single integer or a string?</p></li>
+<li><p>What happens when one of the values is negative?</p></li>
+</ul>
+<p>The most simple test would be a list of integers. Create a file, <code class="docutils literal notranslate"><span class="pre">test.py</span></code> with the following Python code:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">unittest</span>
+
+<span class="kn">from</span> <span class="nn">my_sum</span> <span class="kn">import</span> <span class="nb">sum</span>
+
+
+<span class="k">class</span> <span class="nc">TestSum</span><span class="p">(</span><span class="n">unittest</span><span class="o">.</span><span class="n">TestCase</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">test_list_int</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Test that it can sum a list of integers</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">data</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="n">result</span><span class="p">,</span> <span class="mi">6</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+    <span class="n">unittest</span><span class="o">.</span><span class="n">main</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>This code example:</p>
+<ol class="simple">
+<li><p>Imports <code class="docutils literal notranslate"><span class="pre">sum()</span></code> from the <code class="docutils literal notranslate"><span class="pre">my_sum</span></code> package you created</p></li>
+<li><p>Defines a new test case class called <code class="docutils literal notranslate"><span class="pre">TestSum</span></code>, which inherits from <code class="docutils literal notranslate"><span class="pre">unittest.TestCase</span></code></p></li>
+<li><p>Defines a test method, <code class="docutils literal notranslate"><span class="pre">.test_list_int()</span></code>, to test a list of integers. The method <code class="docutils literal notranslate"><span class="pre">.test_list_int()</span></code> will:</p>
+<ul class="simple">
+<li><p>Declare a variable <code class="docutils literal notranslate"><span class="pre">data</span></code> with a list of numbers <code class="docutils literal notranslate"><span class="pre">(1,</span> <span class="pre">2,</span> <span class="pre">3)</span></code></p></li>
+<li><p>Assign the result of <code class="docutils literal notranslate"><span class="pre">my_sum.sum(data)</span></code> to a <code class="docutils literal notranslate"><span class="pre">result</span></code> variable</p></li>
+<li><p>Assert that the value of <code class="docutils literal notranslate"><span class="pre">result</span></code> equals <code class="docutils literal notranslate"><span class="pre">6</span></code> by using the <code class="docutils literal notranslate"><span class="pre">.assertEqual()</span></code> method on the <code class="docutils literal notranslate"><span class="pre">unittest.TestCase</span></code> class</p></li>
+</ul>
+</li>
+<li><p>Defines a command-line entry point, which runs the <code class="docutils literal notranslate"><span class="pre">unittest</span></code> test-runner <code class="docutils literal notranslate"><span class="pre">.main()</span></code></p></li>
+</ol>
+<p>If you’re unsure what <code class="docutils literal notranslate"><span class="pre">self</span></code> is or how <code class="docutils literal notranslate"><span class="pre">.assertEqual()</span></code> is defined, you can brush up on your object-oriented programming with <a class="reference external" href="https://realpython.com/python3-object-oriented-programming/">Python 3 Object-Oriented Programming</a>.</p>
+</div>
+<div class="section" id="how-to-write-assertions">
+<h3>How to Write Assertions<a class="headerlink" href="#how-to-write-assertions" title="Permalink to this headline">¶</a></h3>
+<p>The last step of writing a test is to validate the output against a known response. This is known as an <strong>assertion</strong>. There are some general best practices around how to write assertions:</p>
+<ul class="simple">
+<li><p>Make sure tests are repeatable and run your test multiple times to make sure it gives the same result every time</p></li>
+<li><p>Try and assert results that relate to your input data, such as checking that the result is the actual sum of values in the <code class="docutils literal notranslate"><span class="pre">sum()</span></code> example</p></li>
+</ul>
+<p><code class="docutils literal notranslate"><span class="pre">unittest</span></code> comes with lots of methods to assert on the values, types, and existence of variables. Here are some of the most commonly used methods:</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Method</p></th>
+<th class="head"><p>Equivalent to</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">.assertEqual(a,</span> <span class="pre">b)</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">a</span> <span class="pre">==</span> <span class="pre">b</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">.assertTrue(x)</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">bool(x)</span> <span class="pre">is</span> <span class="pre">True</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">.assertFalse(x)</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">bool(x)</span> <span class="pre">is</span> <span class="pre">False</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">.assertIs(a,</span> <span class="pre">b)</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">a</span> <span class="pre">is</span> <span class="pre">b</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">.assertIsNone(x)</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">is</span> <span class="pre">None</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">.assertIn(a,</span> <span class="pre">b)</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">a</span> <span class="pre">in</span> <span class="pre">b</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">.assertIsInstance(a,</span> <span class="pre">b)</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">isinstance(a,</span> <span class="pre">b)</span></code></p></td>
+</tr>
+</tbody>
+</table>
+<p><code class="docutils literal notranslate"><span class="pre">.assertIs()</span></code>, <code class="docutils literal notranslate"><span class="pre">.assertIsNone()</span></code>, <code class="docutils literal notranslate"><span class="pre">.assertIn()</span></code>, and <code class="docutils literal notranslate"><span class="pre">.assertIsInstance()</span></code> all have opposite methods, named <code class="docutils literal notranslate"><span class="pre">.assertIsNot()</span></code>, and so forth.</p>
+</div>
+<div class="section" id="side-effects">
+<h3>Side Effects<a class="headerlink" href="#side-effects" title="Permalink to this headline">¶</a></h3>
+<p>When you’re writing tests, it’s often not as simple as looking at the return value of a function. Often, executing a piece of code will alter other things in the environment, such as the attribute of a class, a file on the filesystem, or a value in a database. These are known as <strong>side effects</strong> and are an important part of testing. Decide if the side effect is being tested before including it in your list of assertions.</p>
+<p>If you find that the unit of code you want to test has lots of side effects, you might be breaking the <a class="reference external" href="https://en.wikipedia.org/wiki/Single_responsibility_principle">Single Responsibility Principle</a>. Breaking the Single Responsibility Principle means the piece of code is doing too many things and would be better off being refactored. Following the Single Responsibility Principle is a great way to design code that it is easy to write repeatable and simple unit tests for, and ultimately, reliable applications.</p>
+</div>
+</div>
+<div class="section" id="executing-your-first-test">
+<h2>Executing Your First Test<a class="headerlink" href="#executing-your-first-test" title="Permalink to this headline">¶</a></h2>
+<p>Now that you’ve created the first test, you want to execute it. Sure, you know it’s going to pass, but before you create more complex tests, you should check that you can execute the tests successfully.</p>
+<div class="section" id="executing-test-runners">
+<h3>Executing Test Runners<a class="headerlink" href="#executing-test-runners" title="Permalink to this headline">¶</a></h3>
+<p>The Python application that executes your test code, checks the assertions, and gives you test results in your console is called the <strong>test runner</strong>.</p>
+<p>At the bottom of <code class="docutils literal notranslate"><span class="pre">test.py</span></code>, you added this small snippet of code:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+    <span class="n">unittest</span><span class="o">.</span><span class="n">main</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>This is a command line entry point. It means that if you execute the script alone by running <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">test.py</span></code> at the command line, it will call <code class="docutils literal notranslate"><span class="pre">unittest.main()</span></code>. This executes the test runner by discovering all classes in this file that inherit from <code class="docutils literal notranslate"><span class="pre">unittest.TestCase</span></code>.</p>
+<p>This is one of many ways to execute the <code class="docutils literal notranslate"><span class="pre">unittest</span></code> test runner. When you have a single test file named <code class="docutils literal notranslate"><span class="pre">test.py</span></code>, calling <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">test.py</span></code> is a great way to get started.</p>
+<p>Another way is using the <code class="docutils literal notranslate"><span class="pre">unittest</span></code> command line. Try this:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ python -m unittest test
+</pre></div>
+</div>
+<p>This will execute the same test module (called <code class="docutils literal notranslate"><span class="pre">test</span></code>) via the command line.</p>
+<p>You can provide additional options to change the output. One of those is <code class="docutils literal notranslate"><span class="pre">-v</span></code> for verbose. Try that next:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ python -m unittest -v test
+test_list_int (test.TestSum) ... ok
+
+----------------------------------------------------------------------
+Ran 1 tests in 0.000s
+</pre></div>
+</div>
+<p>This executed the one test inside <code class="docutils literal notranslate"><span class="pre">test.py</span></code> and printed the results to the console. Verbose mode listed the names of the tests it executed first, along with the result of each test.</p>
+<p>Instead of providing the name of a module containing tests, you can request an auto-discovery using the following:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ python -m unittest discover
+</pre></div>
+</div>
+<p>This will search the current directory for any files named <code class="docutils literal notranslate"><span class="pre">test*.py</span></code> and attempt to test them.</p>
+<p>Once you have multiple test files, as long as you follow the <code class="docutils literal notranslate"><span class="pre">test*.py</span></code> naming pattern, you can provide the name of the directory instead by using the <code class="docutils literal notranslate"><span class="pre">-s</span></code> flag and the name of the directory:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ python -m unittest discover -s tests
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">unittest</span></code> will run all tests in a single test plan and give you the results.</p>
+<p>Lastly, if your source code is not in the directory root and contained in a subdirectory, for example in a folder called <code class="docutils literal notranslate"><span class="pre">src/</span></code>, you can tell <code class="docutils literal notranslate"><span class="pre">unittest</span></code> where to execute the tests so that it can import the modules correctly with the <code class="docutils literal notranslate"><span class="pre">-t</span></code> flag:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ python -m unittest discover -s tests -t src
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">unittest</span></code> will change to the <code class="docutils literal notranslate"><span class="pre">src/</span></code> directory, scan for all <code class="docutils literal notranslate"><span class="pre">test*.py</span></code> files inside the the <code class="docutils literal notranslate"><span class="pre">tests</span></code> directory, and execute them.</p>
+</div>
+<div class="section" id="understanding-test-output">
+<h3>Understanding Test Output<a class="headerlink" href="#understanding-test-output" title="Permalink to this headline">¶</a></h3>
+<p>That was a very simple example where everything passes, so now you’re going to try a failing test and interpret the output.</p>
+<p><code class="docutils literal notranslate"><span class="pre">sum()</span></code> should be able to accept other lists of numeric types, like fractions.</p>
+<p>At the top of the <code class="docutils literal notranslate"><span class="pre">test.py</span></code> file, add an import statement to import the <code class="docutils literal notranslate"><span class="pre">Fraction</span></code> type from the <code class="docutils literal notranslate"><span class="pre">fractions</span></code> module in the standard library:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">fractions</span> <span class="kn">import</span> <span class="n">Fraction</span>
+</pre></div>
+</div>
+<p>Now add a test with an assertion expecting the incorrect value, in this case expecting the sum of 1/4, 1/4, and 2/5 to be 1:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">unittest</span>
+
+<span class="kn">from</span> <span class="nn">my_sum</span> <span class="kn">import</span> <span class="nb">sum</span>
+
+
+<span class="k">class</span> <span class="nc">TestSum</span><span class="p">(</span><span class="n">unittest</span><span class="o">.</span><span class="n">TestCase</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">test_list_int</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Test that it can sum a list of integers</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">data</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="n">result</span><span class="p">,</span> <span class="mi">6</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">test_list_fraction</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Test that it can sum a list of fractions</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">data</span> <span class="o">=</span> <span class="p">[</span><span class="n">Fraction</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">),</span> <span class="n">Fraction</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">),</span> <span class="n">Fraction</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">)]</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="n">result</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+    <span class="n">unittest</span><span class="o">.</span><span class="n">main</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>If you execute the tests again with <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">-m</span> <span class="pre">unittest</span> <span class="pre">test</span></code>, you should see the following output:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ python -m unittest test
+F.
+======================================================================
+FAIL: test_list_fraction (test.TestSum)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File &quot;test.py&quot;, line 21, in test_list_fraction
+    self.assertEqual(result, 1)
+AssertionError: Fraction(9, 10) != 1
+
+----------------------------------------------------------------------
+Ran 2 tests in 0.001s
+
+FAILED (failures=1)
+</pre></div>
+</div>
+<p>In the output, you’ll see the following information:</p>
+<ol class="simple">
+<li><p>The first line shows the execution results of all the tests, one failed (<code class="docutils literal notranslate"><span class="pre">F</span></code>) and one passed (<code class="docutils literal notranslate"><span class="pre">.</span></code>).</p></li>
+<li><p>The <code class="docutils literal notranslate"><span class="pre">FAIL</span></code> entry shows some details about the failed test:</p>
+<ul class="simple">
+<li><p>The test method name (<code class="docutils literal notranslate"><span class="pre">test_list_fraction</span></code>)</p></li>
+<li><p>The test module (<code class="docutils literal notranslate"><span class="pre">test</span></code>) and the test case (<code class="docutils literal notranslate"><span class="pre">TestSum</span></code>)</p></li>
+<li><p>A traceback to the failing line</p></li>
+<li><p>The details of the assertion with the expected result (<code class="docutils literal notranslate"><span class="pre">1</span></code>) and the actual result (<code class="docutils literal notranslate"><span class="pre">Fraction(9,</span> <span class="pre">10)</span></code>)</p></li>
+</ul>
+</li>
+</ol>
+<p>Remember, you can add extra information to the test output by adding the <code class="docutils literal notranslate"><span class="pre">-v</span></code> flag to the <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">-m</span> <span class="pre">unittest</span></code> command.</p>
+</div>
+<div class="section" id="running-your-tests-from-pycharm">
+<h3>Running Your Tests From PyCharm<a class="headerlink" href="#running-your-tests-from-pycharm" title="Permalink to this headline">¶</a></h3>
+<p>If you’re using the PyCharm IDE, you can run <code class="docutils literal notranslate"><span class="pre">unittest</span></code> or <code class="docutils literal notranslate"><span class="pre">pytest</span></code> by following these steps:</p>
+<ol class="simple">
+<li><p>In the Project tool window, select the <code class="docutils literal notranslate"><span class="pre">tests</span></code> directory.</p></li>
+<li><p>On the context menu, choose the run command for <code class="docutils literal notranslate"><span class="pre">unittest</span></code>. For example, choose <em>Run ‘Unittests in my Tests…’</em>.</p></li>
+</ol>
+<p>This will execute <code class="docutils literal notranslate"><span class="pre">unittest</span></code> in a test window and give you the results within PyCharm:</p>
+<p><a class="reference external" href="https://files.realpython.com/media/py_run_test_folder.b0e61b478c81.png"><img alt="PyCharm Testing" src="https://files.realpython.com/media/py_run_test_folder.b0e61b478c81.png" /></a></p>
+<p>More information is available on the <a class="reference external" href="https://www.jetbrains.com/help/pycharm/performing-tests.html">PyCharm Website</a>.</p>
+</div>
+<div class="section" id="running-your-tests-from-visual-studio-code">
+<h3>Running Your Tests From Visual Studio Code<a class="headerlink" href="#running-your-tests-from-visual-studio-code" title="Permalink to this headline">¶</a></h3>
+<p>If you’re using the Microsoft Visual Studio Code IDE, support for <code class="docutils literal notranslate"><span class="pre">unittest</span></code>, <code class="docutils literal notranslate"><span class="pre">nose</span></code>, and <code class="docutils literal notranslate"><span class="pre">pytest</span></code> execution is built into the Python plugin.</p>
+<p>If you have the Python plugin installed, you can set up the configuration of your tests by opening the Command Palette with Ctrl+Shift+P and typing “Python test”. You will see a range of options:</p>
+<p><a class="reference external" href="https://files.realpython.com/media/vscode-test-capture.dfefa1d20789.PNG"><img alt="Visual Studio Code Step 1" src="https://files.realpython.com/media/vscode-test-capture.dfefa1d20789.PNG" /></a></p>
+<p>Choose <em>Debug All Unit Tests</em>, and VSCode will then raise a prompt to configure the test framework. Click on the cog to select the test runner (<code class="docutils literal notranslate"><span class="pre">unittest</span></code>) and the home directory (<code class="docutils literal notranslate"><span class="pre">.</span></code>).</p>
+<p>Once this is set up, you will see the status of your tests at the bottom of the window, and you can quickly access the test logs and run the tests again by clicking on these icons:</p>
+<p><a class="reference external" href="https://files.realpython.com/media/vscode-test-results.951be75c3d3b.PNG"><img alt="Visual Studio Code Step 2" src="https://files.realpython.com/media/vscode-test-results.951be75c3d3b.PNG" /></a></p>
+<p>This shows the tests are executing, but some of them are failing.</p>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./automate/_todo"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Sajal N. Shrestha<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    <script src="../../_static/js/index.js"></script>
+    
+  </body>
+</html>

@@ -1,0 +1,1277 @@
+
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Working with Files and Directories</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
+    <link href="../../_static/css/index.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../_static/sphinx-book-theme.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/language_data.js"></script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/sphinx-book-theme.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="docsearch:language" content="en">
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../../index.html">
+  
+  <img src="../../_static/logo.png" class="logo" alt="logo">
+  
+  
+</a>
+</div>
+
+<form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../intro.html">
+   Python End-2-End RoadMap
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Know Your Language
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../know-your-language/q-%26-a/README.html">
+   A Q&amp;A Session
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../know-your-language/before-we-begin/README.html">
+   Before We Begin
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../know-your-language/apply-primer/README.html">
+   Applying Primer
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../know-your-language/apply-primer/README.html#strings">
+   Strings
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../know-your-language/apply-primer/README.html#lists">
+   Lists
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Apply Python in Real Life
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../regular-expressions/README.html">
+   Regular Expressions
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Web and Beyond
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../web-and-beyond/README.html">
+   To Web and Beyond
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Rest time
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../rest-time/README.html">
+   Rest Time
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Master Your Language
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../master-your-language/README.html">
+   Master your language
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Miscellaneous
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../miscellaneous/docker/README.html">
+   Docker
+  </a>
+ </li>
+</ul>
+
+</nav>
+
+ <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Compiled by <a href="mailto:sajalshres@gmail.com">Sajal Shrestha</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        <div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../_sources/automate/_todo/organize-files.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+    
+</div>
+        <!-- Source interaction buttons -->
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#before-we-begin">
+   Before We Begin
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#listing-directories">
+   Listing Directories
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#get-current-working-directory">
+     Get current working directory
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#list-directory">
+     List directory
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#iterate-over-directory">
+       Iterate over directory
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#alternative-modern-pythonic-approach-to-listing-directory">
+       Alternative modern Pythonic approach to listing directory
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#loop-over-scandir">
+       Loop over
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         scandir()
+        </span>
+       </code>
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#common-listing-functions">
+       Common listing functions
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#list-all-files-in-a-directory">
+   List all files in a directory
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#using-os-listdir">
+     Using
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       os.listdir()
+      </span>
+     </code>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#using-os-scandir">
+     Using
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       os.scandir()
+      </span>
+     </code>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#using-pathlib-path-return-later">
+     Using
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       pathlib.Path()
+      </span>
+     </code>
+     [
+     <em>
+      Return Later
+     </em>
+     ]
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#list-subdirectories">
+   List subdirectories
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id1">
+     Using
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       os.listdir()
+      </span>
+     </code>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id2">
+     Using
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       os.scandir()
+      </span>
+     </code>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id3">
+     Using
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       pathlib.Path()
+      </span>
+     </code>
+     [
+     <em>
+      Return Later
+     </em>
+     ]
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#get-file-metadata-attributes">
+   Get file metadata/attributes
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#creating-directories">
+   Creating Directories
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#create-single-directories">
+     Create single directories
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#create-multiple-directories">
+     Create multiple directories
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#pattern-matching">
+   Pattern Matching
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#using-string-method">
+     Using string method
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#using-fnmatch">
+     Using
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       fnmatch
+      </span>
+     </code>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#using-glob">
+     Using glob
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#traversing">
+   Traversing
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#deleting-files-and-directories">
+   Deleting Files and Directories
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#deleting-files">
+     Deleting Files
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#deleting-files-with-exception-handling">
+       Deleting files with exception handling:
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#deleting-directories">
+     Deleting Directories
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#deleting-directories-tree">
+     Deleting Directories Tree
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#common-delete-functions">
+       Common delete functions
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#copying-files-and-directories">
+   Copying Files and Directories
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#copying-files">
+     Copying Files
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#copying-directories">
+     Copying Directories
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#moving-files-and-directories">
+   Moving Files and Directories
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#renaming-files-and-directories">
+   Renaming Files and Directories
+  </a>
+ </li>
+</ul>
+
+        </nav>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="working-with-files-and-directories">
+<h1>Working with Files and Directories<a class="headerlink" href="#working-with-files-and-directories" title="Permalink to this headline">¶</a></h1>
+<p>Python has several built-in modules and functions for handling files and directories each with similar and specific use cases. Some of them are:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">os</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">os.path</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">shutil</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pathlib</span></code></p></li>
+</ul>
+<div class="section" id="before-we-begin">
+<h2>Before We Begin<a class="headerlink" href="#before-we-begin" title="Permalink to this headline">¶</a></h2>
+<p>All the examples are based on the root directory of this repository:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>D:<span class="se">\R</span>EPOSITORIES<span class="se">\P</span>YTHON-E2E-BOOK
+│   .gitignore
+│   debug.log
+│   LICENSE
+│   python-e2e-book.code-workspace
+│   README.md
+│
+├───.vscode
+│       settings.json
+│
+├───1-know-your-language
+│   │   apply-primer.jpg
+│   │   before-we-begin.md
+│   │   classes-and-objects.ipynb
+│   │   classes-and-objects.md
+│   │   Client-server.jpg
+│   │   data-structures.ipynb
+│   │   data-structures.md
+│   │   errors-and-exception.ipynb
+│   │   errors-and-exception.md
+│   │   flow-control.ipynb
+│   │   flow-control.md
+│   │   functions.ipynb
+│   │   functions.md
+│   │   looping-techniques.ipynb
+│   │   looping-techniques.md
+│   │   modules.md
+│   │   Monty-Python-Flying-Circus.jpg
+│   │   package-management.ipynb
+│   │   package-management.md
+│   │   python-primer.ipynb
+│   │   python-primer.md
+│   │   python-qna.jpg
+│   │   q-<span class="p">&amp;</span>-a.md
+│   │   README.md
+│   │   shell.jpg
+│   │   virtual-environment.ipynb
+│   │   virtual-environment.md
+│
+├───2-automate ----------------&gt; WE ARE HERE
+│   │   file-joke.png
+│   │   file-parts.png
+│   │   input-output.md
+│   │   organize-files.md
+│   │   README.md
+│   │   regular-expressions.md
+│   │   Untitled.ipynb
+│   │
+│   ├───input-output
+│   │       contacts_manager.py
+│   │       database.txt
+│   │
+│   └───regular-expressions
+│           password_strength.py
+│
+├───3-web-and-beyond
+│       README.md
+│
+├───4-rest-time
+│       README.md
+│
+├───5-what-now
+│       README.md
+│
+└───6-Miscellaneous
+        container-vm.png
+        docker-architecture.png
+        docker-engine.png
+        docker.md
+        README.md
+</pre></div>
+</div>
+</div>
+<div class="section" id="listing-directories">
+<h2>Listing Directories<a class="headerlink" href="#listing-directories" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="get-current-working-directory">
+<h3>Get current working directory<a class="headerlink" href="#get-current-working-directory" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
+
+<span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">()</span>
+
+<span class="c1"># Output: &#39;D:\\repositories\\python-e2e-book\\2-automate&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="list-directory">
+<h3>List directory<a class="headerlink" href="#list-directory" title="Permalink to this headline">¶</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">os.listdir()</span></code> is the method to use to get a directory listing:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
+
+<span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">(</span><span class="s1">&#39;input-output/&#39;</span><span class="p">)</span>
+
+<span class="c1"># Output: [&#39;contacts_manager.py&#39;, &#39;database.txt&#39;]</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">os.listdir()</span></code> returns a Python list containing the names of the files and subdirectories in the directory given by the path argument:</p>
+<div class="section" id="iterate-over-directory">
+<h4>Iterate over directory<a class="headerlink" href="#iterate-over-directory" title="Permalink to this headline">¶</a></h4>
+<p>Printing out the output of a call to <code class="docutils literal notranslate"><span class="pre">os.listdir()</span></code> using a loop helps clean things up:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">(</span><span class="s1">&#39;input-output/&#39;</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">item</span><span class="p">)</span>
+
+<span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">Output:</span>
+<span class="sd">contacts_manager.py</span>
+<span class="sd">database.txt</span>
+<span class="sd">&#39;&#39;&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="alternative-modern-pythonic-approach-to-listing-directory">
+<h4>Alternative modern Pythonic approach to listing directory<a class="headerlink" href="#alternative-modern-pythonic-approach-to-listing-directory" title="Permalink to this headline">¶</a></h4>
+<p><code class="docutils literal notranslate"><span class="pre">os.scandir()</span></code> was introduced in Python 3.5. <code class="docutils literal notranslate"><span class="pre">os.scandir()</span></code> returns an iterator as opposed to a list when called:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">os</span><span class="o">.</span><span class="n">scandir</span><span class="p">(</span><span class="s1">&#39;input-output/&#39;</span><span class="p">)</span>
+
+<span class="c1"># Output: &lt;nt.ScandirIterator at 0x13fc6ac63d0&gt;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="loop-over-scandir">
+<h4>Loop over <code class="docutils literal notranslate"><span class="pre">scandir()</span></code><a class="headerlink" href="#loop-over-scandir" title="Permalink to this headline">¶</a></h4>
+<p>The <code class="docutils literal notranslate"><span class="pre">ScandirIterator</span></code> points to all the entries in the current directory. You can loop over the contents of the iterator and print out the filenames:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="n">os</span><span class="o">.</span><span class="n">scandir</span><span class="p">(</span><span class="s1">&#39;input-output/&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">items</span><span class="p">:</span>
+    <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">items</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">item</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s1"> with path </span><span class="si">{</span><span class="n">item</span><span class="o">.</span><span class="n">path</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+        
+<span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">Output:</span>
+<span class="sd">contacts_manager.py with path input-output/contacts_manager.py</span>
+<span class="sd">database.txt with path input-output/database.txt</span>
+<span class="sd">&#39;&#39;&#39;</span>
+</pre></div>
+</div>
+<p>Here, <code class="docutils literal notranslate"><span class="pre">os.scandir()</span></code> is used in conjunction with the <code class="docutils literal notranslate"><span class="pre">with</span></code> statement because it supports the context manager protocol. Using a context manager closes the iterator and frees up acquired resources automatically after the iterator has been exhausted.</p>
+</div>
+<div class="section" id="common-listing-functions">
+<h4>Common listing functions<a class="headerlink" href="#common-listing-functions" title="Permalink to this headline">¶</a></h4>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Function</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">os.listdir()</span></code></p></td>
+<td><p>Returns a list of all files and folders in a directory</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">os.scandir()</span></code></p></td>
+<td><p>Returns an iterator of all the objects in a directory including file attribute information</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">pathlib.Path.iterdir()</span></code></p></td>
+<td><p>Returns an iterator of all the objects in a directory including file attribute information</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="section" id="list-all-files-in-a-directory">
+<h2>List all files in a directory<a class="headerlink" href="#list-all-files-in-a-directory" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="using-os-listdir">
+<h3>Using <code class="docutils literal notranslate"><span class="pre">os.listdir()</span></code><a class="headerlink" href="#using-os-listdir" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
+
+<span class="c1"># List all files in a directory using os.listdir</span>
+<span class="n">basepath</span> <span class="o">=</span> <span class="s1">&#39;../&#39;</span>
+<span class="k">for</span> <span class="n">entry</span> <span class="ow">in</span> <span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">(</span><span class="n">basepath</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isfile</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">basepath</span><span class="p">,</span> <span class="n">entry</span><span class="p">)):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">entry</span><span class="p">)</span>
+
+<span class="sd">&#39;&#39;&#39;      </span>
+<span class="sd">.gitignore</span>
+<span class="sd">debug.log</span>
+<span class="sd">LICENSE</span>
+<span class="sd">python-e2e-book.code-workspace</span>
+<span class="sd">README.md&#39;&#39;&#39;</span>
+</pre></div>
+</div>
+<p>Here, the call to <code class="docutils literal notranslate"><span class="pre">os.listdir()</span></code> returns a list of everything in the specified path, and then that list is filtered by <code class="docutils literal notranslate"><span class="pre">os.path.isfile()</span></code> to only print out files and not directories.</p>
+</div>
+<div class="section" id="using-os-scandir">
+<h3>Using <code class="docutils literal notranslate"><span class="pre">os.scandir()</span></code><a class="headerlink" href="#using-os-scandir" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
+
+<span class="c1"># List all files in a directory using scandir()</span>
+<span class="n">basepath</span> <span class="o">=</span> <span class="s1">&#39;../&#39;</span>
+<span class="k">with</span> <span class="n">os</span><span class="o">.</span><span class="n">scandir</span><span class="p">(</span><span class="n">basepath</span><span class="p">)</span> <span class="k">as</span> <span class="n">entries</span><span class="p">:</span>
+    <span class="k">for</span> <span class="n">entry</span> <span class="ow">in</span> <span class="n">entries</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">entry</span><span class="o">.</span><span class="n">is_file</span><span class="p">():</span>
+            <span class="nb">print</span><span class="p">(</span><span class="n">entry</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+            
+<span class="sd">&#39;&#39;&#39;      </span>
+<span class="sd">.gitignore</span>
+<span class="sd">debug.log</span>
+<span class="sd">LICENSE</span>
+<span class="sd">python-e2e-book.code-workspace</span>
+<span class="sd">README.md&#39;&#39;&#39;</span>
+</pre></div>
+</div>
+<p>Using <code class="docutils literal notranslate"><span class="pre">os.scandir()</span></code> has the advantage of looking cleaner and being easier to understand than using <code class="docutils literal notranslate"><span class="pre">os.listdir()</span></code>, even though it is one line of code longer. Calling <code class="docutils literal notranslate"><span class="pre">entry.is_file()</span></code> on each item in the <code class="docutils literal notranslate"><span class="pre">ScandirIterator</span></code> returns <code class="docutils literal notranslate"><span class="pre">True</span></code> if the object is a file.</p>
+</div>
+<div class="section" id="using-pathlib-path-return-later">
+<h3>Using <code class="docutils literal notranslate"><span class="pre">pathlib.Path()</span></code> [<em>Return Later</em>]<a class="headerlink" href="#using-pathlib-path-return-later" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">pathlib</span> <span class="kn">import</span> <span class="n">Path</span>
+
+<span class="n">basepath</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="s1">&#39;../&#39;</span><span class="p">)</span>
+<span class="n">files_in_basepath</span> <span class="o">=</span> <span class="n">basepath</span><span class="o">.</span><span class="n">iterdir</span><span class="p">()</span>
+<span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">files_in_basepath</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">item</span><span class="o">.</span><span class="n">is_file</span><span class="p">():</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">item</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+        
+<span class="sd">&#39;&#39;&#39;      </span>
+<span class="sd">.gitignore</span>
+<span class="sd">debug.log</span>
+<span class="sd">LICENSE</span>
+<span class="sd">python-e2e-book.code-workspace</span>
+<span class="sd">README.md&#39;&#39;&#39;</span>
+</pre></div>
+</div>
+<p>The call <code class="docutils literal notranslate"><span class="pre">.is_file()</span></code> on each entry yielded by <code class="docutils literal notranslate"><span class="pre">.iterdir()</span></code></p>
+</div>
+</div>
+<div class="section" id="list-subdirectories">
+<h2>List subdirectories<a class="headerlink" href="#list-subdirectories" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id1">
+<h3>Using <code class="docutils literal notranslate"><span class="pre">os.listdir()</span></code><a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
+
+<span class="c1"># List all subdirectories using os.listdir</span>
+<span class="n">basepath</span> <span class="o">=</span> <span class="s1">&#39;../&#39;</span>
+<span class="k">for</span> <span class="n">entry</span> <span class="ow">in</span> <span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">(</span><span class="n">basepath</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isdir</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">basepath</span><span class="p">,</span> <span class="n">entry</span><span class="p">)):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">entry</span><span class="p">)</span>
+
+<span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">.git</span>
+<span class="sd">.ipynb_checkpoints</span>
+<span class="sd">.vscode</span>
+<span class="sd">1-know-your-language</span>
+<span class="sd">2-automate</span>
+<span class="sd">3-web-and-beyond</span>
+<span class="sd">4-rest-time</span>
+<span class="sd">5-what-now</span>
+<span class="sd">6-Miscellaneous</span>
+<span class="sd">&#39;&#39;&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id2">
+<h3>Using <code class="docutils literal notranslate"><span class="pre">os.scandir()</span></code><a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
+
+<span class="c1"># List all subdirectories using scandir()</span>
+<span class="n">basepath</span> <span class="o">=</span> <span class="s1">&#39;../&#39;</span>
+<span class="k">with</span> <span class="n">os</span><span class="o">.</span><span class="n">scandir</span><span class="p">(</span><span class="n">basepath</span><span class="p">)</span> <span class="k">as</span> <span class="n">entries</span><span class="p">:</span>
+    <span class="k">for</span> <span class="n">entry</span> <span class="ow">in</span> <span class="n">entries</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">entry</span><span class="o">.</span><span class="n">is_dir</span><span class="p">():</span>
+            <span class="nb">print</span><span class="p">(</span><span class="n">entry</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+
+<span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">.git</span>
+<span class="sd">.ipynb_checkpoints</span>
+<span class="sd">.vscode</span>
+<span class="sd">1-know-your-language</span>
+<span class="sd">2-automate</span>
+<span class="sd">3-web-and-beyond</span>
+<span class="sd">4-rest-time</span>
+<span class="sd">5-what-now</span>
+<span class="sd">6-Miscellaneous</span>
+<span class="sd">&#39;&#39;&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id3">
+<h3>Using <code class="docutils literal notranslate"><span class="pre">pathlib.Path()</span></code> [<em>Return Later</em>]<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">pathlib</span> <span class="kn">import</span> <span class="n">Path</span>
+
+<span class="c1"># List all subdirectory using pathlib</span>
+<span class="n">basepath</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="s1">&#39;../&#39;</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">entry</span> <span class="ow">in</span> <span class="n">basepath</span><span class="o">.</span><span class="n">iterdir</span><span class="p">():</span>
+    <span class="k">if</span> <span class="n">entry</span><span class="o">.</span><span class="n">is_dir</span><span class="p">():</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">entry</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+
+<span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">.git</span>
+<span class="sd">.ipynb_checkpoints</span>
+<span class="sd">.vscode</span>
+<span class="sd">1-know-your-language</span>
+<span class="sd">2-automate</span>
+<span class="sd">3-web-and-beyond</span>
+<span class="sd">4-rest-time</span>
+<span class="sd">5-what-now</span>
+<span class="sd">6-Miscellaneous</span>
+<span class="sd">&#39;&#39;&#39;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="get-file-metadata-attributes">
+<h2>Get file metadata/attributes<a class="headerlink" href="#get-file-metadata-attributes" title="Permalink to this headline">¶</a></h2>
+<p>Python makes retrieving file attributes such as file size and modified times easy. This is done through <code class="docutils literal notranslate"><span class="pre">os.stat()</span></code>, <code class="docutils literal notranslate"><span class="pre">os.scandir()</span></code>, or <code class="docutils literal notranslate"><span class="pre">pathlib.Path()</span></code>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
+
+<span class="k">with</span> <span class="n">os</span><span class="o">.</span><span class="n">scandir</span><span class="p">(</span><span class="s1">&#39;../&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">dir_contents</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">{0:35s}{1:&lt;10s}{2:&lt;10s}{3:&lt;8s}{4:&lt;20s}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+        <span class="s1">&#39;Name&#39;</span><span class="p">,</span> <span class="s1">&#39;UserID&#39;</span><span class="p">,</span> <span class="s1">&#39;GroupID&#39;</span><span class="p">,</span> <span class="s1">&#39;Mode&#39;</span><span class="p">,</span> <span class="s1">&#39;Modified&#39;</span><span class="p">))</span>
+    <span class="k">for</span> <span class="n">entry</span> <span class="ow">in</span> <span class="n">dir_contents</span><span class="p">:</span>
+        <span class="n">info</span> <span class="o">=</span> <span class="n">entry</span><span class="o">.</span><span class="n">stat</span><span class="p">()</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">entry</span><span class="o">.</span><span class="n">name</span><span class="si">:</span><span class="s1">35s</span><span class="si">}{</span><span class="n">info</span><span class="o">.</span><span class="n">st_uid</span><span class="si">:</span><span class="s1">&lt;10d</span><span class="si">}</span><span class="se">\</span>
+<span class="s1">            </span><span class="si">{</span><span class="n">info</span><span class="o">.</span><span class="n">st_gid</span><span class="si">:</span><span class="s1">&lt;10d</span><span class="si">}{</span><span class="n">info</span><span class="o">.</span><span class="n">st_mode</span><span class="si">:</span><span class="s1">&lt;8d</span><span class="si">}{</span><span class="n">info</span><span class="o">.</span><span class="n">st_mtime</span><span class="si">:</span><span class="s1">&lt;20f</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+
+<span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">Name                               UserID    GroupID   Mode    Modified            </span>
+<span class="sd">.git                               0         0         16895   1582698009.583250   </span>
+<span class="sd">.gitignore                         0         0         33206   1582606190.601146   </span>
+<span class="sd">.ipynb_checkpoints                 0         0         16895   1580138522.330589   </span>
+<span class="sd">.vscode                            0         0         16895   1582565352.059732   </span>
+<span class="sd">1-know-your-language               0         0         16895   1582688743.341213   </span>
+<span class="sd">2-automate                         0         0         16895   1582738816.884005   </span>
+<span class="sd">3-web-and-beyond                   0         0         16895   1580228642.191034   </span>
+<span class="sd">4-rest-time                        0         0         16895   1578136533.607883   </span>
+<span class="sd">5-what-now                         0         0         16895   1578136542.003414   </span>
+<span class="sd">6-Miscellaneous                    0         0         16895   1580232203.811131   </span>
+<span class="sd">debug.log                          0         0         33206   1579507956.837189   </span>
+<span class="sd">LICENSE                            0         0         33206   1578136002.648941   </span>
+<span class="sd">python-e2e-book.code-workspace     0         0         33206   1582605928.260975   </span>
+<span class="sd">README.md                          0         0         33206   1582632397.891731  </span>
+<span class="sd">&#39;&#39;&#39;</span>
+</pre></div>
+</div>
+<p>After date conversion:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span>
+<span class="kn">from</span> <span class="nn">os</span> <span class="kn">import</span> <span class="n">scandir</span>
+
+<span class="k">def</span> <span class="nf">convert_date</span><span class="p">(</span><span class="n">timestamp</span><span class="p">):</span>
+    <span class="n">d</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">utcfromtimestamp</span><span class="p">(</span><span class="n">timestamp</span><span class="p">)</span>
+    <span class="n">formated_date</span> <span class="o">=</span> <span class="n">d</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">%d</span><span class="s1"> %b %Y&#39;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">formated_date</span>
+
+<span class="k">def</span> <span class="nf">get_files</span><span class="p">():</span>
+    <span class="n">dir_entries</span> <span class="o">=</span> <span class="n">scandir</span><span class="p">(</span><span class="s1">&#39;../&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">{0:35s}{1:&lt;10s}{2:&lt;10s}{3:&lt;8s}{4:&lt;20s}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+        <span class="s1">&#39;Name&#39;</span><span class="p">,</span> <span class="s1">&#39;UserID&#39;</span><span class="p">,</span> <span class="s1">&#39;GroupID&#39;</span><span class="p">,</span> <span class="s1">&#39;Mode&#39;</span><span class="p">,</span> <span class="s1">&#39;Modified&#39;</span><span class="p">))</span>
+    <span class="k">for</span> <span class="n">entry</span> <span class="ow">in</span> <span class="n">dir_entries</span><span class="p">:</span>
+        <span class="n">info</span> <span class="o">=</span> <span class="n">entry</span><span class="o">.</span><span class="n">stat</span><span class="p">()</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">entry</span><span class="o">.</span><span class="n">name</span><span class="si">:</span><span class="s1">&lt;35s</span><span class="si">}{</span><span class="n">info</span><span class="o">.</span><span class="n">st_uid</span><span class="si">:</span><span class="s1">&lt;10d</span><span class="si">}</span><span class="se">\</span>
+<span class="si">{</span><span class="n">info</span><span class="o">.</span><span class="n">st_gid</span><span class="si">:</span><span class="s1">&lt;10d</span><span class="si">}{</span><span class="n">info</span><span class="o">.</span><span class="n">st_mode</span><span class="si">:</span><span class="s1">&lt;8d</span><span class="si">}{</span><span class="n">convert_date</span><span class="p">(</span><span class="n">info</span><span class="o">.</span><span class="n">st_mtime</span><span class="p">)</span><span class="si">:</span><span class="s1">&lt;20</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+            
+<span class="n">get_files</span><span class="p">()</span>
+
+<span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">Name                               UserID    GroupID   Mode    Modified            </span>
+<span class="sd">.git                               0         0         16895   26 Feb 2020         </span>
+<span class="sd">.gitignore                         0         0         33206   25 Feb 2020         </span>
+<span class="sd">.ipynb_checkpoints                 0         0         16895   27 Jan 2020         </span>
+<span class="sd">.vscode                            0         0         16895   24 Feb 2020         </span>
+<span class="sd">1-know-your-language               0         0         16895   26 Feb 2020         </span>
+<span class="sd">2-automate                         0         0         16895   26 Feb 2020         </span>
+<span class="sd">3-web-and-beyond                   0         0         16895   28 Jan 2020         </span>
+<span class="sd">4-rest-time                        0         0         16895   04 Jan 2020         </span>
+<span class="sd">5-what-now                         0         0         16895   04 Jan 2020         </span>
+<span class="sd">6-Miscellaneous                    0         0         16895   28 Jan 2020         </span>
+<span class="sd">debug.log                          0         0         33206   20 Jan 2020         </span>
+<span class="sd">LICENSE                            0         0         33206   04 Jan 2020         </span>
+<span class="sd">python-e2e-book.code-workspace     0         0         33206   25 Feb 2020         </span>
+<span class="sd">README.md                          0         0         33206   25 Feb 2020 </span>
+<span class="sd">&#39;&#39;&#39;</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">convert_date()</span></code> makes use of <code class="docutils literal notranslate"><span class="pre">.strftime()</span></code> to convert the time in seconds into a string.</p>
+<p>The arguments passed to <code class="docutils literal notranslate"><span class="pre">.strftime()</span></code> are the following:</p>
+<ul class="simple">
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">%d</span></code>:</strong> the day of the month</p></li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">%b</span></code>:</strong> the month, in abbreviated form</p></li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">%Y</span></code>:</strong> the year</p></li>
+</ul>
+</div>
+<div class="section" id="creating-directories">
+<h2>Creating Directories<a class="headerlink" href="#creating-directories" title="Permalink to this headline">¶</a></h2>
+<p>Sooner or later, the programs you write will have to create directories in order to store data in them.</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Function</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">os.mkdir()</span></code></p></td>
+<td><p>Creates a single subdirectory</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">pathlib.Path.mkdir()</span></code></p></td>
+<td><p>Creates single or multiple directories</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">os.makedirs()</span></code></p></td>
+<td><p>Creates multiple directories, including intermediate directories</p></td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="create-single-directories">
+<h3>Create single directories<a class="headerlink" href="#create-single-directories" title="Permalink to this headline">¶</a></h3>
+<p>To create a single directory, pass a path to the directory as a parameter to <code class="docutils literal notranslate"><span class="pre">os.mkdir()</span></code>:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Using os</span>
+<span class="kn">import</span> <span class="nn">os</span>
+
+<span class="n">os</span><span class="o">.</span><span class="n">mkdir</span><span class="p">(</span><span class="s1">&#39;example_directory/&#39;</span><span class="p">)</span>
+
+<span class="c1"># Using pathlib</span>
+<span class="kn">from</span> <span class="nn">pathlib</span> <span class="kn">import</span> <span class="n">Path</span>
+
+<span class="n">p</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="s1">&#39;example_directory/&#39;</span><span class="p">)</span>
+<span class="n">p</span><span class="o">.</span><span class="n">mkdir</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>If a directory already exists, <code class="docutils literal notranslate"><span class="pre">os.mkdir()</span></code> raises <code class="docutils literal notranslate"><span class="pre">FileExistsError</span></code>.  To avoid errors like this, catch the error when it happens and let your user know:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">pathlin</span> <span class="n">Path</span>
+
+<span class="n">p</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="s1">&#39;example_directory&#39;</span><span class="p">)</span>
+<span class="k">try</span><span class="p">:</span>
+    <span class="n">p</span><span class="o">.</span><span class="n">mkdir</span><span class="p">()</span>
+<span class="k">except</span> <span class="ne">FileExistsError</span> <span class="k">as</span> <span class="n">exc</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">exc</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Alternatively, you can ignore the <code class="docutils literal notranslate"><span class="pre">FileExistsError</span></code> by passing the <code class="docutils literal notranslate"><span class="pre">exist_ok=True</span></code> argument to <code class="docutils literal notranslate"><span class="pre">.mkdir()</span></code>:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">pathlib</span> <span class="kn">import</span> <span class="n">Path</span>
+
+<span class="n">p</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="s1">&#39;example_directory&#39;</span><span class="p">)</span>
+<span class="n">p</span><span class="o">.</span><span class="n">mkdir</span><span class="p">(</span><span class="n">exist_ok</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="create-multiple-directories">
+<h3>Create multiple directories<a class="headerlink" href="#create-multiple-directories" title="Permalink to this headline">¶</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">os.makedirs()</span></code> is similar to <code class="docutils literal notranslate"><span class="pre">os.mkdir()</span></code>. The difference between the two is that not only can <code class="docutils literal notranslate"><span class="pre">os.makedirs()</span></code> create individual directories, it can also be used to create directory trees.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
+
+<span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="s1">&#39;Hello</span><span class="se">\\</span><span class="s1">World&#39;</span><span class="p">)</span>
+
+<span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">├───.ipynb_checkpoints</span>
+<span class="sd">├───Hello</span>
+<span class="sd">│   └───World</span>
+<span class="sd">├───input-output</span>
+<span class="sd">└───regular-expressions</span>
+<span class="sd">&#39;&#39;&#39;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="pattern-matching">
+<h2>Pattern Matching<a class="headerlink" href="#pattern-matching" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="using-string-method">
+<h3>Using string method<a class="headerlink" href="#using-string-method" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
+
+<span class="c1"># Get .txt files</span>
+<span class="k">for</span> <span class="n">f_name</span> <span class="ow">in</span> <span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">(</span><span class="s1">&#39;.&#39;</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">f_name</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="s1">&#39;.md&#39;</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">f_name</span><span class="p">)</span>
+        
+<span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">input-output.md</span>
+<span class="sd">organize-files.md</span>
+<span class="sd">README.md</span>
+<span class="sd">regular-expressions.md</span>
+<span class="sd">&#39;&#39;&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="using-fnmatch">
+<h3>Using <code class="docutils literal notranslate"><span class="pre">fnmatch</span></code><a class="headerlink" href="#using-fnmatch" title="Permalink to this headline">¶</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">fnmatch.fnmatch()</span></code> is a function that supports the use of wildcards such as <code class="docutils literal notranslate"><span class="pre">*</span></code> and <code class="docutils literal notranslate"><span class="pre">?</span></code> to match filenames. For example, in order to find all <code class="docutils literal notranslate"><span class="pre">.md</span></code> files in a directory using <code class="docutils literal notranslate"><span class="pre">fnmatch</span></code>, you would do the following:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">fnmatch</span>
+
+<span class="k">for</span> <span class="n">file_name</span> <span class="ow">in</span> <span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">(</span><span class="s1">&#39;.&#39;</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">fnmatch</span><span class="o">.</span><span class="n">fnmatch</span><span class="p">(</span><span class="n">file_name</span><span class="p">,</span> <span class="s1">&#39;*.md&#39;</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">file_name</span><span class="p">)</span>
+        
+<span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">input-output.md</span>
+<span class="sd">organize-files.md</span>
+<span class="sd">README.md</span>
+<span class="sd">regular-expressions.md</span>
+<span class="sd">&#39;&#39;&#39;</span>
+</pre></div>
+</div>
+<p>Another example:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">filename</span> <span class="ow">in</span> <span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">(</span><span class="s1">&#39;.&#39;</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">fnmatch</span><span class="o">.</span><span class="n">fnmatch</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="s1">&#39;*-*.md&#39;</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
+
+<span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">input-output.md</span>
+<span class="sd">organize-files.md</span>
+<span class="sd">regular-expressions.md</span>
+<span class="sd">&#39;&#39;&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="using-glob">
+<h3>Using glob<a class="headerlink" href="#using-glob" title="Permalink to this headline">¶</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">.glob()</span></code> in the <code class="docutils literal notranslate"><span class="pre">glob</span></code> module works just like <code class="docutils literal notranslate"><span class="pre">fnmatch.fnmatch()</span></code>, but unlike <code class="docutils literal notranslate"><span class="pre">fnmatch.fnmatch()</span></code>, it treats files beginning with a period (<code class="docutils literal notranslate"><span class="pre">.</span></code>) as special.</p>
+<p>UNIX and related systems translate name patterns with wildcards like <code class="docutils literal notranslate"><span class="pre">?</span></code> and <code class="docutils literal notranslate"><span class="pre">*</span></code> into a list of files. This is called globbing.</p>
+<p>For example, typing <code class="docutils literal notranslate"><span class="pre">mv</span> <span class="pre">*.py</span> <span class="pre">python_files/</span></code> in a UNIX shell moves (<code class="docutils literal notranslate"><span class="pre">mv</span></code>) all files with the <code class="docutils literal notranslate"><span class="pre">.py</span></code> extension from the current directory to the directory <code class="docutils literal notranslate"><span class="pre">python_files</span></code>. The <code class="docutils literal notranslate"><span class="pre">*</span></code> character is a wildcard that means “any number of characters,” and <code class="docutils literal notranslate"><span class="pre">*.py</span></code> is the glob pattern. This shell capability is not available in the Windows Operating System. The <code class="docutils literal notranslate"><span class="pre">glob</span></code> module adds this capability in Python, which enables Windows programs to use this feature.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">glob</span>
+<span class="n">glob</span><span class="o">.</span><span class="n">glob</span><span class="p">(</span><span class="s1">&#39;*.md&#39;</span><span class="p">)</span>
+
+<span class="c1"># [&#39;input-output.md&#39;, &#39;organize-files.md&#39;, &#39;README.md&#39;, &#39;regular-expressions.md&#39;]</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">glob.glob('*.md')</span></code> searches for all files that have the <code class="docutils literal notranslate"><span class="pre">.md</span></code> extension in the current directory and returns them as a list.</p>
+</div>
+</div>
+<div class="section" id="traversing">
+<h2>Traversing<a class="headerlink" href="#traversing" title="Permalink to this headline">¶</a></h2>
+<p>A common programming task is walking a directory tree and processing files in the tree. Let’s explore how the built-in Python function <code class="docutils literal notranslate"><span class="pre">os.walk()</span></code> can be used to do this. <code class="docutils literal notranslate"><span class="pre">os.walk()</span></code> is used to generate filename in a directory tree by walking the tree either top-down or bottom-up.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">dirpath</span><span class="p">,</span> <span class="n">dirnames</span><span class="p">,</span> <span class="n">files</span> <span class="ow">in</span> <span class="n">os</span><span class="o">.</span><span class="n">walk</span><span class="p">(</span><span class="s1">&#39;.&#39;</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Found directory: </span><span class="si">{</span><span class="n">dirpath</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">file_name</span> <span class="ow">in</span> <span class="n">files</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">file_name</span><span class="p">)</span>
+        
+<span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">Found directory: .</span>
+<span class="sd">file-joke.png</span>
+<span class="sd">file-parts.png</span>
+<span class="sd">input-output.md</span>
+<span class="sd">organize-files.md</span>
+<span class="sd">README.md</span>
+<span class="sd">regular-expressions.md</span>
+<span class="sd">Untitled.ipynb</span>
+<span class="sd">Found directory: .\.ipynb_checkpoints</span>
+<span class="sd">spreadsheet-whisperer-checkpoint.ipynb</span>
+<span class="sd">Untitled-checkpoint.ipynb</span>
+<span class="sd">Found directory: .\input-output</span>
+<span class="sd">contacts_manager.py</span>
+<span class="sd">database.txt</span>
+<span class="sd">Found directory: .\regular-expressions</span>
+<span class="sd">password_strength.py</span>
+<span class="sd">&#39;&#39;&#39;</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">os.walk()</span></code> returns three values on each iteration of the loop:</p>
+<ol class="simple">
+<li><p>The name of the current folder</p></li>
+<li><p>A list of folders in the current folder</p></li>
+<li><p>A list of files in the current folder</p></li>
+</ol>
+<p>To traverse the directory tree in a bottom-up manner, pass in a <code class="docutils literal notranslate"><span class="pre">topdown=False</span></code> keyword argument to <code class="docutils literal notranslate"><span class="pre">os.walk()</span></code>:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">dirpath</span><span class="p">,</span> <span class="n">dirnames</span><span class="p">,</span> <span class="n">files</span> <span class="ow">in</span> <span class="n">os</span><span class="o">.</span><span class="n">walk</span><span class="p">(</span><span class="s1">&#39;.&#39;</span><span class="p">,</span> <span class="n">topdown</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Found directory: </span><span class="si">{</span><span class="n">dirpath</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">file_name</span> <span class="ow">in</span> <span class="n">files</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">file_name</span><span class="p">)</span>
+        
+<span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">Found directory: .\.ipynb_checkpoints</span>
+<span class="sd">spreadsheet-whisperer-checkpoint.ipynb</span>
+<span class="sd">Untitled-checkpoint.ipynb</span>
+<span class="sd">Found directory: .\input-output</span>
+<span class="sd">contacts_manager.py</span>
+<span class="sd">database.txt</span>
+<span class="sd">Found directory: .\regular-expressions</span>
+<span class="sd">password_strength.py</span>
+<span class="sd">Found directory: .</span>
+<span class="sd">file-joke.png</span>
+<span class="sd">file-parts.png</span>
+<span class="sd">input-output.md</span>
+<span class="sd">organize-files.md</span>
+<span class="sd">README.md</span>
+<span class="sd">regular-expressions.md</span>
+<span class="sd">Untitled.ipynb</span>
+<span class="sd">&#39;&#39;&#39;</span>
+</pre></div>
+</div>
+<p>Passing the <code class="docutils literal notranslate"><span class="pre">topdown=False</span></code> argument will make <code class="docutils literal notranslate"><span class="pre">os.walk()</span></code> print out the files it finds in the <em>subdirectories</em> first.</p>
+</div>
+<div class="section" id="deleting-files-and-directories">
+<h2>Deleting Files and Directories<a class="headerlink" href="#deleting-files-and-directories" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="deleting-files">
+<h3>Deleting Files<a class="headerlink" href="#deleting-files" title="Permalink to this headline">¶</a></h3>
+<p>To delete a single file, use <code class="docutils literal notranslate"><span class="pre">pathlib.Path.unlink()</span></code>, <code class="docutils literal notranslate"><span class="pre">os.remove()</span></code>. or <code class="docutils literal notranslate"><span class="pre">os.unlink()</span></code>.</p>
+<p><code class="docutils literal notranslate"><span class="pre">os.remove()</span></code> and <code class="docutils literal notranslate"><span class="pre">os.unlink()</span></code> are semantically identical. To delete a file, do the following:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
+
+<span class="n">data_file</span> <span class="o">=</span> <span class="s1">&#39;D:</span><span class="se">\\</span><span class="s1">tmp</span><span class="se">\\</span><span class="s1">file.txt&#39;</span>
+<span class="c1"># Using remove</span>
+<span class="n">os</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">data_file</span><span class="p">)</span>
+<span class="c1"># Using unlink</span>
+<span class="n">os</span><span class="o">.</span><span class="n">unlink</span><span class="p">(</span><span class="n">data_file</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="section" id="deleting-files-with-exception-handling">
+<h4>Deleting files with exception handling:<a class="headerlink" href="#deleting-files-with-exception-handling" title="Permalink to this headline">¶</a></h4>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
+
+<span class="n">data_file</span> <span class="o">=</span> <span class="s1">&#39;D:</span><span class="se">\\</span><span class="s1">tmp</span><span class="se">\\</span><span class="s1">file.txt&#39;</span>
+
+<span class="c1"># Use exception handling</span>
+<span class="k">try</span><span class="p">:</span>
+    <span class="n">os</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">data_file</span><span class="p">)</span>
+<span class="k">except</span> <span class="ne">OSError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Error: </span><span class="si">{</span><span class="n">data_file</span><span class="si">}</span><span class="s1"> : </span><span class="si">{</span><span class="n">e</span><span class="o">.</span><span class="n">strerror</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="deleting-directories">
+<h3>Deleting Directories<a class="headerlink" href="#deleting-directories" title="Permalink to this headline">¶</a></h3>
+<p>The standard library offers the following functions for deleting directories:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">os.rmdir()</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pathlib.Path.rmdir()</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">shutil.rmtree()</span></code></p></li>
+</ul>
+<p>To delete a single directory or folder, use <code class="docutils literal notranslate"><span class="pre">os.rmdir()</span></code> or <code class="docutils literal notranslate"><span class="pre">pathlib.rmdir()</span></code>. These two functions only work if the directory you’re trying to delete is empty. If the directory isn’t empty, an <code class="docutils literal notranslate"><span class="pre">OSError</span></code> is raised. Here is how to delete a folder:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
+
+<span class="n">trash_dir</span> <span class="o">=</span> <span class="s1">&#39;D:</span><span class="se">\\</span><span class="s1">tmp</span><span class="se">\\</span><span class="s1">&#39;</span>
+
+<span class="k">try</span><span class="p">:</span>
+    <span class="n">os</span><span class="o">.</span><span class="n">rmdir</span><span class="p">(</span><span class="n">trash_dir</span><span class="p">)</span>
+<span class="k">except</span> <span class="ne">OSError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Error: </span><span class="si">{</span><span class="n">trash_dir</span><span class="si">}</span><span class="s1"> : </span><span class="si">{</span><span class="n">e</span><span class="o">.</span><span class="n">strerror</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="deleting-directories-tree">
+<h3>Deleting Directories Tree<a class="headerlink" href="#deleting-directories-tree" title="Permalink to this headline">¶</a></h3>
+<p>To delete non-empty directories and entire directory trees, Python offers <code class="docutils literal notranslate"><span class="pre">shutil.rmtree()</span></code>:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">shutil</span>
+
+<span class="n">trash_dir</span> <span class="o">=</span>  <span class="s1">&#39;D:</span><span class="se">\\</span><span class="s1">tmp</span><span class="se">\\</span><span class="s1">&#39;</span>
+
+<span class="k">try</span><span class="p">:</span>
+    <span class="n">shutil</span><span class="o">.</span><span class="n">rmtree</span><span class="p">(</span><span class="n">trash_dir</span><span class="p">)</span>
+<span class="k">except</span> <span class="ne">OSError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Error: </span><span class="si">{</span><span class="n">trash_dir</span><span class="si">}</span><span class="s1"> : </span><span class="si">{</span><span class="n">e</span><span class="o">.</span><span class="n">strerror</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Everything in <code class="docutils literal notranslate"><span class="pre">trash_dir</span></code> is deleted when <code class="docutils literal notranslate"><span class="pre">shutil.rmtree()</span></code> is called on it.</p>
+<div class="section" id="common-delete-functions">
+<h4>Common delete functions<a class="headerlink" href="#common-delete-functions" title="Permalink to this headline">¶</a></h4>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Function</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">os.remove()</span></code></p></td>
+<td><p>Deletes a file and does not delete directories</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">os.unlink()</span></code></p></td>
+<td><p>Is identical to <code class="docutils literal notranslate"><span class="pre">os.remove()</span></code> and deletes a single file</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">pathlib.Path.unlink()</span></code></p></td>
+<td><p>Deletes a file and cannot delete directories</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">os.rmdir()</span></code></p></td>
+<td><p>Deletes an empty directory</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">pathlib.Path.rmdir()</span></code></p></td>
+<td><p>Deletes an empty directory</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">shutil.rmtree()</span></code></p></td>
+<td><p>Deletes entire directory tree and can be used to delete non-empty directories</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="section" id="copying-files-and-directories">
+<h2>Copying Files and Directories<a class="headerlink" href="#copying-files-and-directories" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="copying-files">
+<h3>Copying Files<a class="headerlink" href="#copying-files" title="Permalink to this headline">¶</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">shutil</span></code> offers a couple of functions for copying files. The most commonly used functions are <code class="docutils literal notranslate"><span class="pre">shutil.copy()</span></code> and <code class="docutils literal notranslate"><span class="pre">shutil.copy2()</span></code>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">shutil</span>
+
+<span class="n">src</span> <span class="o">=</span> <span class="s1">&#39;path/to/file.txt&#39;</span>
+<span class="n">dst</span> <span class="o">=</span> <span class="s1">&#39;path/to/dest_dir&#39;</span>
+<span class="n">shutil</span><span class="o">.</span><span class="n">copy</span><span class="p">(</span><span class="n">src</span><span class="p">,</span> <span class="n">dst</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="copying-directories">
+<h3>Copying Directories<a class="headerlink" href="#copying-directories" title="Permalink to this headline">¶</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">shutil.copytree()</span></code> will copy an entire directory and everything contained in it. <code class="docutils literal notranslate"><span class="pre">shutil.copytree(src,</span> <span class="pre">dest)</span></code> takes two arguments: a source directory and the destination directory where files and folders will be copied to.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">shutil</span>
+<span class="n">shutil</span><span class="o">.</span><span class="n">copytree</span><span class="p">(</span><span class="s1">&#39;data_1&#39;</span><span class="p">,</span> <span class="s1">&#39;data1_backup&#39;</span><span class="p">)</span>
+
+<span class="c1"># &#39;data1_backup&#39;</span>
+</pre></div>
+</div>
+<p>In this example, <code class="docutils literal notranslate"><span class="pre">.copytree()</span></code> copies the contents of <code class="docutils literal notranslate"><span class="pre">data_1</span></code> to a new location <code class="docutils literal notranslate"><span class="pre">data1_backup</span></code> and returns the destination directory. The destination directory must not already exist. It will be created as well as missing parent directories. <code class="docutils literal notranslate"><span class="pre">shutil.copytree()</span></code> is a good way to back up your files.</p>
+</div>
+</div>
+<div class="section" id="moving-files-and-directories">
+<h2>Moving Files and Directories<a class="headerlink" href="#moving-files-and-directories" title="Permalink to this headline">¶</a></h2>
+<p>o move a file or directory to another location, use <code class="docutils literal notranslate"><span class="pre">shutil.move(src,</span> <span class="pre">dst)</span></code>.</p>
+<p><code class="docutils literal notranslate"><span class="pre">src</span></code> is the file or directory to be moved and <code class="docutils literal notranslate"><span class="pre">dst</span></code> is the destination:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">shutil</span>
+<span class="n">shutil</span><span class="o">.</span><span class="n">move</span><span class="p">(</span><span class="s1">&#39;dir_1/&#39;</span><span class="p">,</span> <span class="s1">&#39;backup/&#39;</span><span class="p">)</span>
+
+<span class="c1"># &#39;backup&#39;</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">shutil.move('dir_1/',</span> <span class="pre">'backup/')</span></code> moves <code class="docutils literal notranslate"><span class="pre">dir_1/</span></code> into <code class="docutils literal notranslate"><span class="pre">backup/</span></code> if <code class="docutils literal notranslate"><span class="pre">backup/</span></code> exists. If <code class="docutils literal notranslate"><span class="pre">backup/</span></code> does not exist, <code class="docutils literal notranslate"><span class="pre">dir_1/</span></code> will be renamed to <code class="docutils literal notranslate"><span class="pre">backup</span></code>.</p>
+</div>
+<div class="section" id="renaming-files-and-directories">
+<h2>Renaming Files and Directories<a class="headerlink" href="#renaming-files-and-directories" title="Permalink to this headline">¶</a></h2>
+<p>Python includes <code class="docutils literal notranslate"><span class="pre">os.rename(src,</span> <span class="pre">dst)</span></code> for renaming files and directories:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">os</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="s1">&#39;first.zip&#39;</span><span class="p">,</span> <span class="s1">&#39;first_01.zip&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>The line above will rename <code class="docutils literal notranslate"><span class="pre">first.zip</span></code> to <code class="docutils literal notranslate"><span class="pre">first_01.zip</span></code>. If the destination path points to a directory, it will raise an <code class="docutils literal notranslate"><span class="pre">OSError</span></code>.</p>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./automate/_todo"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Sajal N. Shrestha<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    <script src="../../_static/js/index.js"></script>
+    
+  </body>
+</html>

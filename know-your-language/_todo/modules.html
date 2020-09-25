@@ -1,0 +1,602 @@
+
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Modules</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
+    <link href="../../_static/css/index.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../_static/sphinx-book-theme.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/language_data.js"></script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/sphinx-book-theme.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="docsearch:language" content="en">
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../../index.html">
+  
+  <img src="../../_static/logo.png" class="logo" alt="logo">
+  
+  
+</a>
+</div>
+
+<form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../intro.html">
+   Python End-2-End RoadMap
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Know Your Language
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../q-%26-a/README.html">
+   A Q&amp;A Session
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../before-we-begin/README.html">
+   Before We Begin
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../apply-primer/README.html">
+   Applying Primer
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../apply-primer/README.html#strings">
+   Strings
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../apply-primer/README.html#lists">
+   Lists
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Apply Python in Real Life
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../automate/regular-expressions/README.html">
+   Regular Expressions
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Web and Beyond
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../web-and-beyond/README.html">
+   To Web and Beyond
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Rest time
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../rest-time/README.html">
+   Rest Time
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Master Your Language
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../master-your-language/README.html">
+   Master your language
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Miscellaneous
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../miscellaneous/docker/README.html">
+   Docker
+  </a>
+ </li>
+</ul>
+
+</nav>
+
+ <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Compiled by <a href="mailto:sajalshres@gmail.com">Sajal Shrestha</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        <div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../_sources/know-your-language/_todo/modules.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+    
+</div>
+        <!-- Source interaction buttons -->
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#modules-in-detail">
+   Modules in detail
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#different-variants-of-import">
+   Different variants of
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     import
+    </span>
+   </code>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#module-s-name">
+   Module’s
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     __name__
+    </span>
+   </code>
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#example">
+     Example:
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#another-example">
+     Another example:
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#module-search-pattern">
+   Module Search Pattern
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#pyc-files">
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     .pyc
+    </span>
+   </code>
+   Files
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#dir-function">
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     dir()
+    </span>
+   </code>
+   function
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#packages">
+   Packages
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#example-of-structuring-your-package">
+     Example of structuring your package
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#intra-package-imports">
+     Intra-package imports
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#absolute-imports">
+       Absolute Imports
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#relative-imports">
+       Relative Imports
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+        </nav>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="modules">
+<h1>Modules<a class="headerlink" href="#modules" title="Permalink to this headline">¶</a></h1>
+<p>Quiting the Python interpreter and entering it again, will make all your pogress like variables, functions etc lost. For longer program, it is better off writing the program using a text editor and running from a file instead. This process is creating a script.</p>
+<p>As your program gets longer, splitting them over a file make more sense for easier maintenance. You may also want to use the program in the file into several programs without cloning its definiton.</p>
+<p>A module is basically a file containing all your variables, functions, definitions etc. The file name is the module name with suffix <code class="docutils literal notranslate"><span class="pre">.py</span></code> appended. Within a module, the module’s name is vailable as the value of the global variable <code class="docutils literal notranslate"><span class="pre">__name__</span></code>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># fibo.py</span>
+<span class="c1"># Fibonacci module</span>
+
+<span class="k">def</span> <span class="nf">fib</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span>
+    <span class="k">while</span> <span class="n">a</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">:</span>
+        <span class="n">result</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+        <span class="n">a</span><span class="p">,</span><span class="n">b</span> <span class="o">=</span> <span class="n">b</span><span class="p">,</span> <span class="n">a</span><span class="o">+</span><span class="n">b</span>
+    <span class="k">return</span> <span class="n">result</span>
+</pre></div>
+</div>
+<p>We can import the above module with following statement:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Import fibo module</span>
+<span class="kn">import</span> <span class="nn">fibo</span>
+
+<span class="n">number</span> <span class="o">=</span> <span class="mi">100</span>
+<span class="n">fibo</span><span class="o">.</span><span class="n">fib</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="section" id="modules-in-detail">
+<h2>Modules in detail<a class="headerlink" href="#modules-in-detail" title="Permalink to this headline">¶</a></h2>
+<p>A module can contain executable statements as well as function definitions.  They are executed only the first time the module name is encountered in an import statement.</p>
+<p>Each module has its own private symbol table, which is used as the global symbol table by all functions defined in the module. Thus, the author of a module can use global variables in the module without worrying about accidental clashes with a user’s global variables. On the other hand, if you know what you are doing you can touch a module’s global variables with the same notation used to refer to its functions, <code class="docutils literal notranslate"><span class="pre">module.item_name</span></code>.</p>
+<p>Modules can import other modules. It is customary but not required to place all <code class="docutils literal notranslate"><span class="pre">import</span></code> statements at the beginning of a module (or script, for that matter).</p>
+</div>
+<div class="section" id="different-variants-of-import">
+<h2>Different variants of <code class="docutils literal notranslate"><span class="pre">import</span></code><a class="headerlink" href="#different-variants-of-import" title="Permalink to this headline">¶</a></h2>
+<p>Import names from a module directly into importing module’s symbol table.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">module_a</span> <span class="kn">import</span> <span class="n">a</span>
+<span class="kn">from</span> <span class="nn">module_all</span> <span class="kn">import</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span>
+</pre></div>
+</div>
+<p>Import all names defined in the module:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">module</span> <span class="kn">import</span> <span class="o">*</span>
+</pre></div>
+</div>
+<p>In general, practice of importing <code class="docutils literal notranslate"><span class="pre">*</span></code> from a module is not a good idea, as it often causes poorly readable code. You can import with <code class="docutils literal notranslate"><span class="pre">*</span></code> when in interpreter or interactive mode.</p>
+<p>Import using <code class="docutils literal notranslate"><span class="pre">as</span></code> will bound the module name directly to the imported module.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">atul</span> <span class="k">as</span> <span class="nn">hade</span>
+
+<span class="n">hade</span><span class="o">.</span><span class="n">make_tea</span><span class="p">(</span><span class="s1">&#39;milk&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Import using <code class="docutils literal notranslate"><span class="pre">as</span></code> and <code class="docutils literal notranslate"><span class="pre">from</span></code></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">python_class</span> <span class="kn">import</span> <span class="n">prashant</span> <span class="k">as</span> <span class="n">pau</span>
+
+<span class="n">pau</span><span class="o">.</span><span class="n">make_a_joke</span><span class="p">(</span><span class="s1">&#39;sacred_games&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Modules are imported only once, if the changes are to be reflected, You must restart the interpreter. If you are testing a module, you can use <code class="docutils literal notranslate"><span class="pre">importlib.reload()</span></code> to reload the module.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">importlib</span>
+<span class="kn">from</span> <span class="nn">python_class</span> <span class="kn">import</span> <span class="n">shilpa</span> <span class="k">as</span> <span class="n">santa</span>
+
+<span class="n">importlib</span><span class="o">.</span><span class="n">reload</span><span class="p">(</span><span class="n">santa</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="module-s-name">
+<h2>Module’s <code class="docutils literal notranslate"><span class="pre">__name__</span></code><a class="headerlink" href="#module-s-name" title="Permalink to this headline">¶</a></h2>
+<p>Each module has a name and the statements in a module can access the name of the module.</p>
+<p>It is useful when a module is imported first time, the main block in that module is run. When we want to run the block only when module was run by itself and not while it was imported from another module.</p>
+<div class="section" id="example">
+<h3>Example:<a class="headerlink" href="#example" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># name.py</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The module is being run by itself&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The module is being imported from another module&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Output:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ python name.py
+The module is being run by itself
+$ python
+&gt;&gt;&gt; import name
+The module is being imported from another module
+</pre></div>
+</div>
+</div>
+<div class="section" id="another-example">
+<h3>Another example:<a class="headerlink" href="#another-example" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># fibo.py</span>
+<span class="c1"># Fibonacci module</span>
+
+<span class="k">def</span> <span class="nf">fib</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span>
+    <span class="k">while</span> <span class="n">a</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">:</span>
+        <span class="n">result</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+        <span class="n">a</span><span class="p">,</span><span class="n">b</span> <span class="o">=</span> <span class="n">b</span><span class="p">,</span> <span class="n">a</span><span class="o">+</span><span class="n">b</span>
+    <span class="k">return</span> <span class="n">result</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+	<span class="kn">import</span> <span class="nn">sys</span>
+    <span class="n">fib</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">]))</span>
+</pre></div>
+</div>
+<p>Output:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Run module by itself</span>
+$ python fibo.py <span class="m">50</span>
+<span class="m">0</span> <span class="m">1</span> <span class="m">1</span> <span class="m">2</span> <span class="m">3</span> <span class="m">5</span> <span class="m">8</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Import module</span>
+<span class="kn">from</span> <span class="nn">fibo</span> <span class="kn">import</span> <span class="n">fib</span>
+
+<span class="n">number</span> <span class="o">=</span> <span class="mi">50</span>
+<span class="n">fib</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="module-search-pattern">
+<h2>Module Search Pattern<a class="headerlink" href="#module-search-pattern" title="Permalink to this headline">¶</a></h2>
+<p>Whenever a module is imported, the interpreter first searches for a build-in module with that name. After that, it searches for a file named <code class="docutils literal notranslate"><span class="pre">module_name.py</span></code> in a list of directories given by <code class="docutils literal notranslate"><span class="pre">sys.path</span></code>.</p>
+<p><code class="docutils literal notranslate"><span class="pre">sys.path</span></code> is initialized from these location:</p>
+<ul class="simple">
+<li><p>Directory containing script or current directory when no file is specified</p></li>
+<li><p>PYTHONPATH (a list of directory names, with the same syntax as the shell variable <code class="docutils literal notranslate"><span class="pre">PATH</span></code>)</p></li>
+<li><p>The installation-dependent default.</p></li>
+</ul>
+</div>
+<div class="section" id="pyc-files">
+<h2><code class="docutils literal notranslate"><span class="pre">.pyc</span></code> Files<a class="headerlink" href="#pyc-files" title="Permalink to this headline">¶</a></h2>
+<p>To speed up loading modules, Python caches the compiled version of each module in the <code class="docutils literal notranslate"><span class="pre">__pycache__</span></code> directory under the name <code class="docutils literal notranslate"><span class="pre">module.*version*.pyc</span></code>, where the version encodes the format of the compiled file; it generally contains the Python version number. For example, in CPython release 3.3 the compiled version of spam.py would be cached as <code class="docutils literal notranslate"><span class="pre">__pycache__/spam.cpython-33.pyc</span></code>. This naming convention allows compiled modules from different releases and different versions of Python to coexist.</p>
+<p>Python checks the modification date of the source against the compiled version to see if it’s out of date and needs to be recompiled. This is a completely automatic process. Also, the compiled modules are platform-independent, so the same library can be shared among systems with different architectures.</p>
+</div>
+<div class="section" id="dir-function">
+<h2><code class="docutils literal notranslate"><span class="pre">dir()</span></code> function<a class="headerlink" href="#dir-function" title="Permalink to this headline">¶</a></h2>
+<p>The built-in function <code class="docutils literal notranslate"><span class="pre">dir()</span></code> is used to find out which names a module defines. It returns a sorted list of strings:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">fibo</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">dir</span><span class="p">(</span><span class="n">fibo</span><span class="p">)</span>
+<span class="go">[&#39;__name__&#39;, &#39;fib&#39;]</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="packages">
+<h2>Packages<a class="headerlink" href="#packages" title="Permalink to this headline">¶</a></h2>
+<p>Packages are way of structuring module namespace by using “dotted module names”. For example, the module name <code class="docutils literal notranslate"><span class="pre">A.B</span></code> designates a submodule named <code class="docutils literal notranslate"><span class="pre">B</span></code> in a package named <code class="docutils literal notranslate"><span class="pre">A</span></code></p>
+<p>Just like the use of modules saves the authors of different modules from having to worry about each other’s global variable names, the use of dotted module names saves the authors of multi-module packages like NumPy or Pillow from having to worry about each other’s module names.</p>
+<div class="section" id="example-of-structuring-your-package">
+<h3>Example of structuring your package<a class="headerlink" href="#example-of-structuring-your-package" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">sor_project</span><span class="o">/</span>			<span class="c1"># Top-level package</span>
+    <span class="fm">__init__</span><span class="o">.</span><span class="n">py</span>			<span class="c1"># Initialize sor-project package</span>
+    <span class="n">sor</span><span class="o">/</span>				<span class="c1"># Subpackage for sor application</span>
+        <span class="fm">__init__</span><span class="o">.</span><span class="n">py</span>
+        <span class="n">models</span><span class="o">.</span><span class="n">py</span>
+        <span class="n">views</span><span class="o">.</span><span class="n">py</span>
+        <span class="n">forms</span><span class="o">.</span><span class="n">py</span>
+        <span class="n">admin</span><span class="o">.</span><span class="n">py</span>
+        <span class="n">urls</span><span class="o">.</span><span class="n">py</span>
+    <span class="n">api</span><span class="o">/</span>				<span class="c1"># Subpackage for api application</span>
+        <span class="fm">__init__</span><span class="o">.</span><span class="n">py</span>
+        <span class="n">serializers</span><span class="o">.</span><span class="n">py</span>
+        <span class="n">views</span><span class="o">.</span><span class="n">py</span>
+        <span class="n">models</span><span class="o">.</span><span class="n">py</span>
+        <span class="n">urls</span><span class="o">.</span><span class="n">py</span>
+    <span class="n">settings</span><span class="o">/</span>			<span class="c1"># Subpackage for settings</span>
+        <span class="fm">__init__</span><span class="o">.</span><span class="n">py</span>
+        <span class="n">settings</span><span class="o">.</span><span class="n">py</span>
+    <span class="n">manage</span><span class="o">.</span><span class="n">py</span>
+</pre></div>
+</div>
+<p>The <code class="docutils literal notranslate"><span class="pre">__init__.py</span></code> files are required to make Python treat directories containing the file as packages. This prevents directories with a common name, such as <code class="docutils literal notranslate"><span class="pre">string</span></code>, unintentionally hiding valid modules that occur later on the module search path. In the simplest case, <code class="docutils literal notranslate"><span class="pre">__init__.py</span></code> can just be an empty file, but it can also execute initialization code for the package or set the <code class="docutils literal notranslate"><span class="pre">__all__</span></code> variable, described later.</p>
+<p>User of the package can import modules as:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sor_project.sor.views</span>
+
+<span class="n">do_something</span><span class="p">():</span>
+	<span class="n">views</span><span class="o">.</span><span class="n">machine_view</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>Alternative:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sor_project.sor</span> <span class="kn">import</span> <span class="n">views</span>
+
+<span class="n">do_something</span><span class="p">():</span>
+	<span class="n">views</span><span class="o">.</span><span class="n">machine_view</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>Or:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sor_project.sor.views</span> <span class="kn">import</span> <span class="n">machine_view</span>
+
+<span class="n">do_something</span><span class="p">():</span>
+	<span class="n">machine_view</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="intra-package-imports">
+<h3>Intra-package imports<a class="headerlink" href="#intra-package-imports" title="Permalink to this headline">¶</a></h3>
+<p>In subpackage structure, you can use absolute imports or relative imports to refer to submodules of siblings packages</p>
+<div class="section" id="absolute-imports">
+<h4>Absolute Imports<a class="headerlink" href="#absolute-imports" title="Permalink to this headline">¶</a></h4>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># api/urls.py</span>
+<span class="kn">from</span> <span class="nn">sor.views</span> <span class="kn">import</span> <span class="n">machine_vew</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="relative-imports">
+<h4>Relative Imports<a class="headerlink" href="#relative-imports" title="Permalink to this headline">¶</a></h4>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># api/views.py</span>
+<span class="kn">from</span> <span class="nn">.models</span> <span class="kn">import</span> <span class="n">Machine</span>
+<span class="kn">from</span> <span class="nn">..sor.models</span> <span class="kn">import</span> <span class="n">Server</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./know-your-language/_todo"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Sajal N. Shrestha<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    <script src="../../_static/js/index.js"></script>
+    
+  </body>
+</html>

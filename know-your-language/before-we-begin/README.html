@@ -1,0 +1,824 @@
+
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Before We Begin</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
+    <link href="../../_static/css/index.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../_static/sphinx-book-theme.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/language_data.js"></script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/sphinx-book-theme.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Applying Primer" href="../apply-primer/README.html" />
+    <link rel="prev" title="A Q&amp;A Session" href="../q-%26-a/README.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="docsearch:language" content="en">
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../../index.html">
+  
+  <img src="../../_static/logo.png" class="logo" alt="logo">
+  
+  
+</a>
+</div>
+
+<form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../intro.html">
+   Python End-2-End RoadMap
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Know Your Language
+ </span>
+</p>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../q-%26-a/README.html">
+   A Q&amp;A Session
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Before We Begin
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../apply-primer/README.html">
+   Applying Primer
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../apply-primer/README.html#strings">
+   Strings
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../apply-primer/README.html#lists">
+   Lists
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Apply Python in Real Life
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../automate/regular-expressions/README.html">
+   Regular Expressions
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Web and Beyond
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../web-and-beyond/README.html">
+   To Web and Beyond
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Rest time
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../rest-time/README.html">
+   Rest Time
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Master Your Language
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../master-your-language/README.html">
+   Master your language
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Miscellaneous
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../miscellaneous/docker/README.html">
+   Docker
+  </a>
+ </li>
+</ul>
+
+</nav>
+
+ <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Compiled by <a href="mailto:sajalshres@gmail.com">Sajal Shrestha</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        <div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../_sources/know-your-language/before-we-begin/README.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+    
+</div>
+        <!-- Source interaction buttons -->
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#basic-terminal-command-line">
+   Basic Terminal / Command Line
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#a-little-bit-of-history">
+     A little bit of history
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#the-first-command">
+       The first command
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#the-very-basics">
+       The very basics
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#current-directory">
+       Current directory
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#learn-about-a-command">
+       Learn about a command
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#list-files-and-directories">
+       List files and directories
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#change-current-directory">
+       Change current directory
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#create-directory">
+       Create directory
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#create-a-file">
+       Create a file
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#copy">
+       Copy
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#move">
+       Move
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#remove">
+       Remove
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#redirect-output">
+       Redirect Output
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#grep-search">
+       grep Search
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#pipe-command">
+       Pipe command
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#version-control-git">
+   Version Control - Git
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#three-sections-of-a-git-project">
+     Three sections of a Git Project
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#git-directory">
+       Git directory
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#working-directory-or-tree">
+       Working directory (or tree)
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#staging-area">
+       Staging area
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#configure-your-git-environment">
+     Configure your Git Environment
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#initialize-repositories">
+     Initialize Repositories
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#branches">
+     Branches
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#making-changes">
+     Making Changes
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#synchronize-your-changes">
+     Synchronize your Changes
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#mistakes-that-s-nice">
+     Mistakes - That’s Nice
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#authenticate-with-ssh">
+     Authenticate with SSH
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#check-for-existing-ssh-key">
+       Check for existing SSH Key
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#generate-a-new-ssh-key">
+       Generate a new SSH Key
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#add-ssh-key-to-ssh-agent">
+       Add SSH Key to
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         ssh-agent
+        </span>
+       </code>
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#add-rsa-key-to-remote-system">
+       Add RSA Key to remote system
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#how-the-web-works">
+   How the Web works
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#clients-and-servers">
+     Clients and servers
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#so-how-it-happens">
+     So how it happens?
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+        </nav>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="before-we-begin">
+<h1>Before We Begin<a class="headerlink" href="#before-we-begin" title="Permalink to this headline">¶</a></h1>
+<p>Before we begin, lets address some of the skills that all developers need regardless of their specialization.</p>
+<ul class="simple">
+<li><p>Basic Terminal</p></li>
+<li><p>Version Control - Git or SVN</p></li>
+<li><p>How the Web works</p></li>
+</ul>
+<div class="section" id="basic-terminal-command-line">
+<h2>Basic Terminal / Command Line<a class="headerlink" href="#basic-terminal-command-line" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="a-little-bit-of-history">
+<h3>A little bit of history<a class="headerlink" href="#a-little-bit-of-history" title="Permalink to this headline">¶</a></h3>
+<p>Way back in the 1960s — 70s, computers were becoming more than just calculators. They could save files to disk and have multiple running applications with multiple users. But these things were difficult to control and easy to break. Thankfully, there was a very smart idea to cover all these internal bits in a nice, usable shell.</p>
+<p>These shells have since evolved to be Windows desktop, Mac OS, and all the touchy screeny bits of your phone. Basically all the user interaction stuff. They make your computer easy to use and (reasonably) hard to break.</p>
+<p>But before these shells started looking pretty and graphical, they were just a command line. You would type something in, and you would get a response. They looked like this:</p>
+<p><img alt="Shell" src="know-your-language/before-we-begin/./shell.jpg" /></p>
+<p>This particular shell is called bash which is short for “Bourne Again SHell” because before that there was the “Bourne Shell” by Stephen Bourne. Never let a software engineer name something that will end up lasting.</p>
+<p>There’s a rich history of shells, and these “Unix style” shells began with Unix System 1’s shell in 1969. But even that was influenced by older programs such as RUNCOM. If you’ve ever noticed that some config files end in “rc” (e.g .vimrc), thats why.</p>
+<p>If these shells haven’t changed since the 1960s, then why do developers keep on using them?</p>
+<p><strong>Because</strong> they haven’t really changed since the 60s. Graphical interfaces for your phone or computer fashionably change with every update (with usability improvements), but command line shells don’t. When you are scripting things or dealing with an entire farm of servers, you really don’t want your (user) interface to change, as it will break your scripts.</p>
+<div class="section" id="the-first-command">
+<h4>The first command<a class="headerlink" href="#the-first-command" title="Permalink to this headline">¶</a></h4>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sajalshres@ALIENWARE-15R4:/$ whoami
+sajalshres
+</pre></div>
+</div>
+<div class="highlight-powershell notranslate"><div class="highlight"><pre><span></span>PS C:\Users\Sajal Shrestha&gt; whoami
+alienware-15r4\sajal shrestha
+</pre></div>
+</div>
+</div>
+<div class="section" id="the-very-basics">
+<h4>The very basics<a class="headerlink" href="#the-very-basics" title="Permalink to this headline">¶</a></h4>
+<p>Each operating systems has a slightly different set of commands while some may share the same, some will differ.</p>
+</div>
+<div class="section" id="current-directory">
+<h4>Current directory<a class="headerlink" href="#current-directory" title="Permalink to this headline">¶</a></h4>
+<p><em>Linux:</em></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ <span class="nb">pwd</span>
+</pre></div>
+</div>
+<p><em>PowerShell:</em></p>
+<div class="highlight-powershell notranslate"><div class="highlight"><pre><span></span>PS C:\Users&gt; Get-Location
+</pre></div>
+</div>
+</div>
+<div class="section" id="learn-about-a-command">
+<h4>Learn about a command<a class="headerlink" href="#learn-about-a-command" title="Permalink to this headline">¶</a></h4>
+<p>Many commands you can type at the command prompt have built-in help that you can display and read</p>
+<p><em>Linux:</em></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ man ls
+</pre></div>
+</div>
+<p><em>PowerShell:</em></p>
+<div class="highlight-powershell notranslate"><div class="highlight"><pre><span></span>PS C:\Users&gt; Get-Help Get-Location
+</pre></div>
+</div>
+</div>
+<div class="section" id="list-files-and-directories">
+<h4>List files and directories<a class="headerlink" href="#list-files-and-directories" title="Permalink to this headline">¶</a></h4>
+<p><em>Linux:</em></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ ls
+</pre></div>
+</div>
+<p><em>PowerShell:</em></p>
+<div class="highlight-powershell notranslate"><div class="highlight"><pre><span></span><span class="nb">dir</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="change-current-directory">
+<h4>Change current directory<a class="headerlink" href="#change-current-directory" title="Permalink to this headline">¶</a></h4>
+<p><em>Linux:</em></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ <span class="nb">cd</span> /home/
+</pre></div>
+</div>
+<p><em>PowerShell:</em></p>
+<div class="highlight-powershell notranslate"><div class="highlight"><pre><span></span>cd c:\Users
+</pre></div>
+</div>
+</div>
+<div class="section" id="create-directory">
+<h4>Create directory<a class="headerlink" href="#create-directory" title="Permalink to this headline">¶</a></h4>
+<p><em>Linux:</em></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>mkdir python
+</pre></div>
+</div>
+<p><em>PowerShell:</em></p>
+<div class="highlight-powershell notranslate"><div class="highlight"><pre><span></span><span class="n">mkdir</span> <span class="n">python</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="create-a-file">
+<h4>Create a file<a class="headerlink" href="#create-a-file" title="Permalink to this headline">¶</a></h4>
+<p><em>Linux:</em></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ touch python.txt
+</pre></div>
+</div>
+<p><em>PowerShell:</em></p>
+<div class="highlight-powershell notranslate"><div class="highlight"><pre><span></span>PS C:\Users&gt; New-Item -ItemType File -Name python.txt
+</pre></div>
+</div>
+</div>
+<div class="section" id="copy">
+<h4>Copy<a class="headerlink" href="#copy" title="Permalink to this headline">¶</a></h4>
+<p><em>Linux:</em></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ cp python.txt python_copy.txt
+</pre></div>
+</div>
+<p><em>PowerShell:</em></p>
+<div class="highlight-powershell notranslate"><div class="highlight"><pre><span></span>PS C:\Users&gt; Copy-Item python.txt python_copy.txt
+</pre></div>
+</div>
+</div>
+<div class="section" id="move">
+<h4>Move<a class="headerlink" href="#move" title="Permalink to this headline">¶</a></h4>
+<p><em>Linux:</em></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ mv python.txt python_practice/
+</pre></div>
+</div>
+<p><em>PowerShell:</em></p>
+<div class="highlight-powershell notranslate"><div class="highlight"><pre><span></span>PS C:\Users&gt; Move-Item python.txt python_practice\
+</pre></div>
+</div>
+</div>
+<div class="section" id="remove">
+<h4>Remove<a class="headerlink" href="#remove" title="Permalink to this headline">¶</a></h4>
+<p><em>Linux:</em></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ rm python.txt
+$ rm -r python_practice
+</pre></div>
+</div>
+<p><em>PowerShell:</em></p>
+<div class="highlight-powershell notranslate"><div class="highlight"><pre><span></span>PS C:\Users&gt; Remove-Item python.txt
+PS C:\Users&gt; Remove-Item python_practice -Recurse
+</pre></div>
+</div>
+</div>
+<div class="section" id="redirect-output">
+<h4>Redirect Output<a class="headerlink" href="#redirect-output" title="Permalink to this headline">¶</a></h4>
+<p><em>Linux:</em></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ ls &gt; list_directory.txt
+$ ls &gt;&gt; list_directory.txt <span class="c1"># Append</span>
+</pre></div>
+</div>
+<p><em>PowerShell:</em></p>
+<div class="highlight-powershell notranslate"><div class="highlight"><pre><span></span>PS C:\Users&gt; ls &gt; list_directory.txt
+PS C:\Users&gt; ls &gt;&gt; list_directory.txt # Append
+</pre></div>
+</div>
+</div>
+<div class="section" id="grep-search">
+<h4>grep Search<a class="headerlink" href="#grep-search" title="Permalink to this headline">¶</a></h4>
+<p><em>Linux:</em></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ grep <span class="s1">&#39;pau&#39;</span> names.txt
+</pre></div>
+</div>
+<p><em>PowerShell:</em></p>
+<div class="highlight-powershell notranslate"><div class="highlight"><pre><span></span>PS C:\Users&gt; Select-String -Path names.txt -Pattern &#39;pau&#39;
+</pre></div>
+</div>
+</div>
+<div class="section" id="pipe-command">
+<h4>Pipe command<a class="headerlink" href="#pipe-command" title="Permalink to this headline">¶</a></h4>
+<p>The <code class="docutils literal notranslate"><span class="pre">|</span></code> command is called a <em>pipe</em>. It is used to <em>pipe</em>, or transfer, the standard output from the command on its left into the the standard input of the command on its right.</p>
+<p><em>Linux:</em></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ <span class="nb">echo</span> <span class="s2">&quot;Hello World&quot;</span> <span class="p">|</span> wc -w
+</pre></div>
+</div>
+<p><em>PowerShell:</em></p>
+<div class="highlight-powershell notranslate"><div class="highlight"><pre><span></span>PS C:\Users&gt; Write-Output &quot;Hello World&quot; | Measure-Object -word
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="version-control-git">
+<h2>Version Control - Git<a class="headerlink" href="#version-control-git" title="Permalink to this headline">¶</a></h2>
+<p>Version control is a system that keeps track of changes to a file or group of files over time. When you have a history of these changes, it lets you find specific versions later, compare changes between versions, recover files you may have deleted, or revert files to previous versions.</p>
+<p>Git and SVN both are feasible for various workflows and version control systems, But since Git is more popular, it seems like a no-brainer for us.</p>
+<div class="section" id="three-sections-of-a-git-project">
+<h3>Three sections of a Git Project<a class="headerlink" href="#three-sections-of-a-git-project" title="Permalink to this headline">¶</a></h3>
+<p>A conventional Git project will have three main sections:</p>
+<ol class="simple">
+<li></li>
+<li></li>
+<li></li>
+</ol>
+<div class="section" id="git-directory">
+<h4>Git directory<a class="headerlink" href="#git-directory" title="Permalink to this headline">¶</a></h4>
+<p>Located in project-path/.git/ is where Git stores everything to tack in-and-outs of project including metadata, object databases, versions of project files.</p>
+</div>
+<div class="section" id="working-directory-or-tree">
+<h4>Working directory (or tree)<a class="headerlink" href="#working-directory-or-tree" title="Permalink to this headline">¶</a></h4>
+<p>It is the place where a user makes local changes to project. This directory pulls the project files from Git directory’s object database and place them on the working directory.</p>
+</div>
+<div class="section" id="staging-area">
+<h4>Staging area<a class="headerlink" href="#staging-area" title="Permalink to this headline">¶</a></h4>
+<p>Sometimes also called as index, stage, or cache, this is a file that stores information about what will go into your upcoming commit. A commit tells Git to save the stage changes.</p>
+<p>Git will take a snapshot of the files and permanently store them in the Git directory.</p>
+</div>
+<p>Each file in a Git project will maintain following states:</p>
+<ol class="simple">
+<li><p>Committed</p></li>
+<li><p>Modified</p></li>
+<li><p>Staged</p></li>
+</ol>
+</div>
+<div class="section" id="configure-your-git-environment">
+<h3>Configure your Git Environment<a class="headerlink" href="#configure-your-git-environment" title="Permalink to this headline">¶</a></h3>
+<p>git config command will allow us to customize your Git environment. Configuration is stored at three levels:</p>
+<ol class="simple">
+<li><p>System (<code class="docutils literal notranslate"><span class="pre">--system</span></code>)</p></li>
+<li><p>User (<code class="docutils literal notranslate"><span class="pre">--global</span></code>)</p></li>
+<li><p>Project (<code class="docutils literal notranslate"><span class="pre">--local</span></code>)</p></li>
+</ol>
+<p><code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">git</span> <span class="pre">config</span> <span class="pre">--global</span> <span class="pre">user.name</span> <span class="pre">&quot;SajalShres&quot;</span> </code>: Update the user’s name</p>
+<p><code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">git</span> <span class="pre">config</span> <span class="pre">--global</span> <span class="pre">user.email</span> <span class="pre">&quot;sajal.shres&#64;gmail.com&quot;</span></code> : Update user’s email</p>
+</div>
+<div class="section" id="initialize-repositories">
+<h3>Initialize Repositories<a class="headerlink" href="#initialize-repositories" title="Permalink to this headline">¶</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">git</span> <span class="pre">clone</span></code> : Make existing directory into a Git project</p>
+<p><code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">git</span> <span class="pre">clone</span> <span class="pre">[URL</span> <span class="pre">or</span> <span class="pre">SSH]</span></code> : Clone or download a repository that already existing in a remote location.</p>
+</div>
+<div class="section" id="branches">
+<h3>Branches<a class="headerlink" href="#branches" title="Permalink to this headline">¶</a></h3>
+<p>Any commits you make will be made on the branch you’re currently “checked out” to.</p>
+<p><code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">git</span> <span class="pre">status</span></code> : Check status of your local changes and branch</p>
+<p><code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">git</span> <span class="pre">branch</span> <span class="pre">[branch-name]</span></code> : Create new branch <code class="docutils literal notranslate"><span class="pre">branch-name</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">git</span> <span class="pre">checkout</span> <span class="pre">[branch-name]</span></code> : Switch to a <code class="docutils literal notranslate"><span class="pre">branch-name</span></code> and update working directory.</p>
+<p><code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">git</span> <span class="pre">merge</span> <span class="pre">[branch-name]</span></code> : Combine <code class="docutils literal notranslate"><span class="pre">branch-name</span></code> history into current branch. This is usually done in pull requests.</p>
+<p><code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">git</span> <span class="pre">branch</span> <span class="pre">-d</span> <span class="pre">[branch-name]</span></code> : Delete the <code class="docutils literal notranslate"><span class="pre">branch-name</span></code> branch</p>
+</div>
+<div class="section" id="making-changes">
+<h3>Making Changes<a class="headerlink" href="#making-changes" title="Permalink to this headline">¶</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">git</span> <span class="pre">add</span> <span class="pre">[file..s]</span></code> : Stage (Snapshots) the changed files.</p>
+<p><code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">git</span> <span class="pre">commit</span> <span class="pre">-m</span> <span class="pre">&quot;[message]&quot;</span></code> : Take a snapshot of staged files.</p>
+<p><code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">git</span> <span class="pre">log</span></code> : Lists version history for the current branch</p>
+<p><code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">git</span> <span class="pre">log</span> <span class="pre">--follow</span> <span class="pre">[file]</span></code> : Lists version history for a file, including renames</p>
+<p><code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">git</span> <span class="pre">diff</span> <span class="pre">[source-branch]</span> <span class="pre">[target-branch]</span></code> : Shows content differences between two branches</p>
+<p><code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">git</span> <span class="pre">show</span> <span class="pre">[commit]</span></code> : Outputs metadata and content changes of the specified commit</p>
+</div>
+<div class="section" id="synchronize-your-changes">
+<h3>Synchronize your Changes<a class="headerlink" href="#synchronize-your-changes" title="Permalink to this headline">¶</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">git</span> <span class="pre">fetch</span></code> : Get history from the remote branches</p>
+<p><code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">git</span> <span class="pre">merge</span></code> : Combines remote tracking branches into current local branch</p>
+<p><code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">git</span> <span class="pre">push</span></code> : Uploads all local branch commits to remote repository</p>
+<p><code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">git</span> <span class="pre">pull</span></code> :  Updates your current local working branch with all new commits from the corresponding remote branch. (Combination of <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">fetch</span></code> and <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">merge</span></code>)</p>
+</div>
+<div class="section" id="mistakes-that-s-nice">
+<h3>Mistakes - That’s Nice<a class="headerlink" href="#mistakes-that-s-nice" title="Permalink to this headline">¶</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">git</span> <span class="pre">reset</span> <span class="pre">[commit]</span></code> : Undoes all commits after <code class="docutils literal notranslate"><span class="pre">[commit]</span></code>, preserving changes locally</p>
+<p><code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">git</span> <span class="pre">reset</span> <span class="pre">--hard</span> <span class="pre">[commit]</span></code> : Discards all history and changes back to the specified commit</p>
+<blockquote>
+<div><p><em>Warning:</em> Changing history can have have hazardous effect.</p>
+</div></blockquote>
+</div>
+<div class="section" id="authenticate-with-ssh">
+<h3>Authenticate with SSH<a class="headerlink" href="#authenticate-with-ssh" title="Permalink to this headline">¶</a></h3>
+<ol class="simple">
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+</ol>
+<div class="section" id="check-for-existing-ssh-key">
+<h4>Check for existing SSH Key<a class="headerlink" href="#check-for-existing-ssh-key" title="Permalink to this headline">¶</a></h4>
+<ol>
+<li><p>Check that there are no <code class="docutils literal notranslate"><span class="pre">rsa</span></code> files here before continuing</p>
+<p><code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">ls</span> <span class="pre">-al</span> <span class="pre">~/.ssh</span></code></p>
+</li>
+<li><p>Create <code class="docutils literal notranslate"><span class="pre">.ssh</span></code> directory if it doesn’t exists</p>
+<p><code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">mkdir</span> <span class="pre">$HOME/.ssh</span></code></p>
+</li>
+</ol>
+</div>
+<div class="section" id="generate-a-new-ssh-key">
+<h4>Generate a new SSH Key<a class="headerlink" href="#generate-a-new-ssh-key" title="Permalink to this headline">¶</a></h4>
+<p><code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">ssh-keygen</span> <span class="pre">-t</span> <span class="pre">rsa</span> <span class="pre">-b</span> <span class="pre">4096</span> <span class="pre">-C</span> <span class="pre">&quot;your_email&#64;example.com&quot;</span></code></p>
+</div>
+<div class="section" id="add-ssh-key-to-ssh-agent">
+<h4>Add SSH Key to <code class="docutils literal notranslate"><span class="pre">ssh-agent</span></code><a class="headerlink" href="#add-ssh-key-to-ssh-agent" title="Permalink to this headline">¶</a></h4>
+<p><code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">eval</span> <span class="pre">$(ssh-agent</span> <span class="pre">-s)</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">ssh-add</span> <span class="pre">~/.ssh/id_rsa</span></code></p>
+</div>
+<div class="section" id="add-rsa-key-to-remote-system">
+<h4>Add RSA Key to remote system<a class="headerlink" href="#add-rsa-key-to-remote-system" title="Permalink to this headline">¶</a></h4>
+<ol class="simple">
+<li><p>Copy the RSA Key to clipboard</p></li>
+<li><p>Paste it to remote system</p></li>
+</ol>
+</div>
+</div>
+</div>
+<div class="section" id="how-the-web-works">
+<h2>How the Web works<a class="headerlink" href="#how-the-web-works" title="Permalink to this headline">¶</a></h2>
+<p><em>How the web works</em> provides a simplified view of what happens when you view a webpage in a web browser on your computer or phone.</p>
+<p>This theory is not essential to writing web code in the short term, but before long you’ll really start to benefit from understanding what’s happening in the background.</p>
+<div class="section" id="clients-and-servers">
+<h3>Clients and servers<a class="headerlink" href="#clients-and-servers" title="Permalink to this headline">¶</a></h3>
+<p>Computers connected to the web are called <strong>clients</strong> and <strong>servers</strong>. A simplified diagram of how they interact might look like this:</p>
+<p><img alt="Client-server" src="know-your-language/before-we-begin/./Client-server.jpg" /></p>
+<ul class="simple">
+<li><p><strong>Clients</strong> are the typical web user’s internet-connected devices (for example, your computer connected to your Wi-Fi, or your phone connected to your mobile network) and web-accessing software available on those devices (usually a web browser like Firefox or Chrome).</p></li>
+<li><p><strong>Servers</strong> are computers that store webpages, sites, or apps. When a client device wants to access a webpage, a copy of the webpage is downloaded from the server onto the client machine to be displayed in the user’s web browser.</p></li>
+</ul>
+<p>In addition,</p>
+<ul class="simple">
+<li><p><strong>Your internet connection</strong>: Allows you to send and receive data on the web.</p></li>
+<li><p><strong>TCP/IP</strong>: Transmission Control Protocol and Internet Protocol are communication protocols that define how data should travel across the web.</p></li>
+<li><p><strong>DNS</strong>: Domain Name Servers are like an address book for websites. When you type a web address in your browser, the browser looks at the DNS to find the website’s real address before it can retrieve the website. The browser needs to find out which server the website lives on, so it can send HTTP messages to the right place.</p></li>
+<li><p><strong>HTTP</strong>: Hypertext Transfer Protocol is an application protocol that defines a language for clients and servers to speak to each other. This is like the language you use to order your goods.</p></li>
+<li><p><strong>Component files:</strong> A website is made up of many different files, which are like the different parts of the goods you buy from the shop. These files come in two main types:</p></li>
+<li><p><strong>Code files</strong>: Websites are built primarily from HTML, CSS, and JavaScript.</p>
+<ul>
+<li><p><strong>Assets</strong>: This is a collective name for all the other stuff that makes up a website, such as images, music, video, Word documents, and PDFs.</p></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="so-how-it-happens">
+<h3>So how it happens?<a class="headerlink" href="#so-how-it-happens" title="Permalink to this headline">¶</a></h3>
+<p>When you type a web address into your browser:</p>
+<ol class="simple">
+<li><p>The browser goes to the DNS server, and finds the real address of the server that the website lives on.</p></li>
+<li><p>The browser sends an HTTP request message to the server, asking it to send a copy of the website to the client. This message, and all other data sent between the client and the server, is sent across your internet connection using TCP/IP.</p></li>
+<li><p>If the server approves the client’s request, the server sends the client a “200 OK” message, which means “Of course you can look at that website! Here it is”, and then starts sending the website’s files to the browser as a series of small chunks called data packets.</p></li>
+<li><p>The browser assembles the small chunks into a complete website and displays it to you.</p></li>
+</ol>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./know-your-language/before-we-begin"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="../q-%26-a/README.html" title="previous page">A Q&amp;A Session</a>
+    <a class='right-next' id="next-link" href="../apply-primer/README.html" title="next page">Applying Primer</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Sajal N. Shrestha<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    <script src="../../_static/js/index.js"></script>
+    
+  </body>
+</html>

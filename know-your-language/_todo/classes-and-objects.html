@@ -1,0 +1,1010 @@
+
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Object Oriented Programmingn (OOP)</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
+    <link href="../../_static/css/index.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../_static/sphinx-book-theme.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/language_data.js"></script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/sphinx-book-theme.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="docsearch:language" content="en">
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../../index.html">
+  
+  <img src="../../_static/logo.png" class="logo" alt="logo">
+  
+  
+</a>
+</div>
+
+<form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../intro.html">
+   Python End-2-End RoadMap
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Know Your Language
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../q-%26-a/README.html">
+   A Q&amp;A Session
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../before-we-begin/README.html">
+   Before We Begin
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../apply-primer/README.html">
+   Applying Primer
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../apply-primer/README.html#strings">
+   Strings
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../apply-primer/README.html#lists">
+   Lists
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Apply Python in Real Life
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../automate/regular-expressions/README.html">
+   Regular Expressions
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Web and Beyond
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../web-and-beyond/README.html">
+   To Web and Beyond
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Rest time
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../rest-time/README.html">
+   Rest Time
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Master Your Language
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../master-your-language/README.html">
+   Master your language
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Miscellaneous
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../miscellaneous/docker/README.html">
+   Docker
+  </a>
+ </li>
+</ul>
+
+</nav>
+
+ <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Compiled by <a href="mailto:sajalshres@gmail.com">Sajal Shrestha</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        <div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../_sources/know-your-language/_todo/classes-and-objects.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+    
+</div>
+        <!-- Source interaction buttons -->
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#namespaces-and-scopes">
+   Namespaces and Scopes
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#namespaces">
+   Namespaces
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#types-of-namespace">
+     Types of Namespace
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#examples">
+     Examples:
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#scopes">
+   Scopes
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#types-of-scopes">
+     Types of Scopes
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#example">
+     Example
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#class-in-python">
+   Class in Python
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#object-in-python">
+   Object in Python
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#a-glance-at-classes">
+   A Glance at Classes
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#defining-class">
+     Defining Class
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#instance-attributes">
+     Instance Attributes
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#class-attributes">
+     Class Attributes
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#instantiate-an-object-s-from-a-class">
+     Instantiate an Object(s) from a Class
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#instance-methods">
+     Instance Methods
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#modify-attributes">
+     Modify Attributes
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#inheritance">
+   Inheritance
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#syntax">
+     Syntax:
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#multiple-inheritance">
+     Multiple Inheritance
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id1">
+     Syntax:
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#override">
+     Override
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#isinstance">
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       isinstance()
+      </span>
+     </code>
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#private-variables">
+   Private Variables
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#name-mangling">
+   Name Mangling
+  </a>
+ </li>
+</ul>
+
+        </nav>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="object-oriented-programmingn-oop">
+<h1>Object Oriented Programmingn (OOP)<a class="headerlink" href="#object-oriented-programmingn-oop" title="Permalink to this headline">¶</a></h1>
+<p>Object-oriented Programming, or OOP, is a programming paradigm which provides a means of structuring programs so that properties(attributes) and behaviors(methods) are bundled into individual objects.</p>
+<p>For example, an object could represent a car with properties like name, color, wheels etc. and with behaviors like accelerate, brake, steer etc. An object could also represent a person with properties like name, age, sex, etc and with behaviours like talking, eating, walking, running etc.</p>
+<p>Another common programming paradigm is procedural programming which structures a program like a recipe in that it provides a set of steps, in the form of functions and code blocks, which flow sequentially in order to complete a task.</p>
+<p>The key takeaway is that objects are at the center of the object-oriented programming paradigm, not only representing the data, as in procedural programming, but in the overall structure of the program as well.</p>
+<div class="section" id="namespaces-and-scopes">
+<h2>Namespaces and Scopes<a class="headerlink" href="#namespaces-and-scopes" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="namespaces">
+<h2>Namespaces<a class="headerlink" href="#namespaces" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Is basically a system to make sure that all the names in a program are unique and can be used without any conflict.</p></li>
+<li><p><strong>Interesting fact</strong>: Python implements namespaces as dictionaries</p></li>
+<li><p>There is a name-to-object mapping, with the names as keys and the objects as values.</p></li>
+<li><p>Multiple namespaces can use the same name and map it to a different object.</p></li>
+<li><p><strong>Name:</strong> an unique identifier &amp; <strong>Space:</strong> something related to scope.</p></li>
+</ul>
+<div class="section" id="types-of-namespace">
+<h3>Types of Namespace<a class="headerlink" href="#types-of-namespace" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><strong>Local namespace</strong> includes local names inside a function.</p></li>
+<li><p><strong>Global namespace</strong> includes names from various imported modules that you are using in a project.</p></li>
+<li><p><strong>Built-in namespace</strong> includes built-in functions and built-in exception names.</p></li>
+</ul>
+</div>
+<div class="section" id="examples">
+<h3>Examples:<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># var1 is in the global namespace </span>
+<span class="n">var1</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="k">def</span> <span class="nf">some_func</span><span class="p">():</span> 
+    <span class="c1"># var2 is in the local namespace </span>
+    <span class="n">var2</span> <span class="o">=</span> <span class="mi">6</span>
+    <span class="k">def</span> <span class="nf">some_inner_func</span><span class="p">():</span> 
+        <span class="c1"># var3 is in the nested local </span>
+        <span class="c1"># namespace </span>
+        <span class="n">var3</span> <span class="o">=</span> <span class="mi">7</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">num_of_people</span> <span class="o">=</span> <span class="mi">5</span>
+
+<span class="k">def</span> <span class="nf">add_people</span><span class="p">():</span> 
+    <span class="k">global</span> <span class="n">num_of_people</span> 
+    <span class="n">num_of_people</span> <span class="o">=</span> <span class="n">num_of_people</span> <span class="o">+</span> <span class="mi">1</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">num_of_people</span><span class="p">)</span> 
+
+<span class="n">add_people</span><span class="p">()</span>
+</pre></div>
+</div>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>6
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="scopes">
+<h2>Scopes<a class="headerlink" href="#scopes" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Namespace uniquely identifies names in a program, but it does’t allow us to use a variable anywhere we want.</p></li>
+<li><p>Scopes are region where a Python’s object are accessible without any prefix.</p></li>
+</ul>
+<div class="section" id="types-of-scopes">
+<h3>Types of Scopes<a class="headerlink" href="#types-of-scopes" title="Permalink to this headline">¶</a></h3>
+<p>During execution of a program, following scope exists:</p>
+<ul class="simple">
+<li><p><strong>innermost scope</strong>, which is searched first, contains the local names</p></li>
+<li><p><strong>scopes of any enclosing functions</strong>, which are searched starting with the nearest enclosing scope, contains non-local, but also non-global names</p></li>
+<li><p><strong>next-to-last scope</strong> contains the current module’s global names</p></li>
+<li><p><strong>outermost scope</strong> (searched last) is the namespace containing built-in names</p></li>
+</ul>
+</div>
+<div class="section" id="example">
+<h3>Example<a class="headerlink" href="#example" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">some_func</span><span class="p">():</span> 
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Inside some_func&quot;</span><span class="p">)</span> 
+    <span class="k">def</span> <span class="nf">some_inner_func</span><span class="p">():</span> 
+        <span class="n">var</span> <span class="o">=</span> <span class="mi">10</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Inside inner function, value of var:&quot;</span><span class="p">,</span><span class="n">var</span><span class="p">)</span> 
+    <span class="n">some_inner_func</span><span class="p">()</span> 
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Try printing var from outer function: &quot;</span><span class="p">,</span><span class="n">var</span><span class="p">)</span> 
+<span class="n">some_func</span><span class="p">()</span>
+</pre></div>
+</div>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Inside some_func
+Inside inner function, value of var: 10
+
+
+
+---------------------------------------------------------------------------
+
+NameError                                 Traceback (most recent call last)
+
+&lt;ipython-input-16-5fc192decd15&gt; in &lt;module&gt;
+      6     some_inner_func()
+      7     print(&quot;Try printing var from outer function: &quot;,var)
+----&gt; 8 some_func()
+
+
+&lt;ipython-input-16-5fc192decd15&gt; in some_func()
+      5         print(&quot;Inside inner function, value of var:&quot;,var)
+      6     some_inner_func()
+----&gt; 7     print(&quot;Try printing var from outer function: &quot;,var)
+      8 some_func()
+
+
+NameError: name &#39;var&#39; is not defined
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">a_num</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="n">b_num</span> <span class="o">=</span> <span class="mi">11</span>
+ 
+<span class="k">def</span> <span class="nf">outer_func</span><span class="p">():</span>
+    <span class="k">global</span> <span class="n">a_num</span>
+    <span class="n">a_num</span> <span class="o">=</span> <span class="mi">15</span>
+    <span class="n">b_num</span> <span class="o">=</span> <span class="mi">16</span>
+    <span class="k">def</span> <span class="nf">inner_func</span><span class="p">():</span>
+        <span class="k">global</span> <span class="n">a_num</span>
+        <span class="n">a_num</span> <span class="o">=</span> <span class="mi">20</span>
+        <span class="n">b_num</span> <span class="o">=</span> <span class="mi">21</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;a_num inside inner_func :&#39;</span><span class="p">,</span> <span class="n">a_num</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;b_num inside inner_func :&#39;</span><span class="p">,</span> <span class="n">b_num</span><span class="p">)</span>
+    <span class="n">inner_func</span><span class="p">()</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;a_num inside outer_func :&#39;</span><span class="p">,</span> <span class="n">a_num</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;b_num inside outer_func :&#39;</span><span class="p">,</span> <span class="n">b_num</span><span class="p">)</span>
+     
+<span class="n">outer_func</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;a_num outside all functions :&#39;</span><span class="p">,</span> <span class="n">a_num</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;b_num outside all functions :&#39;</span><span class="p">,</span> <span class="n">b_num</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>a_num inside inner_func : 20
+b_num inside inner_func : 21
+a_num inside outer_func : 20
+b_num inside outer_func : 16
+a_num outside all functions : 20
+b_num outside all functions : 11
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="class-in-python">
+<h2>Class in Python<a class="headerlink" href="#class-in-python" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>User-defined data structure used to define arbitrary information about something.</p></li>
+<li><p>For example, a <code class="docutils literal notranslate"><span class="pre">Car()</span></code> class can have properties like name, type etc.</p></li>
+<li><p><strong>Note:</strong> Class is just like a blueprint, it doesn’t hold any state.</p></li>
+</ul>
+</div>
+<div class="section" id="object-in-python">
+<h2>Object in Python<a class="headerlink" href="#object-in-python" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>While class is a blueprint, an Object (Instance) is a copy of class with real values.</p></li>
+<li><p>Its like a Car with real name ‘i20’ and model ‘2019’</p></li>
+</ul>
+</div>
+<div class="section" id="a-glance-at-classes">
+<h2>A Glance at Classes<a class="headerlink" href="#a-glance-at-classes" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="defining-class">
+<h3>Defining Class<a class="headerlink" href="#defining-class" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">ClassName</span><span class="p">:</span>
+    <span class="o">&lt;</span><span class="n">statement</span><span class="o">-</span><span class="mi">1</span><span class="o">&gt;</span>
+    <span class="o">.</span>
+    <span class="o">.</span>
+    <span class="o">.</span>
+    <span class="o">&lt;</span><span class="n">statement</span><span class="o">-</span><span class="n">N</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">PythonClass</span><span class="p">:</span>
+    <span class="k">pass</span> <span class="c1"># pass is like a place holder where the code will enventually be written.</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="instance-attributes">
+<h3>Instance Attributes<a class="headerlink" href="#instance-attributes" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>All classes create objects, and all objects contain characteristics called attributes (sometimes referred to as properties)</p></li>
+<li><p>Use the <code class="docutils literal notranslate"><span class="pre">__init__()</span></code> method to initialize the object’s initial attributes. (State)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">__init__()</span></code> method must have at least one argument <code class="docutils literal notranslate"><span class="pre">self</span></code>, which refers to object itself.</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Car</span><span class="p">:</span>
+    
+    <span class="c1"># Instance Attributes</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">unid</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">unid</span> <span class="o">=</span> <span class="n">unid</span> 
+</pre></div>
+</div>
+<p><strong>Note</strong>: We never call the <strong>init</strong>() method; it gets automatically called when a new instance is created.</p>
+</div>
+<div class="section" id="class-attributes">
+<h3>Class Attributes<a class="headerlink" href="#class-attributes" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Shared by all the instances of the class.</p></li>
+<li><p>Class attributes remain the same for all instances.</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Car</span><span class="p">:</span>
+    
+    <span class="c1"># Class Attribute</span>
+    <span class="nb">type</span> <span class="o">=</span> <span class="s1">&#39;vehicle&#39;</span>
+    
+    <span class="c1"># Instance Attributes</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">unid</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">unid</span> <span class="o">=</span> <span class="n">unid</span> 
+</pre></div>
+</div>
+</div>
+<div class="section" id="instantiate-an-object-s-from-a-class">
+<h3>Instantiate an Object(s) from a Class<a class="headerlink" href="#instantiate-an-object-s-from-a-class" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>means creating a new, unique instance of a class</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Car</span><span class="p">:</span>
+    <span class="k">pass</span>
+
+<span class="n">Car</span><span class="p">()</span>
+</pre></div>
+</div>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;__main__.Car at 0x1db880825e0&gt;
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">Car</span><span class="p">()</span>
+</pre></div>
+</div>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;__main__.Car at 0x1db88082f40&gt;
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">car_A</span> <span class="o">=</span> <span class="n">Car</span><span class="p">()</span>
+<span class="n">car_B</span> <span class="o">=</span> <span class="n">Car</span><span class="p">()</span>
+
+<span class="n">car_A</span> <span class="o">==</span> <span class="n">car_B</span>
+</pre></div>
+</div>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>False
+</pre></div>
+</div>
+</div>
+<div class="section" id="instance-methods">
+<h3>Instance Methods<a class="headerlink" href="#instance-methods" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Define inside a class, and can be used to get the content or perform operation on an instance/attributes.</p></li>
+<li><p>Similar to <code class="docutils literal notranslate"><span class="pre">__init__()</span></code> method, they also have <code class="docutils literal notranslate"><span class="pre">self</span></code> variable</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Car</span><span class="p">:</span>
+    
+    <span class="c1"># Class Attribute</span>
+    <span class="nb">type</span> <span class="o">=</span> <span class="s1">&#39;vehicle&#39;</span>
+    
+    <span class="c1"># Instance Attributes</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">unid</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">unid</span> <span class="o">=</span> <span class="n">unid</span>
+    
+    <span class="c1"># An instance method</span>
+    <span class="k">def</span> <span class="nf">description</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="s2">&quot;Car name is </span><span class="si">{}</span><span class="s2"> and its ID is </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">unid</span><span class="p">)</span>
+    
+    <span class="c1"># An instance method</span>
+    <span class="k">def</span> <span class="nf">honk</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">level</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>
+        <span class="k">return</span> <span class="s2">&quot;Car is honking at level </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">level</span><span class="p">)</span>
+
+<span class="c1"># Instantiate Car object</span>
+<span class="n">i20</span> <span class="o">=</span> <span class="n">Car</span><span class="p">(</span><span class="s2">&quot;i20&quot;</span><span class="p">,</span> <span class="mi">1123</span><span class="p">)</span>
+
+<span class="c1"># Call instance method</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">i20</span><span class="o">.</span><span class="n">description</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">i20</span><span class="o">.</span><span class="n">honk</span><span class="p">(</span><span class="mi">2</span><span class="p">))</span>
+</pre></div>
+</div>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Car name is i20 and its ID is 1123
+Car is honking at level 2
+</pre></div>
+</div>
+<p>Attribute lookup prioritize the instance, when same attribute name occurs. See below:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Person</span><span class="p">:</span>
+    <span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;Kshitiz Maharjan&#39;</span>
+    <span class="n">sex</span> <span class="o">=</span> <span class="s1">&#39;Male&#39;</span>
+
+<span class="n">p1</span> <span class="o">=</span> <span class="n">Person</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">p1</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="n">p1</span><span class="o">.</span><span class="n">sex</span><span class="p">)</span>
+
+<span class="n">p2</span> <span class="o">=</span> <span class="n">Person</span><span class="p">()</span>
+<span class="n">p2</span><span class="o">.</span><span class="n">sex</span> <span class="o">=</span> <span class="s1">&#39;Female&#39;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">p2</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="n">p2</span><span class="o">.</span><span class="n">sex</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">p1</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="n">p1</span><span class="o">.</span><span class="n">sex</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Kshitiz Maharjan Male
+Kshitiz Maharjan Female
+Kshitiz Maharjan Male
+</pre></div>
+</div>
+</div>
+<div class="section" id="modify-attributes">
+<h3>Modify Attributes<a class="headerlink" href="#modify-attributes" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Email</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">is_sent</span> <span class="o">=</span> <span class="kc">False</span>
+    
+    <span class="k">def</span> <span class="nf">send_email</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">message</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Sending:&quot;</span><span class="p">,</span> <span class="n">message</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">is_sent</span> <span class="o">=</span> <span class="kc">True</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">email</span> <span class="o">=</span> <span class="n">Email</span><span class="p">()</span>
+<span class="n">email</span><span class="o">.</span><span class="n">is_sent</span>
+</pre></div>
+</div>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>False
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">email</span><span class="o">.</span><span class="n">send_email</span><span class="p">(</span><span class="s2">&quot;Ehh Bhaiii, K chhha?&quot;</span><span class="p">)</span>
+<span class="n">email</span><span class="o">.</span><span class="n">is_sent</span>
+</pre></div>
+</div>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Sending: Ehh Bhaiii, K chhha?
+
+True
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="inheritance">
+<h2>Inheritance<a class="headerlink" href="#inheritance" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>One class takes attributes and methods of another.</p></li>
+<li><p>Child class derived from Parent class</p></li>
+<li><p>Child class override or extend attributes and methods of parent’s class.</p></li>
+</ul>
+<div class="section" id="syntax">
+<h3>Syntax:<a class="headerlink" href="#syntax" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">DerivedClassName</span><span class="p">(</span><span class="n">BaseClassName</span><span class="p">):</span>
+    <span class="o">&lt;</span><span class="n">statement</span><span class="o">-</span><span class="mi">1</span><span class="o">&gt;</span>
+    <span class="o">.</span>
+    <span class="o">.</span>
+    <span class="o">.</span>
+    <span class="o">&lt;</span><span class="n">statement</span><span class="o">-</span><span class="n">N</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Car</span><span class="p">:</span>
+    
+    <span class="c1"># Class attributes</span>
+    <span class="nb">type</span> <span class="o">=</span> <span class="s1">&#39;vehicle&#39;</span>
+    
+    <span class="c1"># Instance Attributes / Initialize</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">manufacturer</span><span class="p">,</span> <span class="n">year</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">manufacturer</span> <span class="o">=</span> <span class="n">manufacturer</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">year</span> <span class="o">=</span> <span class="n">year</span>
+    
+    <span class="c1"># instance method</span>
+    <span class="k">def</span> <span class="nf">accelerate</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">speed</span><span class="p">):</span>
+        <span class="k">return</span> <span class="s2">&quot;Car </span><span class="si">%s</span><span class="s2"> is acclerating at </span><span class="si">%d</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="n">speed</span><span class="p">)</span>
+
+<span class="c1"># Child class of Car</span>
+<span class="k">class</span> <span class="nc">SuperCar</span><span class="p">(</span><span class="n">Car</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">zoom</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="s2">&quot;Car </span><span class="si">%s</span><span class="s2"> zoomed&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">i20</span> <span class="o">=</span> <span class="n">Car</span><span class="p">(</span><span class="s1">&#39;i20&#39;</span><span class="p">,</span> <span class="s1">&#39;Hyundai&#39;</span><span class="p">,</span> <span class="mi">2020</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">i20</span><span class="o">.</span><span class="n">type</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">i20</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">i20</span><span class="o">.</span><span class="n">year</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">i20</span><span class="o">.</span><span class="n">accelerate</span><span class="p">(</span><span class="mi">2</span><span class="p">))</span>
+</pre></div>
+</div>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>vehicle
+i20
+2020
+Car i20 is acclerating at 2
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">lamborghini</span> <span class="o">=</span> <span class="n">SuperCar</span><span class="p">(</span><span class="s1">&#39;Huracan&#39;</span><span class="p">,</span> <span class="s1">&#39;Lamborghini&#39;</span><span class="p">,</span> <span class="mi">2019</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">lamborghini</span><span class="o">.</span><span class="n">type</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">lamborghini</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">lamborghini</span><span class="o">.</span><span class="n">year</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">lamborghini</span><span class="o">.</span><span class="n">accelerate</span><span class="p">(</span><span class="mi">10</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">lamborghini</span><span class="o">.</span><span class="n">zoom</span><span class="p">())</span>
+</pre></div>
+</div>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>vehicle
+Huracan
+2019
+Car Huracan is acclerating at 10
+Car Huracan zoomed
+</pre></div>
+</div>
+</div>
+<div class="section" id="multiple-inheritance">
+<h3>Multiple Inheritance<a class="headerlink" href="#multiple-inheritance" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Python also supports multiple inheritance.</p></li>
+</ul>
+</div>
+<div class="section" id="id1">
+<h3>Syntax:<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">DerivedClassName</span><span class="p">(</span><span class="n">Base1</span><span class="p">,</span> <span class="n">Base2</span><span class="p">,</span> <span class="n">Base3</span><span class="p">):</span>
+    <span class="o">&lt;</span><span class="n">statement</span><span class="o">-</span><span class="mi">1</span><span class="o">&gt;</span>
+    <span class="o">.</span>
+    <span class="o">.</span>
+    <span class="o">.</span>
+    <span class="o">&lt;</span><span class="n">statement</span><span class="o">-</span><span class="n">N</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>If attribute not found in <code class="docutils literal notranslate"><span class="pre">DerivedClassName</span></code>, it is searched in <code class="docutils literal notranslate"><span class="pre">Base1</span></code></p></li>
+<li><p>If not found there, it is searched in <code class="docutils literal notranslate"><span class="pre">Base2</span></code>, and the search goes on.</p></li>
+</ul>
+</div>
+<div class="section" id="override">
+<h3>Override<a class="headerlink" href="#override" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Child classes can override attributes and methods of parent clasess.</p></li>
+<li><p>See example below:</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Car</span><span class="p">:</span>
+    
+    <span class="c1"># Class attributes</span>
+    <span class="nb">type</span> <span class="o">=</span> <span class="s1">&#39;vehicle&#39;</span>
+    
+    <span class="c1"># Instance Attributes / Initialize</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">manufacturer</span><span class="p">,</span> <span class="n">year</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">manufacturer</span> <span class="o">=</span> <span class="n">manufacturer</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">year</span> <span class="o">=</span> <span class="n">year</span>
+    
+    <span class="c1"># instance method</span>
+    <span class="k">def</span> <span class="nf">accelerate</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">speed</span><span class="p">):</span>
+        <span class="k">return</span> <span class="s2">&quot;Car </span><span class="si">%s</span><span class="s2"> is acclerating at </span><span class="si">%d</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="n">speed</span><span class="p">)</span>
+
+<span class="c1"># Child class of Car</span>
+<span class="k">class</span> <span class="nc">SuperCar</span><span class="p">(</span><span class="n">Car</span><span class="p">):</span>
+    <span class="nb">type</span> <span class="o">=</span> <span class="s1">&#39;Luxury vehicle&#39;</span>
+    <span class="k">def</span> <span class="nf">zoom</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="s2">&quot;Car </span><span class="si">%s</span><span class="s2"> zoomed&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">i20</span> <span class="o">=</span> <span class="n">Car</span><span class="p">(</span><span class="s1">&#39;i20&#39;</span><span class="p">,</span> <span class="s1">&#39;Hyundai&#39;</span><span class="p">,</span> <span class="mi">2020</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">i20</span><span class="o">.</span><span class="n">type</span><span class="p">)</span>
+
+<span class="n">lamborghini</span> <span class="o">=</span> <span class="n">SuperCar</span><span class="p">(</span><span class="s1">&#39;Huracan&#39;</span><span class="p">,</span> <span class="s1">&#39;Lamborghini&#39;</span><span class="p">,</span> <span class="mi">2019</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">lamborghini</span><span class="o">.</span><span class="n">type</span><span class="p">)</span>
+
+</pre></div>
+</div>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>vehicle
+Luxury vehicle
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Car</span><span class="p">:</span>
+    
+    <span class="c1"># Class attributes</span>
+    <span class="nb">type</span> <span class="o">=</span> <span class="s1">&#39;vehicle&#39;</span>
+    
+    <span class="c1"># Instance Attributes / Initialize</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">manufacturer</span><span class="p">,</span> <span class="n">year</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">manufacturer</span> <span class="o">=</span> <span class="n">manufacturer</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">year</span> <span class="o">=</span> <span class="n">year</span>
+    
+    <span class="c1"># instance method</span>
+    <span class="k">def</span> <span class="nf">accelerate</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">speed</span><span class="p">):</span>
+        <span class="k">return</span> <span class="s2">&quot;Car </span><span class="si">%s</span><span class="s2"> is acclerating at </span><span class="si">%d</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="n">speed</span><span class="p">)</span>
+
+<span class="c1"># Child class of Car</span>
+<span class="k">class</span> <span class="nc">SuperCar</span><span class="p">(</span><span class="n">Car</span><span class="p">):</span>
+    <span class="nb">type</span> <span class="o">=</span> <span class="s1">&#39;Luxury vehicle&#39;</span>
+    
+    <span class="k">def</span> <span class="nf">accelerate</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">speed</span><span class="p">):</span>
+        <span class="k">return</span> <span class="s2">&quot;Car </span><span class="si">%s</span><span class="s2"> is acclerating at </span><span class="si">%d</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="n">speed</span><span class="o">*</span><span class="mi">2</span><span class="p">)</span>
+    
+    <span class="k">def</span> <span class="nf">zoom</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="s2">&quot;Car </span><span class="si">%s</span><span class="s2"> zoomed&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+
+
+<span class="n">i20</span> <span class="o">=</span> <span class="n">Car</span><span class="p">(</span><span class="s1">&#39;i20&#39;</span><span class="p">,</span> <span class="s1">&#39;Hyundai&#39;</span><span class="p">,</span> <span class="mi">2020</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">i20</span><span class="o">.</span><span class="n">accelerate</span><span class="p">(</span><span class="mi">10</span><span class="p">))</span>
+
+<span class="n">lamborghini</span> <span class="o">=</span> <span class="n">SuperCar</span><span class="p">(</span><span class="s1">&#39;Huracan&#39;</span><span class="p">,</span> <span class="s1">&#39;Lamborghini&#39;</span><span class="p">,</span> <span class="mi">2019</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">lamborghini</span><span class="o">.</span><span class="n">accelerate</span><span class="p">(</span><span class="mi">10</span><span class="p">))</span>
+</pre></div>
+</div>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Car i20 is acclerating at 10
+Car Huracan is acclerating at 20
+</pre></div>
+</div>
+</div>
+<div class="section" id="isinstance">
+<h3><code class="docutils literal notranslate"><span class="pre">isinstance()</span></code><a class="headerlink" href="#isinstance" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>determines if an instance is also an instance of a certain parent class.</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">isinstance</span><span class="p">(</span><span class="n">lamborghini</span><span class="p">,</span> <span class="n">Car</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>True
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">isinstance</span><span class="p">(</span><span class="n">lamborghini</span><span class="p">,</span> <span class="n">SuperCar</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>True
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">isinstance</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="nb">int</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>True
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mf">4.2</span>
+
+<span class="nb">isinstance</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="p">(</span><span class="nb">int</span><span class="p">,</span> <span class="nb">float</span><span class="p">))</span>
+</pre></div>
+</div>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>True
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="private-variables">
+<h2>Private Variables<a class="headerlink" href="#private-variables" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Car</span><span class="p">:</span>
+    
+    <span class="c1"># Instance Attributes / Initialize</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">manufacturer</span><span class="p">,</span> <span class="n">year</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">manufacturer</span> <span class="o">=</span> <span class="n">manufacturer</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">year</span> <span class="o">=</span> <span class="n">year</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__type</span> <span class="o">=</span> <span class="s1">&#39;vehicle&#39;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_num_of_wheels</span> <span class="o">=</span> <span class="mi">4</span>
+    
+    <span class="k">def</span> <span class="nf">get_type</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__type</span>
+    
+    <span class="c1"># instance method</span>
+    <span class="k">def</span> <span class="nf">accelerate</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">speed</span><span class="p">):</span>
+        <span class="k">return</span> <span class="s2">&quot;Car </span><span class="si">%s</span><span class="s2"> is acclerating at </span><span class="si">%d</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="n">speed</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">i20</span> <span class="o">=</span> <span class="n">Car</span><span class="p">(</span><span class="s1">&#39;i20&#39;</span><span class="p">,</span> <span class="s1">&#39;Hyundai&#39;</span><span class="p">,</span> <span class="mi">2020</span><span class="p">)</span>
+<span class="n">i20</span><span class="o">.</span><span class="n">get_type</span><span class="p">()</span>
+</pre></div>
+</div>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>&#39;vehicle&#39;
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">i20</span><span class="o">.</span><span class="n">__type</span>
+</pre></div>
+</div>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>---------------------------------------------------------------------------
+
+AttributeError                            Traceback (most recent call last)
+
+&lt;ipython-input-37-e31da153b0a7&gt; in &lt;module&gt;
+----&gt; 1 i20.__type
+
+
+AttributeError: &#39;Car&#39; object has no attribute &#39;__type&#39;
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">i20</span><span class="o">.</span><span class="n">_Car__type</span>
+</pre></div>
+</div>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>&#39;vehicle&#39;
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">i20</span><span class="o">.</span><span class="n">_num_of_wheels</span>
+</pre></div>
+</div>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>4
+</pre></div>
+</div>
+</div>
+<div class="section" id="name-mangling">
+<h2>Name Mangling<a class="headerlink" href="#name-mangling" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><strong>Note</strong> : Revisit after automation module.</p></li>
+</ul>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./know-your-language/_todo"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Sajal N. Shrestha<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    <script src="../../_static/js/index.js"></script>
+    
+  </body>
+</html>

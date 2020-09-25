@@ -1,0 +1,457 @@
+
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Zen of Python</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
+    <link href="../../_static/css/index.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../_static/sphinx-book-theme.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/language_data.js"></script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/sphinx-book-theme.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="docsearch:language" content="en">
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../../index.html">
+  
+  <img src="../../_static/logo.png" class="logo" alt="logo">
+  
+  
+</a>
+</div>
+
+<form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../intro.html">
+   Python End-2-End RoadMap
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Know Your Language
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../know-your-language/q-%26-a/README.html">
+   A Q&amp;A Session
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../know-your-language/before-we-begin/README.html">
+   Before We Begin
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../know-your-language/apply-primer/README.html">
+   Applying Primer
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../know-your-language/apply-primer/README.html#strings">
+   Strings
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../know-your-language/apply-primer/README.html#lists">
+   Lists
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Apply Python in Real Life
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../automate/regular-expressions/README.html">
+   Regular Expressions
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Web and Beyond
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../web-and-beyond/README.html">
+   To Web and Beyond
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Rest time
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../rest-time/README.html">
+   Rest Time
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Master Your Language
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../master-your-language/README.html">
+   Master your language
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Miscellaneous
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../docker/README.html">
+   Docker
+  </a>
+ </li>
+</ul>
+
+</nav>
+
+ <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Compiled by <a href="mailto:sajalshres@gmail.com">Sajal Shrestha</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        <div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../_sources/miscellaneous/zen-of-python/zen-of-python.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+    
+</div>
+        <!-- Source interaction buttons -->
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#beautiful-is-better-than-ugly">
+   Beautiful is better than ugly.
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#explicit-is-better-than-implicit">
+   Explicit is better than implicit.
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#simple-is-better-than-complex-complex-is-better-than-complicated">
+   Simple is better than complex. Complex is better than complicated.
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#flat-is-better-than-nested">
+   Flat is better than nested.
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#sparse-is-better-than-dense">
+   Sparse is better than dense.
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#readability-counts">
+   Readability counts.
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#special-cases-arent-special-enough-to-break-the-rules-although-practicality-beats-purity">
+   Special cases aren’t special enough to break the rules. Although practicality beats purity.
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#errors-should-never-pass-silently-unless-explicitly-silenced">
+   Errors should never pass silently. Unless explicitly silenced.
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#in-the-face-of-ambiguity-refuse-the-temptation-to-guess">
+   In the face of ambiguity, refuse the temptation to guess.
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#there-should-be-oneand-preferably-only-oneobvious-way-to-do-it">
+   There should be one—and preferably only one—obvious way to do it.
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#although-that-way-may-not-be-obvious-at-first-unless-youre-dutch">
+   Although that way may not be obvious at first unless you’re Dutch.
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#now-is-better-than-never-although-never-is-often-better-than-right-now">
+   Now is better than never. Although never is often better than
+   <em>
+    right
+   </em>
+   now.
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#if-the-implementation-is-hard-to-explain-its-a-bad-idea-if-the-implementation-is-easy-to-explain-it-may-be-a-good-idea">
+   If the implementation is hard to explain, it’s a bad idea. If the implementation is easy to explain, it may be a good idea.
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#namespaces-are-one-honking-great-idealets-do-more-of-those">
+   Namespaces are one honking great idea—let’s do more of those!
+  </a>
+ </li>
+</ul>
+
+        </nav>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="zen-of-python">
+<h1>Zen of Python<a class="headerlink" href="#zen-of-python" title="Permalink to this headline">¶</a></h1>
+<p><em>The Zen of Python</em> by Tim Peters are 20 guidelines for the design of the Python language.</p>
+<p>The Zen of Python is an <em>Easter egg</em>, or hidden joke, that appears if you run <code class="docutils literal notranslate"><span class="pre">import</span> <span class="pre">this</span></code>:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">this</span>
+<span class="go">The Zen of Python, by Tim Peters</span>
+
+<span class="go">Beautiful is better than ugly.</span>
+<span class="go">Explicit is better than implicit.</span>
+<span class="go">Simple is better than complex.</span>
+<span class="go">Complex is better than complicated.</span>
+<span class="go">Flat is better than nested.</span>
+<span class="go">Sparse is better than dense.</span>
+<span class="go">Readability counts.</span>
+<span class="go">Special cases aren&#39;t special enough to break the rules.</span>
+<span class="go">Although practicality beats purity.</span>
+<span class="go">Errors should never pass silently.</span>
+<span class="go">Unless explicitly silenced.</span>
+<span class="go">In the face of ambiguity, refuse the temptation to guess.</span>
+<span class="go">There should be one-- and preferably only one --obvious way to do it.</span>
+<span class="go">Although that way may not be obvious at first unless you&#39;re Dutch.</span>
+<span class="go">Now is better than never.</span>
+<span class="go">Although never is often better than *right* now.</span>
+<span class="go">If the implementation is hard to explain, it&#39;s a bad idea.</span>
+<span class="go">If the implementation is easy to explain, it may be a good idea.</span>
+<span class="go">Namespaces are one honking great idea -- let&#39;s do more of those!</span>
+</pre></div>
+</div>
+<div class="section" id="beautiful-is-better-than-ugly">
+<h2>Beautiful is better than ugly.<a class="headerlink" href="#beautiful-is-better-than-ugly" title="Permalink to this headline">¶</a></h2>
+<p>Programmers often write code quickly without concern for readability. While code doesn’t have to be readable, the code of the Python language itself must be thought out, consistent, and a joy to use. Of course, not every script needs to be beautiful, and beauty is subjective, but much of Python’s popularity is a result of being so easy to work with.</p>
+</div>
+<div class="section" id="explicit-is-better-than-implicit">
+<h2>Explicit is better than implicit.<a class="headerlink" href="#explicit-is-better-than-implicit" title="Permalink to this headline">¶</a></h2>
+<p>“This aphorism is self-explanatory,” that would be a terrible explanation for any aphorism. Similarly, it’s better for code to be verbose and explicit. You should avoid hiding code’s functionality behind obscure language features that require familiarity to fully understand.</p>
+</div>
+<div class="section" id="simple-is-better-than-complex-complex-is-better-than-complicated">
+<h2>Simple is better than complex. Complex is better than complicated.<a class="headerlink" href="#simple-is-better-than-complex-complex-is-better-than-complicated" title="Permalink to this headline">¶</a></h2>
+<p>These two aphorisms remind us that building anything can be done using simple or complex techniques. With a simple problem, such as building a birdhouse, a simple solution is better. Building a diesel train engine, on the other hand, is a complex problem that requires complex techniques. Even if you could technically make a diesel train engine using birdhouse techniques, you probably would end up with a complicated, Rube Goldberg arrangement of birdhouse parts that wouldn’t be an ideal solution. Prefer simplicity to complexity, but know the limits of simplicity.</p>
+</div>
+<div class="section" id="flat-is-better-than-nested">
+<h2>Flat is better than nested.<a class="headerlink" href="#flat-is-better-than-nested" title="Permalink to this headline">¶</a></h2>
+<p>Programmers love to organize things into categories, especially categories that contain subcategories which contain other sub-subcategories. These hierarchies often don’t add <em>organization</em> so much as they add <em>bureaucracy</em>. It’s okay to have code in just one top-layer module or class instead of split up across multiple submodules or subclasses. If you make packages and modules that require code like <code class="docutils literal notranslate"><span class="pre">import</span> <span class="pre">spam.eggs.bacon.ham.foo.bar</span></code>, then you’re making your code too complicated.</p>
+</div>
+<div class="section" id="sparse-is-better-than-dense">
+<h2>Sparse is better than dense.<a class="headerlink" href="#sparse-is-better-than-dense" title="Permalink to this headline">¶</a></h2>
+<p>Programmers often like to cram as much functionality into as little code as possible, such as one-liners like the following: <code class="docutils literal notranslate"><span class="pre">print('\n'.join(&quot;%i</span> <span class="pre">bytes</span> <span class="pre">=</span> <span class="pre">%i</span> <span class="pre">bits</span> <span class="pre">which</span> <span class="pre">has</span> <span class="pre">%i</span> <span class="pre">possible</span> <span class="pre">values.&quot;</span> <span class="pre">%</span> <span class="pre">(j,</span> <span class="pre">j*8,</span> <span class="pre">256**j-1)</span> <span class="pre">for</span> <span class="pre">j</span> <span class="pre">in</span> <span class="pre">(1</span> <span class="pre">&lt;&lt;</span> <span class="pre">i</span> <span class="pre">for</span> <span class="pre">i</span> <span class="pre">in</span> <span class="pre">range(8))))</span></code>. While code like this may impress their friends, it’ll infuriate their coworkers who have to try to understand it. Code that is spread out over multiple lines is often easier to read than dense one-liners.</p>
+</div>
+<div class="section" id="readability-counts">
+<h2>Readability counts.<a class="headerlink" href="#readability-counts" title="Permalink to this headline">¶</a></h2>
+<p>While <code class="docutils literal notranslate"><span class="pre">strcmp()</span></code> may obviously mean the “string compare” function to someone who has been programming in C since the 1970s, modern computers have enough memory to write out the full function name. Don’t drop vowels from your names or write overly terse code. Code is read more often than it’s written, so explicit, readable code is more important than terse, undocumented code.</p>
+</div>
+<div class="section" id="special-cases-arent-special-enough-to-break-the-rules-although-practicality-beats-purity">
+<h2>Special cases aren’t special enough to break the rules. Although practicality beats purity.<a class="headerlink" href="#special-cases-arent-special-enough-to-break-the-rules-although-practicality-beats-purity" title="Permalink to this headline">¶</a></h2>
+<p>These two aphorisms, which come as a set, contradict each other. Programming is full of “best practices” that programmers should strive for in their code. Skirting these practices for a quick hack may be tempting, but can lead to a rat’s nest of inconsistent, unreadable code. However, bending over backwards to adhere to rules can result in highly-abstract, unreadable code. The Java programming language’s attempt to fit all code to its object-oriented paradigm often results in lots of boilerplate code for even the smallest program. Walking the line between these two aphorisms becomes easier with experience. And in time, you’ll not only learn the rules, but also learn when to break them.</p>
+</div>
+<div class="section" id="errors-should-never-pass-silently-unless-explicitly-silenced">
+<h2>Errors should never pass silently. Unless explicitly silenced.<a class="headerlink" href="#errors-should-never-pass-silently-unless-explicitly-silenced" title="Permalink to this headline">¶</a></h2>
+<p>Just because programmers often ignore error messages doesn’t mean the program should stop emitting them. Silent errors can happen when functions return error codes or <code class="docutils literal notranslate"><span class="pre">None</span></code> instead of raising exceptions. These two aphorisms tell us that it’s better for a program to <code class="docutils literal notranslate"><span class="pre">fail</span> <span class="pre">fast</span></code> and crash than to silence the error and continue running the program. The bugs that inevitably happen later on will be harder to debug since they are far removed from the original cause. Though you can always choose to explicitly ignore the errors your programs cause, just be sure you are making the conscious choice to do so.</p>
+</div>
+<div class="section" id="in-the-face-of-ambiguity-refuse-the-temptation-to-guess">
+<h2>In the face of ambiguity, refuse the temptation to guess.<a class="headerlink" href="#in-the-face-of-ambiguity-refuse-the-temptation-to-guess" title="Permalink to this headline">¶</a></h2>
+<p>Computers have made humans superstitious: To exorcise the demons in our computers we perform the sacred ritual of turning them off and then on. Supposedly this will fix any mysterious problem. However, computers are not magic. If your code isn’t working, there is a reason and only careful, critical thinking will solve it. Refuse the temptation to blindly try solutions until something seems to work; often you have merely masked the problem rather than solved it.</p>
+</div>
+<div class="section" id="there-should-be-oneand-preferably-only-oneobvious-way-to-do-it">
+<h2>There should be one—and preferably only one—obvious way to do it.<a class="headerlink" href="#there-should-be-oneand-preferably-only-oneobvious-way-to-do-it" title="Permalink to this headline">¶</a></h2>
+<p>This is a broadside against the Perl programming language’s motto, “There’s more than one way to do it!” It turns out that having three or four different ways to write code that does the same thing is a double-edged sword: you have flexibility in how you write code, but now you have to learn every possible way it could have been written in order to read it. This flexibility isn’t worth the 3x or 4x effort needed to learn a programming language.</p>
+</div>
+<div class="section" id="although-that-way-may-not-be-obvious-at-first-unless-youre-dutch">
+<h2>Although that way may not be obvious at first unless you’re Dutch.<a class="headerlink" href="#although-that-way-may-not-be-obvious-at-first-unless-youre-dutch" title="Permalink to this headline">¶</a></h2>
+<p>This line is a joke. Guido van Rossum, the creator and <em>BDFL</em> (Benevolent Dictator for Life) of Python, is Dutch. However, not even this aphorism prevented Python from incorporating three different ways of formatting strings.</p>
+</div>
+<div class="section" id="now-is-better-than-never-although-never-is-often-better-than-right-now">
+<h2>Now is better than never. Although never is often better than <em>right</em> now.<a class="headerlink" href="#now-is-better-than-never-although-never-is-often-better-than-right-now" title="Permalink to this headline">¶</a></h2>
+<p>These two aphorisms tell us that code that hangs or gets caught in infinite loops is obviously worse than code that doesn’t. However, it’s almost certainly better to wait for your program to finish than to have it finish too early with incorrect results.</p>
+</div>
+<div class="section" id="if-the-implementation-is-hard-to-explain-its-a-bad-idea-if-the-implementation-is-easy-to-explain-it-may-be-a-good-idea">
+<h2>If the implementation is hard to explain, it’s a bad idea. If the implementation is easy to explain, it may be a good idea.<a class="headerlink" href="#if-the-implementation-is-hard-to-explain-its-a-bad-idea-if-the-implementation-is-easy-to-explain-it-may-be-a-good-idea" title="Permalink to this headline">¶</a></h2>
+<p>Python strives to make the programmer’s job easier rather than accommodate the computer so a program runs faster. And programs need to be understandable not just by the programmer who wrote it, but also by other programmers who maintain the code. These two aphorisms remind us that if “high-performance” code is so complicated as to be impossible for programmers to understand and debug, then it’s bad code. But alas, just because it’s easy to explain a program’s code to someone else doesn’t mean it isn’t bad code. Programming is hard.</p>
+</div>
+<div class="section" id="namespaces-are-one-honking-great-idealets-do-more-of-those">
+<h2>Namespaces are one honking great idea—let’s do more of those!<a class="headerlink" href="#namespaces-are-one-honking-great-idealets-do-more-of-those" title="Permalink to this headline">¶</a></h2>
+<p>Namespaces (and also global and local scopes) are key for preventing names in one module or scope from conflicting with names in another. But also remember that <em>flat is better than nested</em>: As great as they are, namespaces should be made only to prevent naming conflicts, and not to add needless categorization.</p>
+<p>Like all opinions about programming, the ones I’ve written here can be argued against or may simply be irrelevant to your situation. Arguing over how code should be written is rarely as productive as you think it is. (Unless you’re writing an entire book full of programming opinions.)</p>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./miscellaneous/zen-of-python"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Sajal N. Shrestha<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    <script src="../../_static/js/index.js"></script>
+    
+  </body>
+</html>

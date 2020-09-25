@@ -1,0 +1,441 @@
+
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>A Q&amp;A Session</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
+    <link href="../../_static/css/index.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../_static/sphinx-book-theme.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/language_data.js"></script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/sphinx-book-theme.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Before We Begin" href="../before-we-begin/README.html" />
+    <link rel="prev" title="Python End-2-End RoadMap" href="../../intro.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="docsearch:language" content="en">
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../../index.html">
+  
+  <img src="../../_static/logo.png" class="logo" alt="logo">
+  
+  
+</a>
+</div>
+
+<form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../intro.html">
+   Python End-2-End RoadMap
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Know Your Language
+ </span>
+</p>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   A Q&amp;A Session
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../before-we-begin/README.html">
+   Before We Begin
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../apply-primer/README.html">
+   Applying Primer
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../apply-primer/README.html#strings">
+   Strings
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../apply-primer/README.html#lists">
+   Lists
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Apply Python in Real Life
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../automate/regular-expressions/README.html">
+   Regular Expressions
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Web and Beyond
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../web-and-beyond/README.html">
+   To Web and Beyond
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Rest time
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../rest-time/README.html">
+   Rest Time
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Master Your Language
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../master-your-language/README.html">
+   Master your language
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Miscellaneous
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../miscellaneous/docker/README.html">
+   Docker
+  </a>
+ </li>
+</ul>
+
+</nav>
+
+ <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Compiled by <a href="mailto:sajalshres@gmail.com">Sajal Shrestha</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        <div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../_sources/know-your-language/q-&-a/README.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+    
+</div>
+        <!-- Source interaction buttons -->
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#why-should-you-learn-python">
+   Why should you learn Python?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#what-can-you-do-with-python">
+   What can you do with Python?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#why-is-it-called-python">
+   Why is it called Python?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#what-are-python-s-strengths">
+   What are Python’s strengths?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#so-what-are-the-downsides">
+   So what are the downsides?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#is-python-a-scripting-language">
+   Is Python a scripting language?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#how-does-python-compare-to-language-x">
+   How does Python compare to language X?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#python-3-or-python-2">
+   Python 3 or Python 2?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#where-is-python-used">
+   Where is Python used?
+  </a>
+ </li>
+</ul>
+
+        </nav>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="a-q-a-session">
+<h1>A Q&amp;A Session<a class="headerlink" href="#a-q-a-session" title="Permalink to this headline">¶</a></h1>
+<p><img alt="python-qna" src="know-your-language/q-&amp;-a/./python-qna.jpg" /></p>
+<div class="section" id="why-should-you-learn-python">
+<h2>Why should you learn Python?<a class="headerlink" href="#why-should-you-learn-python" title="Permalink to this headline">¶</a></h2>
+<p>According to multiple sources (StackOverflow, Codeburst, TIOBE), Python is one of the ~~top 10~~ top 5 programming languages of 2019. Python, being a high level language, allows you to focus on the core functionality of the application by taking care of common programming tasks. It’s dead simple syntax rules makes it easier to keep the code readable and maintainable.</p>
+<p>To sum it up:</p>
+<ul class="simple">
+<li><p>Readable and maintainable code</p></li>
+<li><p>Multiple programming paradigms</p></li>
+<li><p>Compatible with major platforms and systems</p></li>
+<li><p>Batteries included</p></li>
+<li><p>Test Driven Development (TDD)</p></li>
+<li><p>Open Source Frameworks and Standard Library</p></li>
+</ul>
+</div>
+<div class="section" id="what-can-you-do-with-python">
+<h2>What can you do with Python?<a class="headerlink" href="#what-can-you-do-with-python" title="Permalink to this headline">¶</a></h2>
+<p>Python is a very versatile programming language, with a plethora of uses in a variety of different applications. There are so many applications of Python, but based on my observation, there are 3 main popular applications:</p>
+<ul class="simple">
+<li><p>Data Science: Data Analysis, Visualization and Machine Learning</p></li>
+<li><p>Scripting</p></li>
+<li><p>Web Development</p></li>
+</ul>
+<p>Other popular applications:</p>
+<ul class="simple">
+<li><p>GUI</p></li>
+<li><p>Database Programming</p></li>
+<li><p>Rapid Prototyping</p></li>
+<li><p>Image Processing</p></li>
+<li><p>Game Development</p></li>
+</ul>
+</div>
+<div class="section" id="why-is-it-called-python">
+<h2>Why is it called Python?<a class="headerlink" href="#why-is-it-called-python" title="Permalink to this headline">¶</a></h2>
+<p>Guido van Rossum (Author of Python Programming Language) began implementing Python, who was also reading the published scripts from “Monty Python’s Flying Circus”, a BBC comedy series from 1970s.</p>
+<p><img alt="Monty-Python-Flying-Circus" src="know-your-language/q-&amp;-a/./Monty-Python-Flying-Circus.jpg" /></p>
+</div>
+<div class="section" id="what-are-python-s-strengths">
+<h2>What are Python’s strengths?<a class="headerlink" href="#what-are-python-s-strengths" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>It’s free</p></li>
+<li><p>It’s portable</p></li>
+<li><p>It’s powerful</p></li>
+<li><p>It’s easy to use</p></li>
+<li><p>It’s easy to learn</p></li>
+<li><p>It’s Object-Oriented</p></li>
+</ul>
+</div>
+<div class="section" id="so-what-are-the-downsides">
+<h2>So what are the downsides?<a class="headerlink" href="#so-what-are-the-downsides" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>It’s speed</p></li>
+<li><p>It’s not for mobile development</p></li>
+<li><p>It’s heavy on memory consumption</p></li>
+<li><p>It’s produces Run-Time errors</p></li>
+<li><p>It ‘s underdeveloped database access layer</p></li>
+</ul>
+</div>
+<div class="section" id="is-python-a-scripting-language">
+<h2>Is Python a scripting language?<a class="headerlink" href="#is-python-a-scripting-language" title="Permalink to this headline">¶</a></h2>
+<p>Python is a general purpose programming language that is often used in scripting applications as well. The term “scripting” can have different meaning to different individuals.</p>
+</div>
+<div class="section" id="how-does-python-compare-to-language-x">
+<h2>How does Python compare to language X?<a class="headerlink" href="#how-does-python-compare-to-language-x" title="Permalink to this headline">¶</a></h2>
+<p>Python is often compared to other languages like Java, JavaScript, Perl, Go, and even C/C++.</p>
+<p>Summary:</p>
+<ul class="simple">
+<li><p>Cleaner syntax and simpler design</p></li>
+<li><p>Simpler and easier to user</p></li>
+<li><p>Powerful and cross-platform</p></li>
+<li><p>Is growing fast</p></li>
+<li><p>Performance</p></li>
+<li><p>Dynamically typed</p></li>
+</ul>
+</div>
+<div class="section" id="python-3-or-python-2">
+<h2>Python 3 or Python 2?<a class="headerlink" href="#python-3-or-python-2" title="Permalink to this headline">¶</a></h2>
+<p>You should use Python 3 going forward. As of January 2020 Python 2 will be in EOL (End Of Life) status and receive no further official support. After that date, there will be no further updates nor bugfixes. Since this end-of-life date has been planned for nearly a decade (the first end-of-life date was slated to happen in 2014, and was pushed back to 2020), and nearly all popular libraries have already ported their code, Python 2.x is well on its way to obsolescence. As such, we can only recommend learning and teaching Python 3.</p>
+</div>
+<div class="section" id="where-is-python-used">
+<h2>Where is Python used?<a class="headerlink" href="#where-is-python-used" title="Permalink to this headline">¶</a></h2>
+<p>Python is widely used by companies and developers to build web apps, automate operations in DevOps, Enterprise applications, data analysis etc.</p>
+<ul class="simple">
+<li><p>Netflix</p></li>
+<li><p>Google</p></li>
+<li><p>Uber</p></li>
+<li><p>Instagram and Facebook</p></li>
+<li><p>Dropbox</p></li>
+<li><p>NASA</p></li>
+<li><p>Quora</p></li>
+<li><p>Spotify</p></li>
+</ul>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./know-your-language/q-&-a"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="../../intro.html" title="previous page">Python End-2-End RoadMap</a>
+    <a class='right-next' id="next-link" href="../before-we-begin/README.html" title="next page">Before We Begin</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Sajal N. Shrestha<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    <script src="../../_static/js/index.js"></script>
+    
+  </body>
+</html>

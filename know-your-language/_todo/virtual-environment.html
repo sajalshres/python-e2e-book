@@ -1,0 +1,480 @@
+
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Virtual Environments</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
+    <link href="../../_static/css/index.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../_static/sphinx-book-theme.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/language_data.js"></script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/sphinx-book-theme.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="docsearch:language" content="en">
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../../index.html">
+  
+  <img src="../../_static/logo.png" class="logo" alt="logo">
+  
+  
+</a>
+</div>
+
+<form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../intro.html">
+   Python End-2-End RoadMap
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Know Your Language
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../q-%26-a/README.html">
+   A Q&amp;A Session
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../before-we-begin/README.html">
+   Before We Begin
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../apply-primer/README.html">
+   Applying Primer
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../apply-primer/README.html#strings">
+   Strings
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../apply-primer/README.html#lists">
+   Lists
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Apply Python in Real Life
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../automate/regular-expressions/README.html">
+   Regular Expressions
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Web and Beyond
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../web-and-beyond/README.html">
+   To Web and Beyond
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Rest time
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../rest-time/README.html">
+   Rest Time
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Master Your Language
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../master-your-language/README.html">
+   Master your language
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Miscellaneous
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../miscellaneous/docker/README.html">
+   Docker
+  </a>
+ </li>
+</ul>
+
+</nav>
+
+ <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Compiled by <a href="mailto:sajalshres@gmail.com">Sajal Shrestha</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        <div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../_sources/know-your-language/_todo/virtual-environment.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+    
+</div>
+        <!-- Source interaction buttons -->
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#problem">
+   Problem:
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#solution">
+   Solution:
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#but-which-virtual-environments-python-and-the-race-to-virtual-environment">
+   But which virtual environments? (Python and the race to virtual environment)
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#standard-library">
+   Standard library:
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#recommendation-for-beginners">
+     Recommendation for beginners:
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#virtualenv">
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     virtualenv
+    </span>
+   </code>
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#install-virtualenv">
+     Install
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       virtualenv
+      </span>
+     </code>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#use-case-for-project">
+     Use case for project
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#use-interpreter-of-your-choice">
+     Use interpreter of your choice
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#activate-virtual-environmet">
+     Activate virtual environmet
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#install-package-as-usual">
+     Install package as Usual:
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#deactivate-virutal-environment">
+     Deactivate virutal environment
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#delete-virtual-environmetn">
+     Delete virtual environmetn:
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+        </nav>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="virtual-environments">
+<h1>Virtual Environments<a class="headerlink" href="#virtual-environments" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="problem">
+<h2>Problem:<a class="headerlink" href="#problem" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>It may not be possible for one Python installation to meet the requirements of every application.</p></li>
+<li><p>If application A needs version 1.0 of a particular module but application B needs version 2.0, then the requirements are in conflict and installing either version 1.0 or 2.0 will leave one application unable to run.</p></li>
+</ul>
+</div>
+<div class="section" id="solution">
+<h2>Solution:<a class="headerlink" href="#solution" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>The solution is to create a virtual environment</p></li>
+<li><p>Virtual environments are self-contained directory that contains a Python installation for a particular version of Python, plus a number of additional packages.</p></li>
+</ul>
+</div>
+<div class="section" id="but-which-virtual-environments-python-and-the-race-to-virtual-environment">
+<h2>But which virtual environments? (Python and the race to virtual environment)<a class="headerlink" href="#but-which-virtual-environments-python-and-the-race-to-virtual-environment" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">virtualenv</span></code> is a very popular tool that creates isolated Python environments for Python libraries. If you’re not familiar with this tool, I highly recommend learning it, as it is a very useful tool, and I’ll be making comparisons to it for the rest of this answer.</p>
+<ul>
+<li><p>It works by installing a bunch of files in a directory (eg: env/), and then modifying the PATH environment variable to prefix it with a custom bin directory (eg: env/bin/). An exact copy of the python or python3 binary is placed in this directory, but Python is programmed to look for libraries relative to its path first, in the environment directory. It’s not part of Python’s standard library, but is officially blessed by the PyPA (Python Packaging Authority). Once activated, you can install packages in the virtual environment using pip.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pyenv</span></code> is used to isolate Python versions. For example, you may want to test your code against Python 2.6, 2.7, 3.3, 3.4 and 3.5, so you’ll need a way to switch between them. Once activated, it prefixes the PATH environment variable with ~/.pyenv/shims, where there are special files matching the Python commands (python, pip). These are not copies of the Python-shipped commands; they are special scripts that decide on the fly which version of Python to run based on the PYENV_VERSION environment variable, or the .python-version file, or the ~/.pyenv/version file. pyenv also makes the process of downloading and installing multiple Python versions easier, using the command pyenv install.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pyenv-virtualenv</span></code> is a plugin for pyenv by the same author as pyenv, to allow you to use pyenv and virtualenv at the same time conveniently. However, if you’re using Python 3.3 or later, pyenv-virtualenv will try to run python -m venv if it is available, instead of virtualenv. You can use virtualenv and pyenv together without pyenv-virtualenv, if you don’t want the convenience features.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">virtualenvwrapper</span></code> is a set of extensions to virtualenv. It gives you commands like mkvirtualenv, lssitepackages, and especially workon for switching between different virtualenv directories. This tool is especially useful if you want multiple virtualenv directories.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pyenv-virtualenvwrapper</span></code> is a plugin for pyenv by the same author as pyenv, to conveniently integrate virtualenvwrapper into pyenv.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pipenv</span></code>, by Kenneth Reitz (the author of requests), is the newest project in this list. It aims to combine Pipfile, pip and virtualenv into one command on the command-line. The virtualenv directory typically gets placed in ~/.local/share/virtualenvs/XXX, with XXX being a hash of the path of the project directory. This is different from virtualenv, where the directory is typically in the current working directory.</p></li>
+</ul>
+<p>The Python Packaging Guide recommends pipenv when developing Python applications (as opposed to libraries). There does not seem to be any plans to support venv instead of virtualenv. Confusingly, its command-line option –venv refers to the virtualenv directory, not venv, and similarly, the environment variable PIPENV_VENV_IN_PROJECT affects the location of the virtualenv directory, not venv directory (#1919).</p>
+</div>
+<div class="section" id="standard-library">
+<h2>Standard library:<a class="headerlink" href="#standard-library" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">pyvenv</span></code> is a script shipped with Python 3 but deprecated in Python 3.6 as it had problems (not to mention the confusing name). In Python 3.6+, the exact equivalent is python3 -m venv.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">venv</span></code> is a package shipped with Python 3, which you can run using python3 -m venv (although for some reason some distros separate it out into a separate distro package, such as python3-venv on Ubuntu/Debian). It serves a similar purpose to virtualenv, and works in a very similar way, but it doesn’t need to copy Python binaries around (except on Windows). Use this if you don’t need to support Python 2. At the time of writing, the Python community seems to be happy with virtualenv and I haven’t heard much talk of venv.</p></li>
+</ul>
+<p><strong>Note</strong>: Most of these tools complement each other. For instance, <code class="docutils literal notranslate"><span class="pre">pipenv</span></code> integrates <code class="docutils literal notranslate"><span class="pre">pip</span></code>, <code class="docutils literal notranslate"><span class="pre">virtualenv</span></code> and even <code class="docutils literal notranslate"><span class="pre">pyenv</span></code> if desired. The only tools that are true alternatives to each other here are <code class="docutils literal notranslate"><span class="pre">venv</span></code> and <code class="docutils literal notranslate"><span class="pre">virtualenv</span></code>.</p>
+<div class="section" id="recommendation-for-beginners">
+<h3>Recommendation for beginners:<a class="headerlink" href="#recommendation-for-beginners" title="Permalink to this headline">¶</a></h3>
+<p>This is my recommendation for beginners (No bias, ahem): start by learning <code class="docutils literal notranslate"><span class="pre">virtualenv</span></code> and <code class="docutils literal notranslate"><span class="pre">pip</span></code>, tools which work with both Python 2 and 3 and in a variety of situations, and pick up the other tools once you start needing them.</p>
+</div>
+</div>
+<div class="section" id="virtualenv">
+<h2><code class="docutils literal notranslate"><span class="pre">virtualenv</span></code><a class="headerlink" href="#virtualenv" title="Permalink to this headline">¶</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">virtualenv</span></code> is a tool to create isolated Python environments. <code class="docutils literal notranslate"><span class="pre">virtualenv</span></code> creates a folder which contains all the necessary executables to use the packages that a Python project would need.</p>
+<div class="section" id="install-virtualenv">
+<h3>Install <code class="docutils literal notranslate"><span class="pre">virtualenv</span></code><a class="headerlink" href="#install-virtualenv" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="use-case-for-project">
+<h3>Use case for project<a class="headerlink" href="#use-case-for-project" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ <span class="nb">cd</span> project_folder
+$ virtualenv venv
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">virtualenv</span> <span class="pre">venv</span></code> will create a folder in the current directory which will contain the Python executable files, and a copy of the <code class="docutils literal notranslate"><span class="pre">pip</span></code> library which you can use to install other packages.</p>
+<p>The name of the virtual environment (in this case, it was <code class="docutils literal notranslate"><span class="pre">venv</span></code>) can be anything; omitting the name will place the files in the current directory instead.</p>
+<p><strong>Note</strong>: <code class="docutils literal notranslate"><span class="pre">venv</span></code> is the general convention used globally.</p>
+</div>
+<div class="section" id="use-interpreter-of-your-choice">
+<h3>Use interpreter of your choice<a class="headerlink" href="#use-interpreter-of-your-choice" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ virtualenv -p /usr/bin/python3.6 venv
+</pre></div>
+</div>
+<p>or change the interpreter globally with an env variable in <code class="docutils literal notranslate"><span class="pre">~/.bashrc</span></code>:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">export</span> <span class="nv">VIRTUALENVWRAPPER_PYTHON</span><span class="o">=</span>/usr/bin/python2.7
+</pre></div>
+</div>
+</div>
+<div class="section" id="activate-virtual-environmet">
+<h3>Activate virtual environmet<a class="headerlink" href="#activate-virtual-environmet" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ <span class="nb">source</span> venv/bin/activate
+</pre></div>
+</div>
+<p><strong>or</strong></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ . venv/bin/activate
+</pre></div>
+</div>
+<p>The name of the current virtual environment will now appear on the left of the prompt:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="o">(</span>venv<span class="o">)</span> root@i10106:/usr/local/repositories/platform# 
+</pre></div>
+</div>
+</div>
+<div class="section" id="install-package-as-usual">
+<h3>Install package as Usual:<a class="headerlink" href="#install-package-as-usual" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="o">(</span>venv<span class="o">)</span> root@i10106:/usr/local/repositories/platform# pip install request
+</pre></div>
+</div>
+</div>
+<div class="section" id="deactivate-virutal-environment">
+<h3>Deactivate virutal environment<a class="headerlink" href="#deactivate-virutal-environment" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="o">(</span>venv<span class="o">)</span> root@i10106:/usr/local/repositories/platform# deactivate
+</pre></div>
+</div>
+</div>
+<div class="section" id="delete-virtual-environmetn">
+<h3>Delete virtual environmetn:<a class="headerlink" href="#delete-virtual-environmetn" title="Permalink to this headline">¶</a></h3>
+<p>Just delete the folder:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>root@i10106:/usr/local/repositories/platform# rm -rf venv
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./know-your-language/_todo"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Sajal N. Shrestha<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    <script src="../../_static/js/index.js"></script>
+    
+  </body>
+</html>
