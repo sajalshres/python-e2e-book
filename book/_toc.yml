@@ -29,7 +29,7 @@
 
 - part: Master Your Language
   chapters:
-    - file: master-your-language/README.md
+    - file: master-your-language/super/notebook.ipynb
 
 - part: Coding Challenges
   chapters:
