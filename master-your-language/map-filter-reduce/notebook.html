@@ -431,6 +431,71 @@ map and function: [1, 4, 9, 16, 25]
 </div>
 <div class="section" id="filter">
 <h2>filter()<a class="headerlink" href="#filter" title="Permalink to this headline">¶</a></h2>
+<ul>
+<li><p>Syntax:</p>
+<p><code class="docutils literal notranslate"><span class="pre">filter(function,</span> <span class="pre">iterable)</span></code></p>
+</li>
+<li><p>Compared to <code class="docutils literal notranslate"><span class="pre">map()</span></code>, ony one iterable is required.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">filter()</span></code> returns a list of elements for which the applied <code class="docutils literal notranslate"><span class="pre">function</span></code> returns <code class="docutils literal notranslate"><span class="pre">True</span></code>.</p></li>
+<li><p>Lets have a look at the code below:</p></li>
+</ul>
+<p><strong>Note:</strong> Checkout <a class="reference external" href="https://sajalshres.github.io/python-e2e-book/know-your-language/functions/notebook.html#lambda-expressions">lambda</a> from previous sections.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># filter even numbers:</span>
+<span class="n">numbers</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
+
+<span class="n">even_numbers</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">filter</span><span class="p">(</span><span class="k">lambda</span> <span class="n">number</span><span class="p">:</span> <span class="n">number</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">,</span> <span class="n">numbers</span><span class="p">))</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">even_numbers</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[0, 2, 4, 6, 8]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># calculate grade</span>
+<span class="n">scores</span> <span class="o">=</span> <span class="p">[</span><span class="mi">50</span><span class="p">,</span> <span class="mi">90</span><span class="p">,</span> <span class="mi">68</span><span class="p">,</span> <span class="mi">88</span><span class="p">,</span> <span class="mi">85</span><span class="p">,</span> <span class="mi">76</span><span class="p">,</span> <span class="mi">77</span><span class="p">,</span> <span class="mi">66</span><span class="p">,</span> <span class="mi">68</span><span class="p">]</span>
+
+<span class="n">scores_over_75</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">filter</span><span class="p">(</span><span class="k">lambda</span> <span class="n">score</span><span class="p">:</span> <span class="n">score</span> <span class="o">&gt;</span> <span class="mi">75</span><span class="p">,</span> <span class="n">scores</span><span class="p">))</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Grade A:&quot;</span><span class="p">,</span><span class="n">scores_over_75</span><span class="p">)</span>
+
+<span class="n">scores_over_60</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">filter</span><span class="p">(</span><span class="k">lambda</span> <span class="n">score</span><span class="p">:</span> <span class="n">score</span> <span class="o">&gt;</span> <span class="mi">60</span> <span class="ow">and</span> <span class="n">score</span> <span class="o">&lt;</span> <span class="mi">75</span><span class="p">,</span> <span class="n">scores</span><span class="p">))</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Grade B:&quot;</span><span class="p">,</span><span class="n">scores_over_60</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Grade A: [90, 88, 85, 76, 77]
+Grade B: [68, 66, 68]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># find pallindrome words from a list of words</span>
+<span class="n">words</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;anna&quot;</span><span class="p">,</span> <span class="s2">&quot;complete&quot;</span><span class="p">,</span> <span class="s2">&quot;rank&quot;</span><span class="p">,</span> <span class="s2">&quot;radar&quot;</span><span class="p">,</span> <span class="s2">&quot;progress&quot;</span><span class="p">,</span> <span class="s2">&quot;level&quot;</span><span class="p">]</span>
+
+<span class="n">pallindrome_words</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">filter</span><span class="p">(</span><span class="k">lambda</span> <span class="n">word</span><span class="p">:</span> <span class="n">word</span> <span class="o">==</span> <span class="n">word</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="n">words</span><span class="p">))</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Pallindrome words are: &quot;</span><span class="p">,</span><span class="n">pallindrome_words</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Pallindrome words are:  [&#39;anna&#39;, &#39;radar&#39;, &#39;level&#39;]
+</pre></div>
+</div>
+</div>
+</div>
 </div>
 <div class="section" id="reduce">
 <h2>reduce()<a class="headerlink" href="#reduce" title="Permalink to this headline">¶</a></h2>
