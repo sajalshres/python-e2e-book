@@ -453,33 +453,6 @@
     <a class="reference internal nav-link" href="#authenticate-with-ssh">
      Authenticate with SSH
     </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#check-for-existing-ssh-key">
-       Check for existing SSH Key
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#generate-a-new-ssh-key">
-       Generate a new SSH Key
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#add-ssh-key-to-ssh-agent">
-       Add SSH Key to
-       <code class="docutils literal notranslate">
-        <span class="pre">
-         ssh-agent
-        </span>
-       </code>
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#add-rsa-key-to-remote-system">
-       Add RSA Key to remote system
-      </a>
-     </li>
-    </ul>
    </li>
   </ul>
  </li>
@@ -764,14 +737,8 @@ PS C:\Users&gt; ls &gt;&gt; list_directory.txt # Append
 </div>
 <div class="section" id="authenticate-with-ssh">
 <h3>Authenticate with SSH<a class="headerlink" href="#authenticate-with-ssh" title="Permalink to this headline">¶</a></h3>
-<ol class="simple">
-<li></li>
-<li></li>
-<li></li>
-<li></li>
-</ol>
-<div class="section" id="check-for-existing-ssh-key">
-<h4>Check for existing SSH Key<a class="headerlink" href="#check-for-existing-ssh-key" title="Permalink to this headline">¶</a></h4>
+<ol>
+<li><p>Check for existing SSH Key</p>
 <ol>
 <li><p>Check that there are no <code class="docutils literal notranslate"><span class="pre">rsa</span></code> files here before continuing</p>
 <p><code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">ls</span> <span class="pre">-al</span> <span class="pre">~/.ssh</span></code></p>
@@ -780,23 +747,21 @@ PS C:\Users&gt; ls &gt;&gt; list_directory.txt # Append
 <p><code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">mkdir</span> <span class="pre">$HOME/.ssh</span></code></p>
 </li>
 </ol>
-</div>
-<div class="section" id="generate-a-new-ssh-key">
-<h4>Generate a new SSH Key<a class="headerlink" href="#generate-a-new-ssh-key" title="Permalink to this headline">¶</a></h4>
+</li>
+<li><p>Generate a new SSH Key</p>
 <p><code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">ssh-keygen</span> <span class="pre">-t</span> <span class="pre">rsa</span> <span class="pre">-b</span> <span class="pre">4096</span> <span class="pre">-C</span> <span class="pre">&quot;your_email&#64;example.com&quot;</span></code></p>
-</div>
-<div class="section" id="add-ssh-key-to-ssh-agent">
-<h4>Add SSH Key to <code class="docutils literal notranslate"><span class="pre">ssh-agent</span></code><a class="headerlink" href="#add-ssh-key-to-ssh-agent" title="Permalink to this headline">¶</a></h4>
+</li>
+<li><p>Add SSH Key to <code class="docutils literal notranslate"><span class="pre">ssh-agent</span></code></p>
 <p><code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">eval</span> <span class="pre">$(ssh-agent</span> <span class="pre">-s)</span></code></p>
 <p><code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">ssh-add</span> <span class="pre">~/.ssh/id_rsa</span></code></p>
-</div>
-<div class="section" id="add-rsa-key-to-remote-system">
-<h4>Add RSA Key to remote system<a class="headerlink" href="#add-rsa-key-to-remote-system" title="Permalink to this headline">¶</a></h4>
+</li>
+<li><p>Add RSA Key to remote system</p>
 <ol class="simple">
 <li><p>Copy the RSA Key to clipboard</p></li>
 <li><p>Paste it to remote system</p></li>
 </ol>
-</div>
+</li>
+</ol>
 </div>
 </div>
 <div class="section" id="how-the-web-works">

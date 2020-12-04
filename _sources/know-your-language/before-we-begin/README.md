@@ -314,7 +314,7 @@ Any commits you make will be made on the branch you’re currently “checked ou
 
 ### Authenticate with SSH
 
-1. #### Check for existing SSH Key
+1. Check for existing SSH Key
 
    1. Check that there are no `rsa` files here before continuing
 
@@ -324,17 +324,17 @@ Any commits you make will be made on the branch you’re currently “checked ou
 
       `$ mkdir $HOME/.ssh`
 
-2. #### Generate a new SSH Key
+2. Generate a new SSH Key
 
    `$ ssh-keygen -t rsa -b 4096 -C "your_email@example.com"`
 
-3. #### Add SSH Key to `ssh-agent`
+3. Add SSH Key to `ssh-agent`
 
    `$ eval $(ssh-agent -s)`
 
    `$ ssh-add ~/.ssh/id_rsa`
 
-4. #### Add RSA Key to remote system
+4. Add RSA Key to remote system
 
    1. Copy the RSA Key to clipboard
    2. Paste it to remote system
