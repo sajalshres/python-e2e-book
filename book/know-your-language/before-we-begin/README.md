@@ -228,21 +228,21 @@ Git and SVN both are feasible for various workflows and version control systems,
 
 A conventional Git project will have three main sections:
 
-1. #### Git directory
+#### 1. Git directory
 
    Located in project-path/.git/ is where Git stores everything to tack in-and-outs of project including metadata, object databases, versions of project files.
 
-2. #### Working directory (or tree)
+#### 2. Working directory (or tree)
 
    It is the place where a user makes local changes to project. This directory pulls the project files from Git directory's object database and place them on the working directory.
 
-3. #### Staging area
+#### 3. Staging area
 
    Sometimes also called as index, stage, or cache, this is a file that stores information about what will go into your upcoming commit. A commit tells Git to save the stage changes.
 
    Git will take a snapshot of the files and permanently store them in the Git directory.
 
-Each file in a Git project will maintain following states:
+Additionally, each file in a Git project will maintain following states:
 
 1. Committed
 2. Modified
