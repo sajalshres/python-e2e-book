@@ -347,7 +347,11 @@
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#reduce">
-   reduce()
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     reduce()
+    </span>
+   </code>
   </a>
  </li>
 </ul>
@@ -505,7 +509,91 @@ Grade B: [68, 66, 68]
 </div>
 </div>
 <div class="section" id="reduce">
-<h2>reduce()<a class="headerlink" href="#reduce" title="Permalink to this headline">¶</a></h2>
+<h2><code class="docutils literal notranslate"><span class="pre">reduce()</span></code><a class="headerlink" href="#reduce" title="Permalink to this headline">¶</a></h2>
+<ul>
+<li><p>Returns a single value unlike <code class="docutils literal notranslate"><span class="pre">map()</span></code> and <code class="docutils literal notranslate"><span class="pre">filter()</span></code></p></li>
+<li><p>Can be imported from <code class="docutils literal notranslate"><span class="pre">functools</span></code> module</p></li>
+<li><p>Syntax:</p>
+<p><code class="docutils literal notranslate"><span class="pre">reduce(function,</span> <span class="pre">iterable[,</span> <span class="pre">initializer])</span></code></p>
+</li>
+<li><p>In above syntax, First parameter <code class="docutils literal notranslate"><span class="pre">function</span></code> is the function on which each element in the <code class="docutils literal notranslate"><span class="pre">iterable</span></code> gets cumulatively applied to.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">initializer</span></code> is the optional value, when present, is placed before the items of the iterable.</p></li>
+<li><p>Lets have a look at the code below:</p></li>
+</ul>
+<p><strong>Note:</strong> Checkout <a class="reference external" href="https://sajalshres.github.io/python-e2e-book/know-your-language/functions/notebook.html#lambda-expressions">lambda</a> from previous sections.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Sum of numbers using look</span>
+<span class="nb">sum</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">numbers</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
+<span class="k">for</span> <span class="n">number</span> <span class="ow">in</span> <span class="n">numbers</span><span class="p">:</span>
+    <span class="nb">sum</span> <span class="o">=</span> <span class="nb">sum</span> <span class="o">+</span> <span class="n">number</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Sum using loop:&quot;</span><span class="p">,</span> <span class="nb">sum</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Sum using loop: 45
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">functools</span> <span class="kn">import</span> <span class="n">reduce</span>
+
+<span class="c1"># Sum of numbers using reduce</span>
+<span class="n">numbers</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
+<span class="nb">sum</span> <span class="o">=</span> <span class="n">reduce</span><span class="p">(</span><span class="k">lambda</span> <span class="n">num1</span><span class="p">,</span> <span class="n">num2</span><span class="p">:</span> <span class="n">num1</span> <span class="o">+</span> <span class="n">num2</span><span class="p">,</span> <span class="n">numbers</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Sum using reduce:&quot;</span><span class="p">,</span> <span class="nb">sum</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Sum using reduce: 45
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">functools</span> <span class="kn">import</span> <span class="n">reduce</span>
+
+<span class="c1"># Sum of numbers using reduce with optional initial value</span>
+<span class="n">numbers</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
+<span class="nb">sum</span> <span class="o">=</span> <span class="n">reduce</span><span class="p">(</span><span class="k">lambda</span> <span class="n">num1</span><span class="p">,</span> <span class="n">num2</span><span class="p">:</span> <span class="n">num1</span> <span class="o">+</span> <span class="n">num2</span><span class="p">,</span> <span class="n">numbers</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Sum using reduce and initial value:&quot;</span><span class="p">,</span> <span class="nb">sum</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Sum using reduce and initial value: 55
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">functools</span> <span class="kn">import</span> <span class="n">reduce</span>
+
+<span class="c1"># Sum of numbers using reduce with optional initial value</span>
+<span class="n">numbers</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="nb">sum</span> <span class="o">=</span> <span class="n">reduce</span><span class="p">(</span><span class="k">lambda</span> <span class="n">num1</span><span class="p">,</span> <span class="n">num2</span><span class="p">:</span> <span class="n">num1</span> <span class="o">+</span> <span class="n">num2</span><span class="p">,</span> <span class="n">numbers</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Sum using reduce and initial value:&quot;</span><span class="p">,</span> <span class="nb">sum</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Sum using reduce and initial value: 10
+</pre></div>
+</div>
+</div>
+</div>
+<p>In the above example, the initializer <code class="docutils literal notranslate"><span class="pre">10</span></code> serves as a default when the iterable <code class="docutils literal notranslate"><span class="pre">numbers</span></code> is empty. So the result becomes 10.</p>
 </div>
 </div>
 
