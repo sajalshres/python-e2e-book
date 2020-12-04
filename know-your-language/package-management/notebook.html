@@ -205,6 +205,11 @@
    </code>
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../master-your-language/map-filter-reduce/notebook.html">
+   Map, Filter and Reduce
+  </a>
+ </li>
 </ul>
 <p class="caption collapsible-parent">
  <span class="caption-text">
@@ -542,12 +547,10 @@ django-bananas (1.5.5)              - Django Bananas - Django extensions the
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: requests in /opt/hostedtoolcache/Python/3.8.6/x64/lib/python3.8/site-packages (2.25.0)
-Requirement already satisfied: urllib3&lt;1.27,&gt;=1.21.1 in /opt/hostedtoolcache/Python/3.8.6/x64/lib/python3.8/site-packages (from requests) (1.26.2)
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: certifi&gt;=2017.4.17 in /opt/hostedtoolcache/Python/3.8.6/x64/lib/python3.8/site-packages (from requests) (2020.11.8)
 Requirement already satisfied: idna&lt;3,&gt;=2.5 in /opt/hostedtoolcache/Python/3.8.6/x64/lib/python3.8/site-packages (from requests) (2.10)
 Requirement already satisfied: chardet&lt;4,&gt;=3.0.2 in /opt/hostedtoolcache/Python/3.8.6/x64/lib/python3.8/site-packages (from requests) (3.0.4)
+Requirement already satisfied: urllib3&lt;1.27,&gt;=1.21.1 in /opt/hostedtoolcache/Python/3.8.6/x64/lib/python3.8/site-packages (from requests) (1.26.2)
+Requirement already satisfied: certifi&gt;=2017.4.17 in /opt/hostedtoolcache/Python/3.8.6/x64/lib/python3.8/site-packages (from requests) (2020.11.8)
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Yellow">WARNING: You are using pip version 20.2.4; however, version 20.3.1 is available.</span>
@@ -573,71 +576,65 @@ Requirement already satisfied: chardet&lt;4,&gt;=3.0.2 in /opt/hostedtoolcache/P
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  Downloading requests-2.6.0-py2.py3-none-any.whl (469 kB)
 ?25l
-     |▊                               | 10 kB 27.1 MB/s eta 0:00:01
-     |█▍                              | 20 kB 22.3 MB/s eta 0:00:01
-     |██                              | 30 kB 11.7 MB/s eta 0:00:01
-     |██▉                             | 40 kB 6.7 MB/s eta 0:00:01
-     |███▌                            | 51 kB 8.0 MB/s eta 0:00:01
-     |████▏                           | 61 kB 7.6 MB/s eta 0:00:01
-     |████▉                           | 71 kB 8.1 MB/s eta 0:00:01
-     |█████▋                          | 81 kB 9.0 MB/s eta 0:00:01
-     |██████▎                         | 92 kB 8.6 MB/s eta 0:00:01
-     |███████                         | 102 kB 7.8 MB/s eta 0:00:01
+     |▊                               | 10 kB 23.1 MB/s eta 0:00:01
+     |█▍                              | 20 kB 27.8 MB/s eta 0:00:01
+     |██                              | 30 kB 24.6 MB/s eta 0:00:01
+     |██▉                             | 40 kB 6.5 MB/s eta 0:00:01
+     |███▌                            | 51 kB 7.8 MB/s eta 0:00:01
+     |████▏                           | 61 kB 9.1 MB/s eta 0:00:01
+     |████▉                           | 71 kB 8.6 MB/s eta 0:00:01
+     |█████▋                          | 81 kB 9.5 MB/s eta 0:00:01
+     |██████▎                         | 92 kB 8.9 MB/s eta 0:00:01
+     |███████                         | 102 kB 9.7 MB/s eta 0:00:01
+     |███████▊                        | 112 kB 9.7 MB/s eta 0:00:01
+     |████████▍                       | 122 kB 9.7 MB/s eta 0:00:01
+     |█████████                       | 133 kB 9.7 MB/s eta 0:00:01
+     |█████████▊                      | 143 kB 9.7 MB/s eta 0:00:01
+     |██████████▌                     | 153 kB 9.7 MB/s eta 0:00:01
+     |███████████▏                    | 163 kB 9.7 MB/s eta 0:00:01
+     |███████████▉                    | 174 kB 9.7 MB/s eta 0:00:01
+     |████████████▌                   | 184 kB 9.7 MB/s eta 0:00:01
+     |█████████████▎                  | 194 kB 9.7 MB/s eta 0:00:01
+     |██████████████                  | 204 kB 9.7 MB/s eta 0:00:01
+     |██████████████▋                 | 215 kB 9.7 MB/s eta 0:00:01
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     |███████▊                        | 112 kB 7.8 MB/s eta 0:00:01
-     |████████▍                       | 122 kB 7.8 MB/s eta 0:00:01
-     |█████████                       | 133 kB 7.8 MB/s eta 0:00:01
-     |█████████▊                      | 143 kB 7.8 MB/s eta 0:00:01
-     |██████████▌                     | 153 kB 7.8 MB/s eta 0:00:01
-     |███████████▏                    | 163 kB 7.8 MB/s eta 0:00:01
-     |███████████▉                    | 174 kB 7.8 MB/s eta 0:00:01
-     |████████████▌                   | 184 kB 7.8 MB/s eta 0:00:01
-     |█████████████▎                  | 194 kB 7.8 MB/s eta 0:00:01
-     |██████████████                  | 204 kB 7.8 MB/s eta 0:00:01
-     |██████████████▋                 | 215 kB 7.8 MB/s eta 0:00:01
-     |███████████████▍                | 225 kB 7.8 MB/s eta 0:00:01
-     |████████████████                | 235 kB 7.8 MB/s eta 0:00:01
-     |████████████████▊               | 245 kB 7.8 MB/s eta 0:00:01
-     |█████████████████▍              | 256 kB 7.8 MB/s eta 0:00:01
-     |██████████████████▏             | 266 kB 7.8 MB/s eta 0:00:01
-     |██████████████████▉             | 276 kB 7.8 MB/s eta 0:00:01
-     |███████████████████▌            | 286 kB 7.8 MB/s eta 0:00:01
-     |████████████████████▎           | 296 kB 7.8 MB/s eta 0:00:01
-     |█████████████████████           | 307 kB 7.8 MB/s eta 0:00:01
-     |█████████████████████▋          | 317 kB 7.8 MB/s eta 0:00:01
-     |██████████████████████▎         | 327 kB 7.8 MB/s eta 0:00:01
-     |███████████████████████         | 337 kB 7.8 MB/s eta 0:00:01
-     |███████████████████████▊        | 348 kB 7.8 MB/s eta 0:00:01
-     |████████████████████████▍       | 358 kB 7.8 MB/s eta 0:00:01
-     |█████████████████████████       | 368 kB 7.8 MB/s eta 0:00:01
-     |█████████████████████████▉      | 378 kB 7.8 MB/s eta 0:00:01
-     |██████████████████████████▌     | 389 kB 7.8 MB/s eta 0:00:01
-     |███████████████████████████▏    | 399 kB 7.8 MB/s eta 0:00:01
-     |████████████████████████████    | 409 kB 7.8 MB/s eta 0:00:01
-     |████████████████████████████▋   | 419 kB 7.8 MB/s eta 0:00:01
-     |█████████████████████████████▎  | 430 kB 7.8 MB/s eta 0:00:01
-     |██████████████████████████████  | 440 kB 7.8 MB/s eta 0:00:01
-     |██████████████████████████████▊ | 450 kB 7.8 MB/s eta 0:00:01
-     |███████████████████████████████▍| 460 kB 7.8 MB/s eta 0:00:01
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     |████████████████████████████████| 469 kB 7.8 MB/s 
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     |███████████████▍                | 225 kB 9.7 MB/s eta 0:00:01
+     |████████████████                | 235 kB 9.7 MB/s eta 0:00:01
+     |████████████████▊               | 245 kB 9.7 MB/s eta 0:00:01
+     |█████████████████▍              | 256 kB 9.7 MB/s eta 0:00:01
+     |██████████████████▏             | 266 kB 9.7 MB/s eta 0:00:01
+     |██████████████████▉             | 276 kB 9.7 MB/s eta 0:00:01
+     |███████████████████▌            | 286 kB 9.7 MB/s eta 0:00:01
+     |████████████████████▎           | 296 kB 9.7 MB/s eta 0:00:01
+     |█████████████████████           | 307 kB 9.7 MB/s eta 0:00:01
+     |█████████████████████▋          | 317 kB 9.7 MB/s eta 0:00:01
+     |██████████████████████▎         | 327 kB 9.7 MB/s eta 0:00:01
+     |███████████████████████         | 337 kB 9.7 MB/s eta 0:00:01
+     |███████████████████████▊        | 348 kB 9.7 MB/s eta 0:00:01
+     |████████████████████████▍       | 358 kB 9.7 MB/s eta 0:00:01
+     |█████████████████████████       | 368 kB 9.7 MB/s eta 0:00:01
+     |█████████████████████████▉      | 378 kB 9.7 MB/s eta 0:00:01
+     |██████████████████████████▌     | 389 kB 9.7 MB/s eta 0:00:01
+     |███████████████████████████▏    | 399 kB 9.7 MB/s eta 0:00:01
+     |████████████████████████████    | 409 kB 9.7 MB/s eta 0:00:01
+     |████████████████████████████▋   | 419 kB 9.7 MB/s eta 0:00:01
+     |█████████████████████████████▎  | 430 kB 9.7 MB/s eta 0:00:01
+     |██████████████████████████████  | 440 kB 9.7 MB/s eta 0:00:01
+     |██████████████████████████████▊ | 450 kB 9.7 MB/s eta 0:00:01
+     |███████████████████████████████▍| 460 kB 9.7 MB/s eta 0:00:01
+     |████████████████████████████████| 469 kB 9.7 MB/s 
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>?25hInstalling collected packages: requests
   Attempting uninstall: requests
     Found existing installation: requests 2.25.0
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>    Uninstalling requests-2.25.0:
+    Uninstalling requests-2.25.0:
       Successfully uninstalled requests-2.25.0
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Successfully installed requests-2.6.0
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Yellow">WARNING: You are using pip version 20.2.4; however, version 20.3.1 is available.</span>
+<span class=" -Color -Color-Yellow">WARNING: You are using pip version 20.2.4; however, version 20.3.1 is available.</span>
 <span class=" -Color -Color-Yellow">You should consider upgrading via the &#39;/opt/hostedtoolcache/Python/3.8.6/x64/bin/python -m pip install --upgrade pip&#39; command.</span>
 </pre></div>
 </div>
@@ -662,12 +659,10 @@ Requirement already satisfied: chardet&lt;4,&gt;=3.0.2 in /opt/hostedtoolcache/P
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting requests
   Using cached requests-2.25.0-py2.py3-none-any.whl (61 kB)
-Requirement already satisfied, skipping upgrade: chardet&lt;4,&gt;=3.0.2 in /opt/hostedtoolcache/Python/3.8.6/x64/lib/python3.8/site-packages (from requests) (3.0.4)
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied, skipping upgrade: idna&lt;3,&gt;=2.5 in /opt/hostedtoolcache/Python/3.8.6/x64/lib/python3.8/site-packages (from requests) (2.10)
-Requirement already satisfied, skipping upgrade: urllib3&lt;1.27,&gt;=1.21.1 in /opt/hostedtoolcache/Python/3.8.6/x64/lib/python3.8/site-packages (from requests) (1.26.2)
 Requirement already satisfied, skipping upgrade: certifi&gt;=2017.4.17 in /opt/hostedtoolcache/Python/3.8.6/x64/lib/python3.8/site-packages (from requests) (2020.11.8)
+Requirement already satisfied, skipping upgrade: chardet&lt;4,&gt;=3.0.2 in /opt/hostedtoolcache/Python/3.8.6/x64/lib/python3.8/site-packages (from requests) (3.0.4)
+Requirement already satisfied, skipping upgrade: urllib3&lt;1.27,&gt;=1.21.1 in /opt/hostedtoolcache/Python/3.8.6/x64/lib/python3.8/site-packages (from requests) (1.26.2)
+Requirement already satisfied, skipping upgrade: idna&lt;3,&gt;=2.5 in /opt/hostedtoolcache/Python/3.8.6/x64/lib/python3.8/site-packages (from requests) (2.10)
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Installing collected packages: requests
@@ -716,7 +711,7 @@ Author: Kenneth Reitz
 Author-email: me@kennethreitz.org
 License: Apache 2.0
 Location: /opt/hostedtoolcache/Python/3.8.6/x64/lib/python3.8/site-packages
-Requires: certifi, chardet, idna, urllib3
+Requires: urllib3, idna, certifi, chardet
 Required-by: Sphinx, nbdime
 </pre></div>
 </div>
