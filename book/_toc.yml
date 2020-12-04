@@ -30,6 +30,7 @@
 - part: Master Your Language
   chapters:
     - file: master-your-language/super/notebook.ipynb
+    - file: master-your-language/map-filter-reduce/notebook.ipynb
 
 - part: Coding Challenges
   chapters:
