@@ -340,6 +340,11 @@
    in-depth
   </a>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#method-resolution-order-mro">
+   Method Resolution Order (MRO)
+  </a>
+ </li>
 </ul>
 
         </nav>
@@ -404,8 +409,7 @@ Student(101): Rachel Smith, 28, Female
 </ul>
 </li>
 <li><p>In above example, calling <code class="docutils literal notranslate"><span class="pre">super(Person,</span> <span class="pre">self).__init__(name,</span> <span class="pre">age,</span> <span class="pre">sex)</span></code> is same as <code class="docutils literal notranslate"><span class="pre">super().__init__(name,</span> <span class="pre">age,</span> <span class="pre">sex)</span></code>.</p></li>
-<li><p>Also, <code class="docutils literal notranslate"><span class="pre">super()</span></code> without any parameters is sufficient ins most of the scenarios.</p></li>
-<li><p>Sometimes, usually in multiple inheritance, it is helpful to call method from different superclass instead of immediate.</p></li>
+<li><p>Sometimes, usually in multiple inheritance, it is helpful to call method from superclass at different lelel instead of immediate superclass.</p></li>
 </ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -443,6 +447,143 @@ Student(101): Rachel Smith, 28, Female
 </div>
 <ul class="simple">
 <li><p>In the above example, By providing argument subclass as <code class="docutils literal notranslate"><span class="pre">B</span></code> to <code class="docutils literal notranslate"><span class="pre">super()</span></code> method, we are causing it to search <code class="docutils literal notranslate"><span class="pre">welcome()</span></code> method just one level above class <code class="docutils literal notranslate"><span class="pre">B</span></code>, in our case, class <code class="docutils literal notranslate"><span class="pre">A</span></code></p></li>
+</ul>
+<p><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">super()</span></code> without any parameters is sufficient in most of the scenarios.</p>
+</div>
+<div class="section" id="method-resolution-order-mro">
+<h2>Method Resolution Order (MRO)<a class="headerlink" href="#method-resolution-order-mro" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Like most object-oriented programming language, Python also supports a form of multiple inheritance as seen above in example.</p></li>
+</ul>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">SubClass</span><span class="p">(</span><span class="n">SuperClass1</span><span class="p">,</span> <span class="n">SuperClass2</span><span class="p">,</span> <span class="n">SuperClass3</span><span class="p">):</span>
+    <span class="o">&lt;</span><span class="n">statement</span><span class="o">-</span><span class="mi">1</span><span class="o">&gt;</span>
+    <span class="o">...</span>
+    <span class="o">...</span>
+    <span class="o">...</span>
+    <span class="o">&lt;</span><span class="n">statement</span><span class="o">-</span><span class="n">N</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>In its simplest form, the search of attributes and methods are carried out as depth-first, left to right, not searching twice in the same class where there is an overlap in the hierarchy.</p></li>
+<li><p>In above syntax, if an attribute is not found in <code class="docutils literal notranslate"><span class="pre">SubClass</span></code>, it is then searched in <code class="docutils literal notranslate"><span class="pre">SuperClass1</span></code>, and then in <code class="docutils literal notranslate"><span class="pre">SuperClass2</span></code> and search goes on recursively. (<strong>MRO</strong>)</p></li>
+<li><p><strong>MRO</strong> tells the Python interpreter to search for the inherited attributes.</p></li>
+<li><p>The search process, in fact, is slightly complex than described above. The <strong>MRO</strong> changes dynamically to support cooperative calls to <code class="docutils literal notranslate"><span class="pre">super()</span></code>.</p></li>
+<li><p>Dynamic resolution is important in cases of complex inheritance when there are one or more diamond relationships. In such cases, superclass can be accessed through multiple ways from baseclass.</p></li>
+<li><p>In order to make baseclass being accessed more than once, the dynamic algorithm (<strong>MRO</strong>) linearizes the search order in a way that preserves the left to right ordering, calling superclass only once.</p></li>
+</ul>
+<p><strong>Note:</strong> Every class has <code class="docutils literal notranslate"><span class="pre">__mro__</span></code> attribute as well as <code class="docutils literal notranslate"><span class="pre">mro()</span></code> method to inspect the order.</p>
+<p>More on <strong>MRO</strong>: <a class="reference external" href="https://www.python.org/download/releases/2.3/mro/">https://www.python.org/download/releases/2.3/mro/</a></p>
+<p>Lets have a look at a code below:</p>
+<p><img alt="class-inheritance" src="../../_images/class-inheritance.jpg" /></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">A</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">message</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">message</span> <span class="o">=</span> <span class="n">message</span>
+    
+    <span class="k">def</span> <span class="nf">greet</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">message</span><span class="p">)</span>
+
+<span class="k">class</span> <span class="nc">B</span><span class="p">(</span><span class="n">A</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">message</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">message</span><span class="o">=</span><span class="n">message</span><span class="p">)</span>
+    
+    <span class="k">def</span> <span class="nf">greet</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">, </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">message</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="k">class</span> <span class="nc">C</span><span class="p">(</span><span class="n">A</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">message</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">message</span><span class="o">=</span><span class="n">message</span><span class="p">)</span>
+    
+    <span class="k">def</span> <span class="nf">greet</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="nb">id</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">(</span><span class="si">{</span><span class="nb">id</span><span class="si">}</span><span class="s2">), </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">message</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="k">class</span> <span class="nc">D</span><span class="p">(</span><span class="n">B</span><span class="p">,</span> <span class="n">C</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">message</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">message</span><span class="o">=</span><span class="n">message</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">D</span><span class="o">.</span><span class="vm">__mro__</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">D</span><span class="o">.</span><span class="n">mro</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(&lt;class &#39;__main__.D&#39;&gt;, &lt;class &#39;__main__.B&#39;&gt;, &lt;class &#39;__main__.C&#39;&gt;, &lt;class &#39;__main__.A&#39;&gt;, &lt;class &#39;object&#39;&gt;)
+[&lt;class &#39;__main__.D&#39;&gt;, &lt;class &#39;__main__.B&#39;&gt;, &lt;class &#39;__main__.C&#39;&gt;, &lt;class &#39;__main__.A&#39;&gt;, &lt;class &#39;object&#39;&gt;]
+</pre></div>
+</div>
+</div>
+</div>
+<ul class="simple">
+<li><p>Another example, demonstrating <strong>MRO</strong></p></li>
+</ul>
+<p><img alt="class-inheritance-pyramid" src="../../_images/class-inheritance-pyramid.jpg" /></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Rectangle</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">length</span><span class="p">,</span> <span class="n">width</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">length</span> <span class="o">=</span> <span class="n">length</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">width</span> <span class="o">=</span> <span class="n">width</span>
+
+    <span class="k">def</span> <span class="nf">area</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">length</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">width</span>
+
+    <span class="k">def</span> <span class="nf">perimeter</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="mi">2</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">length</span> <span class="o">+</span> <span class="mi">2</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">width</span>
+
+<span class="k">class</span> <span class="nc">Square</span><span class="p">(</span><span class="n">Rectangle</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">length</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">Square</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">length</span><span class="p">,</span> <span class="n">length</span><span class="p">)</span>
+
+<span class="k">class</span> <span class="nc">Cube</span><span class="p">(</span><span class="n">Square</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">surface_area</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">face_area</span> <span class="o">=</span> <span class="nb">super</span><span class="p">(</span><span class="n">Square</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="n">area</span><span class="p">()</span>
+        <span class="k">return</span> <span class="n">face_area</span> <span class="o">*</span> <span class="mi">6</span>
+
+    <span class="k">def</span> <span class="nf">volume</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">face_area</span> <span class="o">=</span> <span class="nb">super</span><span class="p">(</span><span class="n">Square</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="n">area</span><span class="p">()</span>
+        <span class="k">return</span> <span class="n">face_area</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">length</span>
+
+<span class="k">class</span> <span class="nc">Triangle</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">base</span><span class="p">,</span> <span class="n">height</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">base</span> <span class="o">=</span> <span class="n">base</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">height</span> <span class="o">=</span> <span class="n">height</span>
+
+    <span class="k">def</span> <span class="nf">area</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="mf">0.5</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">base</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">height</span>
+
+<span class="k">class</span> <span class="nc">RightPyramid</span><span class="p">(</span><span class="n">Square</span><span class="p">,</span> <span class="n">Triangle</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">base</span><span class="p">,</span> <span class="n">slant_height</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">base</span> <span class="o">=</span> <span class="n">base</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">slant_height</span> <span class="o">=</span> <span class="n">slant_height</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">base</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">area</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">base_area</span> <span class="o">=</span> <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">area</span><span class="p">()</span>
+        <span class="n">perimeter</span> <span class="o">=</span> <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">perimeter</span><span class="p">()</span>
+        <span class="k">return</span> <span class="mf">0.5</span> <span class="o">*</span> <span class="n">perimeter</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">slant_height</span> <span class="o">+</span> <span class="n">base_area</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">RightPyramid</span><span class="o">.</span><span class="vm">__mro__</span><span class="p">)</span>
+
+<span class="n">pyramid</span> <span class="o">=</span> <span class="n">RightPyramid</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">pyramid</span><span class="o">.</span><span class="n">area</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(&lt;class &#39;__main__.RightPyramid&#39;&gt;, &lt;class &#39;__main__.Square&#39;&gt;, &lt;class &#39;__main__.Rectangle&#39;&gt;, &lt;class &#39;__main__.Triangle&#39;&gt;, &lt;class &#39;object&#39;&gt;)
+20.0
+</pre></div>
+</div>
+</div>
+</div>
+<p>When desigining inheritance, you should consider some of the best practices, like:</p>
+<ul class="simple">
+<li><p>Identify interfaces: Interfaces define methods only but not the implementation and should be overridden. (Sometimes called Abstract Base Class: <strong>ABC</strong>)</p></li>
+<li><p>Identify mixins: Mixins bundle together related implementations to be used in child.</p></li>
+<li><p>Inherit from one concrete superclass, and several interfaces or mixins</p></li>
+<li><p>Frequently used classes can be joined together</p></li>
+<li><p>Use composition over multiple inheritance, when possible: Finding a way of using a class as an attribute instead of inherting it.</p></li>
 </ul>
 </div>
 </div>
