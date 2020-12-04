@@ -404,17 +404,17 @@
     <ul class="nav section-nav flex-column">
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#git-directory">
-       Git directory
+       1. Git directory
       </a>
      </li>
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#working-directory-or-tree">
-       Working directory (or tree)
+       2. Working directory (or tree)
       </a>
      </li>
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#staging-area">
-       Staging area
+       3. Staging area
       </a>
      </li>
     </ul>
@@ -693,30 +693,25 @@ PS C:\Users&gt; ls &gt;&gt; list_directory.txt # Append
 <div class="section" id="three-sections-of-a-git-project">
 <h3>Three sections of a Git Project<a class="headerlink" href="#three-sections-of-a-git-project" title="Permalink to this headline">¶</a></h3>
 <p>A conventional Git project will have three main sections:</p>
-<ol class="simple">
-<li></li>
-<li></li>
-<li></li>
-</ol>
 <div class="section" id="git-directory">
-<h4>Git directory<a class="headerlink" href="#git-directory" title="Permalink to this headline">¶</a></h4>
+<h4>1. Git directory<a class="headerlink" href="#git-directory" title="Permalink to this headline">¶</a></h4>
 <p>Located in project-path/.git/ is where Git stores everything to tack in-and-outs of project including metadata, object databases, versions of project files.</p>
 </div>
 <div class="section" id="working-directory-or-tree">
-<h4>Working directory (or tree)<a class="headerlink" href="#working-directory-or-tree" title="Permalink to this headline">¶</a></h4>
+<h4>2. Working directory (or tree)<a class="headerlink" href="#working-directory-or-tree" title="Permalink to this headline">¶</a></h4>
 <p>It is the place where a user makes local changes to project. This directory pulls the project files from Git directory’s object database and place them on the working directory.</p>
 </div>
 <div class="section" id="staging-area">
-<h4>Staging area<a class="headerlink" href="#staging-area" title="Permalink to this headline">¶</a></h4>
+<h4>3. Staging area<a class="headerlink" href="#staging-area" title="Permalink to this headline">¶</a></h4>
 <p>Sometimes also called as index, stage, or cache, this is a file that stores information about what will go into your upcoming commit. A commit tells Git to save the stage changes.</p>
 <p>Git will take a snapshot of the files and permanently store them in the Git directory.</p>
-</div>
-<p>Each file in a Git project will maintain following states:</p>
+<p>Additionally, each file in a Git project will maintain following states:</p>
 <ol class="simple">
 <li><p>Committed</p></li>
 <li><p>Modified</p></li>
 <li><p>Staged</p></li>
 </ol>
+</div>
 </div>
 <div class="section" id="configure-your-git-environment">
 <h3>Configure your Git Environment<a class="headerlink" href="#configure-your-git-environment" title="Permalink to this headline">¶</a></h3>
