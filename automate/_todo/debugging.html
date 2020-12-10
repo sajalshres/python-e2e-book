@@ -1339,32 +1339,32 @@ display tail: &#39;debug_5.py&#39;
 <div class="section" id="set-configuration-options">
 <h2>Set configuration options<a class="headerlink" href="#set-configuration-options" title="Permalink to this headline">¶</a></h2>
 <p>When you first create <code class="docutils literal notranslate"><span class="pre">launch.json</span></code>, there are two standard configurations that run the active file in the editor in either the integrated terminal (inside VS Code) or the external terminal (outside of VS Code):</p>
-<div class="highlight-json notranslate"><div class="highlight"><pre><span></span>{
-    &quot;name&quot;: &quot;Python: Current File (Integrated Terminal)&quot;,
-    &quot;type&quot;: &quot;python&quot;,
-    &quot;request&quot;: &quot;launch&quot;,
-    &quot;program&quot;: &quot;${file}&quot;,
-    &quot;console&quot;: &quot;integratedTerminal&quot;
-},
-{
-    &quot;name&quot;: &quot;Python: Current File (External Terminal)&quot;,
-    &quot;type&quot;: &quot;python&quot;,
-    &quot;request&quot;: &quot;launch&quot;,
-    &quot;program&quot;: &quot;${file}&quot;,
-    &quot;console&quot;: &quot;externalTerminal&quot;
-}
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Python: Current File (Integrated Terminal)&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;python&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;request&quot;</span><span class="p">:</span> <span class="s2">&quot;launch&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;program&quot;</span><span class="p">:</span> <span class="s2">&quot;${file}&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;console&quot;</span><span class="p">:</span> <span class="s2">&quot;integratedTerminal&quot;</span>
+<span class="p">},</span>
+<span class="p">{</span>
+    <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Python: Current File (External Terminal)&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;python&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;request&quot;</span><span class="p">:</span> <span class="s2">&quot;launch&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;program&quot;</span><span class="p">:</span> <span class="s2">&quot;${file}&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;console&quot;</span><span class="p">:</span> <span class="s2">&quot;externalTerminal&quot;</span>
+<span class="p">}</span>
 </pre></div>
 </div>
 <p>The specific settings are described in the following sections. You can also add other settings, such as <code class="docutils literal notranslate"><span class="pre">args</span></code>, that aren’t included in the standard configurations.</p>
 <blockquote>
 <div><p><strong>Tip</strong>: It’s often helpful in a project to create a configuration that runs a specific startup file. For example, if you want to always launch <code class="docutils literal notranslate"><span class="pre">startup.py</span></code> with the arguments <code class="docutils literal notranslate"><span class="pre">--port</span> <span class="pre">1593</span></code> when you start the debugger, create a configuration entry as follows:</p>
-<div class="highlight-json notranslate"><div class="highlight"><pre><span></span>{
-    &quot;name&quot;: &quot;Python: startup.py&quot;,
-    &quot;type&quot;: &quot;python&quot;,
-    &quot;request&quot;: &quot;launch&quot;,
-    &quot;program&quot;: &quot;${workspaceFolder}/startup.py&quot;,
-    &quot;args&quot; : [&quot;--port&quot;, &quot;1593&quot;]
-},
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Python: startup.py&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;python&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;request&quot;</span><span class="p">:</span> <span class="s2">&quot;launch&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;program&quot;</span><span class="p">:</span> <span class="s2">&quot;${workspaceFolder}/startup.py&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;args&quot;</span> <span class="p">:</span> <span class="p">[</span><span class="s2">&quot;--port&quot;</span><span class="p">,</span> <span class="s2">&quot;1593&quot;</span><span class="p">]</span>
+<span class="p">},</span>
 </pre></div>
 </div>
 </div></blockquote>
