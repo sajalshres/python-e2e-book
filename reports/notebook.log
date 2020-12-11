@@ -17,21 +17,25 @@ Traceback (most recent call last):
     raise CellExecutionError.from_cell_and_msg(cell, exec_reply['content'])
 nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
 ------------------
-print(next(increment))
+numbers = [1, 2, 3]
+iterable_numbers = iter(numbers)
+
+print("Calling 1st time: ", next(iterable_numbers))
+
+print("Calling 2nd time: ", next(iterable_numbers))
+
+print("Calling 3rd time: ", next(iterable_numbers))
+
+print("Calling 4th time: ", next(iterable_numbers)) # Raises StopIteration
 ------------------
 
 [0;31m---------------------------------------------------------------------------[0m
 [0;31mStopIteration[0m                             Traceback (most recent call last)
-[0;32m<ipython-input-8-37e11a149c41>[0m in [0;36m<module>[0;34m[0m
-[0;32m----> 1[0;31m [0mprint[0m[0;34m([0m[0mnext[0m[0;34m([0m[0mincrement[0m[0;34m)[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0;32m<ipython-input-2-cdd05496ca3a>[0m in [0;36m<module>[0;34m[0m
+[1;32m      8[0m [0mprint[0m[0;34m([0m[0;34m"Calling 3rd time: "[0m[0;34m,[0m [0mnext[0m[0;34m([0m[0miterable_numbers[0m[0;34m)[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[1;32m      9[0m [0;34m[0m[0m
+[0;32m---> 10[0;31m [0mprint[0m[0;34m([0m[0;34m"Calling 4th time: "[0m[0;34m,[0m [0mnext[0m[0;34m([0m[0miterable_numbers[0m[0;34m)[0m[0;34m)[0m [0;31m# Raises StopIteration[0m[0;34m[0m[0;34m[0m[0m
 [0m
-[0;32m<ipython-input-2-d0ee8d8b457f>[0m in [0;36m__next__[0;34m(self)[0m
-[1;32m     12[0m         [0;34m"""returns the next value or raises StopIteration"""[0m[0;34m[0m[0;34m[0m[0m
-[1;32m     13[0m         [0;32mif[0m [0mself[0m[0;34m.[0m[0mcurrent[0m [0;34m>[0m [0mself[0m[0;34m.[0m[0mend[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
-[0;32m---> 14[0;31m             [0;32mraise[0m [0mStopIteration[0m[0;34m([0m[0;34m"Stop Iteration"[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
-[0m[1;32m     15[0m         [0;32melse[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
-[1;32m     16[0m             [0mself[0m[0;34m.[0m[0mcurrent[0m [0;34m+=[0m [0;36m1[0m[0;34m[0m[0;34m[0m[0m
-
-[0;31mStopIteration[0m: Stop Iteration
-StopIteration: Stop Iteration
+[0;31mStopIteration[0m: 
+StopIteration: 
 

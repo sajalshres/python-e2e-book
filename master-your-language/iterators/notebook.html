@@ -384,11 +384,47 @@
 <ul class="simple">
 <li><p>To create our oun iterator object, we’ll need to implement two dunder(double underscore) methods in the class:</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">__iter__</span></code>: should return iterator object. Used in <code class="docutils literal notranslate"><span class="pre">for</span></code> and <code class="docutils literal notranslate"><span class="pre">in</span></code> keywords</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">__next__</span></code>: returns next value or <code class="docutils literal notranslate"><span class="pre">StopIteration</span></code> error once all the objects has been looped.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">__iter__()</span></code> (<code class="docutils literal notranslate"><span class="pre">iter()</span></code>): should return iterator object. Used in <code class="docutils literal notranslate"><span class="pre">for</span></code> and <code class="docutils literal notranslate"><span class="pre">in</span></code> keywords</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">__next__()</span></code> (<code class="docutils literal notranslate"><span class="pre">next()</span></code>): returns next value or <code class="docutils literal notranslate"><span class="pre">StopIteration</span></code> error once all the objects has been looped. Moreover, this method internally uses <code class="docutils literal notranslate"><span class="pre">iter()</span></code> method to get an iterator object and the uses <code class="docutils literal notranslate"><span class="pre">next()</span></code> method to iterate over the values.</p></li>
 </ul>
 </li>
 <li><p>Let’s have a look at the code below:</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">numbers</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+<span class="n">iterable_numbers</span> <span class="o">=</span> <span class="nb">iter</span><span class="p">(</span><span class="n">numbers</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Calling 1st time: &quot;</span><span class="p">,</span> <span class="nb">next</span><span class="p">(</span><span class="n">iterable_numbers</span><span class="p">))</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Calling 2nd time: &quot;</span><span class="p">,</span> <span class="nb">next</span><span class="p">(</span><span class="n">iterable_numbers</span><span class="p">))</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Calling 3rd time: &quot;</span><span class="p">,</span> <span class="nb">next</span><span class="p">(</span><span class="n">iterable_numbers</span><span class="p">))</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Calling 4th time: &quot;</span><span class="p">,</span> <span class="nb">next</span><span class="p">(</span><span class="n">iterable_numbers</span><span class="p">))</span> <span class="c1"># Raises StopIteration</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Calling 1st time:  1
+Calling 2nd time:  2
+Calling 3rd time:  3
+</pre></div>
+</div>
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">StopIteration</span><span class="g g-Whitespace">                             </span>Traceback (most recent call last)
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">2</span><span class="o">-</span><span class="n">cdd05496ca3a</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">      </span><span class="mi">8</span> <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Calling 3rd time: &quot;</span><span class="p">,</span> <span class="nb">next</span><span class="p">(</span><span class="n">iterable_numbers</span><span class="p">))</span>
+<span class="g g-Whitespace">      </span><span class="mi">9</span> 
+<span class="ne">---&gt; </span><span class="mi">10</span> <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Calling 4th time: &quot;</span><span class="p">,</span> <span class="nb">next</span><span class="p">(</span><span class="n">iterable_numbers</span><span class="p">))</span> <span class="c1"># Raises StopIteration</span>
+
+<span class="ne">StopIteration</span>: 
+</pre></div>
+</div>
+</div>
+</div>
+<ul class="simple">
+<li><p>Now, lets create our own custom iterator below:</p></li>
 </ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -407,8 +443,8 @@
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">current</span> <span class="o">&gt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">end</span><span class="p">:</span>
             <span class="k">raise</span> <span class="ne">StopIteration</span><span class="p">(</span><span class="s2">&quot;Stop Iteration&quot;</span><span class="p">)</span>
         <span class="k">else</span><span class="p">:</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">current</span> <span class="o">+=</span> <span class="mi">1</span>
-            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">current</span> <span class="o">-</span> <span class="mi">1</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">current</span> <span class="o">+=</span> <span class="bp">self</span><span class="o">.</span><span class="n">step</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">current</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">step</span>
 </pre></div>
 </div>
 </div>
@@ -429,7 +465,7 @@
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 
-0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 
+0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 
 </pre></div>
 </div>
 </div>
@@ -497,15 +533,15 @@
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">StopIteration</span><span class="g g-Whitespace">                             </span>Traceback (most recent call last)
-<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">8</span><span class="o">-</span><span class="mf">37e11</span><span class="n">a149c41</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">74</span><span class="o">-</span><span class="mf">37e11</span><span class="n">a149c41</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="ne">----&gt; </span><span class="mi">1</span> <span class="nb">print</span><span class="p">(</span><span class="nb">next</span><span class="p">(</span><span class="n">increment</span><span class="p">))</span>
 
-<span class="nn">&lt;ipython-input-2-d0ee8d8b457f&gt;</span> in <span class="ni">__next__</span><span class="nt">(self)</span>
-<span class="g g-Whitespace">     </span><span class="mi">12</span>         <span class="sd">&quot;&quot;&quot;returns the next value or raises StopIteration&quot;&quot;&quot;</span>
-<span class="g g-Whitespace">     </span><span class="mi">13</span>         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">current</span> <span class="o">&gt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">end</span><span class="p">:</span>
-<span class="ne">---&gt; </span><span class="mi">14</span>             <span class="k">raise</span> <span class="ne">StopIteration</span><span class="p">(</span><span class="s2">&quot;Stop Iteration&quot;</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">15</span>         <span class="k">else</span><span class="p">:</span>
-<span class="g g-Whitespace">     </span><span class="mi">16</span>             <span class="bp">self</span><span class="o">.</span><span class="n">current</span> <span class="o">+=</span> <span class="mi">1</span>
+<span class="nn">&lt;ipython-input-64-be979cba6339&gt;</span> in <span class="ni">__next__</span><span class="nt">(self)</span>
+<span class="g g-Whitespace">     </span><span class="mi">10</span>     <span class="k">def</span> <span class="fm">__next__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="g g-Whitespace">     </span><span class="mi">11</span>         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">current</span> <span class="o">&gt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">end</span><span class="p">:</span>
+<span class="ne">---&gt; </span><span class="mi">12</span>             <span class="k">raise</span> <span class="ne">StopIteration</span><span class="p">(</span><span class="s2">&quot;Stop Iteration&quot;</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">13</span>         <span class="k">else</span><span class="p">:</span>
+<span class="g g-Whitespace">     </span><span class="mi">14</span>             <span class="bp">self</span><span class="o">.</span><span class="n">current</span> <span class="o">+=</span> <span class="mi">1</span>
 
 <span class="ne">StopIteration</span>: Stop Iteration
 </pre></div>
@@ -545,7 +581,7 @@
 
 <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
     <span class="k">try</span><span class="p">:</span>
-        <span class="n">i</span> <span class="o">=</span> <span class="n">increment</span><span class="o">.</span><span class="fm">__next__</span><span class="p">()</span>
+        <span class="n">i</span> <span class="o">=</span> <span class="n">increment</span><span class="o">.</span><span class="fm">__next__</span><span class="p">()</span> <span class="c1"># or next(increment)</span>
         <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s2">&quot;, &quot;</span><span class="p">)</span>
     <span class="k">except</span> <span class="ne">StopIteration</span> <span class="k">as</span> <span class="n">error</span><span class="p">:</span>
         <span class="nb">print</span><span class="p">(</span><span class="n">error</span><span class="p">,</span> <span class="s2">&quot;Raised&quot;</span><span class="p">)</span>
