@@ -17,14 +17,21 @@ Traceback (most recent call last):
     raise CellExecutionError.from_cell_and_msg(cell, exec_reply['content'])
 nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
 ------------------
-print(f.read())
+print(next(increment))
 ------------------
 
 [0;31m---------------------------------------------------------------------------[0m
-[0;31mValueError[0m                                Traceback (most recent call last)
-[0;32m<ipython-input-10-315c20b774c2>[0m in [0;36m<module>[0;34m[0m
-[0;32m----> 1[0;31m [0mprint[0m[0;34m([0m[0mf[0m[0;34m.[0m[0mread[0m[0;34m([0m[0;34m)[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0;31mStopIteration[0m                             Traceback (most recent call last)
+[0;32m<ipython-input-8-37e11a149c41>[0m in [0;36m<module>[0;34m[0m
+[0;32m----> 1[0;31m [0mprint[0m[0;34m([0m[0mnext[0m[0;34m([0m[0mincrement[0m[0;34m)[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
 [0m
-[0;31mValueError[0m: I/O operation on closed file.
-ValueError: I/O operation on closed file.
+[0;32m<ipython-input-2-d0ee8d8b457f>[0m in [0;36m__next__[0;34m(self)[0m
+[1;32m     12[0m         [0;34m"""returns the next value or raises StopIteration"""[0m[0;34m[0m[0;34m[0m[0m
+[1;32m     13[0m         [0;32mif[0m [0mself[0m[0;34m.[0m[0mcurrent[0m [0;34m>[0m [0mself[0m[0;34m.[0m[0mend[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[0;32m---> 14[0;31m             [0;32mraise[0m [0mStopIteration[0m[0;34m([0m[0;34m"Stop Iteration"[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m     15[0m         [0;32melse[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[1;32m     16[0m             [0mself[0m[0;34m.[0m[0mcurrent[0m [0;34m+=[0m [0;36m1[0m[0;34m[0m[0;34m[0m[0m
+
+[0;31mStopIteration[0m: Stop Iteration
+StopIteration: Stop Iteration
 
