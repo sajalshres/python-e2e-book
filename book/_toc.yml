@@ -15,6 +15,12 @@
     - file: know-your-language/package-management/notebook.ipynb
     - file: know-your-language/virtual-environments/notebook.ipynb
 
+- part: Master Your Language
+  chapters:
+    - file: master-your-language/super/notebook.ipynb
+    - file: master-your-language/map-filter-reduce/notebook.ipynb
+    - file: master-your-language/iterators/notebook.ipynb
+
 - part: Apply Python in Real Life
   chapters:
     - file: automate/regular-expressions/README.md
@@ -26,11 +32,6 @@
 - part: Rest time
   chapters:
     - file: rest-time/README.md
-
-- part: Master Your Language
-  chapters:
-    - file: master-your-language/super/notebook.ipynb
-    - file: master-your-language/map-filter-reduce/notebook.ipynb
 
 - part: Coding Challenges
   chapters:
