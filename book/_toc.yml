@@ -20,6 +20,7 @@
     - file: master-your-language/super/notebook.ipynb
     - file: master-your-language/map-filter-reduce/notebook.ipynb
     - file: master-your-language/iterators/notebook.ipynb
+    - file: master-your-language/context-managers/notebook.ipynb
 
 - part: Apply Python in Real Life
   chapters:
